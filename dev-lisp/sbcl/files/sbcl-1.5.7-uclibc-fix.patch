@@ -1,0 +1,29 @@
+
+--- a/src/runtime/Config.x86-64-linux
++++ b/src/runtime/Config.x86-64-linux
+@@ -43,7 +43,6 @@
+ endif
+ 
+ CFLAGS += -Wunused-parameter -fno-omit-frame-pointer -momit-leaf-frame-pointer
+-CPPFLAGS += -include memcpy.h
+ ifeq ($(LISP_FEATURE_SB_DYNAMIC_CORE),1)
+   DISABLE_PIE=no
+ endif
+
+--- a/src/runtime/linux-os.c
++++ b/src/runtime/linux-os.c
+@@ -55,13 +55,6 @@
+ # include <sys/timerfd.h>
+ #endif
+ 
+-#ifdef LISP_FEATURE_X86
+-/* Prototype for personality(2). Done inline here since the header file
+- * for this isn't available on old versions of glibc. */
+-int personality (unsigned long);
+ #define ADDR_NO_RANDOMIZE 0x0040000
+-#else
+-#include <sys/personality.h>
+-#endif
+ 
+ size_t os_vm_page_size;
+

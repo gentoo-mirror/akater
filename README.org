@@ -1,0 +1,19 @@
+#+title: akater-ebuilds
+#+author: =#<PERSON akater A24961DE3ADD04E057ADCF4599555CE6F2E1B21D>=
+
+This ebuild repository may contain:
+- some older ebuilds dropped from mainline gentoo repository but interesting to the author
+- ebuilds providing compatibility with environments interesting to the author
+- experimental stuff (but most ebuilds should work)
+
+Overall, this is not a copy of my local ebuild repository. In general, this is not an ebuild repository. Providing one is inconvenient for me so far. Help with portage (namely, portage homedir and its ssh keys) is appreciated.
+
+Environments interesting to the author are mostly lightweight environments, i.e.:
+- text-only environments (no X)
+- non-glibc environments (uClibc, at this point)
+
+I'm interested in 
+- www-client/palemoon support for hardened Gentoo
+- net-print/lprng ebuilds and filters
+- all versions of app-crypt/gnupg
+- bringing (at least some) packages from quicklisp and melpa into portage

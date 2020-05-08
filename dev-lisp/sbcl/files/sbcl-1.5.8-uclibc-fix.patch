@@ -1,0 +1,19 @@
+
+
+--- a/src/runtime/linux-os.c
++++ b/src/runtime/linux-os.c
+@@ -55,13 +55,6 @@
+ # include <sys/timerfd.h>
+ #endif
+ 
+-#ifdef LISP_FEATURE_X86
+-/* Prototype for personality(2). Done inline here since the header file
+- * for this isn't available on old versions of glibc. */
+-int personality (unsigned long);
+ #define ADDR_NO_RANDOMIZE 0x0040000
+-#else
+-#include <sys/personality.h>
+-#endif
+ 
+ size_t os_vm_page_size;
+

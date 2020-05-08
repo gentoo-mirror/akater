@@ -1,0 +1,16 @@
+# Copyright 1999-2016 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+DESCRIPTION="Manage /usr/bin/lisp implementation"
+MAINTAINER="nuclearspace@gmail.com"
+VERSION="0.1"
+
+SYMLINK_PATH=/usr/bin/lisp
+SYMLINK_TARGETS=( acl lispworks sbcl ccl clisp ecl abcl )
+SYMLINK_DESCRIPTION='default lisp'
+
+inherit bin-symlink
+
+do_unset() {
+    rm -f "${SYMLINK_PATH}"
+}
