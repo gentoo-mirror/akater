@@ -16,9 +16,8 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-BDEPEND="
+BDEPEND=">=virtual/emacs-26
 	app-emacs/akater-misc-elisp
-	app-emacs/dash
 "
 
 RDEPEND="${BDEPEND}
