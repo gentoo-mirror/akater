@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>nuclearspace@gmail.com</email>
+		<name>Dima Akater</name>
+	</maintainer>
+	<longdescription>VTerm is a package and an emacs module that
+	implements a bridge to display a terminal in an Emacs
+	buffer. Warning: this is an **alpha release**, so it will
+	crash your Emacs. If it does, please report a bug at upstream
+	github.
+</longdescription>
+	<use>
+		<flag name="system-libvterm">Use the system-wide dev-libs/libvterm instead of bundled.</flag>                
+	</use>
+        <upstream>
+		<remote-id type="github">akermu/emacs-libvterm</remote-id>
+	</upstream>
+</pkgmetadata>
