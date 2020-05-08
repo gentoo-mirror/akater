@@ -14,10 +14,12 @@ KEYWORDS="amd64 x86"
 LICENSE=GPL-3
 SLOT=0
 
+DOCS="readme.md"
+
 BDEPEND=">=virtual/emacs-24"
 RDEPEND=">=virtual/emacs-24"
 
 src_compile() {
-	elisp-compile "*.el" || \
+	elisp-compile *.el || \
 		die "Could not compile"
 }

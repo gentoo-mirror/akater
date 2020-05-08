@@ -23,6 +23,6 @@ RDEPEND=">=virtual/emacs-24
 "
 
 src_compile() {
-	elisp-compile "*.el" || \
+	elisp-compile *.el || \
 		die "Could not compile"
 }

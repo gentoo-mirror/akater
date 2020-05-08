@@ -9,15 +9,17 @@ DESCRIPTION="Convenient infix arguments and suffix commands in Emacs"
 HOMEPAGE="https://github.com/magit/transient"
 
 EGIT_REPO_URI="https://github.com/magit/transient.git"
+EGIT_BRANCH="master"
 KEYWORDS="amd64 x86"
 
 LICENSE=GPL-3
 SLOT=0
 
-BDEPEND=">=virtual/emacs-25.1"
-RDEPEND=">=virtual/emacs-25.1"
+S="${WORKDIR}/${P}/lisp"
+ELISP_TEXINFO="../docs/transient.texi"
+DOCS="../README.md"
 
-src_compile() {
-	elisp-compile "*.el" || \
-		die "Could not compile"
-}
+BDEPEND=">=virtual/emacs-25.1
+	sys-apps/texinfo"
+
+RDEPEND=">=virtual/emacs-25.1"
