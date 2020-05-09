@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>akater</name>
+    <description lang="en">akater's Gentoo ebuild repository</description>
+    <homepage>https://gitlab.com/akater/ebuilds</homepage>
+    <owner type="person">
+      <name>akater</name>
+      <email>nuclearspace@gmail.com</email>
+    </owner>
+    <source type="git">https://gitlab.com/akater/ebuilds.git</source>
+    <source type="git">git+ssh://git@gitlab.com/akater/ebuilds.git</source>
+    <feed>https://gitlab.com/akater/ebuilds/commits/master.atom</feed>
+  </repo>
+</repositories>
