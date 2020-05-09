@@ -23,8 +23,6 @@ This ebuild repository may contain:
 - ebuilds providing compatibility with environments interesting to the author
 - experimental stuff (but most ebuilds should work)
 
-Overall, this is not a copy of my local ebuild repository. In general, this is not an ebuild repository. Providing one is inconvenient for me so far. Help with portage (namely, portage homedir and its ssh keys) is appreciated.
-
 Environments interesting to the author are mostly lightweight environments, i.e.:
 - text-only environments (no X)
 - non-glibc environments (uClibc, at this point)
