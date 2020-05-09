@@ -1,5 +1,5 @@
 # Copyright 1999-2020 Gentoo Authors
-# Distributed under the terms of the GNU General Public License v3
+# Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
@@ -26,17 +26,3 @@ RDEPEND=">=virtual/emacs-26
 "
 
 SITEFILE=70${PN}-sitefile.el
-
-src_compile() {
-
-	cd elisp
-	elisp-compile *.el || die "Compiling *.el failed"
-
-}
-
-src_install() {
-
-	cd elisp
-	elisp-install ${PN} *.{el,elc} || die "Cannot install elisp files"
-
-}

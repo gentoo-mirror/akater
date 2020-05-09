@@ -19,8 +19,7 @@
 
 inherit elisp
 
-EXPORT_FUNCTIONS src_configure
-
+EXPORT_FUNCTIONS src_configure src_compile src_install
 
 orgmode_src_configure() {
 	ebegin "Configuring with org"
@@ -40,14 +39,10 @@ orgmode_src_configure() {
 	eend $? "org-babel-tangle-file: failed to tangle" || die
 }
 
+orgmode_src_compile() {
+	elisp-compile elisp/*.el || die "Compiling *.el failed"
+}
 
-elisp-install-r() {
-	local subdir="$1"
-	shift
-	ebegin "Installing directories for GNU Emacs support"
-	( # subshell to avoid pollution of calling environment
-		insinto "${SITELISP}/${subdir}"
-		doins -r "$@"
-	)
-	eend $? "elisp-install-r: doins failed" || die
+orgmode_src_install() {
+	elisp-install ${PN} elisp/*.{el,elc} || die "Cannot install elisp files"
 }
