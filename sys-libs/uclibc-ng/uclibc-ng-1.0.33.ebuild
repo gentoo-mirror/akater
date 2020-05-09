@@ -255,6 +255,8 @@ src_prepare() {
 
 	eapply "${FILESDIR}"/bsd-b64-ntop-b64-pton-support.patch
 
+	eapply "${FILESDIR}"/pc-relative-64-bit.patch
+
 	# We need to change the major.minor.sublevel of uclibc-ng.
 	# Upstream sets MAJOR_VERSION = 1 which breaks runtime linking.
 	# If we really want the ABI bump, we'll have to hack the gcc
