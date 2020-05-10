@@ -8,7 +8,8 @@ inherit elisp git-r3
 DESCRIPTION="Portage viewer"
 HOMEPAGE="https://github.com/kiwanami/emacs-portage-navi"
 
-EGIT_REPO_URI="https://github.com/kiwanami/emacs-portage-navi.git"
+EGIT_REPO_URI="https://github.com/akater/emacs-portage-navi.git"
+EGIT_BRANCH="introduce-defcustoms"
 KEYWORDS="amd64 x86"
 
 LICENSE=GPL-3
