@@ -27,6 +27,7 @@ orgmode_src_configure() {
 			 --eval "(require 'ob-tangle)"                                \
 			 --eval "(require 'find-lisp)"                                \
 			 --eval "(require 'files)"                                    \
+			 --eval "(defvar use-flags '(${USE}))"                        \
 			 --eval "(defun tangle-unless-readme (filename)               \
 					   (unless (string-equal \"README\"                   \
 											 (file-name-base filename))   \

@@ -14,11 +14,13 @@ EGIT_BRANCH="master"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
+IUSE="smart-live-rebuild"
 
 BDEPEND=">=virtual/emacs-26"
 RDEPEND=">=virtual/emacs-26
 	app-portage/eix
 	app-portage/gentoolkit
+	smart-live-rebuild? ( app-portage/smart-live-rebuild )
 	app-emacs/portage-navi
 	app-emacs/transient
 	app-emacs/akater-misc-elisp
