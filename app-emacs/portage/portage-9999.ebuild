@@ -23,6 +23,7 @@ RDEPEND=">=virtual/emacs-26
 	smart-live-rebuild? ( app-portage/smart-live-rebuild )
 	app-emacs/portage-navi
 	app-emacs/transient
+	app-emacs/file-tree
 	app-emacs/akater-misc-elisp
 	app-emacs/akater-sh-tools
 "
