@@ -41,7 +41,10 @@ orgmode_src_configure() {
 }
 
 orgmode_src_compile() {
-	elisp-compile elisp/*.el || die "Compiling *.el failed"
+	# local S="${WORKDIR}/${P}/elisp" doesn't work
+	# but it better be something like it
+	cd "${WORKDIR}/${P}/elisp"
+	elisp-compile *.el || die "Compiling *.el failed"
 }
 
 orgmode_src_install() {
