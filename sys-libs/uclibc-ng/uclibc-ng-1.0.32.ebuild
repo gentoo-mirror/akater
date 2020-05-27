@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="7"
@@ -253,7 +253,7 @@ src_prepare() {
 	# We want to get rid of this and just have ABI = 0.
 	eapply "${FILESDIR}"/uclibc-compat-r1.patch
 
-	eapply "${FILESDIR}"/bsd-b64-ntop-b64-pton-support.patch
+	eapply "${FILESDIR}"/${P}-bsd-b64-ntop-b64-pton-support.patch
 
 	# We need to change the major.minor.sublevel of uclibc-ng.
 	# Upstream sets MAJOR_VERSION = 1 which breaks runtime linking.

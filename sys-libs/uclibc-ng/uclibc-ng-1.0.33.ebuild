@@ -253,7 +253,7 @@ src_prepare() {
 	# We want to get rid of this and just have ABI = 0.
 	eapply "${FILESDIR}"/uclibc-compat-r1.patch
 
-	eapply "${FILESDIR}"/bsd-b64-ntop-b64-pton-support.patch
+	eapply "${FILESDIR}"/${P}-bsd-b64-ntop-b64-pton-support.patch
 
 	eapply "${FILESDIR}"/pc-relative-64-bit.patch
 

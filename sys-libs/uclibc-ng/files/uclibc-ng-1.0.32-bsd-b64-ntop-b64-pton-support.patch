@@ -50,7 +50,7 @@ Pulled directly from glibc; needed by openbsd-netcat.
 
 --- a/libc/inet/resolv.c
 +++ b/libc/inet/resolv.c
-@@ -3632,5 +3632,262 @@
+@@ -3632,6 +3632,263 @@
  }
  #endif
  
