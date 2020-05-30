@@ -26,6 +26,7 @@ RDEPEND=">=virtual/emacs-26
 	app-emacs/file-tree
 	app-emacs/akater-misc-elisp
 	app-emacs/akater-sh-tools
+	app-emacs/ebuild-tools
 "
 
 SITEFILE=70${PN}-sitefile.el
