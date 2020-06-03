@@ -22,8 +22,8 @@ RDEPEND=">=virtual/emacs-26
 	app-portage/gentoolkit
 	smart-live-rebuild? ( app-portage/smart-live-rebuild )
 	app-emacs/portage-navi
+	app-emacs/gentoo-cache
 	app-emacs/transient
-	app-emacs/file-tree
 	app-emacs/akater-misc-elisp
 	app-emacs/akater-sh-tools
 	app-emacs/ebuild-tools

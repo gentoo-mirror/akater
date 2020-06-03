@@ -15,7 +15,8 @@ KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-3"
 SLOT="0"
 
-BDEPEND=">=virtual/emacs-25"
+BDEPEND=">=virtual/emacs-25
+	app-emacs/anaphora"
 RDEPEND=">=virtual/emacs-25
 	app-emacs/akater-misc-elisp
 	app-emacs/akater-sh-tools

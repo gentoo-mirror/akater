@@ -14,9 +14,17 @@ KEYWORDS="~amd64 ~x86"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE=""
+IUSE="+eix gentoolkit"
+# it does not really work with gentoolkit
+REQUIRED_USE="|| ( eix gentoolkit )"
 
-RDEPEND=">=virtual/emacs-24"
-BDEPEND="${RDEPEND}
+BDEPEND=">=virtual/emacs-24
+	app-emacs/file-tree
 	app-emacs/akater-misc-elisp
+"
+RDEPEND="${BDEPEND}
+	app-emacs/akater-sh-tools
+	eix? ( app-portage/eix )
+	gentoolkit? ( app-portage/gentoolkit )
+	app-emacs/gentoo-cache
 "
