@@ -1,0 +1,12 @@
+--- a/README.md
++++ b/README.md
+@@ -4,7 +4,7 @@
+ 
+ ## Sample
+ 
+-``` lisp
++```emacs-lisp
+ (require 'sqlite3)
+ 
+ (progn
+
