@@ -9,7 +9,7 @@ inherit elisp git-r3
 DESCRIPTION="Sqlite3 Emacs module by syohex"
 HOMEPAGE="https://github.com/syohex/emacs-sqlite3"
 
-EGIT_REPO_URI="https://github.com/syohex/emacs-sqlite3.git"
+EGIT_REPO_URI="https://github.com/larsmagne/emacs-sqlite3.git"
 EGIT_BRANCH="master"
 KEYWORDS="amd64 x86"
 
