@@ -16,6 +16,8 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
+DOCS="README.org"
+
 BDEPEND=">=virtual/emacs-26
 	app-emacs/anaphora
 	app-emacs/akater-misc-elisp
