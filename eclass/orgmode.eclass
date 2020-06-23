@@ -25,7 +25,6 @@ orgmode_src_configure() {
 	ebegin "Configuring with org"
 	${EMACS} ${EMACSFLAGS} ${BYTECOMPFLAGS} \
 			 --eval "(require 'ob-tangle)"                                \
-			 --eval "(require 'find-lisp)"                                \
 			 --eval "(require 'files)"                                    \
 			 --eval "(defvar use-flags '(${USE}))"                        \
 			 --eval "(defun tangle-unless-readme (filename)               \
@@ -33,10 +32,8 @@ orgmode_src_configure() {
 											 (file-name-base filename))   \
 						 (org-babel-tangle-file filename)))"              \
 			 --eval "(mapc #'tangle-unless-readme                         \
-					   (let ((find-lisp-regexp \"\\\\.org$\"))            \
-						 (find-lisp-find-files-internal default-directory \
-						   #'find-lisp-default-file-predicate             \
-						   (lambda (dir parent) nil))))"                  \
+					   (directory-files default-directory                 \
+										t \"\\\\.org$\" t))"              \
 	eend $? "org-babel-tangle-file: failed to tangle" || die
 }
 
@@ -45,8 +42,29 @@ orgmode_src_compile() {
 	# but it better be something like it
 	cd "${WORKDIR}/${P}/elisp"
 	elisp-compile *.el || die "Compiling *.el failed"
+	cd "${WORKDIR}/${P}"
+
+	if [[ -n ${ELISP_TEXINFO} ]]; then
+		makeinfo ${ELISP_TEXINFO} || die
+	fi
 }
 
 orgmode_src_install() {
 	elisp-install ${PN} elisp/*.{el,elc} || die "Cannot install elisp files"
+	if [[ -n ${SITEFILE} ]]; then
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
+	fi
+	if [[ -n ${ELISP_TEXINFO} ]]; then
+		set -- ${ELISP_TEXINFO}
+		set -- ${@##*/}
+		doinfo ${@/%.*/.info*}
+	fi
+	# install documentation only when explicitly requested
+	case ${EAPI} in
+		4|5) [[ -n ${DOCS} ]] && dodoc ${DOCS} ;;
+		*) [[ $(declare -p DOCS 2>/dev/null) == *=* ]] && einstalldocs ;;
+	esac
+	if declare -f readme.gentoo_create_doc >/dev/null; then
+		readme.gentoo_create_doc
+	fi
 }
