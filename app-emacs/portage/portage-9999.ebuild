@@ -16,6 +16,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="smart-live-rebuild"
 
+DOCS="README.org"
+
 BDEPEND=">=virtual/emacs-26"
 RDEPEND=">=virtual/emacs-26
 	app-portage/eix
@@ -29,4 +31,4 @@ RDEPEND=">=virtual/emacs-26
 	app-emacs/ebuild-tools
 "
 
-SITEFILE=70${PN}-sitefile.el
+SITEFILE=70emacs-${PN}-gentoo.el
