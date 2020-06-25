@@ -22,7 +22,7 @@ DOCS="README.org"
 
 BDEPEND=">=virtual/emacs-24
 	app-emacs/file-tree
-	app-emacs/akater-misc-elisp
+	app-emacs/akater-misc
 "
 RDEPEND="${BDEPEND}
 	app-emacs/akater-sh-tools

@@ -20,13 +20,13 @@ DOCS="README.org"
 
 BDEPEND=">=virtual/emacs-26
 	app-emacs/anaphora
-	app-emacs/akater-misc-elisp
+	app-emacs/akater-misc
 "
 
 RDEPEND=">=virtual/emacs-26
 	app-emacs/epl
 	app-emacs/ebuild-mode
-	app-emacs/akater-misc-elisp
+	app-emacs/akater-misc
 	app-emacs/akater-sh-tools
 	app-emacs/ebuild-tools
 "

@@ -17,7 +17,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND=">=virtual/emacs-26
-	app-emacs/akater-misc-elisp"
+	app-emacs/akater-misc"
 BDEPEND="${RDEPEND}
 	app-emacs/anaphora
 "

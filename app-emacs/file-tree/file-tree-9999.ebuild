@@ -18,7 +18,7 @@ IUSE=""
 
 BDEPEND=">=virtual/emacs-26
 	app-emacs/anaphora
-	app-emacs/akater-misc-elisp
+	app-emacs/akater-misc
 "
 
 RDEPEND="${BDEPEND}

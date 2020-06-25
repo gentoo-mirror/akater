@@ -26,7 +26,7 @@ RDEPEND=">=virtual/emacs-26
 	app-emacs/portage-navi
 	app-emacs/gentoo-cache
 	app-emacs/transient
-	app-emacs/akater-misc-elisp
+	app-emacs/akater-misc
 	app-emacs/akater-sh-tools
 	app-emacs/ebuild-tools
 "

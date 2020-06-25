@@ -17,7 +17,7 @@ SLOT="0"
 IUSE=""
 
 BDEPEND=">=virtual/emacs-26
-	app-emacs/akater-misc-elisp
+	app-emacs/akater-misc
 "
 
 RDEPEND="${BDEPEND}
