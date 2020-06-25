@@ -26,6 +26,7 @@ BDEPEND=">=virtual/emacs-24
 "
 RDEPEND="${BDEPEND}
 	app-emacs/akater-sh-tools
+	app-emacs/akater-conf
 	eix? ( app-portage/eix )
 	gentoolkit? ( app-portage/gentoolkit )
 	app-emacs/gentoo-cache
