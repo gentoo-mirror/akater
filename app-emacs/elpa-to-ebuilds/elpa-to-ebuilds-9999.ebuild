@@ -27,6 +27,6 @@ RDEPEND=">=virtual/emacs-26
 	app-emacs/epl
 	app-emacs/ebuild-mode
 	app-emacs/akater-misc
-	app-emacs/akater-sh-tools
+	app-emacs/akater-sh
 	app-emacs/ebuild-tools
 "

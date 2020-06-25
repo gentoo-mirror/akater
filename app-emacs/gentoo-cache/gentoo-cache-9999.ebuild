@@ -19,6 +19,6 @@ BDEPEND=">=virtual/emacs-25
 	app-emacs/anaphora"
 RDEPEND=">=virtual/emacs-25
 	app-emacs/akater-misc
-	app-emacs/akater-sh-tools
+	app-emacs/akater-sh
 	app-portage/eix
 "

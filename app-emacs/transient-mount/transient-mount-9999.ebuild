@@ -22,5 +22,5 @@ RDEPEND=">=virtual/emacs-26
 	>=sys-apps/util-linux-2.18
 	app-emacs/transient
 	app-emacs/akater-misc
-	app-emacs/akater-sh-tools
+	app-emacs/akater-sh
 "

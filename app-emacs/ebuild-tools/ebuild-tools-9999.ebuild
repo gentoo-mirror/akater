@@ -25,7 +25,7 @@ BDEPEND=">=virtual/emacs-24
 	app-emacs/akater-misc
 "
 RDEPEND="${BDEPEND}
-	app-emacs/akater-sh-tools
+	app-emacs/akater-sh
 	app-emacs/akater-conf
 	eix? ( app-portage/eix )
 	gentoolkit? ( app-portage/gentoolkit )

@@ -5,7 +5,7 @@ EAPI=7
 
 inherit elisp orgmode git-r3
 
-DESCRIPTION="This package is obsolete, renamed to app-emacs/akater-sh"
+DESCRIPTION="Emacs shell script related helper functions and macros"
 HOMEPAGE="https://gitlab.com/akater/elisp-akater-sh"
 
 EGIT_REPO_URI="https://gitlab.com/akater/elisp-akater-sh.git"
