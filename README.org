@@ -7,7 +7,6 @@
 | =app-emacs/portage=         | By author, not present in main repository    |
 | =app-emacs/transient-mount= | By author, not present in main repository    |
 | =dev-lisp/sbcl=             | Bootstrappable with a user-specified Lisp    |
-| =app-emacs/xrdb-mode=       | Cleaner build; some convenience functions    |
 | =sys-libs/uclibc-ng=        | Allows building =openbsd-netcat=             |
 | =app-emacs/imdb=            | Not present in main repository               |
 | =www-client/w3m=            | Will provide images on some X-less devices   |
