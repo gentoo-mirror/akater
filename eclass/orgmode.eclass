@@ -21,9 +21,22 @@ inherit elisp
 
 EXPORT_FUNCTIONS src_configure src_compile src_install
 
+EMACSCUSTOMCODE=nil
+
 orgmode_src_configure() {
+
+	all_pn_defvars_code="(progn"
+	for code in "${orgmode_configure_pn_defvars[@]}"
+	do
+		:
+		all_pn_defvars_code+=" (defvar ${PN}-${code})"
+	done
+	all_pn_defvars_code+=")"
+
 	ebegin "Configuring with org"
 	${EMACS} ${EMACSFLAGS} ${BYTECOMPFLAGS} \
+			 --eval "${all_pn_defvars_code}"                              \
+			 --eval "${EMACSCUSTOMCODE}"                                  \
 			 --eval "(require 'ob-tangle)"                                \
 			 --eval "(require 'files)"                                    \
 			 --eval "(defvar use-flags '(${USE}))"                        \
