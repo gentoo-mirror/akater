@@ -20,6 +20,7 @@ DOCS="README.org"
 
 BDEPEND=">=virtual/emacs-26"
 RDEPEND=">=virtual/emacs-26
+	app-admin/sudo
 	app-portage/eix
 	app-portage/gentoolkit
 	smart-live-rebuild? ( app-portage/smart-live-rebuild )

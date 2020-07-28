@@ -25,6 +25,7 @@ BDEPEND=">=virtual/emacs-24
 	app-emacs/akater-misc
 "
 RDEPEND="${BDEPEND}
+	app-admin/sudo
 	app-emacs/akater-sh
 	app-emacs/akater-conf
 	eix? ( app-portage/eix )
