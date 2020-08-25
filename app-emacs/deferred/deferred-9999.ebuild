@@ -14,8 +14,8 @@ KEYWORDS="amd64 x86"
 LICENSE=GPL-3
 SLOT=0
 
-BDEPEND=">=virtual/emacs-24.4"
-RDEPEND=">=virtual/emacs-24.4"
+BDEPEND=">=app-editors/emacs-24.4"
+RDEPEND=">=app-editors/emacs-24.4"
 
 src_compile() {
 	elisp-compile *.el || \

@@ -17,7 +17,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="
-	virtual/emacs
+	app-editors/emacs
 "
 
 BDEPEND="${RDEPEND}"

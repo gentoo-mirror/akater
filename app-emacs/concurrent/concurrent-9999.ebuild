@@ -14,8 +14,8 @@ KEYWORDS="amd64 x86"
 LICENSE=GPL-3
 SLOT=0
 
-BDEPEND=">=virtual/emacs-24.3"
-RDEPEND=">=virtual/emacs-24.3
+BDEPEND=">=app-editors/emacs-24.3"
+RDEPEND=">=app-editors/emacs-24.3
 	>=app-emacs/deferred-0.5.0
 "
 

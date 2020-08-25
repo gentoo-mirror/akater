@@ -18,10 +18,10 @@ IUSE=""
 
 DOCS="README.org"
 
-BDEPEND=">=virtual/emacs-25
+BDEPEND=">=app-editors/emacs-25
 	app-emacs/anaphora
 	app-emacs/akater-misc"
-RDEPEND=">=virtual/emacs-25
+RDEPEND=">=app-editors/emacs-25
 	app-admin/sudo
 	sys-apps/kbd
 	app-emacs/akater-misc

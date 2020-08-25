@@ -16,8 +16,8 @@ SLOT=0
 
 DOCS="readme.md"
 
-BDEPEND=">=virtual/emacs-24"
-RDEPEND=">=virtual/emacs-24"
+BDEPEND=">=app-editors/emacs-24"
+RDEPEND=">=app-editors/emacs-24"
 
 src_compile() {
 	elisp-compile *.el || \

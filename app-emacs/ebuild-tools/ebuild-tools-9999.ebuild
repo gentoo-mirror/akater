@@ -20,7 +20,7 @@ REQUIRED_USE="|| ( eix gentoolkit )"
 
 DOCS="README.org"
 
-BDEPEND=">=virtual/emacs-24
+BDEPEND=">=app-editors/emacs-24
 	app-emacs/file-tree
 	app-emacs/akater-misc
 "

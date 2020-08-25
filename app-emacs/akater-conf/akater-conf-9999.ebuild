@@ -16,7 +16,7 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND=">=virtual/emacs-26
+RDEPEND=">=app-editors/emacs-26
 	app-emacs/akater-misc"
 BDEPEND="${RDEPEND}
 	app-emacs/anaphora

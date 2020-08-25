@@ -16,7 +16,7 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND=">=virtual/emacs-26"
+RDEPEND=">=app-editors/emacs-26"
 BDEPEND="${RDEPEND}
 	app-emacs/anaphora
 "

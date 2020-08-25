@@ -19,7 +19,7 @@ S="${WORKDIR}/${P}/lisp"
 ELISP_TEXINFO="../docs/transient.texi"
 DOCS="../README.md"
 
-BDEPEND=">=virtual/emacs-25.1
+BDEPEND=">=app-editors/emacs-25.1
 	sys-apps/texinfo"
 
-RDEPEND=">=virtual/emacs-25.1"
+RDEPEND=">=app-editors/emacs-25.1"

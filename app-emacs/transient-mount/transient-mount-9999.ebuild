@@ -15,10 +15,10 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
-BDEPEND=">=virtual/emacs-26
+BDEPEND=">=app-editors/emacs-26
 	app-emacs/anaphora
 "
-RDEPEND=">=virtual/emacs-26
+RDEPEND=">=app-editors/emacs-26
 	>=sys-apps/util-linux-2.18
 	app-admin/sudo
 	app-emacs/transient

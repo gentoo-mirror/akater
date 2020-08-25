@@ -18,12 +18,12 @@ IUSE=""
 
 DOCS="README.org"
 
-BDEPEND=">=virtual/emacs-26
+BDEPEND=">=app-editors/emacs-26
 	app-emacs/anaphora
 	app-emacs/akater-misc
 "
 
-RDEPEND=">=virtual/emacs-26
+RDEPEND=">=app-editors/emacs-26
 	app-emacs/epl
 	app-emacs/ebuild-mode
 	app-emacs/akater-misc

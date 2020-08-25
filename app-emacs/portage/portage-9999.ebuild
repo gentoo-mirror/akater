@@ -18,8 +18,8 @@ IUSE="smart-live-rebuild"
 
 DOCS="README.org"
 
-BDEPEND=">=virtual/emacs-26"
-RDEPEND=">=virtual/emacs-26
+BDEPEND=">=app-editors/emacs-26"
+RDEPEND=">=app-editors/emacs-26
 	app-admin/sudo
 	app-portage/eix
 	app-portage/gentoolkit

@@ -16,5 +16,5 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-BDEPEND=">=virtual/emacs-24"
-RDEPEND=">=virtual/emacs-24"
+BDEPEND=">=app-editors/emacs-24"
+RDEPEND=">=app-editors/emacs-24"
