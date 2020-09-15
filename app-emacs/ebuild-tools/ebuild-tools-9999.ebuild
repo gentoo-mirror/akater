@@ -28,7 +28,8 @@ RDEPEND="${BDEPEND}
 	app-admin/sudo
 	app-emacs/akater-sh
 	app-emacs/akater-conf
-	eix? ( app-portage/eix )
+	eix? ( app-emacs/eix
+		   app-portage/eix )
 	gentoolkit? ( app-portage/gentoolkit )
 	app-emacs/gentoo-cache
 "
