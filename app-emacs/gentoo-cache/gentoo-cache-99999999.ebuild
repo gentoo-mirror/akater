@@ -9,7 +9,7 @@ DESCRIPTION="Elisp package that provides cached data about underlying Gentoo sys
 HOMEPAGE="https://gitlab.com/akater/emacs-gentoo-cache"
 
 EGIT_REPO_URI="https://gitlab.com/akater/emacs-gentoo-cache.git"
-EGIT_BRANCH="master"
+EGIT_BRANCH="release"
 KEYWORDS="~amd64 ~x86"
 
 LICENSE="GPL-3"
