@@ -5,7 +5,7 @@ EAPI=7
 
 inherit elisp orgmode git-r3
 
-DESCRIPTION="Functions to deal with ebuilds in Emacs Lisp"
+DESCRIPTION="Elisp package that provides cached data about underlying Gentoo system to Emacs"
 HOMEPAGE="https://gitlab.com/akater/emacs-gentoo-cache"
 
 EGIT_REPO_URI="https://gitlab.com/akater/emacs-gentoo-cache.git"
