@@ -38,6 +38,7 @@ orgmode_src_configure() {
 			 --eval "${all_pn_defvars_code}"                              \
 			 --eval "${EMACSCUSTOMCODE}"                                  \
 			 --eval "(require 'ob-tangle)"                                \
+			 --eval "(defalias 'org-development-elisp-mode 'org-mode)"    \
 			 --eval "(require 'files)"                                    \
 			 --eval "(defvar use-flags '(${USE}))"                        \
 			 --eval "(defun tangle-unless-readme (filename)               \
