@@ -15,6 +15,8 @@ KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-3"
 SLOT="0"
 
+DOCS="README.org"
+
 BDEPEND=">=app-editors/emacs-25
 	app-emacs/anaphora"
 RDEPEND=">=app-editors/emacs-25
