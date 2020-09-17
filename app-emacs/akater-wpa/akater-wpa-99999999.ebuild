@@ -9,7 +9,7 @@ DESCRIPTION="Emacs interface to wpa_supplicant"
 HOMEPAGE="https://gitlab.com/akater/emacs-wpa"
 
 EGIT_REPO_URI="https://gitlab.com/akater/emacs-wpa.git"
-EGIT_BRANCH="master"
+EGIT_BRANCH="release"
 
 LICENSE="GPL-3"
 SLOT="0"
