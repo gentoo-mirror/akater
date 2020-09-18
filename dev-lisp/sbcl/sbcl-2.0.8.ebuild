@@ -55,7 +55,7 @@ REQUIRED_USE="
 
 # bootstrap-self is not available with normal (non-bootstrap) install solely on the assumption that normal install would produce the output equivalent to what bootstrap-self would have produced
 
-CDEPEND=">=dev-lisp/asdf-3.1:="
+CDEPEND=">=dev-lisp/asdf-3.3.2-r1"
 BDEPEND="
 	bootstrap?
 	( ||
