@@ -18,6 +18,7 @@ SLOT="0"
 DOCS="README.org"
 
 BDEPEND=">=app-editors/emacs-25
+	app-emacs/akater-misc
 	app-emacs/anaphora"
 RDEPEND=">=app-editors/emacs-25
 	app-emacs/akater-misc
