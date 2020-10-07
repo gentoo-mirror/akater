@@ -9,7 +9,7 @@ DESCRIPTION="Emacs Lisp accessory functions used by akater"
 HOMEPAGE="https://gitlab.com/akater/elisp-akater-misc"
 
 EGIT_REPO_URI="https://gitlab.com/akater/elisp-akater-misc.git"
-EGIT_BRANCH="master"
+EGIT_BRANCH="release"
 KEYWORDS="~amd64 ~x86"
 
 LICENSE="GPL-3"
