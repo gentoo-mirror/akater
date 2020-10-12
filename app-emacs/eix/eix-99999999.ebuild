@@ -23,5 +23,5 @@ BDEPEND=">=app-editors/emacs-24
 RDEPEND="${BDEPEND}
 	app-emacs/akater-misc
 	app-emacs/akater-sh
-	app-portage/eix
+	>=app-portage/eix-0.34.4
 "
