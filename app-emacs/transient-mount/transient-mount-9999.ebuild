@@ -9,7 +9,7 @@ DESCRIPTION="Emacs interface to mount via transient"
 HOMEPAGE="https://gitlab.com/akater/emacs-transient-mount"
 
 EGIT_REPO_URI="https://gitlab.com/akater/emacs-transient-mount.git"
-EGIT_BRANCH="master"
+EGIT_BRANCH="release"
 
 LICENSE="GPL-3"
 SLOT="0"
