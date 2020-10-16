@@ -9,7 +9,7 @@ DESCRIPTION="Convert loaded Elisp packages to ebuilds"
 HOMEPAGE="https://gitlab.com/akater/elpa-to-ebuilds"
 
 EGIT_REPO_URI="https://gitlab.com/akater/elpa-to-ebuilds.git"
-EGIT_BRANCH="master"
+EGIT_BRANCH="release"
 KEYWORDS="amd64 x86"
 
 LICENSE="GPL-3"
