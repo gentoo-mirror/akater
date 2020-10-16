@@ -9,7 +9,7 @@ DESCRIPTION="Manipulation of symbolic file trees in Elisp"
 HOMEPAGE="https://gitlab.com/akater/elisp-file-tree"
 
 EGIT_REPO_URI="https://gitlab.com/akater/elisp-file-tree.git"
-EGIT_BRANCH="master"
+EGIT_BRANCH="release"
 KEYWORDS="~amd64 ~x86"
 
 LICENSE="GPL-3"
