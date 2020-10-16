@@ -9,7 +9,7 @@ DESCRIPTION="Emacs Lisp conf-related functions and macros used by akater"
 HOMEPAGE="https://gitlab.com/akater/elisp-akater-conf"
 
 EGIT_REPO_URI="https://gitlab.com/akater/elisp-akater-conf.git"
-EGIT_BRANCH="master"
+EGIT_BRANCH="release"
 KEYWORDS="~amd64 ~x86"
 
 LICENSE="GPL-3"
