@@ -9,7 +9,7 @@ DESCRIPTION="Emacs interface to console colors"
 HOMEPAGE="https://gitlab.com/akater/emacs-console-colors"
 
 EGIT_REPO_URI="https://gitlab.com/akater/emacs-console-colors.git"
-EGIT_BRANCH="master"
+EGIT_BRANCH="release"
 
 LICENSE="GPL-3"
 SLOT="0"
