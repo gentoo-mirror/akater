@@ -4,13 +4,18 @@
 * Things of interest (in order of decreasing interest)
 | Package                     | Feature                                      |
 |-----------------------------+----------------------------------------------|
-| =app-emacs/portage=         | By author, not present in main repository    |
-| =app-emacs/transient-mount= | By author, not present in main repository    |
+| =app-emacs/portage=         | By akater, not present in main tree          |
+| =app-emacs/ebuild-tools=    | By akater, not present in main tree          |
+| =app-emacs/elpa-to-ebuilds= | By akater, not present in main tree          |
+| =app-emacs/transient-mount= | By akater, not present in main tree          |
+| =app-emacs/console-colors=  | By akater, not present in main tree          |
 | =dev-lisp/sbcl=             | Bootstrappable with a user-specified Lisp    |
 | =sys-libs/uclibc-ng=        | Allows building =openbsd-netcat=             |
 | =app-emacs/imdb=            | Not present in main repository               |
 | =www-client/w3m=            | Will provide images on some X-less devices   |
 | =app-emacs/vterm=           | USE =system-libvterm=; native =emacs-module= |
+
+=dev-lisp/sbcl= also allows omitting html doc thus avoiding dependency on =graphviz=.
 
 The rest are largely dependencies for things of interest.
 
