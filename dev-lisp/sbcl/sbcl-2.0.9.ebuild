@@ -40,7 +40,7 @@ SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 LICENSE="MIT"
 SLOT="0/${PV}"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~x86-solaris"
-IUSE="bootstrap bootstrap-self abcl clisp clozurecl cmucl ecls debug doc gcl sbcl source +threads +unicode pax_kernel zlib"
+IUSE="bootstrap bootstrap-self abcl clisp clozurecl cmucl ecls debug gcl htmldoc sbcl source infodoc +threads +unicode pax_kernel zlib"
 
 REQUIRED_USE="
 	abcl?      (       !clisp !clozurecl !cmucl !ecls !gcl !sbcl )
@@ -72,15 +72,16 @@ BDEPEND="
 	  )
 	)
 "
-# at the time of writing, lisps enumerated in fallback section above get chosen in order in which they appear. This corresponds to the intent.
-# clozurecl should be the first choice for compilation after sbcl
+# at the time of writing, lisps enumerated in fallback section above get chosen in order in which they appear. This was the intent.
+# clozurecl should arguably be the first choice for compilation after sbcl
 # but I can't build it
 # if ecl can build at all, it should be moved prior to clisp as it's more portable
 
 # lisps that fail to compile sbcl should be masked at profile level, I believe
 
 DEPEND="${CDEPEND} ${BDEPEND}
-		doc? ( sys-apps/texinfo >=media-gfx/graphviz-2.26.0 )
+		htmldoc? ( sys-apps/texinfo >=media-gfx/graphviz-2.26.0 )
+		infodoc? ( sys-apps/texinfo )
 		pax_kernel? ( sys-apps/elfix )"
 RDEPEND="${CDEPEND}
 		!prefix? ( elibc_glibc? ( >=sys-libs/glibc-2.6 ) )"
@@ -312,7 +313,7 @@ src_compile() {
 	fi
 
 	# need to set HOME because libpango(used by graphviz) complains about it
-	if use doc; then
+	if use htmldoc && use infodoc; then
 		env - HOME="${T}" PATH="${PATH}" \
 			CL_SOURCE_REGISTRY="(:source-registry :ignore-inherited-configuration)" \
 			ASDF_OUTPUT_TRANSLATIONS="(:output-translations :ignore-inherited-configuration)" \
@@ -321,7 +322,28 @@ src_compile() {
 			CL_SOURCE_REGISTRY="(:source-registry :ignore-inherited-configuration)" \
 			ASDF_OUTPUT_TRANSLATIONS="(:output-translations :ignore-inherited-configuration)" \
 			make -C doc/internals info html || die "Cannot build internal docs"
+		elif use infodoc; then
+		env - HOME="${T}" PATH="${PATH}" \
+			CL_SOURCE_REGISTRY="(:source-registry :ignore-inherited-configuration)" \
+			ASDF_OUTPUT_TRANSLATIONS="(:output-translations :ignore-inherited-configuration)" \
+			make -C doc/manual info || die "Cannot build manual"
+		env - HOME="${T}" PATH="${PATH}" \
+			CL_SOURCE_REGISTRY="(:source-registry :ignore-inherited-configuration)" \
+			ASDF_OUTPUT_TRANSLATIONS="(:output-translations :ignore-inherited-configuration)" \
+			make -C doc/internals info || die "Cannot build internal docs"
+		elif use htmldoc; then
+		env - HOME="${T}" PATH="${PATH}" \
+			CL_SOURCE_REGISTRY="(:source-registry :ignore-inherited-configuration)" \
+			ASDF_OUTPUT_TRANSLATIONS="(:output-translations :ignore-inherited-configuration)" \
+			make -C doc/manual html || die "Cannot build manual"
+		env - HOME="${T}" PATH="${PATH}" \
+			CL_SOURCE_REGISTRY="(:source-registry :ignore-inherited-configuration)" \
+			ASDF_OUTPUT_TRANSLATIONS="(:output-translations :ignore-inherited-configuration)" \
+			make -C doc/internals html || die "Cannot build internal docs"
 	fi
+
+
+
 }
 
 src_test() {
@@ -358,8 +380,9 @@ src_install() {
 	# rm empty directories lest paludis complain about this
 	find "${ED}" -empty -type d -exec rmdir -v {} +
 
-	if use doc; then
-		dodoc -r doc/internals/sbcl-internals
+	if use htmldoc || use infodoc; then
+		# dodoc -r doc/internals/sbcl-internals
+		# I do not know what I'm doing but it works for me
 
 		doinfo doc/manual/*.info*
 		doinfo doc/internals/sbcl-internals.info
