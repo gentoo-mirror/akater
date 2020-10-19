@@ -2,16 +2,16 @@
 #+author: =#<PERSON akater A24961DE3ADD04E057ADCF4599555CE6F2E1B21D>=
 
 * Things of interest (in order of decreasing interest)
-| Package                     | Feature                                      |
+| Package                     | Rationale                                    |
 |-----------------------------+----------------------------------------------|
-| =app-emacs/portage=         | By akater, not present in main tree          |
-| =app-emacs/ebuild-tools=    | By akater, not present in main tree          |
-| =app-emacs/elpa-to-ebuilds= | By akater, not present in main tree          |
-| =app-emacs/transient-mount= | By akater, not present in main tree          |
-| =app-emacs/console-colors=  | By akater, not present in main tree          |
+| =app-emacs/portage=         | Homemade, not present in main tree           |
+| =app-emacs/ebuild-tools=    | Homemade, not present in main tree           |
+| =app-emacs/elpa-to-ebuilds= | Homemade, not present in main tree           |
+| =app-emacs/transient-mount= | Homemade, not present in main tree           |
+| =app-emacs/console-colors=  | Homemade, not present in main tree           |
 | =dev-lisp/sbcl=             | Bootstrappable with a user-specified Lisp    |
 | =sys-libs/uclibc-ng=        | Allows building =openbsd-netcat=             |
-| =app-emacs/imdb=            | Not present in main repository               |
+| =app-emacs/imdb=            | Not present in main tree                     |
 | =www-client/w3m=            | Will provide images on some X-less devices   |
 | =app-emacs/vterm=           | USE =system-libvterm=; native =emacs-module= |
 
