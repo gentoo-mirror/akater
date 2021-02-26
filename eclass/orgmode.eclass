@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: orgmode.eclass
@@ -60,6 +60,36 @@ orgmode_src_compile() {
 
 	if [[ -n ${ELISP_TEXINFO} ]]; then
 		makeinfo ${ELISP_TEXINFO} || die
+	fi
+}
+
+orgmode_src_test() {
+	# we call directory-files twice because sometimes files are not compiled
+	if [ "org-development" == "${PN}" ]; then
+		die "Testing org-development requires bootstrapping; not done yet"
+	elif [[ -f build/${PN}-tests.elc ]] || [[ -f build/${PN}-tests.el ]]; then
+		ebegin "Testing with org, as provided by ${PN}"
+		${EMACS} ${EMACSFLAGS} \
+		 --eval "(let ((load-path (cons (expand-file-name \"build\")  \
+										load-path)))                  \
+					(load \"${PN}-tests\"))"                          \
+		 --eval "(${PN}-tests-run)"
+		eend $? "org-development: test phase failed" || die
+	else
+		ebegin "Testing with org"
+		${EMACS} ${EMACSFLAGS} -L . \
+				 --eval "(require 'org-development-elisp)"                   \
+				 --eval "(setf org-confirm-babel-evaluate nil)"              \
+				 --eval "(require 'files)"                                   \
+				 --eval "(mapc #'load                                        \
+						   (or (directory-files (expand-file-name \"build\") \
+											t \"\\\\.elc$\" t)               \
+							   (directory-files (expand-file-name \"build\") \
+											t \"\\\\.el$\" t)))"             \
+				 --eval "(mapc #'org-development-run-tests-in-file           \
+						   (directory-files default-directory                \
+											t \"\\\\.org$\" t))"
+		eend $? "org-development: test phase failed" || die
 	fi
 }
 
