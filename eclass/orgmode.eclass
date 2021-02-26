@@ -52,9 +52,9 @@ orgmode_src_configure() {
 }
 
 orgmode_src_compile() {
-	# local S="${WORKDIR}/${P}/elisp" doesn't work
+	# local S="${WORKDIR}/${P}/build" doesn't work
 	# but it better be something like it
-	cd "${WORKDIR}/${P}/elisp"
+	cd "${WORKDIR}/${P}/build"
 	elisp-compile *.el || die "Compiling *.el failed"
 	cd "${WORKDIR}/${P}"
 
@@ -94,7 +94,7 @@ orgmode_src_test() {
 }
 
 orgmode_src_install() {
-	elisp-install ${PN} elisp/*.{el,elc} || die "Cannot install elisp files"
+	elisp-install ${PN} build/*.{el,elc} || die "Cannot install elisp files"
 	if [[ -n ${SITEFILE} ]]; then
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
