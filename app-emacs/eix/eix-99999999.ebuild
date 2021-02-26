@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -9,7 +9,7 @@ DESCRIPTION="Emacs Lisp interface to app-portage/eix"
 HOMEPAGE="https://gitlab.com/akater/elisp-eix"
 
 EGIT_REPO_URI="https://gitlab.com/akater/elisp-eix.git"
-EGIT_BRANCH="master"
+EGIT_BRANCH="release"
 KEYWORDS="~amd64 ~x86"
 
 LICENSE="GPL-2"
