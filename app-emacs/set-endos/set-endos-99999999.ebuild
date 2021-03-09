@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -17,7 +17,9 @@ SLOT="0"
 IUSE=""
 
 RDEPEND=">=app-editors/emacs-26
-	app-emacs/anaphora
+	app-emacs/akater-misc
 "
 
-BDEPEND="${RDEPEND}"
+BDEPEND=">=app-editors/emacs-26
+	app-emacs/anaphora
+"
