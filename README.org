@@ -6,16 +6,13 @@
 |-----------------------------+----------------------------------------------|
 | =app-emacs/portage=         | Homemade, not present in main tree           |
 | =app-emacs/ebuild-tools=    | Homemade, not present in main tree           |
-| =app-emacs/elpa-to-ebuilds= | Homemade, not present in main tree           |
-| =app-emacs/transient-mount= | Homemade, not present in main tree           |
-| =app-emacs/console-colors=  | Homemade, not present in main tree           |
 | =dev-lisp/sbcl=             | Bootstrappable with a user-specified Lisp    |
 | =sys-libs/uclibc-ng=        | Allows building =openbsd-netcat=             |
 | =app-emacs/imdb=            | Not present in main tree                     |
 | =www-client/w3m=            | Will provide images on some X-less devices   |
 | =app-emacs/vterm=           | USE =system-libvterm=; native =emacs-module= |
 
-=dev-lisp/sbcl= also allows omitting html doc thus avoiding dependency on =graphviz=.
+There is a variety of other homemade =app-emacs/*= packages in the repository.  =dev-lisp/sbcl= also allows omitting html doc thus avoiding dependency on =graphviz=.
 
 The rest are largely dependencies for things of interest.
 
@@ -38,15 +35,38 @@ sudo emerge layman
 * Notes
 This ebuild repository may contain:
 - some older ebuilds dropped from mainline gentoo repository but interesting to the author
+- a variety of app-emacs/* ebuilds
 - ebuilds providing compatibility with environments interesting to the author
 - experimental stuff (but most ebuilds should work)
 
 Environments interesting to the author are mostly lightweight environments, i.e.:
 - text-only environments (no X)
-- non-glibc environments (uClibc, at this point)
+- non-glibc environments (musl, at this point); there are some uClibc related ebuilds but uClibc profile is deprecated in Gentoo right now
 
-I'm interested in 
+Some ebuilds do not work, including:
+- app-emacs/geo
+- app-emacs/libegit2
+- sys-firmware/open-ath9k-htc-firmware
+
+I'd appreciate help with them.
+
+To understand the purpose of forks of ebuilds from the main tree, I recommend simply diffing ebuilds.  For convenient ebuild (multi-)diffs, I recommend my function ~diff-ebuilds~ provided by =app-emacs/ebuild-tools=.
+
+I'm interested in
 - www-client/palemoon support for hardened Gentoo
 - net-print/lprng ebuilds and filters
 - all versions of app-crypt/gnupg
-- bringing (at least some) packages from quicklisp and melpa into portage
+- automated packaging of Emacs Lisp software for Gentoo
+
+* Some notes
+Instead of layman, I considered transitioning to ~ebuild repository~:
+#+begin_src sh :tangle no :results none
+sudo eselect repository add akater git https://gitlab.com/akater/ebuilds.git
+#+end_src
+
+but I don't understand why does earlier protocol require metadata and later one does not.  It is natural to have repository description in a small standalone container, much like a package description is stored in ebuild, and users are not offered to pull a tarball from upstream and get ebuild from there.
+
+This particular issue is extremely baffling and makes me question the whole idea of transition from ~layman~ to ~eselect repository~.  Most notably, with ~layman~, I understood where I'd put fingerprints for keys to verify ebuild updates against but with ~eselect repository~ I don't.
+
+Another issue:
+- In my own =repos.conf=, local repository has =masters= option.  I suppose it's important but I don't know how to explain to eselect repository how to specify it (or maybe other options).
