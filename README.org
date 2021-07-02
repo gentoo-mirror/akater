@@ -7,7 +7,6 @@
 | =app-emacs/portage=         | Homemade, not present in main tree           |
 | =app-emacs/ebuild-tools=    | Homemade, not present in main tree           |
 | =dev-lisp/sbcl=             | Bootstrappable with a user-specified Lisp    |
-| =sys-libs/uclibc-ng=        | Allows building =openbsd-netcat=             |
 | =app-emacs/imdb=            | Not present in main tree                     |
 | =www-client/w3m=            | Will provide images on some X-less devices   |
 | =app-emacs/vterm=           | USE =system-libvterm=; native =emacs-module= |
