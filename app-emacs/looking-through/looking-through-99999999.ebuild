@@ -5,7 +5,7 @@ EAPI=8
 NEED_EMACS="25"
 
 MY_PN="elisp-${PN}"
-inherit elisp akater-live-release
+inherit elisp-common akater-live-release
 
 DESCRIPTION="Emacs Lisp's looking-at, followed by movement if match succeeded"
 HOMEPAGE="https://gitlab.com/akater/elisp-looking-through"
