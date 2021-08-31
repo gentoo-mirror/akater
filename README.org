@@ -18,6 +18,20 @@
 There is a variety of other =app-emacs/*= packages in the repository, some mine.
 
 * Installation
+** Layman
+If you use =layman=,
+#+begin_src sh :tangle no :results none
+sudo layman -o  https://gitlab.com/akater/ebuilds/-/raw/release/repositories.xml -f -a akater
+#+end_src
+
+To remove this repository:
+#+begin_src sh :tangle no :results none
+sudo layman -d akater
+#+end_src
+
+This should ensure pulls from =release= branch which is recommended.
+
+** Manually
 Add the following to your =repos.conf=:
 #+begin_example conf-unix
 [akater]
@@ -29,6 +43,8 @@ sync-type = git
 sync-uri = https://gitlab.com/akater/ebuilds.git
 auto-sync = yes
 #+end_example
+
+However, seems like you'll have to switch to =release= branch manually then.
 
 * Notes
 This ebuild repository may contain:
