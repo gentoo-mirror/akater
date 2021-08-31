@@ -47,7 +47,6 @@ I'm interested in lightweight environments, i.e.:
 Some ebuilds do not work, including:
 - app-emacs/libegit2
 - sys-firmware/open-ath9k-htc-firmware
-- app-misc/carpalx
 
 I'd appreciate help with them.
 
@@ -69,5 +68,5 @@ but I don't understand why does earlier protocol require metadata and later one 
 This particular issue is extremely baffling and makes me question the whole idea of transition from ~layman~ to ~eselect repository~.  Most notably, with ~layman~, I understood where I'd put fingerprints for keys to verify ebuild updates against but with ~eselect repository~ I don't.
 
 Another issues:
-- I don't understand how ~eselect repository~ is supposed to understand which branch of a git repository to use.
-- In my own =repos.conf=, local repository has =masters= option.  I suppose it's important but I don't know how to explain to eselect repository how to specify it.
+- How is ~eselect repository~ supposed to understand which branch of a git repository to use?
+- In my own =repos.conf=, local repository has =masters= option.  I suppose it's important but I don't know how to explain to ~eselect repository~ how to specify it.
