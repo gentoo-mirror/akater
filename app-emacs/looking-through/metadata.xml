@@ -6,6 +6,9 @@
   <name>Dima Akater</name>
 </maintainer>
 <stabilize-allarches/>
+<use>
+  <flag name="esdf">Build with ESDF</flag>
+</use>
 <upstream>
   <remote-id type="gitlab">akater/elisp-looking-through</remote-id>
 </upstream>
