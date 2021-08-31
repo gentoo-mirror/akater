@@ -18,25 +18,22 @@
 There is a variety of other =app-emacs/*= packages in the repository, some mine.
 
 * Installation
-To add this to your Gentoo system:
-#+begin_src sh :tangle no :results none
-sudo layman -o  https://gitlab.com/akater/ebuilds/-/raw/master/repositories.xml -f -a akater
-#+end_src
-
-To remove this repository:
-#+begin_src sh :tangle no :results none
-sudo layman -d akater
-#+end_src
-
-If you don't have =layman=,
-#+begin_src sh :tangle no :results none
-sudo emerge layman
-#+end_src
+Add the following to your =repos.conf=:
+#+begin_example conf-unix
+[akater]
+location = /var/db/repos/akater
+masters = gentoo
+sync-type = git
+# sync-git-verify-commit-signature = true
+# sync-openpgp-key-path = /var/akater.asc
+sync-uri = https://gitlab.com/akater/ebuilds.git
+auto-sync = yes
+#+end_example
 
 * Notes
 This ebuild repository may contain:
 - some older ebuilds dropped from mainline gentoo repository but interesting to the author
-- a variety of app-emacs/* ebuilds
+- a variety of =app-emacs/*= ebuilds
 - ebuilds providing compatibility with environments interesting to the author
 - experimental stuff (but most ebuilds should work)
 
@@ -45,28 +42,14 @@ I'm interested in lightweight environments, i.e.:
 - non-glibc environments (musl, at this point); there are some uClibc related ebuilds but uClibc profile is deprecated in Gentoo right now
 
 Some ebuilds do not work, including:
-- app-emacs/libegit2
-- sys-firmware/open-ath9k-htc-firmware
+- =app-emacs/libegit2=
+- =sys-firmware/open-ath9k-htc-firmware=
 
 I'd appreciate help with them.
 
 To understand the purpose of forks of ebuilds from the main tree, I recommend simply diffing ebuilds.  For convenient ebuild (multi-)diffs, consider my function ~diff-ebuilds~ provided by =app-emacs/ebuild-tools=.
 
 I'm interested in
-- www-client/palemoon support for hardened Gentoo
-- net-print/lprng ebuilds and filters
+- =www-client/palemoon= support for hardened Gentoo
+- =net-print/lprng= ebuilds and filters
 - automated packaging of Emacs Lisp software for Gentoo
-
-* Some notes
-Instead of layman, I considered transitioning to ~ebuild repository~:
-#+begin_src sh :tangle no :results none
-sudo eselect repository add akater git https://gitlab.com/akater/ebuilds.git
-#+end_src
-
-but I don't understand why does earlier protocol require metadata and later one does not.  It is natural to have repository description in a small standalone container, much like a package description is stored in ebuild, and users are not offered to pull a tarball from upstream and get ebuild from there.
-
-This particular issue is extremely baffling and makes me question the whole idea of transition from ~layman~ to ~eselect repository~.  Most notably, with ~layman~, I understood where I'd put fingerprints for keys to verify ebuild updates against but with ~eselect repository~ I don't.
-
-Another issues:
-- How is ~eselect repository~ supposed to understand which branch of a git repository to use?
-- In my own =repos.conf=, local repository has =masters= option.  I suppose it's important but I don't know how to explain to ~eselect repository~ how to specify it.
