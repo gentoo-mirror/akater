@@ -1,0 +1,32 @@
+
+--- a/lisp/Makefile.in
++++ b/lisp/Makefile.in
+@@ -74,7 +74,6 @@
+ LOADDEFS = $(lisp)/calendar/cal-loaddefs.el \
+ 	$(lisp)/calendar/diary-loaddefs.el \
+ 	$(lisp)/calendar/hol-loaddefs.el \
+-	$(lisp)/mh-e/mh-loaddefs.el \
+ 	$(lisp)/net/tramp-loaddefs.el
+ 
+ # All generated autoload files.
+@@ -402,20 +401,6 @@
+ 	$(emacs) $(BYTE_COMPILE_FLAGS) \
+ 	    --eval "(batch-byte-recompile-directory 0)" $(lisp)
+ 
+-# Update MH-E internal autoloads. These are not to be confused with
+-# the autoloads for the MH-E entry points, which are already in loaddefs.el.
+-MH_E_DIR = $(lisp)/mh-e
+-MH_E_SRC = $(sort $(wildcard ${MH_E_DIR}/mh*.el))
+-MH_E_SRC := $(filter-out ${MH_E_DIR}/mh-loaddefs.el,${MH_E_SRC})
+-
+-.PHONY: mh-autoloads
+-mh-autoloads: $(MH_E_DIR)/mh-loaddefs.el
+-$(MH_E_DIR)/mh-loaddefs.el: $(MH_E_SRC)
+-	$(AM_V_GEN)$(emacs) -l autoload \
+-	   --eval "(setq generate-autoload-cookie \";;;###mh-autoload\")" \
+-	   --eval "(setq generated-autoload-file (expand-file-name (unmsys--file-name \"$@\")))" \
+-	   -f batch-update-autoloads $(MH_E_DIR)
+-
+ # Update TRAMP internal autoloads. Maybe we could move tramp*.el into
+ # an own subdirectory. OTOH, it does not hurt to keep them in
+ # lisp/net.

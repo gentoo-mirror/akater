@@ -1,0 +1,13 @@
+
+--- a/doc/misc/Makefile.in
++++ b/doc/misc/Makefile.in
+@@ -83,7 +83,7 @@
+ 	eieio \
+ 	emacs-mime \
+ 	epa \
+-	erc \
++	\
+ 	ert \
+ 	eshell \
+ 	eudc \
+

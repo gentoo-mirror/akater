@@ -1,0 +1,13 @@
+
+--- a/dict-flow.tex
++++ b/dict-flow.tex
+@@ -4167,7 +4167,7 @@
+ \endcode
+ 
+ In \clisp, functions with names like ``\f{\i{xxx}-if-not}''
+-are related to functions with names like ``\f{{\it xxx}-if}'' 
++are related to functions with names like ``\f{\i{xxx}-if}'' 
+ in that
+ 
+ \code
+

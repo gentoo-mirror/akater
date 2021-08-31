@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+  <email>nuclearspace@gmail.com</email>
+  <name>Dima Akater</name>
+</maintainer>
+<use>
+  <flag name="keep-dvi">Keep dvi files, as found at www.cs.cmu.edu</flag>
+</use>
+</pkgmetadata>

@@ -2,18 +2,19 @@
 #+author: =#<PERSON akater A24961DE3ADD04E057ADCF4599555CE6F2E1B21D>=
 
 * Things of interest (in order of decreasing interest)
-| Package                     | Rationale                                    |
-|-----------------------------+----------------------------------------------|
-| =app-emacs/portage=         | Homemade, not present in main tree           |
-| =app-emacs/ebuild-tools=    | Homemade, not present in main tree           |
-| =dev-lisp/sbcl=             | Bootstrappable with a user-specified Lisp    |
-| =app-emacs/imdb=            | Not present in main tree                     |
-| =www-client/w3m=            | Will provide images on some X-less devices   |
-| =app-emacs/vterm=           | USE =system-libvterm=; native =emacs-module= |
+| Package                  | Rationale                                    |
+|--------------------------+----------------------------------------------|
+| =app-emacs/ebuild-tools= | Access ebuilds quickly from Emacs            |
+| =app-emacs/ement-extras= | Use Matrix from Emacs with encryption        |
+| =app-emacs/portage=      | Issue ~emerge~ commands from Emacs           |
+| =dev-lisp/sbcl=          | Bootstrappable with a user-specified Lisp    |
+| =app-emacs/imdb=         | Emacs IMDB client with local database        |
+| =www-client/w3m=         | Provides images on some X-less devices       |
+| =app-emacs/vterm=        | USE =system-libvterm=; native =emacs-module= |
 
-There is a variety of other homemade =app-emacs/*= packages in the repository.  =dev-lisp/sbcl= also allows omitting html doc thus avoiding dependency on =graphviz=.
+=dev-lisp/sbcl= also allows omitting html doc thus avoiding dependency on =graphviz=.
 
-The rest are largely dependencies for things of interest.
+There is a variety of other =app-emacs/*= packages in the repository, some mine.
 
 * Installation
 To add this to your Gentoo system:
@@ -38,23 +39,22 @@ This ebuild repository may contain:
 - ebuilds providing compatibility with environments interesting to the author
 - experimental stuff (but most ebuilds should work)
 
-Environments interesting to the author are mostly lightweight environments, i.e.:
+I'm interested in lightweight environments, i.e.:
 - text-only environments (no X)
 - non-glibc environments (musl, at this point); there are some uClibc related ebuilds but uClibc profile is deprecated in Gentoo right now
 
 Some ebuilds do not work, including:
-- app-emacs/geo
 - app-emacs/libegit2
 - sys-firmware/open-ath9k-htc-firmware
+- app-misc/carpalx
 
 I'd appreciate help with them.
 
-To understand the purpose of forks of ebuilds from the main tree, I recommend simply diffing ebuilds.  For convenient ebuild (multi-)diffs, I recommend my function ~diff-ebuilds~ provided by =app-emacs/ebuild-tools=.
+To understand the purpose of forks of ebuilds from the main tree, I recommend simply diffing ebuilds.  For convenient ebuild (multi-)diffs, consider my function ~diff-ebuilds~ provided by =app-emacs/ebuild-tools=.
 
 I'm interested in
 - www-client/palemoon support for hardened Gentoo
 - net-print/lprng ebuilds and filters
-- all versions of app-crypt/gnupg
 - automated packaging of Emacs Lisp software for Gentoo
 
 * Some notes
@@ -67,5 +67,6 @@ but I don't understand why does earlier protocol require metadata and later one 
 
 This particular issue is extremely baffling and makes me question the whole idea of transition from ~layman~ to ~eselect repository~.  Most notably, with ~layman~, I understood where I'd put fingerprints for keys to verify ebuild updates against but with ~eselect repository~ I don't.
 
-Another issue:
-- In my own =repos.conf=, local repository has =masters= option.  I suppose it's important but I don't know how to explain to eselect repository how to specify it (or maybe other options).
+Another issues:
+- I don't understand how ~eselect repository~ is supposed to understand which branch of a git repository to use.
+- In my own =repos.conf=, local repository has =masters= option.  I suppose it's important but I don't know how to explain to eselect repository how to specify it.

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+  <email>nuclearspace@gmail.com</email>
+  <name>Dima Akater</name>
+</maintainer>
+<longdescription>Emacs Lisp library that produces ebuilds for Emacs Lisp packages from common data at hand.  Currently it can produce ebuilds for packages (features) loaded into Emacs.</longdescription>
+<use>
+  <flag name="melpa">Use melpa recipes as additional data source</flag>
+</use>
+<upstream>
+  <remote-id type="gitlab">akater/elpa-to-ebuilds</remote-id>
+</upstream>
+</pkgmetadata>

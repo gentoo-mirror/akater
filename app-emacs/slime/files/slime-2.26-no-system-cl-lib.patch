@@ -1,0 +1,53 @@
+From bd567d4835dfd4db8b8ff340a8eff00e3d102adc Mon Sep 17 00:00:00 2001
+From: "System user; portage" <portage@poseidon.akater>
+Date: Thu, 1 Jul 2021 09:11:04 +0000
+Subject: [PATCH] No system-cl-lib
+
+---
+ lib/hyperspec.el | 2 +-
+ lib/macrostep.el | 2 +-
+ slime.el         | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/lib/hyperspec.el b/lib/hyperspec.el
+index da4a9f37..59b883bb 100644
+--- a/lib/hyperspec.el
++++ b/lib/hyperspec.el
+@@ -33,7 +33,7 @@
+ 
+ ;;; Code:
+ 
+-(require 'cl-lib nil t)
++
+ (require 'cl-lib "lib/cl-lib")
+ (require 'browse-url)                   ;you need the Emacs 20 version
+ (require 'thingatpt)
+diff --git a/lib/macrostep.el b/lib/macrostep.el
+index b301497f..dd8ae658 100644
+--- a/lib/macrostep.el
++++ b/lib/macrostep.el
+@@ -259,7 +259,7 @@
+ (require 'pp)
+ (require 'ring)
+ (eval-and-compile
+-  (require 'cl-lib nil t)
++  
+   (require 'cl-lib "lib/cl-lib"))
+ 
+ 
+diff --git a/slime.el b/slime.el
+index 1e934508..3349375c 100644
+--- a/slime.el
++++ b/slime.el
+@@ -59,7 +59,7 @@
+ 
+ ;;;; Dependencies and setup
+ (eval-and-compile
+-  (require 'cl-lib nil t)
++  
+   ;; For emacs 23, look for bundled version
+   (require 'cl-lib "lib/cl-lib"))
+ 
+-- 
+2.31.1
+

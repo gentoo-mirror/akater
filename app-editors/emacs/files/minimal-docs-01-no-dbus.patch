@@ -1,0 +1,13 @@
+
+--- a/doc/misc/Makefile.in
++++ b/doc/misc/Makefile.in
+@@ -74,7 +74,7 @@
+ 	calc \
+ 	ccmode \
+ 	cl \
+-	dbus \
++	\
+ 	dired-x \
+ 	ebrowse \
+ 	ede \
+

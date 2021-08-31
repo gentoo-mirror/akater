@@ -1,0 +1,30 @@
+
+--- a/configure.ac
++++ b/configure.ac
+@@ -2581,7 +2581,6 @@
+ 
+ ### Use -lrsvg-2 if available, unless '--with-rsvg=no' is specified.
+ HAVE_RSVG=no
+-if test "${HAVE_X11}" = "yes" || test "${HAVE_NS}" = "yes" || test "${opsys}" = "mingw32"; then
+   if test "${with_rsvg}" != "no"; then
+     RSVG_REQUIRED=2.14.0
+     RSVG_MODULE="librsvg-2.0 >= $RSVG_REQUIRED"
+@@ -2599,10 +2598,8 @@
+       fi
+     fi
+   fi
+-fi
+ 
+ HAVE_IMAGEMAGICK=no
+-if test "${HAVE_X11}" = "yes" || test "${HAVE_NS}" = "yes" || test "${HAVE_W32}" = "yes"; then
+   if test "${with_imagemagick}" != "no"; then
+     if test -n "$BREW"; then
+       # Homebrew doesn't link ImageMagick 6 by default, so make sure
+@@ -2647,7 +2644,6 @@
+     AC_SUBST([IMAGEMAGICK_CFLAGS])
+     AC_SUBST([IMAGEMAGICK_LIBS])
+   fi
+-fi
+ 
+ AC_CHECK_LIB(anl, getaddrinfo_a, HAVE_GETADDRINFO_A=yes)
+ if test "${HAVE_GETADDRINFO_A}" = "yes"; then

@@ -1,0 +1,38 @@
+
+--- a/sqlite/Makefile
++++ b/sqlite/Makefile
+@@ -1,17 +1,8 @@
+ .POSIX:
+-LDLIBS = -ldl -lm
+-CFLAGS = -O2 -Wall -Wextra \
+-    -DSQLITE_THREADSAFE=0 \
+-    -DSQLITE_DEFAULT_FOREIGN_KEYS=1 \
+-    -DSQLITE_ENABLE_FTS5 \
+-    -DSQLITE_ENABLE_FTS4 \
+-    -DSQLITE_ENABLE_FTS3_PARENTHESIS \
+-    -DSQLITE_ENABLE_RTREE \
+-    -DSQLITE_ENABLE_JSON1 \
+-    -DSQLITE_SOUNDEX
++LDLIBS = -ldl -lm -lsqlite3
+ 
+-emacsql-sqlite: emacsql.c sqlite3.c
+-	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ emacsql.c sqlite3.c $(LDLIBS)
++emacsql-sqlite: emacsql.c
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ emacsql.c $(LDLIBS)
+ 
+ clean:
+ 	rm -f emacsql-sqlite
+
+
+--- a/sqlite/emacsql.c
++++ b/sqlite/emacsql.c
+@@ -1,7 +1,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+-#include "sqlite3.h"
++#include <sqlite3.h>
+ 
+ #define TRUE 1
+ #define FALSE 0
+

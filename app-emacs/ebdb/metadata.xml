@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+  <email>nuclearspace@gmail.com</email>
+  <name>Dima Akater</name>
+</maintainer>
+<longdescription>
+  EBDB is a contact management package: it records information about
+people and organizations, and integrates with other Emacs software
+packages, mostly those concerned with sending and reading mail.  The
+principle parts of EBDB are records, which represent people and
+organizations; fields, representing detailed data about records; and
+databases, which hold and persist records.
+
+  EBDB is like BBDB but EIEIO-based.
+</longdescription>
+<use>
+  <flag name="company">Use company completion framework</flag>
+</use>
+
+<stabilize-allarches/>
+<upstream>
+  <remote-id type="github">girzel/ebdb</remote-id>
+</upstream>
+</pkgmetadata>

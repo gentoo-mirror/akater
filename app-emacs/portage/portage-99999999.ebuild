@@ -1,25 +1,25 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
+NEED_EMACS="26"
 
-inherit elisp orgmode git-r3
+inherit orgmode akater-live-release
+# inherit orgdev git-r3
 
 DESCRIPTION="Emacs interface to Portage"
 HOMEPAGE="https://gitlab.com/akater/emacs-portage"
 
 EGIT_REPO_URI="https://gitlab.com/akater/emacs-portage.git"
-EGIT_BRANCH="release"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~x86"
 IUSE="smart-live-rebuild"
 
 DOCS="README.org"
 
-BDEPEND=">=app-editors/emacs-26"
-RDEPEND=">=app-editors/emacs-26
+RDEPEND="
 	app-admin/sudo
 	app-portage/eix
 	app-portage/gentoolkit

@@ -3,26 +3,58 @@
 
 # @ECLASS: orgmode.eclass
 # @MAINTAINER:
-# Gentoo GNU Emacs project <gnu-emacs@gentoo.org>
+# Dima Akater <nuclearspace@gmail.com>
 # @AUTHOR:
 # Dima Akater <nuclearspace@gmail.com>
-# @SUPPORTED_EAPIS: 4 5 6 7
+# @SUPPORTED_EAPIS: 4 5 6 7 8
 # @BLURB: Eclass for Emacs Lisp packages written in Org
 # @DESCRIPTION:
 #
-# This eclass is designed to tangle org files of Emacs related
-# packages and install the results into the site-lisp directory.
+# This eclass is designed to deal with Emacs packages
+# developed with org-development-elisp
+# Deprecated.
+
+# @FUNCTION: orgmode_src_prepare
+# @DESCRIPTION:
+# Delete custom test system if test use flag is not set
 
 # @FUNCTION: orgmode_src_configure
 # @DESCRIPTION:
 # Tangle all org files
 
+# @FUNCTION: orgmode_src_compile
+# @DESCRIPTION:
+# Compile files in ./build/, make texinfo if present
+
+# @FUNCTION: orgmode_src_test
+# @DESCRIPTION:
+# Test with app-emacs/org-development-elisp
+
+# @FUNCTION: orgmode_src_install
+# @DESCRIPTION:
+# Install from ./build/
+
 inherit elisp
 
-EXPORT_FUNCTIONS src_configure src_compile src_install
+EXPORT_FUNCTIONS src_prepare src_configure src_compile src_test src_install
 
 EMACSCUSTOMCODE=nil
 
+IUSE+=" test"
+
+# I wish I could
+DEPEND+=" test? ( app-emacs/org-development-elisp )"
+# but it does not seem
+
+orgmode_src_prepare() {
+	use test || rm ${PN}-tests.org
+
+	eapply_user
+}
+
+# (require 'org) only becomes necessary
+# when org is installed by portage
+# and ripped from Emacs install
 orgmode_src_configure() {
 
 	all_pn_defvars_code="(progn"
@@ -38,9 +70,11 @@ orgmode_src_configure() {
 			 --eval "${all_pn_defvars_code}"                              \
 			 --eval "${EMACSCUSTOMCODE}"                                  \
 			 --eval "(require 'ob-tangle)"                                \
+			 --eval "(require 'org)"                                      \
 			 --eval "(defalias 'org-development-elisp-mode 'org-mode)"    \
 			 --eval "(require 'files)"                                    \
 			 --eval "(defvar use-flags '(${USE}))"                        \
+			 --eval "(defvar ob-flags use-flags)"                         \
 			 --eval "(defun tangle-unless-readme (filename)               \
 					   (unless (string-equal \"README\"                   \
 											 (file-name-base filename))   \

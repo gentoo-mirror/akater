@@ -1,0 +1,15 @@
+
+--- a/src/crypto/random.c
++++ b/src/crypto/random.c
+@@ -25,9 +25,7 @@
+ #include "utils/includes.h"
+ #ifdef __linux__
+ #include <fcntl.h>
+-#ifdef CONFIG_GETRANDOM
+-#include <sys/random.h>
+-#endif /* CONFIG_GETRANDOM */
++#include <linux/random.h>
+ #endif /* __linux__ */
+ 
+ #include "utils/common.h"
+

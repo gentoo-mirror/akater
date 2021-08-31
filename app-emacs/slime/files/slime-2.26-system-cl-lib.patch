@@ -1,0 +1,60 @@
+From 95feadb776082dd5491648bc7dd25215f36bcde2 Mon Sep 17 00:00:00 2001
+From: "System user; portage" <portage@poseidon.akater>
+Date: Thu, 1 Jul 2021 09:15:12 +0000
+Subject: [PATCH] system-cl-lib
+
+---
+ lib/hyperspec.el | 4 ++--
+ lib/macrostep.el | 4 ++--
+ slime.el         | 5 ++---
+ 3 files changed, 6 insertions(+), 7 deletions(-)
+
+diff --git a/lib/hyperspec.el b/lib/hyperspec.el
+index da4a9f37..833866d4 100644
+--- a/lib/hyperspec.el
++++ b/lib/hyperspec.el
+@@ -33,8 +33,8 @@
+ 
+ ;;; Code:
+ 
+-(require 'cl-lib nil t)
+-(require 'cl-lib "lib/cl-lib")
++(require 'cl-lib)
++
+ (require 'browse-url)                   ;you need the Emacs 20 version
+ (require 'thingatpt)
+ 
+diff --git a/lib/macrostep.el b/lib/macrostep.el
+index b301497f..cb219948 100644
+--- a/lib/macrostep.el
++++ b/lib/macrostep.el
+@@ -259,8 +259,8 @@
+ (require 'pp)
+ (require 'ring)
+ (eval-and-compile
+-  (require 'cl-lib nil t)
+-  (require 'cl-lib "lib/cl-lib"))
++  (require 'cl-lib)
++  )
+ 
+ 
+ ;;; Constants and dynamically bound variables
+diff --git a/slime.el b/slime.el
+index 1e934508..08c3d59d 100644
+--- a/slime.el
++++ b/slime.el
+@@ -59,9 +59,8 @@
+ 
+ ;;;; Dependencies and setup
+ (eval-and-compile
+-  (require 'cl-lib nil t)
+-  ;; For emacs 23, look for bundled version
+-  (require 'cl-lib "lib/cl-lib"))
++  (require 'cl-lib)
++  )
+ 
+ (eval-and-compile
+   (if (< emacs-major-version 23)
+-- 
+2.31.1
+

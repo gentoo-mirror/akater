@@ -1,0 +1,15 @@
+Use external macrostep.el
+
+--- a/contrib/slime-macrostep.el
++++ b/contrib/slime-macrostep.el
+@@ -25,9 +25,7 @@
+ 
+ (require 'slime)
+ (eval-and-compile
+-  (require 'macrostep nil t)
+-  ;; Use bundled version if not separately installed
+-  (require 'macrostep "../lib/macrostep"))
++  (require 'macrostep))
+ (eval-when-compile (require 'cl-lib))
+ 
+ (defvar slime-repl-mode-hook)

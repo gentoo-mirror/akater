@@ -1,26 +1,26 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
+NEED_EMACS="25"
 
-inherit elisp orgmode git-r3
+inherit elisp orgmode akater-live-release
 
 DESCRIPTION="Elisp package that provides cached data about underlying Gentoo system to Emacs"
 HOMEPAGE="https://gitlab.com/akater/emacs-gentoo-cache"
 
 EGIT_REPO_URI="https://gitlab.com/akater/emacs-gentoo-cache.git"
-EGIT_BRANCH="release"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 LICENSE="GPL-3"
 SLOT="0"
 
 DOCS="README.org"
 
-BDEPEND=">=app-editors/emacs-25
+BDEPEND="
 	app-emacs/akater-misc
 	app-emacs/anaphora"
-RDEPEND=">=app-editors/emacs-25
+RDEPEND="
 	app-emacs/akater-misc
 	app-emacs/akater-sh
 	app-portage/eix

@@ -1,0 +1,97 @@
+The removed definition produces warnings during compilation and was troublesome enough so that I've had a replacement probably since the first days of using xrdb-mode. I don't remember the reasons already but this works fine.
+
+The original documentation mentioned xrdb-program, xrdb-program-args and xrdb-master-file. I use all of them but I don't describe the usage in documentation. It might differ from the original. Hopefully, I'll expand docstring on this some day.
+
+Requires Emacs 27, for `cl-some'.
+
+--- a/xrdb-mode.el
++++ b/xrdb-mode.el
+@@ -54,6 +54,9 @@
+ 
+ ;;; Code:
+ (require 'custom)
++(require 'cl-extra)
++(declare-function exwm-enable "exwm")
++(declare-function exwm--server-stop "exwm")
+ 
+ 
+ 
+@@ -486,39 +487,48 @@
+ 
+ 
+ ;; merging and manipulating the X resource database
+-(defun xrdb-database-merge-buffer-or-region (start end)
+-  "Merge the current buffer's resources into the X resource database.
+-`xrdb-program' is the program to actually call, with the arguments
+-specified in `xrdb-program-args'.  This latter can be set to do either
+-a merge or a load, etc.  Also, if the file local variable
+-`xrdb-master-file' is non-nil, then it is merged instead of the
+-buffer's file.
+-
+-START and END are the region; if the current region is active, it is merged
+-instead of the buffer, and this overrides any use of `xrdb-master-file'."
+-  (interactive
+-   ;; the idea here is that if the region is inactive, start and end
+-   ;; will be nil, if not passed in programmatically
+-   (list (xrdb-safe (and (mark) (region-beginning)))
+-         (xrdb-safe (and (mark) (region-end)))))
++(defun xrdb-merge-current-buffer-or-region ()
++  "Merge current buffer into Xresources database. Note: file is not saved prior to merge."
++  (interactive)
+   (message "Merging with args: %s..." xrdb-program-args)
+-  (let ((outbuf (get-buffer-create "*Shell Command Output*")))
+-    ;; I prefer the XEmacs way of doing this, but this is the easiest
+-    ;; way to work in both XEmacs and Emacs.
++  (let* ((outbuf (get-buffer-create "*Shell Command Output*"))
++	 (region-is-being-merged (use-region-p))
++	 (start (if region-is-being-merged (region-beginning) (point-min)))
++	 (end (if region-is-being-merged (region-end) (point-max)))
++	 (exwm-is-running (and (fboundp #'exwm-enable)
++			       (cl-some (lambda (x) (eq #'exwm--server-stop x))
++					kill-emacs-hook))))
+     (with-current-buffer outbuf (erase-buffer))
+-    (cond
+-     ((and start end)
+-      (apply 'call-process-region start end xrdb-program nil outbuf t
+-             xrdb-program-args))
+-     (xrdb-master-file
+-      (apply 'call-process xrdb-program xrdb-master-file outbuf t
+-             xrdb-program-args))
+-     (t
+-      (apply 'call-process-region (point-min) (point-max) xrdb-program
+-             nil outbuf t xrdb-program-args)))
++    (if exwm-is-running
++	(if (and (not region-is-being-merged) xrdb-master-file)
++	    (start-process-shell-command
++	     xrdb-program outbuf
++	     (apply #'concat
++		    `(,xrdb-program " " ,@xrdb-program-args " " ,xrdb-master-file)))
++	  (let ((temp-file (make-temp-file
++			    (replace-regexp-in-string
++			     "[[:blank:]]+" "-"
++			     (apply #'concat `(,xrdb-program "-" ,@xrdb-program-args "-"))))))
++	    (write-region start end temp-file)
++	    (start-process-shell-command
++	     xrdb-program outbuf
++	     (apply #'concat
++		    `(,xrdb-program " " ,@xrdb-program-args " " ,temp-file)))
++	    ;; we should now probably
++	    ;; (delete-file temp-file)
++	    ;; but this does not play well with the asynchronous function
++	    ;; start-process-shell-command
++	    ))
++      (if (and (not region-is-being-merged) xrdb-master-file)
++	  (apply 'call-process
++		 xrdb-program xrdb-master-file outbuf t
++		 xrdb-program-args)
++	(apply 'call-process-region start end
++	       xrdb-program nil outbuf t
++	       xrdb-program-args)))
+     (if (not (zerop (with-current-buffer outbuf (buffer-size))))
+         (pop-to-buffer outbuf)))
+-  (message "Merging... done"))
++  (message "Merging done"))
+ 
+ 
+ 
+

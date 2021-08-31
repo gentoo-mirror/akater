@@ -1,0 +1,78 @@
+
+--- a/doc/misc/Makefile.in
++++ b/doc/misc/Makefile.in
+@@ -65,14 +65,65 @@
+ DOCMISC_W32 = @DOCMISC_W32@
+ 
+ ## Info files to build and install on all platforms.
+-INFO_COMMON = auth autotype bovine calc ccmode cl \
+-	dbus dired-x ebrowse ede ediff edt eieio \
+-	emacs-mime epa erc ert eshell eudc efaq eww \
+-	flymake forms gnus emacs-gnutls htmlfontify idlwave ido info.info \
+-	mairix-el message mh-e newsticker nxml-mode octave-mode \
+-	org pcl-cvs pgg rcirc remember reftex sasl \
+-	sc semantic ses sieve smtpmail speedbar srecode todo-mode tramp \
+-	url vhdl-mode vip viper widget wisent woman
++INFO_COMMON = \
++	auth \
++	autotype \
++	bovine \
++	calc \
++	ccmode \
++	cl \
++	dbus \
++	dired-x \
++	ebrowse \
++	ede \
++	ediff \
++	edt \
++	eieio \
++	emacs-mime \
++	epa \
++	erc \
++	ert \
++	eshell \
++	eudc \
++	efaq \
++	eww \
++	flymake \
++	forms \
++	gnus \
++	emacs-gnutls \
++	htmlfontify \
++	idlwave \
++	ido \
++	info.info \
++	mairix-el \
++	message \
++	mh-e \
++	newsticker \
++	nxml-mode \
++	octave-mode \
++	org \
++	pcl-cvs \
++	pgg \
++	rcirc \
++	remember \
++	reftex \
++	sasl \
++	sc \
++	semantic \
++	ses \
++	sieve \
++	smtpmail \
++	speedbar \
++	srecode \
++	todo-mode \
++	tramp \
++	url \
++	vhdl-mode \
++	vip \
++	viper \
++	widget \
++	wisent \
++	woman \
+ 
+ ## Info files to install on current platform.
+ INFO_INSTALL = $(INFO_COMMON) $(DOCMISC_W32)
+

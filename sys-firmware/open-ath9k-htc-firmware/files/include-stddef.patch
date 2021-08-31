@@ -1,0 +1,23 @@
+
+--- a/wlan/ah_internal.h
++++ b/wlan/ah_internal.h
+@@ -43,6 +43,7 @@
+ #ifndef _ATH_AH_INTERAL_H_
+ #define _ATH_AH_INTERAL_H_
+ 
++#include <stddef.h>
+ #include <stdarg.h>
+ 
+ #define IEEE80211_AMPDU_LIMIT_MAX   (64 * 1024 - 1)
+
+--- a/wlan/ah_osdep.h
++++ b/wlan/ah_osdep.h
+@@ -53,6 +53,7 @@
+  * disabling.
+  */
+ 
++#include <stddef.h>
+ #include <adf_os_types.h>
+ #include <adf_os_dma.h>
+ #include <adf_os_timer.h>
+

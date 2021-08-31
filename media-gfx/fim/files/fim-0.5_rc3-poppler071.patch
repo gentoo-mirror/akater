@@ -1,0 +1,102 @@
+This patch was useful until poppler-0.85.0
+
+From poppler ChangeLog:
+
+>     Poppler 0.71.0
+> [...]
+>     Replace GBool, gTrue, and gFalse by bool, true, false, resp.
+
+>     These are just non-standard names for bool, true, false, respectively.
+>     Getting rid of these names saves on layer of mental redirection,
+>     and enables proper syntax highlighting in editors.
+
+So apparently these changes should go without version check, as I did.
+
+However, there might be a need for delicate version check when it comes to poppler/splash vs splash headers if support for older poppler versions is desirable. Those versions are not in portage tree anymore.
+
+Check for globalParams instead of gfree is my improv. This overall method for library checks is bewildering to me.
+
+--- a/configure.ac
++++ b/configure.ac
+@@ -795,7 +795,7 @@
+   have_poppler=yes
+         if test x$with_libpoppler != xno && test -z "$LIBPOPPLER"; then
+ dnl FIXME : the following is a dirty hack
+-          AC_CHECK_LIB(poppler, gfree,
++          AC_CHECK_LIB(poppler, globalParams,
+             have_poppler=yes,
+             have_poppler=no
+       AC_MSG_WARN([*** POPPLER loader will not be built (POPPLER library not found) ***]) )
+
+--- a/src/FbiStuffPdf.cpp
++++ b/src/FbiStuffPdf.cpp
+@@ -42,13 +42,8 @@
+  */
+ #include <poppler/cpp/poppler-version.h>
+ #if (POPPLER_VERSION_MINOR>=21)
+-#if (POPPLER_VERSION_MINOR< 24)
+ #include <poppler/splash/SplashBitmap.h>
+ #include <poppler/splash/SplashTypes.h>
+-#else
+-#include <splash/SplashBitmap.h>
+-#include <splash/SplashTypes.h>
+-#endif /* (POPPLER_VERSION_MINOR< 24) */
+ #include <poppler/poppler-config.h>
+ #include <poppler/OutputDev.h>
+ #include <poppler/PDFDoc.h>
+@@ -98,7 +93,7 @@
+ 
+ static SplashColorPtr  gBgColor = SPLASH_COL_WHITE_PTR;
+ 
+-static void splashColorSet(SplashColorPtr col, Guchar red, Guchar green, Guchar blue, Guchar alpha)
++static void splashColorSet(SplashColorPtr col, unsigned char red, unsigned char green, unsigned char blue, unsigned char alpha)
+ {
+     switch (gSplashColorMode)
+     {
+@@ -138,9 +133,9 @@
+ 	double zoomReal=100.0;
+ 	double hDPI;
+ 	double vDPI;
+-	GBool  useMediaBox ;
+-	GBool  crop        ;
+-	GBool  doLinks     ;
++	bool  useMediaBox ;
++	bool  crop        ;
++	bool  doLinks     ;
+ 	fim_int prd=cc.getIntVariable(FIM_VID_PREFERRED_RENDERING_DPI);
+ 	prd=prd<1?FIM_RENDERING_DPI:prd;
+ 
+@@ -183,7 +178,7 @@
+ 	if (!globalParams)
+ 		goto err;
+ 
+-	globalParams->setErrQuiet(gFalse);
++	globalParams->setErrQuiet(false);
+ 
+ #if defined(POPPLER_VERSION_MINOR) && (POPPLER_VERSION_MINOR<22)
+ 	globalParams->setBaseDir(_);
+@@ -198,8 +193,8 @@
+ 
+ 	if (!ds->od)
+ 	{
+-        	GBool bitmapTopDown = gTrue;
+-        	ds->od = new SplashOutputDev(gSplashColorMode, /*4*/3, gFalse, gBgColor, bitmapTopDown);
++        	bool bitmapTopDown = true;
++        	ds->od = new SplashOutputDev(gSplashColorMode, /*4*/3, false, gBgColor, bitmapTopDown);
+ 	        if (ds->od)
+ #ifdef POPPLER_VERSION	/* as of 0.20.2, from poppler/poppler-config.h */
+ 			/* FIXME: this is an incomplete fix (triggered on 20120719's email on fim-devel);
+@@ -216,9 +211,9 @@
+ 	hDPI = (double)i->dpi* (zoomReal * 0.01);
+ 	vDPI = (double)i->dpi* (zoomReal * 0.01);
+ 
+-	useMediaBox = gFalse;
+-	crop        = gTrue;
+-	doLinks     = gTrue;
++	useMediaBox = false;
++	crop        = true;
++	doLinks     = true;
+ 
+ 	i->npages = ds->pd->getNumPages();
+ 	if(page>=i->npages || page<0)goto err;
+

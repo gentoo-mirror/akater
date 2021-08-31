@@ -1,0 +1,63 @@
+
+--- a/gcc/jit/jit-playback.c
++++ b/gcc/jit/jit-playback.c
+@@ -19,6 +19,9 @@
+ <http://www.gnu.org/licenses/>.  */
+ 
+ #include "config.h"
++
++#include <pthread.h>
++
+ #include "system.h"
+ #include "coretypes.h"
+ #include "target.h"
+@@ -40,8 +43,6 @@
+ #include "gcc.h"
+ #include "diagnostic.h"
+ 
+-#include <pthread.h>
+-
+ #include "jit-playback.h"
+ #include "jit-result.h"
+ #include "jit-builtins.h"
+
+--- a/gcc/jit/jit-recording.c
++++ b/gcc/jit/jit-recording.c
+@@ -19,14 +19,15 @@
+ <http://www.gnu.org/licenses/>.  */
+ 
+ #include "config.h"
++
++#include <pthread.h>
++
+ #include "system.h"
+ #include "coretypes.h"
+ #include "tm.h"
+ #include "pretty-print.h"
+ #include "toplev.h"
+ 
+-#include <pthread.h>
+-
+ #include "jit-builtins.h"
+ #include "jit-recording.h"
+ #include "jit-playback.h"
+
+--- a/gcc/jit/libgccjit.c
++++ b/gcc/jit/libgccjit.c
+@@ -19,12 +19,14 @@
+ <http://www.gnu.org/licenses/>.  */
+ 
+ #include "config.h"
++
++#include <pthread.h>
++
+ #include "system.h"
+ #include "coretypes.h"
+ #include "timevar.h"
+ #include "typed-splay-tree.h"
+ #include "cppbuiltin.h"
+-#include <pthread.h>
+ 
+ #include "libgccjit.h"
+ #include "jit-recording.h"
+

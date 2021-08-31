@@ -1,0 +1,25 @@
+From f05a698deef307310f3a8c9f7fabcceec8bc3cd8 Mon Sep 17 00:00:00 2001
+From: "System user; portage" <portage@poseidon.akater>
+Date: Thu, 1 Jul 2021 09:23:00 +0000
+Subject: [PATCH] no-system-ert
+
+---
+ slime-tests.el | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/slime-tests.el b/slime-tests.el
+index b122119e..1f38a5b7 100644
+--- a/slime-tests.el
++++ b/slime-tests.el
+@@ -26,7 +26,7 @@
+ 
+ ;;;; Tests
+ (require 'slime)
+-(require 'ert nil t)
++
+ (require 'ert "lib/ert" t) ;; look for bundled version for Emacs 23
+ (require 'cl-lib)
+ (require 'bytecomp) ; byte-compile-current-file
+-- 
+2.31.1
+

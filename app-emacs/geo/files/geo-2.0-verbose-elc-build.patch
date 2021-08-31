@@ -1,0 +1,22 @@
+From 2760e9f5d4d5249915e55b2dbf1a4a668c1fac89 Mon Sep 17 00:00:00 2001
+From: "System user; portage" <portage@poseidon.akater>
+Date: Sat, 10 Jul 2021 12:17:58 +0000
+Subject: [PATCH] verbose-elc-build
+
+---
+ lisp-src/Makefile.am | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/lisp-src/Makefile.am b/lisp-src/Makefile.am
+index 3b5a353..c5826b6 100644
+--- a/lisp-src/Makefile.am
++++ b/lisp-src/Makefile.am
+@@ -7,4 +7,4 @@ AM_V_ELC = @echo "  ELC       " $@;
+ .el.elc:
+ 	$(AM_V_ELC)$(EMACS) -Q -batch \
+ 	-l ./compload.el -f byte-compile-refresh-preloaded \
+-	-f batch-byte-compile $< &> /dev/null
++	-f batch-byte-compile $<
+-- 
+2.31.1
+

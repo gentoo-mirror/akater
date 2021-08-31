@@ -1,0 +1,26 @@
+From b432f7bba5cdf842ab46b705abb62b305b8a3bcf Mon Sep 17 00:00:00 2001
+From: "System user; portage" <portage@poseidon.akater>
+Date: Sat, 10 Jul 2021 12:23:52 +0000
+Subject: [PATCH] include bdeps
+
+---
+ lisp-src/compload.el | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/lisp-src/compload.el b/lisp-src/compload.el
+index d0d5dc2..4285add 100644
+--- a/lisp-src/compload.el
++++ b/lisp-src/compload.el
+@@ -14,8 +14,8 @@
+ 
+ ;;; Code:
+ 
+-(package-initialize)
++(add-to-list 'load-path "/usr/share/emacs/site-lisp/async")
+ (add-to-list 'load-path default-directory)
+ (load "bytecomp")
+ 
+ (provide 'compload)
+-- 
+2.31.1
+

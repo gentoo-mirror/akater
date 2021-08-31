@@ -1,0 +1,50 @@
+Just what I've had locally installed for a year
+
+--- a/xah-fly-keys.el
++++ b/xah-fly-keys.el
+@@ -3370,7 +3370,7 @@ minor modes loaded later may override bindings in this map.")
+ 
+ 
+ ;; setting keys
+-
++(xah-fly--define-keys xah-fly-insert-map '(("C-t" . xah-fly-command-mode-activate)))
+ (xah-fly--define-keys
+  xah-fly-command-map
+  '(
+@@ -3448,7 +3448,7 @@ minor modes loaded later may override bindings in this map.")
+ 
+ (xah-fly--define-keys
+  xah-fly-shared-map
+- '(("<home>" . xah-fly-command-mode-activate)
++ '(("C-t" . xah-fly-command-mode-activate)
+    ("<menu>" . xah-fly-command-mode-activate)
+    ("<f8>" . xah-fly-command-mode-activate-no-hook)
+ 
+@@ -3495,16 +3495,16 @@ minor modes loaded later may override bindings in this map.")
+      ("C-3" . previous-error)
+      ("C-4" . next-error)
+ 
+-     ("C-a" . mark-whole-buffer)
+-     ("C-n" . xah-new-empty-buffer)
++     ;; ("C-a" . mark-whole-buffer)
++     ;; ("C-n" . xah-new-empty-buffer)
+      ("C-S-n" . make-frame-command)
+-     ("C-o" . find-file)
+-     ("C-s" . save-buffer)
++     ;; ("C-o" . find-file)
++     ;; ("C-s" . save-buffer)
+      ("C-S-s" . write-file)
+-     ("C-S-t" . xah-open-last-closed)
+-     ("C-v" . yank)
+-     ("C-w" . xah-close-current-buffer)
+-     ("C-z" . undo)
++     ;; ("C-S-t" . xah-open-last-closed)
++     ;; ("C-v" . yank)
++     ;; ("C-w" . xah-close-current-buffer)
++     ;; ("C-z" . undo)
+ 
+      ("C-+" . text-scale-increase)
+      ("C--" . text-scale-decrease)
+-- 
+2.31.1
+

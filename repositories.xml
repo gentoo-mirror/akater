@@ -9,8 +9,8 @@
       <name>akater</name>
       <email>nuclearspace@gmail.com</email>
     </owner>
-    <source type="git">https://gitlab.com/akater/ebuilds.git</source>
-    <source type="git">git+ssh://git@gitlab.com/akater/ebuilds.git</source>
-    <feed>https://gitlab.com/akater/ebuilds/commits/master.atom</feed>
+    <source type="git" branch="release">https://gitlab.com/akater/ebuilds.git</source>
+    <source type="git" branch="release">git+ssh://git@gitlab.com/akater/ebuilds.git</source>
+    <feed>https://gitlab.com/akater/ebuilds/commits/release.atom</feed>
   </repo>
 </repositories>

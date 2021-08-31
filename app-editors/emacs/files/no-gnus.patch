@@ -1,0 +1,75 @@
+--- a/lisp/calendar/diary-lib.el
++++ b/lisp/calendar/diary-lib.el
+@@ -2470,9 +2470,9 @@
+   (view-mode 1))
+ 
+ ;; Following code from Dave Love <fx@gnu.org>.
+-;; Import Outlook-format appointments from mail messages in Gnus or
++;; Import Outlook-format appointments from mail messages in
+ ;; Rmail using command `diary-from-outlook'.  This, or the specialized
+-;; functions `diary-from-outlook-gnus' and `diary-from-outlook-rmail',
++;; function `diary-from-outlook-rmail',
+ ;; could be run from hooks to notice appointments automatically (in
+ ;; which case they will prompt about adding to the diary).  The
+ ;; message formats recognized are customizable through `diary-outlook-formats'.
+@@ -2499,37 +2499,6 @@
+           (throw 'finished t))))
+     nil))
+ 
+-(defvar gnus-article-mime-handles)
+-(defvar gnus-article-buffer)
+-
+-(autoload 'gnus-fetch-field "gnus-util")
+-(autoload 'gnus-narrow-to-body "gnus")
+-(autoload 'mm-get-part "mm-decode")
+-
+-(defun diary-from-outlook-gnus (&optional noconfirm)
+-  "Maybe snarf diary entry from Outlook-generated message in Gnus.
+-Unless the optional argument NOCONFIRM is non-nil (which is the case when
+-this function is called interactively), then if an entry is found the
+-user is asked to confirm its addition.
+-Add this function to `gnus-article-prepare-hook' to notice appointments
+-automatically."
+-  (interactive "p")
+-  (with-current-buffer gnus-article-buffer
+-    (let ((subject (gnus-fetch-field "subject"))
+-          (body (if gnus-article-mime-handles
+-                    ;; We're multipart.  Don't get confused by part
+-                    ;; buttons &c.  Assume info is in first part.
+-                    (mm-get-part (nth 1 gnus-article-mime-handles))
+-                  (save-restriction
+-                    (gnus-narrow-to-body)
+-                    (buffer-string)))))
+-      (when (diary-from-outlook-internal subject body t)
+-        (when (or noconfirm (y-or-n-p "Snarf diary entry? "))
+-          (diary-from-outlook-internal subject body)
+-          (message "Diary entry added"))))))
+-
+-(custom-add-option 'gnus-article-prepare-hook 'diary-from-outlook-gnus)
+-
+ (defvar rmail-buffer)
+ 
+ (defun diary-from-outlook-rmail (&optional noconfirm)
+@@ -2556,12 +2525,12 @@
+ If the current buffer contains an Outlook-style appointment message,
+ this function should extract it into a diary entry.  If the argument is
+ nil, it should ask for confirmation before adding this entry to the diary.
+-For examples, see `diary-from-outlook-rmail' and `diary-from-outlook-gnus'.")
++For examples, see `diary-from-outlook-rmail'.")
+ 
+ (defun diary-from-outlook (&optional noconfirm)
+   "Maybe snarf diary entry from current Outlook-generated message.
+ Uses `diary-from-outlook-function' if that is non-nil, else
+-`diary-from-outlook-rmail' for Rmail or `diary-from-outlook-gnus' for Gnus.
++`diary-from-outlook-rmail' for Rmail.
+ Unless the optional argument NOCONFIRM is non-nil (which is the
+ case when this function is called interactively), then if an
+ entry is found the user is asked to confirm its addition."
+@@ -2570,7 +2539,5 @@
+                (diary-from-outlook-function)
+                ((eq major-mode 'rmail-mode)
+                 #'diary-from-outlook-rmail)
+-               ((memq major-mode '(gnus-summary-mode gnus-article-mode))
+-                #'diary-from-outlook-gnus)
+                (t (error "Don't know how to snarf in `%s'" major-mode)))))
+     (funcall func noconfirm)))

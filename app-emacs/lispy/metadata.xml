@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+  <email>nuclearspace@gmail.com</email>
+  <name>Dima Akater</name>
+</maintainer>
+<stabilize-allarches/>
+<use>
+  <flag name="clojure">Support Clojure</flag>
+</use>
+<upstream>
+  <remote-id type="github">abo-abo/lispy</remote-id>
+</upstream>
+</pkgmetadata>

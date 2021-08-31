@@ -1,0 +1,36 @@
+Add suffix so that e.g. Helm can find ansicl
+
+--- a/dpans2texi-master/dpans2texi.el
++++ b/dpans2texi-master/dpans2texi.el
+@@ -59,7 +59,7 @@
+ (defvar dp-preamble
+   "\\input texinfo                  @c -*-texinfo-*-
+ @c %**start of header
+-@setfilename ansicl
++@setfilename ansicl.info
+ @settitle ANSI Common Lisp
+ @paragraphindent 0
+ @exampleindent 0
+
+
+--- a/dpans2texi-master/Makefile.in
++++ b/dpans2texi-master/Makefile.in
+@@ -45,7 +45,7 @@
+ CONFIG_CLEAN_FILES =
+ SOURCES =
+ DIST_SOURCES =
+-INFO_DEPS = ansicl
++INFO_DEPS = ansicl.info
+ am__TEXINFO_TEX_DIR = $(srcdir)
+ DVIS = ansicl.dvi
+ PDFS = ansicl.pdf
+@@ -677,7 +677,7 @@
+ 	uninstall-lispLISP uninstall-pdf-am uninstall-ps-am
+ 
+ 
+-ansicl: dpans2texi.elc temp.texi
++ansicl.info: dpans2texi.elc temp.texi
+ 	$(MAKEINFO) $(AM_MAKEINFOFLAGS) temp.texi
+ 	$(EMACSDP) -f dp-tr
+ 
+

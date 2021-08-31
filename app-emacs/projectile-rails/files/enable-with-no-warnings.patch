@@ -1,0 +1,12 @@
+
+--- a/projectile-rails.el
++++ b/projectile-rails.el
+@@ -44,6 +44,7 @@
+ (require 'rake)
+ (require 'json)
+ (require 'comint)
++(require 'byte-run)
+ 
+ (defgroup projectile-rails nil
+   "Rails mode based on projectile"
+

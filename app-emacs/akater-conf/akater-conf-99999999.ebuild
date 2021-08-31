@@ -1,7 +1,8 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
+NEED_EMACS="26"
 
 inherit elisp orgmode git-r3
 
@@ -9,23 +10,33 @@ DESCRIPTION="Emacs Lisp conf-related functions and macros used by akater"
 HOMEPAGE="https://gitlab.com/akater/elisp-akater-conf"
 
 EGIT_REPO_URI="https://gitlab.com/akater/elisp-akater-conf.git"
-EGIT_BRANCH="release"
-KEYWORDS="~amd64 ~x86"
+# EGIT_REPO_URI="file:///tmp/elisp-akater-conf/"
+EGIT_BRANCH="master"
+KEYWORDS="amd64 ~x86"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE=""
+IUSE="test"
 
-RDEPEND=">=app-editors/emacs-26
+RDEPEND="
 	app-emacs/akater-misc"
 BDEPEND="${RDEPEND}
 	app-emacs/anaphora
 "
 
-src_compile() {
-	:;
+DEPEND="test? ( app-emacs/akater-misc
+				app-emacs/org-development-elisp )"
+
+src_prepare() {
+	use test || rm ${PN}-tests.org
+
+	eapply_user
 }
 
-src_install() {
-	elisp-install ${PN} elisp/*.el || die "Cannot install elisp files"
-}
+# src_compile() {
+# 	:;
+# }
+
+# src_install() {
+# 	elisp-install ${PN} build/*.el || die "Cannot install elisp files"
+# }

@@ -1,7 +1,7 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 NEED_EMACS=26
 # maybe 25 will do but Lars doesn't think so
 
@@ -12,7 +12,7 @@ HOMEPAGE="https://github.com/larsmagne/sqorm.el"
 
 EGIT_REPO_URI="https://github.com/larsmagne/sqorm.el.git"
 EGIT_BRANCH="master"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 LICENSE="GPL-3"
 SLOT="0"

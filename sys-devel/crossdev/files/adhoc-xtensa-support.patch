@@ -1,0 +1,12 @@
+
+--- a/crossdev
++++ b/crossdev
+@@ -199,7 +199,7 @@
+ 				CTARGET="${CTARGET}-unknown-linux-gnueabi";;
+ 			aarch64*|alpha*|cris*|hppa*|ia64*|m68*|mips*|powerpc*|riscv*|sparc*|sh*|tile*)
+ 				CTARGET="${CTARGET}-unknown-linux-gnu";;
+-			bfin*|h8300*|msp430*|nds32*|nios2*|spu*|xc16x*)
++			bfin*|h8300*|msp430*|nds32*|nios2*|spu*|xc16x*|xtensa*)
+ 				CTARGET="${CTARGET}-elf";;
+ 		esac
+ 	fi

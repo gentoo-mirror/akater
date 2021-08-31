@@ -1,0 +1,22 @@
+Do not install dependencies when running tests.
+
+--- a/etc/telega-make.el
++++ b/etc/telega-make.el
+@@ -52,7 +52,6 @@
+ 
+ (defun telega-run-tests ()
+   "Run telega tests."
+-  (telega-ensure-dependencies)
+ 
+   (load "ert")
+   (load "test")
+
+
+--- a/Makefile
++++ b/Makefile
+@@ -1,4 +1,4 @@
+-EMACS=emacs -Q
++EMACS=emacs -q --no-site-file
+ 
+ SERVER_TARGETS=telega-server install
+ 

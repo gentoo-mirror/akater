@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+  <email>nuclearspace@gmail.com</email>
+  <name>Dima Akater</name>
+</maintainer>
+<stabilize-allarches/>
+<use>
+  <flag name="eix">Use app-emacs/eix backend</flag>
+  <flag name="gentoolkit">(broken!) Use app-emacs/gentoolkit backend</flag>
+</use>
+<upstream>
+  <remote-id type="gitlab">akater/emacs-ebuild-tools</remote-id>
+</upstream>
+</pkgmetadata>

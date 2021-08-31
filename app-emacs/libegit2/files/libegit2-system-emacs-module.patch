@@ -1,0 +1,79 @@
+Use emacs-module from /usr/include
+
+--- a/src/interface.c
++++ b/src/interface.c
+@@ -2,7 +2,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ 
+-#include "emacs-module.h"
++#include <emacs-28-vcs/emacs-module.h>
+ #include "interface.h"
+
+ 
+--- a/src/egit-options.h
++++ b/src/egit-options.h
+@@ -1,5 +1,5 @@
+-#include "emacs-module.h"
++#include <emacs-28-vcs/emacs-module.h>
+ 
+ #ifndef EGIT_OPTIONS_H
+ #define EGIT_OPTIONS_H
+
+
+--- a/src/main.c
++++ b/src/main.c
+@@ -1,6 +1,6 @@
+-#include "emacs-module.h"
++#include <emacs-28-vcs/emacs-module.h>
+ #include "git2.h"
+ 
+ #include "egit.h"
+
+
+--- a/src/interface.h
++++ b/src/interface.h
+@@ -1,9 +1,9 @@
+ #include <stdarg.h>
+ #include <string.h>
+ 
+-#include "emacs-module.h"
++#include <emacs-28-vcs/emacs-module.h>
+ #include "symbols.h"
+ 
+ #ifndef INTERFACE_H
+
+
+--- a/src/symbols.h
++++ b/src/symbols.h
+@@ -2,9 +2,9 @@
+ // This file is generated. Do not edit by hand.
+ // Instead, edit ../symbols.cfg and run ../gensyms.py
+ 
+-#include "emacs-module.h"
++#include <emacs-28-vcs/emacs-module.h>
+ #include "git2.h"
+ 
+ #ifndef SYMBOLS_H
+
+
+--- a/src/egit.h
++++ b/src/egit.h
+@@ -1,5 +1,5 @@
+-#include "emacs-module.h"
++#include <emacs-28-vcs/emacs-module.h>
+ #include "git2.h"
+ #include "git2.h"
+ 
+
+--- a/src/egit.c
++++ b/src/egit.c
+@@ -1,7 +1,7 @@
+ #include <stdlib.h>
+ #include <assert.h>
+ 
+-#include "emacs-module.h"
++#include <emacs-28-vcs/emacs-module.h>
+ #include "git2.h"
+ 
+ #ifdef EGIT_DEBUG

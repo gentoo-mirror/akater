@@ -1,0 +1,12 @@
+
+--- a/doc/misc/Makefile.in
++++ b/doc/misc/Makefile.in
+@@ -97,7 +97,7 @@
+ 	info.info \
+ 	mairix-el \
+ 	message \
+-	mh-e \
++	     \
+ 	newsticker \
+ 	nxml-mode \
+	octave-mode \

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>nuclearspace@gmail.com</email>
+		<name>Dima Akater</name>
+	</maintainer>
+	<longdescription>Recipes and scripts needed to build `package.el'-compatible Emacs Lisp packages from the upstream source code.</longdescription>
+	<use>
+		<flag name="package-build">Compile and system-wide install `package-build' Elisp package</flag>
+		<flag name="recipes">Install MELPA recipes</flag>
+		<flag name="sources">Install MELPA build scripts meant to build packages from recipes</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">melpa/melpa</remote-id>
+	</upstream>
+</pkgmetadata>

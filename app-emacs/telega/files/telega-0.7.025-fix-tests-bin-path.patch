@@ -1,0 +1,14 @@
+Search for telega-server binary properly.
+
+--- a/server/run_tests.py
++++ b/server/run_tests.py
+@@ -5,7 +5,7 @@
+ import subprocess
+ 
+ 
+-TELEGA_SERVER = os.path.expanduser('~/.telega/telega-server')
++TELEGA_SERVER = os.path.expanduser('telega-server')
+ if not os.path.isfile(TELEGA_SERVER):
+     TELEGA_SERVER += '.exe'
+ 
+

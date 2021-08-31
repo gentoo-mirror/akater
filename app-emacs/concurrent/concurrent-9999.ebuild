@@ -1,7 +1,8 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
+NEED_EMACS="24.3"
 
 inherit elisp git-r3
 
@@ -14,12 +15,6 @@ KEYWORDS="amd64 x86"
 LICENSE=GPL-3
 SLOT=0
 
-BDEPEND=">=app-editors/emacs-24.3"
-RDEPEND=">=app-editors/emacs-24.3
+RDEPEND="
 	>=app-emacs/deferred-0.5.0
 "
-
-src_compile() {
-	elisp-compile *.el || \
-		die "Could not compile"
-}

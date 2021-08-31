@@ -1,0 +1,25 @@
+From 699f58055f52103327b0d5faed72731583ad68a2 Mon Sep 17 00:00:00 2001
+From: "System user; portage" <portage@poseidon.akater>
+Date: Thu, 13 May 2021 01:06:21 +0000
+Subject: [PATCH] Replace obsolete name
+
+---
+ vlf-ediff.el | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/vlf-ediff.el b/vlf-ediff.el
+index 2a861e7..7c58608 100644
+--- a/vlf-ediff.el
++++ b/vlf-ediff.el
+@@ -86,7 +86,7 @@ respectively of difference list, runs ediff over the adjacent chunks."
+                                            ediff-last-dir-B
+                                          (file-name-directory f)))
+                                  (progn
+-                                   (ediff-add-to-history
++                                   (add-to-history
+                                     'file-name-history
+                                     (ediff-abbreviate-file-name
+                                      (expand-file-name
+-- 
+2.26.3
+

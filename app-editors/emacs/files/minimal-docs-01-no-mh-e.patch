@@ -1,0 +1,13 @@
+
+--- a/doc/misc/Makefile.in
++++ b/doc/misc/Makefile.in
+@@ -99,7 +99,7 @@
+ 	info.info \
+ 	mairix-el \
+ 	message \
+-	mh-e \
++	\
+ 	modus-themes \
+ 	newsticker \
+ 	nxml-mode \
+

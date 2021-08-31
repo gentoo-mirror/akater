@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+  <email>nuclearspace@gmail.com</email>
+  <name>Dima Akater</name>
+</maintainer>
+<stabilize-allarches/>
+<use>
+  <flag name="ar7010">Build AR9271 (MAGPIE) firmware</flag>
+  <flag name="ar9271">Build AR9271 (K2) firmware</flag>
+</use>
+</pkgmetadata>

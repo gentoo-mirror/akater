@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>nuclearspace@gmail.com</email>
+    <name>Dima Akater</name>
+  </maintainer>
+  <longdescription>Libegit2 is an experimental module for libgit2 bindings to Emacs, intended to boost the performance of magit.
+  </longdescription>
+  <use>
+    <flag name="system-libgit">Use the system-wide dev-libs/libgit2 instead of bundled.</flag>
+  </use>
+  <upstream>
+    <remote-id type="github">magit/libegit2</remote-id>
+  </upstream>
+</pkgmetadata>

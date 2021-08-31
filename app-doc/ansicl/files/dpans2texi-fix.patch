@@ -1,0 +1,207 @@
+Silence byte-compiler
+
+--- a/dpans2texi-master/dpans2texi.el
++++ b/dpans2texi-master/dpans2texi.el
+@@ -54,7 +54,7 @@
+ ;;; Code:
+ 
+ (require 'rx)
+-(require 'cl)
++(require 'cl-lib)
+ 
+ (defvar dp-preamble
+   "\\input texinfo                  @c -*-texinfo-*-
+@@ -257,7 +257,7 @@
+ 	  (set-marker p (scan-sexps (point) 1))
+ 	  (delete-char 1)
+ 	  (goto-char p)
+-	  (delete-backward-char 1))))))
++	  (delete-char -1))))))
+ 
+ 
+ (defun dp-f (command)
+@@ -310,7 +310,7 @@
+ 	(setq p (scan-sexps (point) 1))
+ 	(delete-char 1)
+ 	(goto-char p)
+-	(delete-backward-char 1))
++	(delete-char -1))
+       (buffer-string))))
+ 
+ (defun dp-get-arg ()
+@@ -327,7 +327,7 @@
+     (replace-match "")
+     (when (char-equal (following-char) ?\ )
+       (delete-char 1))
+-    (assert (char-equal (char-before) ?{))
++    (cl-assert (char-equal (char-before) ?{))
+     (search-backward "{")
+     (save-excursion
+       (backward-char)
+@@ -377,7 +377,7 @@
+     (nreverse rows)))
+ 
+ (defun dp-transpose (list)
+-  (apply 'mapcar* (cons 'list list)))
++  (apply 'cl-mapcar (cons 'list list)))
+ 
+ (defun dp-max-elems (list)
+   (let ((max "") max-list)
+@@ -429,7 +429,7 @@
+     (when (null dp-current-fig-label)
+       (setq dp-current-fig-label
+ 	    (format "fig%s.%d" dp-current-chapter-no (1+ dp-fig-no))))
+-    (incf dp-fig-no)
++    (cl-incf dp-fig-no)
+     (save-excursion
+       (insert "\n@float Figure," dp-current-fig-label)
+       (insert "\n@cartouche\n")
+@@ -462,7 +462,7 @@
+ 
+ (dp-defconvert 'dp-quadrant 'dpquadrant)
+ (defun dp-quadrant (command)
+-  (incf dp-fig-no)
++  (cl-incf dp-fig-no)
+   (replace-match "@quadrant{}"))
+ 
+ (dp-defconvert 'dp-tabletwo 'tabletwo)
+@@ -490,7 +490,7 @@
+       (search-backward "@lisp")
+       (insert
+        (format "@float Figure,fig%s.%d\n" dp-current-chapter-no
+-	       (incf dp-fig-no))))
++	       (cl-incf dp-fig-no))))
+     (insert "@caption{" arg "}\n@end float\n")))
+ 	      
+ ;;; Dictionary entries
+@@ -635,7 +635,7 @@
+     (dp-delete-line)
+     (insert "@node " node-name "\n"
+            "@section " secname "\n")
+-    (incf dp-section-no)
++    (cl-incf dp-section-no)
+     (setq dp-current-section-marker (point))))
+ 
+ (defvar dp-subsections-list nil)
+@@ -677,7 +677,7 @@
+     (insert "@node " name "\n")
+     (push name dp-subsections-list)
+     (insert "@subsection " name "\n")
+-    (incf dp-subsection-no)))
++    (cl-incf dp-subsection-no)))
+ 
+ (dp-defconvert 'dp-endsubsection
+ 	       'endSubsection 'endsubsection 'endSubsection
+@@ -700,7 +700,7 @@
+ 	    (buffer-string)))
+     (dp-delete-line)
+     (insert "@subsubsection " name "\n")
+-    (incf dp-subsubsection-no)))
++    (cl-incf dp-subsubsection-no)))
+ 
+ (dp-defconvert 'dp-endsubsubsection 'endsubsubsection)
+ (defun dp-endsubsubsection (command)
+@@ -717,7 +717,7 @@
+ 	     dp-current-chapter-no
+ 	     dp-section-no dp-subsection-no
+ 	     dp-subsubsection-no
+-	     (incf dp-subsubsubsection-no) name))))
++	     (cl-incf dp-subsubsubsection-no) name))))
+ 
+ (dp-defconvert 'dp-endsubsubsubsection 'endsubsubsubsection)
+ (defun dp-endsubsubsubsection (command)
+@@ -735,7 +735,7 @@
+ 	     dp-section-no dp-subsection-no
+ 	     dp-subsubsection-no
+ 	     dp-subsubsubsection-no
+-	     (incf dp-subsubsubsubsection-no) name))))
++	     (cl-incf dp-subsubsubsubsection-no) name))))
+ 
+ (dp-defconvert 'dp-definesection 'DefineSection)
+ (defun dp-definesection (command)
+@@ -883,7 +883,7 @@
+ 	     (t
+ 	      (push 'table dp-list-type))))
+     (dp-delete-line)
+-    (ecase (car dp-list-type)
++    (cl-ecase (car dp-list-type)
+       (enumerate (insert "\n@enumerate " arg "\n"))
+       (itemize (insert "\n@itemize " arg "\n"))
+       (table (insert "\n@table @asis\n")))))
+@@ -894,7 +894,7 @@
+   (when (save-excursion  ;; i.e. `looking-back'
+ 	  (re-search-backward "\\(?:\n\n\\)\\=" nil t))
+     (delete-char -1))
+-  (ecase (pop dp-list-type)
++  (cl-ecase (pop dp-list-type)
+     (enumerate (insert "@end enumerate\n\n"))
+     (itemize (insert "@end itemize\n\n"))
+     (table (insert "@end table\n\n"))))
+@@ -902,7 +902,7 @@
+ (dp-defconvert 'dp-item 'itemitem 'item)
+ (defun dp-item (command)
+   (let (arg)
+-    (ecase (car dp-list-type)
++    (cl-ecase (car dp-list-type)
+       ((enumerate itemize)
+        (delete-region (point-at-bol) (scan-sexps (point) 1))
+        (insert "@item"))
+@@ -948,7 +948,7 @@
+     (when (member arg dp-com-duplicates)
+       (setq
+        link
+-       (ecase command
++       (cl-ecase command
+ 	 ((seefun Seefun seefuns Seefuns function funref)
+ 	  (if (assoc arg dp-funref-name-alist)
+ 	      (cdr (assoc arg dp-funref-name-alist))
+@@ -971,7 +971,7 @@
+     (if (memq command '(seeterm Seeterm SeetermAlso seetermAlso))
+ 	(setq link (concat "@ref{glos-" arg ", " arg "}"))
+       (setq link (concat "@ref{" link "}")))
+-    (ecase command
++    (cl-ecase command
+       (seefun (insert "see the @term{function} " link))
+       (Seefun (insert "See the @term{function} " link))
+       (seefuns (insert "see the @term{functions} " link))
+@@ -1019,10 +1019,10 @@
+       (setq arg (match-string 1))
+       (replace-match ""))
+     (setq text (cdr (assoc arg dp-section-names)))
+-    (assert text)
++    (cl-assert text)
+     (when (assoc arg dp-chapter-name-alist)
+       (setq arg (cdr (assoc arg dp-chapter-name-alist))))
+-    (ecase (intern command)
++    (cl-ecase (intern command)
+       ((seechapter seefigure seesection)
+        (replace-match (concat "see @ref{" arg ", " text "}") t t nil))
+       ((Seechapter Seefigure Seesection)
+@@ -1058,7 +1058,7 @@
+     (dp-freshline)
+     (insert
+      "@cindex "
+-     (case (intern command)
++     (cl-case (intern command)
+        (idxkeyref (concat "&" arg))
+        (idxpackref (upcase arg))
+        (idxkwd (concat ":" arg))
+@@ -1210,7 +1210,7 @@
+ 	    (set-marker p (scan-sexps (point) 1))
+ 	    (delete-char 1)
+ 	    (goto-char p)
+-	    (delete-backward-char 1))))
++	    (delete-char -1))))
+       (when multi
+ 	(forward-line)
+ 	(setq multi nil)))))
+@@ -1539,7 +1539,7 @@
+     (dp-pm)
+     (while (re-search-forward "@ref{\\([^},]+\\)" nil t)
+       (push (match-string 1) refs))
+-    (setq anchors (set-difference dp-anchors refs :test 'string=))
++    (setq anchors (cl-set-difference dp-anchors refs :test 'string=))
+     (dolist (anchor anchors)
+       (dp-pm)
+       (when (search-forward (concat "@anchor{" anchor "}") nil t)
+

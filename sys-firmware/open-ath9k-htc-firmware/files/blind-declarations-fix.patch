@@ -1,0 +1,26 @@
+
+
+--- a/wlan/ah_internal.h
++++ b/wlan/ah_internal.h
+@@ -254,7 +254,7 @@
+ 			     a_uint32_t mask, a_uint32_t val);
+ 
+ /* allocate and free memory */
+-extern void *ath_hal_malloc(size_t);
++extern void *ath_hal_malloc(adf_os_size_t);
+ extern void ath_hal_free(void *);
+ 
+ /*
+
+
+--- a/wlan/ah_osdep.h
++++ b/wlan/ah_osdep.h
+@@ -127,7 +127,7 @@
+ #define OS_REMAP(_addr, _len)       ath_hal_ioremap(_addr, _len)
+ 
+ #define OS_MEMCPY(_d, _s, _n)   ath_hal_memcpy(_d,_s,_n)
+-extern void * __ahdecl ath_hal_memcpy(void *, const void *, size_t);
++extern void * __ahdecl ath_hal_memcpy(void *, const void *, adf_os_size_t);
+ 
+ #ifndef abs
+ #define abs(_a)     __builtin_abs(_a)

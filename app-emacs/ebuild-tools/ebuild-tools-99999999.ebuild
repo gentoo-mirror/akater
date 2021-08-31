@@ -1,16 +1,17 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
+NEED_EMACS="24"
 
-inherit elisp orgmode git-r3
+MY_PN="emacs-${PN}"
+inherit elisp orgmode akater-live-release
 
 DESCRIPTION="Functions to deal with ebuilds in Emacs Lisp"
 HOMEPAGE="https://gitlab.com/akater/emacs-ebuild-tools"
 
-EGIT_REPO_URI="https://gitlab.com/akater/emacs-ebuild-tools.git"
-EGIT_BRANCH="release"
-KEYWORDS="~amd64 ~x86"
+EGIT_REPO_URI="https://gitlab.com/akater/${MY_PN}.git"
+KEYWORDS="amd64 ~x86"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -20,7 +21,7 @@ REQUIRED_USE="|| ( eix gentoolkit )"
 
 DOCS="README.org"
 
-BDEPEND=">=app-editors/emacs-24
+BDEPEND="
 	app-emacs/file-tree
 	app-emacs/akater-misc
 "

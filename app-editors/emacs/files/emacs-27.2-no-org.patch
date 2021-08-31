@@ -1,0 +1,453 @@
+
+--- a/lisp/gnus/gnus-icalendar.el
++++ b/lisp/gnus/gnus-icalendar.el
+@@ -24,12 +24,6 @@
+ ;; (require 'gnus-icalendar)
+ ;; (gnus-icalendar-setup)
+ 
+-;; to enable optional iCalendar->Org sync functionality
+-;; NOTE: both the capture file and the headline(s) inside must already exist
+-;; (setq gnus-icalendar-org-capture-file "~/org/notes.org")
+-;; (setq gnus-icalendar-org-capture-headline '("Calendar"))
+-;; (gnus-icalendar-org-setup)
+-
+ 
+ ;;; Code:
+ 
+@@ -355,321 +349,18 @@
+ ;;;
+ ;;; gnus-icalendar-org
+ ;;
+-;; TODO: this is an optional feature, and it's only available with org-mode
+-;; 7+, so will need to properly handle emacsen with no/outdated org-mode
+-
+-(require 'org)
+-(require 'org-capture)
+-
+-(defgroup gnus-icalendar-org nil
+-  "Settings for Calendar Event gnus/org integration."
+-  :version "24.4"
+-  :group 'gnus-icalendar
+-  :prefix "gnus-icalendar-org-")
+-
+-(defcustom gnus-icalendar-org-capture-file nil
+-  "Target Org file for storing captured calendar events."
+-  :type '(choice (const nil) file))
+-
+-(defcustom gnus-icalendar-org-capture-headline nil
+-  "Target outline in `gnus-icalendar-org-capture-file' for storing captured events."
+-  :type '(repeat string))
+-
+-(defcustom gnus-icalendar-org-template-name "used by gnus-icalendar-org"
+-  "Org-mode template name."
+-  :type '(string))
+-
+-(defcustom gnus-icalendar-org-template-key "#"
+-  "Org-mode template hotkey."
+-  :type '(string))
++;; (disabled)
+ 
+ (defvar gnus-icalendar-org-enabled-p nil)
+ 
+-
+-(cl-defmethod gnus-icalendar-event:org-repeat ((event gnus-icalendar-event))
+-  "Return `org-mode' timestamp repeater string for recurring EVENT.
+-Return nil for non-recurring EVENT."
+-  (when (gnus-icalendar-event:recurring-p event)
+-    (let* ((freq-map '(("HOURLY" . "h")
+-                       ("DAILY" . "d")
+-                       ("WEEKLY" . "w")
+-                       ("MONTHLY" . "m")
+-                       ("YEARLY" . "y")))
+-           (org-freq (cdr (assoc (gnus-icalendar-event:recurring-freq event) freq-map))))
+-
+-      (when org-freq
+-        (format "+%s%s" (gnus-icalendar-event:recurring-interval event) org-freq)))))
+-
+-(cl-defmethod gnus-icalendar-event:org-timestamp ((event gnus-icalendar-event))
+-  "Build `org-mode' timestamp from EVENT start/end dates and recurrence info."
+-  (let* ((start (gnus-icalendar-event:start-time event))
+-         (end (gnus-icalendar-event:end-time event))
+-         (start-date (format-time-string "%Y-%m-%d" start))
+-         (start-time (format-time-string "%H:%M" start))
+-         (start-at-midnight (string= start-time "00:00"))
+-         (end-date (format-time-string "%Y-%m-%d" end))
+-         (end-time (format-time-string "%H:%M" end))
+-         (end-at-midnight (string= end-time "00:00"))
+-         (start-end-date-diff
+-	  (time-to-number-of-days (time-subtract
+-				   (org-time-string-to-time end-date)
+-				   (org-time-string-to-time start-date))))
+-         (org-repeat (gnus-icalendar-event:org-repeat event))
+-         (repeat (if org-repeat (concat " " org-repeat) ""))
+-	 (time-1-day 86400))
+-
+-    ;; NOTE: special care is needed with appointments ending at midnight
+-    ;; (typically all-day events): the end time has to be changed to 23:59 to
+-    ;; prevent org agenda showing the event on one additional day
+-    (cond
+-     ;; start/end midnight
+-     ;; A 0:0 - A+1 0:0 -> A
+-     ;; A 0:0 - A+n 0:0 -> A - A+n-1
+-     ((and start-at-midnight end-at-midnight) (if (> start-end-date-diff 1)
+-                                                  (let ((end-ts (format-time-string "%Y-%m-%d" (time-subtract end time-1-day))))
+-                                                    (format "<%s>--<%s>" start-date end-ts))
+-                                                (format "<%s%s>" start-date repeat)))
+-     ;; end midnight
+-     ;; A .:. - A+1 0:0 -> A .:.-23:59
+-     ;; A .:. - A+n 0:0 -> A .:. - A_n-1
+-     (end-at-midnight (if (= start-end-date-diff 1)
+-                          (format "<%s %s-23:59%s>" start-date start-time repeat)
+-                        (let ((end-ts (format-time-string "%Y-%m-%d" (time-subtract end time-1-day))))
+-                          (format "<%s %s>--<%s>" start-date start-time end-ts))))
+-     ;; start midnight
+-     ;; A 0:0 - A .:. -> A 0:0-.:. (default 1)
+-     ;; A 0:0 - A+n .:. -> A - A+n .:.
+-     ((and start-at-midnight
+-           (cl-plusp start-end-date-diff)) (format "<%s>--<%s %s>" start-date end-date end-time))
+-     ;; default
+-     ;; A .:. - A .:. -> A .:.-.:.
+-     ;; A .:. - B .:.
+-     ((zerop start-end-date-diff) (format "<%s %s-%s%s>" start-date start-time end-time repeat))
+-     (t (format "<%s %s>--<%s %s>" start-date start-time end-date end-time)))))
+-
+ (defun gnus-icalendar--format-summary-line (summary &optional location)
+   (if location
+       (format "%s (%s)" summary location)
+     (format "%s" summary)))
+ 
+-
+ (defun gnus-icalendar--format-participant-list (participants)
+   (mapconcat #'identity participants ", "))
+ 
+-;; TODO: make the template customizable
+-(cl-defmethod gnus-icalendar-event->org-entry ((event gnus-icalendar-event) reply-status)
+-  "Return string with new `org-mode' entry describing EVENT."
+-  (with-temp-buffer
+-    (org-mode)
+-    (with-slots (organizer summary description location
+-                           recur uid) event
+-      (let* ((reply (if reply-status (capitalize (symbol-name reply-status))
+-                      "Not replied yet"))
+-             (props `(("ICAL_EVENT" . "t")
+-                      ("ID" . ,uid)
+-                      ("ORGANIZER" . ,(gnus-icalendar-event:organizer event))
+-                      ("LOCATION" . ,(gnus-icalendar-event:location event))
+-                      ("PARTICIPATION_TYPE" . ,(symbol-name (gnus-icalendar-event:participation-type event)))
+-                      ("REQ_PARTICIPANTS" . ,(gnus-icalendar--format-participant-list (gnus-icalendar-event:req-participants event)))
+-                      ("OPT_PARTICIPANTS" . ,(gnus-icalendar--format-participant-list (gnus-icalendar-event:opt-participants event)))
+-                      ("RRULE" . ,(gnus-icalendar-event:recur event))
+-                      ("REPLY" . ,reply))))
+-
+-        (insert (format "* %s\n\n"
+-                        (gnus-icalendar--format-summary-line summary location)))
+-        (mapc (lambda (prop)
+-                (org-entry-put (point) (car prop) (cdr prop)))
+-              props))
+-
+-      (save-restriction
+-        (narrow-to-region (point) (point))
+-        (insert (gnus-icalendar-event:org-timestamp event)
+-                "\n\n"
+-                (or description "No description"))
+-        (indent-region (point-min) (point-max) 2)
+-        (fill-region (point-min) (point-max)))
+-
+-      (buffer-string))))
+-
+-(defun gnus-icalendar--deactivate-org-timestamp (ts)
+-  (replace-regexp-in-string "[<>]"
+-                            (lambda (m) (cond ((string= m "<") "[")
+-                                              ((string= m ">") "]")))
+-                            ts))
+-
+-(defun gnus-icalendar-find-org-event-file (event &optional org-file)
+-  "Return the name of the file containing EVENT org entry.
+-Return nil when not found.
+-
+-All org agenda files are searched for the EVENT entry.  When
+-the optional ORG-FILE argument is specified, only that one file
+-is searched."
+-  (let ((uid (gnus-icalendar-event:uid event))
+-        (files (or org-file (org-agenda-files t 'ifmode))))
+-    (cl-labels
+-        ((find-event-in
+-	  (file)
+-	  (org-check-agenda-file file)
+-	  (with-current-buffer (find-file-noselect file)
+-	    (let ((event-pos (org-find-entry-with-id uid)))
+-	      (when (and event-pos
+-			 (string= (cdr (assoc "ICAL_EVENT"
+-					      (org-entry-properties event-pos)))
+-				  "t"))
+-		(throw 'found file))))))
+-      (gnus-icalendar-find-if #'find-event-in files))))
+-
+-
+-(defun gnus-icalendar--show-org-event (event &optional org-file)
+-  (let ((file (gnus-icalendar-find-org-event-file event org-file)))
+-    (when file
+-      (switch-to-buffer (find-file file))
+-      (goto-char (org-find-entry-with-id (gnus-icalendar-event:uid event)))
+-      (org-show-entry))))
+-
+-
+-(defun gnus-icalendar--update-org-event (event reply-status &optional org-file)
+-  (let ((file (gnus-icalendar-find-org-event-file event org-file)))
+-    (when file
+-      (with-current-buffer (find-file-noselect file)
+-        (with-slots (uid summary description organizer location recur
+-                         participation-type req-participants opt-participants) event
+-          (let ((event-pos (org-find-entry-with-id uid)))
+-            (when event-pos
+-              (goto-char event-pos)
+-
+-              ;; update the headline, keep todo, priority and tags, if any
+-              (save-excursion
+-                (let* ((priority (org-entry-get (point) "PRIORITY"))
+-                       (headline (delq nil (list
+-                                            (org-entry-get (point) "TODO")
+-                                            (when priority (format "[#%s]" priority))
+-                                            (gnus-icalendar--format-summary-line summary location)
+-                                            (org-entry-get (point) "TAGS")))))
+-
+-                  (re-search-forward "^\\*+ " (line-end-position))
+-                  (delete-region (point) (line-end-position))
+-                  (insert (mapconcat #'identity headline " "))))
+-
+-              ;; update props and description
+-              (let ((entry-end (org-entry-end-position))
+-                    (entry-outline-level (org-outline-level)))
+-
+-                ;; delete body of the entry, leave org drawers intact
+-                (save-restriction
+-                  (org-narrow-to-element)
+-                  (goto-char entry-end)
+-                  (re-search-backward "^[\t ]*:END:")
+-                  (forward-line)
+-                  (delete-region (point) entry-end))
+-
+-                ;; put new event description in the entry body
+-                (when description
+-                  (save-restriction
+-                    (narrow-to-region (point) (point))
+-                    (insert "\n"
+-                            (gnus-icalendar-event:org-timestamp event)
+-                            "\n\n"
+-                            (replace-regexp-in-string "[\n]+$" "\n" description)
+-                            "\n")
+-                    (indent-region (point-min) (point-max) (1+ entry-outline-level))
+-                    (fill-region (point-min) (point-max))))
+-
+-                ;; update entry properties
+-                (cl-labels
+-                    ((update-org-entry
+-		      (position property value)
+-		      (if (or (null value)
+-			      (string= value ""))
+-			  (org-entry-delete position property)
+-			(org-entry-put position property value))))
+-
+-                  (update-org-entry event-pos "ORGANIZER" organizer)
+-                  (update-org-entry event-pos "LOCATION" location)
+-                  (update-org-entry event-pos "PARTICIPATION_TYPE"
+-				    (symbol-name participation-type))
+-                  (update-org-entry event-pos "REQ_PARTICIPANTS"
+-				    (gnus-icalendar--format-participant-list
+-				     req-participants))
+-                  (update-org-entry event-pos "OPT_PARTICIPANTS"
+-				    (gnus-icalendar--format-participant-list
+-				     opt-participants))
+-                  (update-org-entry event-pos "RRULE" recur)
+-                  (update-org-entry
+-		   event-pos "REPLY"
+-		   (if reply-status (capitalize (symbol-name reply-status))
+-		     "Not replied yet")))
+-                (save-buffer)))))))))
+-
+-
+-(defun gnus-icalendar--cancel-org-event (event &optional org-file)
+-  (let ((file (gnus-icalendar-find-org-event-file event org-file)))
+-    (when file
+-      (with-current-buffer (find-file-noselect file)
+-        (let ((event-pos (org-find-entry-with-id (gnus-icalendar-event:uid event))))
+-          (when event-pos
+-            (let ((ts (org-entry-get event-pos "DT")))
+-              (when ts
+-                (org-entry-put event-pos "DT" (gnus-icalendar--deactivate-org-timestamp ts))
+-                (save-buffer)))))))))
+-
+-
+-(defun gnus-icalendar--get-org-event-reply-status (event &optional org-file)
+-  (let ((file (gnus-icalendar-find-org-event-file event org-file)))
+-    (when file
+-      (save-excursion
+-        (with-current-buffer (find-file-noselect file)
+-          (let ((event-pos (org-find-entry-with-id (gnus-icalendar-event:uid event))))
+-            (org-entry-get event-pos "REPLY")))))))
+-
+-
+-(defun gnus-icalendar-insinuate-org-templates ()
+-  (unless (gnus-icalendar-find-if (lambda (x) (string= (cadr x) gnus-icalendar-org-template-name))
+-                      org-capture-templates)
+-    (setq org-capture-templates
+-          (append `((,gnus-icalendar-org-template-key
+-                     ,gnus-icalendar-org-template-name
+-                     entry
+-                     (file+olp ,gnus-icalendar-org-capture-file ,@gnus-icalendar-org-capture-headline)
+-                     "%i"
+-                     :immediate-finish t))
+-                  org-capture-templates))
+-
+-    ;; hide the template from interactive template selection list
+-    ;; (org-capture)
+-    ;; NOTE: doesn't work when capturing from string
+-    ;; (when (boundp 'org-capture-templates-contexts)
+-    ;;   (push `(,gnus-icalendar-org-template-key "" ((in-mode . "gnus-article-mode")))
+-    ;;         org-capture-templates-contexts))
+-    ))
+-
+-(defun gnus-icalendar:org-event-save (event reply-status)
+-  (with-temp-buffer
+-    (org-capture-string (gnus-icalendar-event->org-entry event reply-status)
+-                        gnus-icalendar-org-template-key)))
+-
+-(defun gnus-icalendar-show-org-agenda (event)
+-  (let* ((time-delta (time-subtract (gnus-icalendar-event:end-time event)
+-                                    (gnus-icalendar-event:start-time event)))
+-         (duration-days (1+ (floor (time-convert time-delta 'integer) 86400))))
+-    (org-agenda-list nil (gnus-icalendar-event:start event) duration-days)))
+-
+-(cl-defmethod gnus-icalendar-event:sync-to-org ((event gnus-icalendar-event-request) reply-status)
+-  (if (gnus-icalendar-find-org-event-file event)
+-      (gnus-icalendar--update-org-event event reply-status)
+-    (gnus-icalendar:org-event-save event reply-status)))
+-
+-(cl-defmethod gnus-icalendar-event:sync-to-org ((event gnus-icalendar-event-cancel) _reply-status)
+-  (when (gnus-icalendar-find-org-event-file event)
+-    (gnus-icalendar--cancel-org-event event)))
+-
+-(defun gnus-icalendar-org-setup ()
+-  (if (and gnus-icalendar-org-capture-file gnus-icalendar-org-capture-headline)
+-      (progn
+-        (gnus-icalendar-insinuate-org-templates)
+-        (setq gnus-icalendar-org-enabled-p t))
+-    (message "Cannot enable Calendar->Org: missing capture file, headline")))
+-
+ ;;;
+ ;;; gnus-icalendar
+ ;;;
+@@ -821,12 +512,7 @@
+             (gnus-icalendar-send-buffer-by-mail (buffer-name) subject))
+ 
+           ;; Back in article buffer
+-          (setq-local gnus-icalendar-reply-status status)
+-          (when gnus-icalendar-org-enabled-p
+-            (gnus-icalendar--update-org-event event status)
+-            ;; refresh article buffer to update the reply status
+-            (with-current-buffer gnus-summary-buffer
+-              (gnus-summary-show-article))))))))
++          (setq-local gnus-icalendar-reply-status status))))))
+ 
+ (defun gnus-icalendar-sync-event-to-org (event)
+   (gnus-icalendar-event:sync-to-org event gnus-icalendar-reply-status))
+@@ -842,37 +528,12 @@
+   nil)
+ 
+ (cl-defmethod gnus-icalendar-event:inline-reply-status ((event gnus-icalendar-event))
+-  (or (when gnus-icalendar-org-enabled-p
+-        (gnus-icalendar--get-org-event-reply-status event))
+-      "Not replied yet"))
++  "Not replied yet")
+ 
+ (cl-defmethod gnus-icalendar-event:inline-reply-status ((_event gnus-icalendar-event-reply))
+   "No reply status for REPLY events."
+   nil)
+ 
+-
+-(cl-defmethod gnus-icalendar-event:inline-org-buttons ((event gnus-icalendar-event))
+-  (let* ((org-entry-exists-p (gnus-icalendar-find-org-event-file event))
+-         (export-button-text (if org-entry-exists-p "Update Org Entry" "Export to Org")))
+-
+-    (delq nil (list
+-               `("Show Agenda" gnus-icalendar-show-org-agenda ,event)
+-               (when (gnus-icalendar-event-request-p event)
+-                 `(,export-button-text gnus-icalendar-sync-event-to-org ,event))
+-               (when org-entry-exists-p
+-                 `("Show Org Entry" gnus-icalendar--show-org-event ,event))))))
+-
+-
+-(cl-defmethod gnus-icalendar-event:inline-org-buttons ((event gnus-icalendar-event-cancel))
+-  (let ((org-entry-exists-p (gnus-icalendar-find-org-event-file event)))
+-
+-    (delq nil (list
+-               `("Show Agenda" gnus-icalendar-show-org-agenda ,event)
+-               (when org-entry-exists-p
+-                 `("Update Org Entry" gnus-icalendar-sync-event-to-org ,event))
+-               (when org-entry-exists-p
+-                 `("Show Org Entry" gnus-icalendar--show-org-event ,event))))))
+-
+ ;;;###autoload
+ (defun gnus-icalendar-mm-inline (handle)
+   (let ((event (gnus-icalendar-event-from-handle handle (gnus-icalendar-identities))))
+@@ -893,9 +554,6 @@
+         (insert-button-group
+ 	 (gnus-icalendar-event:inline-reply-buttons event handle))
+ 
+-        (when gnus-icalendar-org-enabled-p
+-          (insert-button-group (gnus-icalendar-event:inline-org-buttons event)))
+-
+         (setq gnus-icalendar-event event
+               gnus-icalendar-handle handle)
+ 
+@@ -905,14 +563,14 @@
+ 
+ (defun gnus-icalendar-save-part (handle)
+   (let (event)
+-    (when (and (equal (car (mm-handle-type handle)) "text/calendar")
+-               (setq event (gnus-icalendar-event-from-handle handle (gnus-icalendar-identities))))
+-
+-      (gnus-icalendar-event:sync-to-org event))))
++    (when (and (equal (car (mm-handle-type handle)) "text/calendar"))
++      (setq event (gnus-icalendar-event-from-handle handle (gnus-icalendar-identities))))))
+ 
+ 
+ (defun gnus-icalendar-save-event ()
+-  "Save the Calendar event in the text/calendar part under point."
++  "Save the Calendar event in the text/calendar part under point.
++
++With gnus-icalendar-org ripped off, it probably does nothing now."
+   (interactive)
+   (gnus-article-check-buffer)
+   (let ((data (get-text-property (point) 'gnus-data)))
+@@ -940,29 +598,6 @@
+     (gnus-icalendar-reply (list gnus-icalendar-handle 'declined gnus-icalendar-event))
+     (setq-local gnus-icalendar-reply-status 'declined)))
+ 
+-(defun gnus-icalendar-event-export ()
+-  "Export calendar event to `org-mode', or update existing agenda entry."
+-  (interactive)
+-  (with-current-buffer gnus-article-buffer
+-    (gnus-icalendar-sync-event-to-org gnus-icalendar-event))
+-  ;; refresh article buffer in case the reply had been sent before initial org
+-  ;; export
+-  (with-current-buffer gnus-summary-buffer
+-    (gnus-summary-show-article)))
+-
+-(defun gnus-icalendar-event-show ()
+-  "Display `org-mode' agenda entry related to the calendar event."
+-  (interactive)
+-  (gnus-icalendar--show-org-event
+-   (with-current-buffer gnus-article-buffer
+-     gnus-icalendar-event)))
+-
+-(defun gnus-icalendar-event-check-agenda ()
+-  "Display `org-mode' agenda for days between event start and end dates."
+-  (interactive)
+-  (gnus-icalendar-show-org-agenda
+-   (with-current-buffer gnus-article-buffer gnus-icalendar-event)))
+-
+ (defvar gnus-mime-action-alist)         ; gnus-art
+ 
+ (defun gnus-icalendar-setup ()
+

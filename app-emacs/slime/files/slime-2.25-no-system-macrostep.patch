@@ -1,0 +1,13 @@
+Use bundled macrostep.el
+
+--- a/contrib/slime-macrostep.el
++++ b/contrib/slime-macrostep.el
+@@ -25,8 +25,6 @@
+ 
+ (require 'slime)
+ (eval-and-compile
+-  (require 'macrostep nil t)
+-  ;; Use bundled version if not separately installed
+   (require 'macrostep "../lib/macrostep"))
+ (eval-when-compile (require 'cl-lib))
+ 
