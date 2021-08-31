@@ -6,10 +6,11 @@
 |--------------------------+----------------------------------------------|
 | =app-emacs/ebuild-tools= | Access ebuilds quickly from Emacs            |
 | =app-emacs/ement-extras= | Use Matrix from Emacs with encryption        |
+| =app-emacs/telega=       | A featureful Telegram client for Emacs       |
 | =app-emacs/portage=      | Issue ~emerge~ commands from Emacs           |
 | =dev-lisp/sbcl=          | Bootstrappable with a user-specified Lisp    |
+| =app-doc/ansicl=         | ANSI Common Lisp Draft: Info and PDF         |
 | =app-emacs/imdb=         | Emacs IMDB client with local database        |
-| =www-client/w3m=         | Provides images on some X-less devices       |
 | =app-emacs/vterm=        | USE =system-libvterm=; native =emacs-module= |
 
 =dev-lisp/sbcl= also allows omitting html doc thus avoiding dependency on =graphviz=.
