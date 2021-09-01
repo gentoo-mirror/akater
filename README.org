@@ -24,12 +24,12 @@ If you use =layman=,
 sudo layman -o  https://gitlab.com/akater/ebuilds/-/raw/release/repositories.xml -f -a akater
 #+end_src
 
-To remove this repository:
+Looks like this should switch to =release= branch which is recommended.
+
+To remove the repository,
 #+begin_src sh :tangle no :results none
 sudo layman -d akater
 #+end_src
-
-This should ensure pulls from =release= branch which is recommended.
 
 ** Manually
 Add the following to your =repos.conf=:
