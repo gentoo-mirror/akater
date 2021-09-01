@@ -3,7 +3,7 @@
 <repositories xmlns="" version="1.0">
   <repo quality="experimental" status="unofficial">
     <name>akater</name>
-    <description lang="en">akater's Gentoo ebuild repository</description>
+    <description lang="en">Personal ebuild repository.  Emacs, Lisp, minimalism.</description>
     <homepage>https://gitlab.com/akater/ebuilds</homepage>
     <owner type="person">
       <name>akater</name>
