@@ -21,10 +21,8 @@ There is a variety of other =app-emacs/*= packages in the repository, some mine.
 ** Layman
 If you use =layman=,
 #+begin_src sh :tangle no :results none
-sudo layman -o  https://gitlab.com/akater/ebuilds/-/raw/release/repositories.xml -f -a akater
+sudo layman -o  https://gitlab.com/akater/ebuilds/-/raw/master/repositories.xml -f -a akater
 #+end_src
-
-Looks like this should switch to =release= branch which is recommended.
 
 To remove the repository,
 #+begin_src sh :tangle no :results none
@@ -43,8 +41,6 @@ sync-type = git
 sync-uri = https://gitlab.com/akater/ebuilds.git
 auto-sync = yes
 #+end_example
-
-However, seems like you'll have to switch to =release= branch manually then.
 
 * Notes
 This ebuild repository may contain:
