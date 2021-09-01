@@ -165,9 +165,7 @@ src_configure() {
 	strip-flags
 	filter-flags -pie					#526948
 
-	if use sh; then
-		replace-flags "-O[1-9]" -O0		#262359
-	elif use ia64; then
+	if use ia64; then
 		replace-flags "-O[2-9]" -O1		#325373
 	else
 		replace-flags "-O[3-9]" -O2
@@ -271,6 +269,17 @@ src_configure() {
 		fi
 	fi
 
+	if tc-is-cross-compiler; then
+		# Configure a CBUILD directory when cross-compiling to make tools
+		mkdir "${S}-build" && pushd "${S}-build" >/dev/null || die
+		ECONF_SOURCE="${S}" econf_build --without-all --without-x-toolkit
+		popd >/dev/null || die
+		# Don't try to execute the binary for dumping during the build
+		myconf+=" --with-dumping=none"
+	else
+		myconf+=" --with-dumping=pdumper"
+	fi
+
 	econf \
 		--program-suffix="-${EMACS_SUFFIX}" \
 		--includedir="${EPREFIX}"/usr/include/${EMACS_SUFFIX} \
@@ -317,8 +326,8 @@ src_compile() {
 	emake
 }
 
-src_install () {
-	emake DESTDIR="${D}" NO_BIN_LINK=t install
+src_install() {
+	emake DESTDIR="${D}" NO_BIN_LINK=t BLESSMAIL_TARGET= install
 
 	mv "${ED}"/usr/bin/{emacs-${FULL_VERSION}-,}${EMACS_SUFFIX} || die
 	mv "${ED}"/usr/share/man/man1/{emacs-,}${EMACS_SUFFIX}.1 || die
@@ -329,17 +338,23 @@ src_install () {
 	touch "${ED}"/usr/share/info/${EMACS_SUFFIX}/.keepinfodir
 	docompress -x /usr/share/info/${EMACS_SUFFIX}/dir.orig
 
+	# movemail must be setgid mail
+	if ! use mailutils; then
+		fowners root:mail /usr/libexec/emacs/${FULL_VERSION}/${CHOST}/movemail
+		fperms 2751 /usr/libexec/emacs/${FULL_VERSION}/${CHOST}/movemail
+	fi
+
 	# avoid collision between slots, see bug #169033 e.g.
-	rm "${ED}"/usr/share/emacs/site-lisp/subdirs.el
-	rm -rf "${ED}"/usr/share/{appdata,applications,icons}
-	rm -rf "${ED}/usr/$(get_libdir)"
-	rm -rf "${ED}"/var
+	rm "${ED}"/usr/share/emacs/site-lisp/subdirs.el || die
+	rm -rf "${ED}"/usr/share/{applications,icons} || die
+	rm -rf "${ED}/usr/$(get_libdir)" || die
+	rm -rf "${ED}"/var || die
 
 	# remove unused <version>/site-lisp dir
-	rm -rf "${ED}"/usr/share/emacs/${FULL_VERSION}/site-lisp
+	rm -rf "${ED}"/usr/share/emacs/${FULL_VERSION}/site-lisp || die
 
 	# remove COPYING file (except for etc/COPYING used by describe-copying)
-	rm "${ED}"/usr/share/emacs/${FULL_VERSION}/lisp/COPYING
+	rm "${ED}"/usr/share/emacs/${FULL_VERSION}/lisp/COPYING || die
 
 	if use systemd; then
 		insinto /usr/lib/systemd/user
@@ -390,9 +405,9 @@ src_install () {
 
 	dodoc README BUGS CONTRIBUTE
 
-	if use aqua; then
+	if use gui && use aqua; then
 		dodir /Applications/Gentoo
-		rm -rf "${ED}"/Applications/Gentoo/${EMACS_SUFFIX^}.app
+		rm -rf "${ED}"/Applications/Gentoo/${EMACS_SUFFIX^}.app || die
 		mv nextstep/Emacs.app \
 			"${ED}"/Applications/Gentoo/${EMACS_SUFFIX^}.app || die
 	fi
