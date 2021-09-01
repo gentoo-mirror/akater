@@ -25,7 +25,7 @@ eselect repository enable akater
 
 To remove the repository,
 #+begin_src sh :dir /sudo::/ :tangle no :results none
-eselect repository disable akater
+eselect repository remove akater
 #+end_src
 
 ** Manually
