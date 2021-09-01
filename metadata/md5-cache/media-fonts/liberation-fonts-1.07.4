@@ -1,0 +1,14 @@
+BDEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=install postinst postrm setup
+DEPEND=fontforge? ( media-gfx/fontforge )
+DESCRIPTION=GPL-2 Helvetica/Times/Courier replacement TrueType fonts, courtesy of Red Hat
+EAPI=7
+HOMEPAGE=https://fedorahosted.org/liberation-fonts
+INHERIT=font
+IUSE=fontforge X X
+KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-2-with-exceptions
+SLOT=0
+SRC_URI=!fontforge? ( https://fedorahosted.org/releases/l/i/liberation-fonts/liberation-fonts-ttf-1.07.4.tar.gz ) fontforge? ( https://fedorahosted.org/releases/l/i/liberation-fonts/liberation-fonts-1.07.4.tar.gz )
+_eclasses_=font	0667878c2b594871023dd1833d05996f
+_md5_=42ab47325dd458c3e2614d128a822579

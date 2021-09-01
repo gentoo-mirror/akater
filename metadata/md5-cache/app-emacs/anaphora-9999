@@ -1,0 +1,13 @@
+BDEPEND=>=app-editors/emacs-18:* >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DESCRIPTION=Anaphoric macros for Emacs Lisp providing implicit temp variables
+EAPI=8
+HOMEPAGE=https://github.com/rolandwalker/anaphora
+INHERIT=elisp git-r3
+KEYWORDS=~amd64 ~x86
+LICENSE=public-domain
+PROPERTIES=live
+RDEPEND=>=app-editors/emacs-18:*
+SLOT=0
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	b165dc0288d12ab26e86f41c56f03914	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_md5_=b2a3cbdf0b7a12aad964905b76dea6d2

@@ -1,0 +1,14 @@
+BDEPEND=>=app-editors/emacs-24:*
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DESCRIPTION=Behavior-Driven Emacs Lisp Testing
+EAPI=8
+HOMEPAGE=https://github.com/jorgenschaefer/emacs-buttercup
+INHERIT=elisp
+KEYWORDS=amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=>=app-editors/emacs-24:*
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/jorgenschaefer/emacs-buttercup/archive/refs/tags/v1.24.tar.gz -> buttercup-1.24.tar.gz
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	b165dc0288d12ab26e86f41c56f03914
+_md5_=5cad06b85f286b5fb31083073cfbbc09

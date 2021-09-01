@@ -1,0 +1,174 @@
+app-admin/pass 9999: Stores, retrieves, generates, and synchronizes passwords securely
+app-crypt/openpgp-keys-gnu-elpa 20190923: OpenPGP keys used to sign GNU ELPA packages
+app-doc/ansicl 20210723 20210724: Common Lisp ANSI standard (draft)
+app-doc/ansicl-dpANS-sources 15.17-r1: Common Lisp ANSI standard (draft): TeX sources
+app-editors/emacs 27.2-r4 27.2.9999 28.0.9999: The extensible, customizable, self-documenting real-time display editor
+app-emacs/ace-isearch 9999: A seamless bridge between isearch, ace-jump-mode, avy, helm-swoop and swiper
+app-emacs/ace-window 9999: Quickly switch windows.
+app-emacs/ag 0.48 9999: An Emacs front-end for ag ('the silver searcher')
+app-emacs/akater-conf 99999999: Emacs Lisp conf-related functions and macros used by akater
+app-emacs/akater-misc 99999999: Emacs Lisp accessory functions used by akater
+app-emacs/akater-sh 99999999: Emacs shell script related helper functions and macros
+app-emacs/akater-wpa 99999999: Emacs interface to wpa_supplicant
+app-emacs/alert 1.2 9999: Growl-style notification system for Emacs
+app-emacs/all-the-icons 5.0.0 9999: A library for inserting Developer icons
+app-emacs/anaphora 1.0.4 9999: Anaphoric macros for Emacs Lisp providing implicit temp variables
+app-emacs/ansi 0.4.1 9999: Emacs library to convert strings into ansi
+app-emacs/async 1.9.5 9999: Simple library for asynchronous processing in Emacs
+app-emacs/auctex 13.0.12 9999: Extensible package for writing and formatting TeX files in Emacs
+app-emacs/avy 9999: Jump to arbitrary positions in visible text and select text quickly.
+app-emacs/buttercup 1.24 9999: Behavior-Driven Emacs Lisp Testing
+app-emacs/cask 0.8.7 9999: Cask: Project management for package development
+app-emacs/cl-format 1.2 9999: CL format routine
+app-emacs/closql 9999: Store EIEIO objects using EmacSQL
+app-emacs/commander 0.7.0 9999: Emacs command line parser
+app-emacs/company 0.9.13 9999: Modular text completion framework
+app-emacs/company-ebdb 1.1 1.1-r1: company-mode completion backend for EBDB in message-mode
+app-emacs/concurrent 9999: Concurrent utility functions for Emacs Lisp
+app-emacs/console-colors 99999999: Emacs interface to console colors
+app-emacs/ctable 20171006 99999999: Table component for Emacs Lisp
+app-emacs/dash 9999: A modern list library for Emacs
+app-emacs/dashboard 1.7.0 1.8.1_pre20210827 9999: A startup screen extracted from Spacemacs
+app-emacs/deferred 9999: Simple asynchronous functions for Emacs Lisp
+app-emacs/defmacro-gensym 99999999: Convenient gensyms for defmacro (Emacs Lisp)
+app-emacs/dired-rsync 9999: Allow rsync from dired buffers
+app-emacs/ebdb 0.8.2 9999: Contact management package
+app-emacs/ebuild-run-mode 20210707 20210713 99999999: Major mode for Emacs buffers where ebuild commands are run
+app-emacs/ebuild-tools 99999999: Functions to deal with ebuilds in Emacs Lisp
+app-emacs/edbi 9999: Database independent interface for Emacs
+app-emacs/eix 99999999: Emacs Lisp interface to app-portage/eix
+app-emacs/elfeed 9999: An Emacs Atom/RSS feed reader
+app-emacs/elisp-slime-nav 9999: Make M-. and M-, work in elisp like they do in slime
+app-emacs/ellit-org 0.9 9999: Emacs Lisp Literate programming tool
+app-emacs/elpa-to-ebuilds 99999999: Convert Elisp packages to ebuilds
+app-emacs/emacsql 9999: high-level SQL database front-end
+app-emacs/ement 9999: Matrix client for GNU Emacs
+app-emacs/ement-extras 99999999: Extra features for Ement, Matrix client for GNU Emacs
+app-emacs/epc 9999: A RPC stack for the Emacs Lisp
+app-emacs/epl 0.9 9999: Emacs Package Library
+app-emacs/ert-runner 0.8.0 9999: Opinionated Ert testing workflow
+app-emacs/expand-region 9999: Emacs extension to increase selected region by semantic units
+app-emacs/file-tree 99999999: Manipulation of symbolic file trees in Elisp
+app-emacs/findr 0.9.11 9999: Breadth-first file-finding facility for (X)Emacs
+app-emacs/forge 9999: Access Git forges from Magit
+app-emacs/fsm 0.2.1 9999: State machine library
+app-emacs/gentoo-cache 99999999: Elisp package that provides cached data about underlying Gentoo system to Emacs
+app-emacs/gentoolkit 99999999: Use Portage's equery from Emacs
+app-emacs/geo 2.0 9999: Geolocation library for Emacs
+app-emacs/ghub 9999: Minuscule client libraries for Git forge APIs.
+app-emacs/gntp 0.1 9999: Growl Notification Protocol for Emacs
+app-emacs/helm 9999: Emacs incremental completion and selection narrowing framework
+app-emacs/helm-company 9999: Helm interface for company-mode
+app-emacs/htmlize 9999: HTML-ize font-lock buffers in Emacs
+app-emacs/hydra 9999: Make bindings that stick around.
+app-emacs/iedit 9999: Edit multiple regions in the same way simultaneously.
+app-emacs/imdb 9999: Querying the IMDB
+app-emacs/inf-ruby 9999: Run a Ruby process in a buffer
+app-emacs/inflections 9999: Convert english words between singular and plural
+app-emacs/info-colors 9999: Extra colors for Info-mode
+app-emacs/ivy 9999: Incremental Vertical completYon
+app-emacs/jabber 9999: A Jabber client for Emacs.
+app-emacs/jack-connect 9999: Manage jack connections within Emacs
+app-emacs/jump 9999: Build functions which contextually jump between files
+app-emacs/language-detection 0_pre20160923 9999: Automatic language detection from code snippets
+app-emacs/let-alist 1.0.6 1.0.6-r1: Easily let-bind values of an assoc-list by their names
+app-emacs/libegit2 9999: Emacs module for libgit2
+app-emacs/lisp-extra-font-lock 9999: Highlight bound variables and quoted exprs.
+app-emacs/lispy 9999: vi-like Paredit.
+app-emacs/literate-elisp 9999: A library to write Emacs Lisp codes in org mode
+app-emacs/log4e 0.3.3 9999: Logging framework for Elisp
+app-emacs/looking-through 99999999: Emacs Lisp's looking-at, followed by movement if match succeeded
+app-emacs/lv 9999: Other echo area
+app-emacs/macrostep 9999: Interactive macro expander
+app-emacs/magit 9999: A Git porcelain inside Emacs
+app-emacs/markdown-mode 9999: Major mode for Markdown-formatted text
+app-emacs/melpa-sources 99999999: Milkman Emacs Lisp Package Archive recipes
+app-emacs/modus-themes 9999: Highly accessible themes (WCAG AAA) for Emacs
+app-emacs/multitran 9999: Interface to multitran
+app-emacs/org 9999: An Emacs mode for notes and project planning
+app-emacs/org-board 9999: Bookmarking and web archival system for Org mode.
+app-emacs/org-clhs 99999999: Support for links to CLHS in Org mode
+app-emacs/org-development 99999999: Elisp package that streamlines software development in org
+app-emacs/org-development-elisp 99999999: Elisp package that streamlines development of Elisp packages in org
+app-emacs/org-development-lisp 99999999: Elisp package that streamlines development of Common Lisp packages in org
+app-emacs/org-header-cycling 99999999: Elisp package that allows convenient cycling of org src block headers
+app-emacs/org-nutrition 99999999: Simple nutrition tracking in Org
+app-emacs/org-project 99999999: Elisp package to create systems of org files from templates
+app-emacs/org-trello 9999: Minor mode to synchronize org-mode buffer and trello board
+app-emacs/orgit 9999: Support for Org links to Magit buffers
+app-emacs/ox-json 9999: JSON export backend for Org mode
+app-emacs/page-break-lines 0.14 9999: Display ^L page breaks as tidy horizontal lines
+app-emacs/paredit 9999: Minor mode for performing structured editing of S-expressions
+app-emacs/pdf-mode 99999999: Major mode for editing PDF files
+app-emacs/pg 9999: Emacs Lisp interface to the PostgreSQL RDBMS
+app-emacs/pinentry 0.1 9999: GnuPG Pinentry server implementation
+app-emacs/pkg-info 9999: Information about packages
+app-emacs/plz 9999: An HTTP library that uses curl as a backend
+app-emacs/poly-markdown 9999: Polymode for markdown-mode
+app-emacs/poly-org 0.2.2 9999: Elisp polymode for org-mode
+app-emacs/polymode 0.2.2 9999: Extensible framework for multiple GNU Emacs major modes
+app-emacs/popup 9999: Visual popup interface library for Emacs
+app-emacs/portage 99999999: Emacs interface to Portage
+app-emacs/portage-navi 9999: Portage viewer
+app-emacs/projectile 9999: Manage and navigate projects in Emacs easily
+app-emacs/projectile-rails 9999: Minor mode for Rails projects based on projectile-mode
+app-emacs/rainbow-identifiers 0.2.2 9999: Highlight identifiers according to their names
+app-emacs/rake 9999: Run rake commands
+app-emacs/request 9999: Compatible layer for URL request in Emacs
+app-emacs/rich-minority 9999: Clean-up and Beautify the list of minor-modes.
+app-emacs/s 9999: The long lost Emacs string manipulation library.
+app-emacs/set-endos 99999999: Elisp package that provides some interfaces to finite dynamical systems
+app-emacs/sgc 99999999: Major mode for Emacs buffers where ebuild commands are run
+app-emacs/shut-up 0.3.3 9999: Shut up would you!
+app-emacs/simple-httpd 9999: Pure elisp HTTP server
+app-emacs/slime 2.26.1 9999: SLIME, the Superior Lisp Interaction Mode (Extended)
+app-emacs/slime-company 9999: slime completion backend for company mode
+app-emacs/smart-mode-line 9999: A color coded smart mode-line.
+app-emacs/smartparens 9999: Automatic insertion, wrapping and paredit-like navigation w/ user defined pairs.
+app-emacs/sokoban 1.4.8-r1: Implementation of Sokoban for Emacs
+app-emacs/sqlite3 9999: Sqlite3 Emacs module by syohex
+app-emacs/sqorm 9999: An ORM for Emacs sqlite3
+app-emacs/srv 9999: perform SRV DNS requests
+app-emacs/sudo-edit 9999: Open files as another user
+app-emacs/sx 9999: StackExchange client for Emacs
+app-emacs/telega 0.7.024 0.7.025 9999: GNU Emacs telegram client (unofficial)
+app-emacs/timestamp-util 99999999: Define Elisp timestamp matchers
+app-emacs/trace-mode 99999999: Attempt at mode for trace output and one extra feature for trace
+app-emacs/transient 0.3.6 9999: Convenient infix arguments and suffix commands in Emacs
+app-emacs/transient-mount 99999999: Emacs interface to mount via transient
+app-emacs/transmission 9999: Emacs interface to a Transmission session
+app-emacs/treepy 9999: Generic tree traversal tools
+app-emacs/ts 9999: Timestamp and date/time library
+app-emacs/undo-tree 0.7.5 9999: Undo trees and visualization
+app-emacs/use-package 9999: A configuration macro for simplifying your .emacs
+app-emacs/visual-fill-column 2.4 9999: fill-column for visual-line-mode
+app-emacs/vlf 9999: View Large Files
+app-emacs/volume 9999: Tweak your sound card volume from Emacs
+app-emacs/vterm 9999: Emacs package implementing a terminal via libvterm
+app-emacs/web-mode 9999: Major mode for editing web templates
+app-emacs/webpaste 9999: Paste to pastebin-like services
+app-emacs/wgrep 9999: Writable grep buffer and apply the changes to files
+app-emacs/which-key 9999: Display available keybindings in popup
+app-emacs/with-editor 9999: Use the Emacsclient as the $EDITOR of child processes
+app-emacs/xah-fly-keys 11.5.20200625041453 9999: ergonomic modal keybinding minor mode.
+app-emacs/xrdb-mode 3.0-r1: An Emacs major mode for editing X resource database files
+app-emacs/yaml 9999: YAML parser for Elisp
+app-emacs/zoutline 9999: Simple outline library.
+app-eselect/eselect-lisp 0.1: Manage /usr/bin/lisp symlink
+dev-db/sqlite 3.34.1 3.35.5: SQL database engine
+dev-libs/mxml 2.11 9999: Tiny XML library
+dev-libs/sqlite3-pcre 9999: REGEXP() for sqlite3
+dev-lisp/sbcl 2.1.4 2.1.5: Steel Bank Common Lisp (SBCL) is an implementation of ANSI Common Lisp
+dev-python/janus 0.4.0-r1 0.5.0: Implementation of the asyncio (PEP 3156) event-loop with Qt
+media-fonts/liberation-fonts 1.07.4: GPL-2 Helvetica/Times/Courier replacement TrueType fonts, courtesy of Red Hat
+media-gfx/fim 0.5_rc3: Fbi-IMproved is a framebuffer image viewer based on Fbi and inspired from Vim
+net-im/pantalaimon 0.10.2: A Matrix proxy daemon that adds E2E encryption capabilities
+net-im/purple-carbons 0.1.3: Message Carbons plugin for libpurple
+net-im/purple-lurch 0.6.4 0.6.5 9999: Plugin for libpurple implementing OMEMO
+net-libs/tdlib 1.5.0 1.7.0 1.7.4 9999: Cross-platform library for building Telegram clients
+net-wireless/wpa_supplicant 9999: IEEE 802.1X/WPA supplicant for secure wireless transfers
+sys-devel/crossdev 20200131 20200801: Gentoo Cross-toolchain generator
+sys-devel/gcc 10.2.0-r5 10.3.0: The GNU Compiler Collection
+sys-firmware/open-ath9k-htc-firmware 1.4.0: The firmware for QCA AR7010/AR9271 802.11n USB NICs
+www-client/netsurf 3.10-r3: a free, open source web browser
+x11-themes/qtstyleplugins 1.0_pre20170311 9999: Additional style plugins for Qt5 (gtk2, cleanlook, plastic, motif)

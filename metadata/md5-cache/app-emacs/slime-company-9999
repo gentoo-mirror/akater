@@ -1,0 +1,13 @@
+BDEPEND=>=app-emacs/slime-2.13 >=app-editors/emacs-24.4:* >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DESCRIPTION=slime completion backend for company mode
+EAPI=8
+HOMEPAGE=https://github.com/anwyn/slime-company
+INHERIT=elisp git-r3
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3+
+PROPERTIES=live
+RDEPEND=>=app-emacs/slime-2.13 >=app-emacs/company-0.9.0 >=app-editors/emacs-24.4:*
+SLOT=0
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	b165dc0288d12ab26e86f41c56f03914	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_md5_=7264b4f965c88c71f5e3f1b2c1008715

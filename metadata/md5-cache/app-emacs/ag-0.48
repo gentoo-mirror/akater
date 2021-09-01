@@ -1,0 +1,15 @@
+BDEPEND=doc? ( dev-python/sphinx ) test? ( app-emacs/cask ) >=app-editors/emacs-24:*
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DESCRIPTION=An Emacs front-end for ag ('the silver searcher')
+EAPI=8
+HOMEPAGE=https://github.com/Wilfred/ag.el
+INHERIT=elisp
+IUSE=doc test
+KEYWORDS=amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=>=app-emacs/dash-2.8.0 >=app-emacs/s-1.9.0 >=app-editors/emacs-24:*
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/Wilfred/ag.el/archive/refs/tags/0.48.tar.gz -> ag-0.48.tar.gz
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	b165dc0288d12ab26e86f41c56f03914
+_md5_=eb38be47ea7196d3e0207f928293e850

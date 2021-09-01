@@ -1,0 +1,14 @@
+BDEPEND=>=app-emacs/dash-2.14.1 app-emacs/transient >=app-emacs/with-editor-2.8.0 sys-apps/texinfo libgit? ( app-emacs/libegit2 ) >=app-editors/emacs-25:* >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DESCRIPTION=A Git porcelain inside Emacs
+EAPI=8
+HOMEPAGE=https://magit.vc/
+INHERIT=elisp git-r3
+IUSE=libgit
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-3+
+PROPERTIES=live
+RDEPEND=>=app-emacs/dash-2.14.1 app-emacs/transient >=app-emacs/with-editor-2.8.0 sys-apps/texinfo libgit? ( app-emacs/libegit2 ) >=dev-vcs/git-2.0.0 libgit? ( dev-libs/libgit2 app-emacs/libegit2 ) >=app-editors/emacs-25:*
+SLOT=0
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	b165dc0288d12ab26e86f41c56f03914	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_md5_=a8192b31d760d82e1adf3bec5daa9b17

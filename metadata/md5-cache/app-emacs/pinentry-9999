@@ -1,0 +1,13 @@
+BDEPEND=>=app-editors/emacs-24:* >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DESCRIPTION=GnuPG Pinentry server implementation
+EAPI=8
+HOMEPAGE=https://elpa.gnu.org/packages/pinentry.html
+INHERIT=elpa
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3+
+PROPERTIES=live
+RDEPEND=>=app-crypt/gnupg-2.1.5 >=app-editors/emacs-24:*
+SLOT=0
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	b165dc0288d12ab26e86f41c56f03914	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	elpa	0b71d0a73691da7a5b46377159457b86
+_md5_=f390083d6f8266bc395fd6a384eede89

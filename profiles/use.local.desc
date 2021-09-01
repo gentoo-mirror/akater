@@ -1,0 +1,142 @@
+# This file is deprecated as per GLEP 56 in favor of metadata.xml.
+# Please add your descriptions to your package's metadata.xml ONLY.
+# * generated automatically using pmaint *
+
+app-admin/pass:X - Use x11-misc/xclip to copy passwords to the clipboard.
+app-admin/pass:dmenu - Add support for x11-misc/dmenu with the 'passmenu' program.
+app-admin/pass:fish-completion - Support app-shells/fish.
+app-admin/pass:git - Use dev-vcs/git for password revisions.
+app-admin/pass:importers - Allow importing passwords from other password managers using various contributed scripts.
+app-doc/ansicl:info - Build the Info version of the draft
+app-doc/ansicl-dpANS-sources:keep-dvi - Keep dvi files, as found at www.cs.cmu.edu
+app-editors/emacs:athena - Enable the MIT Athena widget set (x11-libs/libXaw)
+app-editors/emacs:dynamic-loading - Enable loading of dynamic libraries at runtime
+app-editors/emacs:games - Support shared score files for games
+app-editors/emacs:gconf - Use gnome-base/gconf to read the system font name
+app-editors/emacs:gfile - Use gfile (dev-libs/glib) for file notification
+app-editors/emacs:gsettings - Use gsettings (dev-libs/glib) to read the system font name
+app-editors/emacs:gtk2 - Prefer version 2 of the GIMP Toolkit to version 3 (x11-libs/gtk+)
+app-editors/emacs:gzip-el - Compress bundled Emacs Lisp source
+app-editors/emacs:harfbuzz - Use media-libs/harfbuzz as text shaping engine
+app-editors/emacs:imagemagick - Use media-gfx/imagemagick for image processing
+app-editors/emacs:json - Compile with native JSON support using dev-libs/jansson
+app-editors/emacs:libxml2 - Use dev-libs/libxml2 to parse XML instead of the internal Lisp implementations
+app-editors/emacs:lto - Enable Link Time Optimization
+app-editors/emacs:mailutils - Retrieve e-mail using net-mail/mailutils instead of the internal movemail substitute
+app-editors/emacs:source - Install C source files and make them available for find-function
+app-editors/emacs:threads - Add elisp threading support
+app-editors/emacs:toolkit-scroll-bars - Use the selected toolkit's scrollbars in preference to Emacs' own scrollbars
+app-editors/emacs:wide-int - Prefer wide Emacs integers (typically 62-bit). This option has an effect only on architectures where "long" and "long long" types have different size.
+app-editors/emacs:xwidgets - Enable use of GTK widgets in Emacs buffers (requires GTK3)
+app-emacs/auctex:preview-latex - Use bundled preview-latex
+app-emacs/auctex:tex - Also install LaTeX
+app-emacs/company:helm - Also install helm-company
+app-emacs/console-colors:nopasswd - Presume setvtrgb can be executed without a password
+app-emacs/ebdb:company - Use company completion framework
+app-emacs/ebuild-tools:eix - Use app-emacs/eix backend
+app-emacs/ebuild-tools:gentoolkit - (broken!) Use app-emacs/gentoolkit backend
+app-emacs/elfeed:emms - Support EMMS
+app-emacs/elfeed:org - Support Org links
+app-emacs/elfeed:web - Install web interface view of the database
+app-emacs/elpa-to-ebuilds:melpa - Use melpa recipes as additional data source
+app-emacs/emacsql:system-sqlite - Use system-wide sqlite instead of bundled
+app-emacs/ement:e2e - Enable end to end encryption support via pantalaimon
+app-emacs/ement:extras - Install extra features (auth-source and proxy support)
+app-emacs/ivy:counsel - Also install counsel
+app-emacs/ivy:hydra - Install ivy-hydra
+app-emacs/ivy:swiper - Also install swiper
+app-emacs/libegit2:system-libgit - Use the system-wide dev-libs/libgit2 instead of bundled.
+app-emacs/lispy:clojure - Support Clojure
+app-emacs/literate-elisp:bootstrap - Compile with itself
+app-emacs/magit:libgit - Install with libgit2 support (experimental)
+app-emacs/melpa-sources:package-build - Compile and system-wide install `package-build' Elisp package
+app-emacs/melpa-sources:recipes - Install MELPA recipes
+app-emacs/melpa-sources:sources - Install MELPA build scripts meant to build packages from recipes
+app-emacs/org:odt-schema - Install non-free schema files for OpenDocument Text exporter
+app-emacs/portage:smart-live-rebuild - Include smart-live-rebuild related functions
+app-emacs/projectile-rails:hydra - Install “hydra keymap”
+app-emacs/slime:company - Also install slime-company
+app-emacs/slime:system-cl-lib - Use system-wide cl-lib instead of bundled
+app-emacs/slime:system-ert - Use system-wide ert instead of bundled
+app-emacs/slime:system-macrostep - Use system-wide macrostep instead of bundled
+app-emacs/slime:xref - Install xref.lisp cross-referencing tool
+app-emacs/telega:contrib - Install miscellanous extra features
+app-emacs/telega:dbus - Ensure Emacs supports dbus, for notifications
+app-emacs/telega:geo - Enable geolocation support with app-emacs/geo
+app-emacs/telega:org - Enable Org links
+app-emacs/telega:tray - Enable AppIndicator support
+app-emacs/vterm:fish - Install Friendly Shell scripts.
+app-emacs/vterm:system-libvterm - Use the system-wide dev-libs/libvterm instead of bundled.
+app-emacs/vterm:zsh - Install Z shell scripts.
+dev-db/sqlite:secure-delete - Enable overwriting of deleted content with zeros by default (http://sqlite.org/pragma.html#pragma_secure_delete), causing some performance penalty
+dev-db/sqlite:tools - Install additional tools
+dev-lisp/sbcl:abcl - Compile SBCL with Armed Bear Common Lisp (dev-lisp/abcl)
+dev-lisp/sbcl:bootstrap - Compile SBCL with a preinstalled Lisp
+dev-lisp/sbcl:bootstrap-self - Make SBCL recompile itself after an initial bootstrap
+dev-lisp/sbcl:clisp - Compile SBCL with GNU CLISP (dev-lisp/clisp)
+dev-lisp/sbcl:clozurecl - Compile SBCL with Clozure Common Lisp (dev-lisp/clozurecl)
+dev-lisp/sbcl:cmucl - Compile SBCL with CMU Common Lisp (dev-lisp/cmucl)
+dev-lisp/sbcl:ecls - Compile SBCL with Embeddable Common Lisp (dev-lisp/ecls)
+dev-lisp/sbcl:gcl - Compile SBCL with GNU Common Lisp (dev-lisp/gcl)
+dev-lisp/sbcl:htmldoc - Install html documentation
+dev-lisp/sbcl:infodoc - Install Info documentation
+dev-lisp/sbcl:pax-kernel - Enable if the user plans to run the package under a pax enabled hardened kernel
+dev-lisp/sbcl:sbcl - Compile SBCL with the currently installed SBCL
+media-fonts/liberation-fonts:fontforge - Build fonts with media-gfx/fontforge
+media-gfx/fim:bmp - Enable BMP file support
+media-gfx/fim:dia - Enable DIA file support via app-office/dia
+media-gfx/fim:imagemagick - Use convert from media-gfx/imagemagick as fallback file opener
+media-gfx/fim:pcx - Enable PCX file support
+media-gfx/fim:xfig - Enable FIG file support via media-gfx/xfig
+net-im/pantalaimon:dbus - Support additional features that require dbus
+net-im/pantalaimon:panctl - Install a CLI utility to control pantalaimon
+net-im/pantalaimon:systemd - Install systemd .service script
+net-libs/tdlib:clang - Compile using Clang
+net-libs/tdlib:cli - Install tg_cli
+net-libs/tdlib:gcc - Compile using GCC
+net-libs/tdlib:low-ram - Split source files during compilation (for systems with less than 3.5G RAM)
+net-libs/tdlib:lto - Enable Link Time Optimization
+net-wireless/wpa_supplicant:ap - Add support for access point mode
+net-wireless/wpa_supplicant:broadcom-sta - Flag to help users disable features not supported by broadcom-sta driver
+net-wireless/wpa_supplicant:eap-sim - Add support for EAP-SIM authentication algorithm
+net-wireless/wpa_supplicant:eapol-test - Build and install eapol_test binary
+net-wireless/wpa_supplicant:fasteap - Add support for FAST-EAP authentication algorithm
+net-wireless/wpa_supplicant:fils - Add support for Fast Initial Link Setup (802.11ai)
+net-wireless/wpa_supplicant:hs2-0 - Add support for 802.11u and Passpoint for HotSpot 2.0
+net-wireless/wpa_supplicant:macsec - Add support for wired macsec
+net-wireless/wpa_supplicant:mbo - Add support Multiband Operation
+net-wireless/wpa_supplicant:mesh - Add support for mesh mode
+net-wireless/wpa_supplicant:p2p - Add support for Wi-Fi Direct mode
+net-wireless/wpa_supplicant:privsep - Enable wpa_priv privledge separation binary
+net-wireless/wpa_supplicant:ps3 - Add support for ps3 hypervisor driven gelic wifi
+net-wireless/wpa_supplicant:smartcard - Add support for smartcards
+net-wireless/wpa_supplicant:tdls - Add support for Tunneled Direct Link Setup (802.11z)
+net-wireless/wpa_supplicant:uncommon-eap-types - Add support for GPSK, SAKE, GPSK_SHA256, IKEV2 and EKE
+net-wireless/wpa_supplicant:wimax - Add support for Wimax EAP-PEER authentication algorithm
+net-wireless/wpa_supplicant:wps - Add support for Wi-Fi Protected Setup
+sys-devel/gcc:ada - Build the ADA language (GNAT) frontend
+sys-devel/gcc:d - Enable support for the D programming language
+sys-devel/gcc:fixed-point - Enable fixed-point arithmetic support for MIPS targets in gcc (Warning: significantly increases compile time!)
+sys-devel/gcc:go - Build the GCC Go language frontend.
+sys-devel/gcc:graphite - Add support for the framework for loop optimizations based on a polyhedral intermediate representation
+sys-devel/gcc:jit - Enable libgccjit so other applications can embed gcc for Just-In-Time compilation. This will slow down the compiler a bit as it forces all of the toolchain to be shared libs.
+sys-devel/gcc:libssp - Build SSP support into a dedicated library rather than use the code in the C library (DO NOT ENABLE THIS IF YOU DON'T KNOW WHAT IT DOES)
+sys-devel/gcc:lto - Build using Link Time Optimizations (LTO)
+sys-devel/gcc:nptl - Enable support for Native POSIX Threads Library, the new threading module (requires linux-2.6 or better usually)
+sys-devel/gcc:objc - Build support for the Objective C code language
+sys-devel/gcc:objc++ - Build support for the Objective C++ language
+sys-devel/gcc:objc-gc - Build support for the Objective C code language Garbage Collector
+sys-devel/gcc:pgo - Build GCC using Profile Guided Optimization (PGO)
+sys-devel/gcc:sanitize - Build support for various sanitizer functions (ASAN/TSAN/etc...)
+sys-devel/gcc:ssp - Build packages with stack smashing protector on by default
+sys-devel/gcc:systemtap - enable systemtap static probe points
+sys-devel/gcc:vtv - Build support for virtual table verification (a C++ hardening feature)
+sys-firmware/open-ath9k-htc-firmware:ar7010 - Build AR9271 (MAGPIE) firmware
+sys-firmware/open-ath9k-htc-firmware:ar9271 - Build AR9271 (K2) firmware
+www-client/netsurf:bmp - BMP bitmap image support (media-libs/libnsbmp)
+www-client/netsurf:duktape - Use duktape.org javascript engine
+www-client/netsurf:gtk - Build GTK3 GUI
+www-client/netsurf:gtk2 - Build GTK2 GUI
+www-client/netsurf:psl - Use public suffix list via media-libs/libnspsl
+www-client/netsurf:rosprite - RISC OS Sprite bitmap image support (media-libs/librosprite)
+www-client/netsurf:svgtiny - SVG image support via media-libs/svgatiny instead of gnome-base/librsvg

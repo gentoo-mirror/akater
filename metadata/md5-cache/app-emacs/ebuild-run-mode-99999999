@@ -1,0 +1,13 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=postinst postrm unpack
+DESCRIPTION=Major mode for Emacs buffers where ebuild commands are run
+EAPI=8
+HOMEPAGE=https://gitlab.com/akater/emacs-ebuild-run-mode/-/blob/master/ebuild-run-mode.org
+INHERIT=elisp-common git-r3
+KEYWORDS=amd64 x86
+LICENSE=GPL-2+
+PROPERTIES=live
+RDEPEND=app-emacs/ebuild-mode
+SLOT=0
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_md5_=77d1288f54c0d647ac37016b2bc69de7

@@ -1,0 +1,12 @@
+DEFINED_PHASES=postinst postrm
+DESCRIPTION=Major mode for Emacs buffers where ebuild commands are run
+EAPI=8
+HOMEPAGE=https://gitlab.com/akater/emacs-ebuild-run-mode/-/blob/master/ebuild-run-mode.org
+INHERIT=elisp-common
+KEYWORDS=amd64 x86
+LICENSE=GPL-2+
+RDEPEND=app-emacs/ebuild-mode
+SLOT=0
+SRC_URI=https://gitlab.com/akater/emacs-ebuild-run-mode/-/archive/v20210707/emacs-ebuild-run-mode-20210707.tar.bz2 -> ebuild-run-mode-20210707.tar.bz2
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a
+_md5_=fe4f70e2cb8e5d6d8afb13cd806903c8

@@ -1,0 +1,13 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install unpack
+DEPEND=net-im/pidgin dev-libs/mxml dev-libs/libxml2 dev-db/sqlite dev-libs/libgcrypt:0
+DESCRIPTION=Plugin for libpurple implementing OMEMO
+EAPI=7
+HOMEPAGE=https://github.com/gkdr/lurch
+INHERIT=git-r3
+LICENSE=GPL-3
+PROPERTIES=live
+RDEPEND=net-im/pidgin dev-libs/mxml dev-libs/libxml2 dev-db/sqlite dev-libs/libgcrypt:0
+SLOT=0
+_eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_md5_=bdb9a56d64436ec8c680cf85dac4ac9d

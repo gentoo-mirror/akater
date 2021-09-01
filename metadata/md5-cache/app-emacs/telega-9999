@@ -1,0 +1,14 @@
+BDEPEND=>=net-libs/tdlib-1.7.4 sys-devel/make virtual/pkgconfig doc? ( app-emacs/ellit-org >=app-emacs/htmlize-1.34 app-emacs/alert app-emacs/all-the-icons >=app-emacs/dashboard-1.8.0 app-emacs/rainbow-identifiers app-emacs/transient app-emacs/visual-fill-column ) org? ( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) ) test? ( >=dev-lang/python-3 ) tray? ( >=dev-libs/libappindicator-3 ) >=app-editors/emacs-26.1:* >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DESCRIPTION=GNU Emacs telegram client (unofficial)
+EAPI=8
+HOMEPAGE=https://zevlg.github.io/telega.el
+INHERIT=elisp git-r3
+IUSE=contrib dbus doc geo org tray test
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-3
+PROPERTIES=live
+RDEPEND=>=net-libs/tdlib-1.7.4 app-emacs/visual-fill-column app-emacs/rainbow-identifiers contrib? ( app-emacs/alert app-emacs/all-the-icons app-emacs/dashboard app-emacs/language-detection app-emacs/transient ) dbus? ( app-editors/emacs[dbus] ) geo? ( app-emacs/geo ) org? ( || ( app-emacs/org app-emacs/org-mode ) ) tray? ( >=dev-libs/libappindicator-3 ) >=app-editors/emacs-26.1:*
+SLOT=0
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	b165dc0288d12ab26e86f41c56f03914	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_md5_=824517d37b07c6de88f02603b15db189

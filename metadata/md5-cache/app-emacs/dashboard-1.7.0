@@ -1,0 +1,13 @@
+BDEPEND=>=app-emacs/page-break-lines-0.11 >=app-editors/emacs-25.3:*
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DESCRIPTION=A startup screen extracted from Spacemacs
+EAPI=8
+HOMEPAGE=https://github.com/emacs-dashboard/emacs-dashboard
+INHERIT=elisp
+KEYWORDS=amd64 x86
+LICENSE=GPL-3
+RDEPEND=>=app-emacs/page-break-lines-0.11 >=app-editors/emacs-25.3:*
+SLOT=0
+SRC_URI=https://github.com/emacs-dashboard/emacs-dashboard/archive/refs/tags/1.7.0.tar.gz -> dashboard-1.7.0.tar.gz
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	b165dc0288d12ab26e86f41c56f03914
+_md5_=4c79dc5003af54d1db99770577cef7cf

@@ -1,0 +1,15 @@
+BDEPEND=>=app-editors/emacs-25.1:*
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DESCRIPTION=Emacs Lisp Literate programming tool
+EAPI=8
+HOMEPAGE=https://github.com/zevlg/ellit-org.el
+INHERIT=elisp
+IUSE=test
+KEYWORDS=amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) ) >=app-editors/emacs-25.1:*
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/zevlg/ellit-org.el/archive/refs/tags/v0.9.tar.gz -> ellit-org-0.9.tar.gz
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	b165dc0288d12ab26e86f41c56f03914
+_md5_=82fc7fc2890acfe3e0e3eb4936d2b47b

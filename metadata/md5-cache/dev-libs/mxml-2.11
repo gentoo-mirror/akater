@@ -1,0 +1,10 @@
+DEFINED_PHASES=install
+DESCRIPTION=Tiny XML library
+EAPI=7
+HOMEPAGE=http://michaelrsweet.github.io/mxml
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-2
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/michaelrsweet/mxml/releases/download/v2.11/mxml-2.11.tar.gz -> mxml-2.11.tar.gz
+_md5_=da127d53852cbaade8be5fd46d16c16d

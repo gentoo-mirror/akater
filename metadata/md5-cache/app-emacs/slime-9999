@@ -1,0 +1,16 @@
+BDEPEND=virtual/commonlisp dev-lisp/asdf system-macrostep? ( >=app-emacs/macrostep-0.9 ) >=sys-apps/texinfo-5.1 doc? ( virtual/texi2dvi ) >=app-editors/emacs-23.1:* >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DESCRIPTION=SLIME, the Superior Lisp Interaction Mode (Extended)
+EAPI=8
+HOMEPAGE=http://common-lisp.net/project/slime/
+INHERIT=elisp git-r3
+IUSE=doc company +system-cl-lib system-ert system-macrostep xref
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 xref? ( xref.lisp )
+PDEPEND=company? ( app-emacs/slime-company )
+PROPERTIES=live
+RDEPEND=virtual/commonlisp dev-lisp/asdf system-macrostep? ( >=app-emacs/macrostep-0.9 ) >=app-editors/emacs-23.1:*
+RESTRICT=test
+SLOT=0
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	b165dc0288d12ab26e86f41c56f03914	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_md5_=abc6c94c6812e4471641946c6bd437b7
