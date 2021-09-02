@@ -59,7 +59,7 @@ RDEPEND="
 			   app-emacs/transient )
 	dbus? ( app-editors/emacs[dbus] )
 	geo? ( app-emacs/geo )
-	org? ( || ( app-emacs/org app-emacs/org-mode ) )
+	org? ( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) )
 	tray? ( >=dev-libs/libappindicator-3 )
 "
 

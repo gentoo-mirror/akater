@@ -191,7 +191,8 @@ src_prepare() {
 		git-merge minimal/no-modus-themes
 		git-merge minimal/no-org
 	fi
-	use dbus || git merge minimal/no-dbus
+	# breaks to much, leave it so far
+	# use dbus || git merge minimal/no-dbus
 
 	default
 

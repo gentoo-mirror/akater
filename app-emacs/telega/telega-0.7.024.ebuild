@@ -26,7 +26,7 @@ BDEPEND="
 	sys-devel/make
 	virtual/pkgconfig
 	doc? ( app-emacs/ellit-org )
-	org? ( || ( app-emacs/org app-emacs/org-mode ) )
+	org? ( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) )
 	test? ( >=dev-lang/python-3
 			app-emacs/alert
 			app-emacs/all-the-icons
@@ -48,7 +48,7 @@ RDEPEND="
 			   app-emacs/language-detection
 			   app-emacs/transient )
 	geo? ( app-emacs/geo )
-	org? ( || ( app-emacs/org app-emacs/org-mode ) )
+	org? ( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) )
 	tray? ( >=dev-libs/libappindicator-3 )
 "
 
