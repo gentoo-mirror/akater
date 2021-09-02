@@ -1,0 +1,20 @@
+Temporary fix for 0.7.025
+
+--- a/telega.el
++++ b/telega.el
+@@ -315,6 +315,15 @@
+ ;; TODO: move runtime env stuff and timer functions here from
+ ;; telega-root.el
+ 
++(when (> emacs-major-version 27)
++  (defun cl--plist-remove (plist member)
++    (cond
++     ((null plist) nil)
++     ((null member) plist)
++     ((eq plist member) (cddr plist))
++     (t `(,(car plist) ,(cadr plist)
++          ,@(cl--plist-remove (cddr plist) member))))))
++
+ (provide 'telega)
+ 
+ 

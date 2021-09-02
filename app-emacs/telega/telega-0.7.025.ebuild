@@ -63,6 +63,7 @@ RDEPEND="
 
 src_prepare() {
 
+	eapply "${FILESDIR}/${PN}"-0.7.025-emacs-28-plist-remove-fix.patch
 	eapply "${FILESDIR}/${PN}"-0.7.025-no-images.patch
 	eapply "${FILESDIR}/${PN}"-0.7.025-fix-version.patch
 
