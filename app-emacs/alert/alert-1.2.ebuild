@@ -19,3 +19,5 @@ RDEPEND="
 >=app-emacs/gntp-0.1
 >=app-emacs/log4e-0.3.0
 "
+
+SITEFILE="50${PN}-gentoo.el"

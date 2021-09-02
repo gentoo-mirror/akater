@@ -17,6 +17,8 @@ SLOT="0"
 DOCS="README.org"
 IUSE="test"
 
+SITEFILE="50${PN}-gentoo.el"
+
 RDEPEND="
 	( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) )
 "

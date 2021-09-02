@@ -20,5 +20,7 @@ S="${WORKDIR}/${P}/lisp"
 ELISP_TEXINFO="../docs/transient.texi"
 DOCS="../README.md"
 
+SITEFILE="50${PN}-gentoo.el"
+
 BDEPEND="
 	sys-apps/texinfo"
