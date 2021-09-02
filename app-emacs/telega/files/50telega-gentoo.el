@@ -1,2 +1,10 @@
 (add-to-list 'load-path "@SITELISP@")
+(when (> emacs-major-version 27)
+  (defun cl--plist-remove (plist member)
+    (cond
+     ((null plist) nil)
+     ((null member) plist)
+     ((eq plist member) (cddr plist))
+     (t `(,(car plist) ,(cadr plist)
+          ,@(cl--plist-remove (cddr plist) member))))))
 (autoload 'telega "telega" nil t)
