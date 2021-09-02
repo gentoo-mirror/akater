@@ -11,4 +11,4 @@ PROPERTIES=live
 RDEPEND=( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) ) >=app-editors/emacs-25.1:*
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	b165dc0288d12ab26e86f41c56f03914	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=8b37492bd31c99177b6099e886632c39
+_md5_=6138b23a1d63a8562b99a484ff21d343
