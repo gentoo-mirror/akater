@@ -34,7 +34,7 @@ BDEPEND="
 		   app-emacs/rainbow-identifiers
 		   app-emacs/transient
 		   app-emacs/visual-fill-column )
-	org? ( || ( app-emacs/org app-emacs/org-mode ) )
+	org? ( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) )
 	test? ( >=dev-lang/python-3 )
 	tray? ( >=dev-libs/libappindicator-3 )
 "
@@ -56,7 +56,7 @@ RDEPEND="
 			   app-emacs/transient )
 	dbus? ( app-editors/emacs[dbus] )
 	geo? ( app-emacs/geo )
-	org? ( || ( app-emacs/org app-emacs/org-mode ) )
+	org? ( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) )
 	tray? ( >=dev-libs/libappindicator-3 )
 "
 
