@@ -15,7 +15,7 @@ app-emacs/all-the-icons 5.0.0 9999: A library for inserting Developer icons
 app-emacs/anaphora 1.0.4 9999: Anaphoric macros for Emacs Lisp providing implicit temp variables
 app-emacs/ansi 0.4.1 9999: Emacs library to convert strings into ansi
 app-emacs/async 1.9.5 9999: Simple library for asynchronous processing in Emacs
-app-emacs/auctex 13.0.12 9999: Extensible package for writing and formatting TeX files in Emacs
+app-emacs/auctex 13.0.14 9999: Extensible package for writing and formatting TeX files in Emacs
 app-emacs/avy 9999: Jump to arbitrary positions in visible text and select text quickly.
 app-emacs/buttercup 1.24 9999: Behavior-Driven Emacs Lisp Testing
 app-emacs/cask 0.8.7 9999: Cask: Project management for package development
