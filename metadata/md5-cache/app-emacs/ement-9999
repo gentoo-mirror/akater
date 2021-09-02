@@ -10,5 +10,5 @@ LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=>=app-emacs/plz-0.1_pre >=app-emacs/ts-0.2 e2e? ( net-im/pantalaimon ) extras? ( app-emacs/ement-extras ) >=app-editors/emacs-26.3:*
 SLOT=0
-_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	b165dc0288d12ab26e86f41c56f03914	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
 _md5_=578ed8bff68154c61bf14e4b3693166f

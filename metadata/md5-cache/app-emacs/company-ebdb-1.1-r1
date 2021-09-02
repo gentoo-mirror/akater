@@ -11,5 +11,5 @@ RDEPEND=>=app-emacs/company-0.9.4 >=app-emacs/ebdb-0.2 >=app-editors/emacs-24:*
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://elpa.gnu.org/packages/company-ebdb-1.1.el verify-sig? ( https://elpa.gnu.org/packages/company-ebdb-1.1.el.sig )
-_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	b165dc0288d12ab26e86f41c56f03914	verify-sig	c777c0c815c60c9460f1ded02a8edb0a	elpa	0b71d0a73691da7a5b46377159457b86
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	verify-sig	c777c0c815c60c9460f1ded02a8edb0a	elpa	0b71d0a73691da7a5b46377159457b86
 _md5_=ffbff3083a0d53cec7309bcc104606ee
