@@ -10,6 +10,7 @@ DESCRIPTION="Convenient infix arguments and suffix commands in Emacs"
 HOMEPAGE="https://github.com/magit/transient"
 
 SRC_URI="https://github.com/magit/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+RESTRICT="mirror"
 KEYWORDS="amd64 ~x86"
 
 LICENSE="GPL-3"

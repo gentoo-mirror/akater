@@ -10,6 +10,7 @@ DESCRIPTION="Highlight identifiers according to their names"
 HOMEPAGE="https://github.com/Fanael/rainbow-identifiers"
 
 SRC_URI="https://github.com/Fanael/rainbow-identifiers/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+RESTRICT="mirror"
 KEYWORDS="amd64 ~x86"
 
 LICENSE="GPL-3"

@@ -11,6 +11,7 @@ DESCRIPTION="A startup screen extracted from Spacemacs"
 HOMEPAGE="https://github.com/emacs-dashboard/emacs-dashboard"
 
 SRC_URI="https://github.com/emacs-dashboard/emacs-dashboard/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+RESTRICT="mirror"
 S="${WORKDIR}/${MY_P}"
 
 KEYWORDS="amd64 x86"
