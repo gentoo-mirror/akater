@@ -1,7 +1,7 @@
 
 ;;; melpa-sources site-lisp configuration
 
-(add-to-list 'load-path "@SITELISP@")
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/package-build")
 
 (defconst site-gentoo-melpa-recipes-dir "@RECIPESDIR@/")
 
