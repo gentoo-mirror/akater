@@ -9,9 +9,10 @@ MY_P="${MY_PN}-${PV}"
 inherit elisp
 
 DESCRIPTION="CL format routine"
-HOMEPAGE="https://github.com/alvinfrancis/cl-format"
+HOMEPAGE="https://gitlab.com/akater/elisp-cl-format"
 
 SRC_URI="https://gitlab.com/akater/${MY_PN}/-/archive/${PV}/${MY_P}.tar.gz -> ${P}.tar.gz"
+RESTRICT="mirror"
 KEYWORDS="amd64 ~x86"
 
 LICENSE="GPL-3"
@@ -25,5 +26,6 @@ src_prepare() {
 }
 
 src_test() {
-	emacs -Q -L . --batch -l ert -l cl-format.ert
+	emacs -Q -L . --batch -l ert -l cl-format.ert \
+		  -f ert-run-tests-batch-and-exit
 }
