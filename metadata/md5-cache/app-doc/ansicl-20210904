@@ -10,4 +10,4 @@ REQUIRED_USE=|| ( info pdf )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=info? ( https://gitlab.com/akater/dpans2texi/-/archive/20210904/dpans2texi-20210904.tar.bz2 -> ansicl-dpans2texi.tar.bz2 ) pdf? ( https://gitlab.com/vancan1ty/clstandard_build/-/archive/master/clstandard_build-master.tar.bz2 -> ansicl-pdfbuild.tar.bz2 )
-_md5_=332f9c81c021108db1732fd3cc51c550
+_md5_=97e77f6a0d9797849953b165ee6f9d12
