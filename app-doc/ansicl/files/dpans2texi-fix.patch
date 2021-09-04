@@ -1,7 +1,7 @@
 Silence byte-compiler
 
---- a/dpans2texi-master/dpans2texi.el
-+++ b/dpans2texi-master/dpans2texi.el
+--- a/dpans2texi.el
++++ b/dpans2texi.el
 @@ -54,7 +54,7 @@
  ;;; Code:
  
