@@ -1,4 +1,4 @@
-BDEPEND=app-emacs/defmacro-gensym app-emacs/ement app-emacs/plz >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=app-emacs/defmacro-gensym app-emacs/ement app-emacs/plz app-emacs/sgc >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=postinst postrm unpack
 DESCRIPTION=Extra features for Ement, Matrix client for GNU Emacs
 EAPI=8
@@ -7,7 +7,7 @@ INHERIT=elisp-common akater-live-release
 KEYWORDS=~amd64
 LICENSE=GPL-3+
 PROPERTIES=live
-RDEPEND=app-emacs/ement
+RDEPEND=app-emacs/ement app-emacs/sgc
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	akater-live-release	942df88ed415db6ad0c73baae7a02cb7
-_md5_=0d82e1bef9e0c605e2bf9362f27344f7
+_md5_=bf6241b93fbbf45fc71cb5572cca3459
