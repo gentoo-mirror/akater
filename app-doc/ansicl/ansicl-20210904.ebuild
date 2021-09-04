@@ -22,7 +22,6 @@ IUSE="info pdf"
 # IUSE="html info pdf"
 REQUIRED_USE=" || ( info pdf ) "
 # REQUIRED_USE=" || ( html info pdf ) "
-PATCHES=( "${FILESDIR}"/dpans2texi-fix.patch "${FILESDIR}"/info-fix.patch )
 
 BDEPEND="
 	=app-doc/ansicl-dpANS-sources-15.17-r1
@@ -35,31 +34,38 @@ BDEPEND="
 # and there are encoding issues with source material
 # which makes it incompatible with modern texinfo
 
+src_prepare() {
+	cd dpans2texi-${PV}
+	eapply "${FILESDIR}"/dpans2texi-fix.patch
+	eapply "${FILESDIR}"/info-fix.patch
+	default
+}
+
 src_configure() {
-	cd dpans2texi-master
+	cd dpans2texi-${PV}
 	econf
 	# it's done after configure in the README so I abide
-	cp /usr/share/ansicl-sources/* "${WORKDIR}"/dpans2texi-master
+	cp /usr/share/ansicl-sources/* "${WORKDIR}"/dpans2texi-${PV}
 	# todo: support custom ansicl-sources dir in the procedure
 	# so that there's no need to copy
 }
 
 src_compile() {
-	use info && emake -C dpans2texi-master info
+	use info && emake -C dpans2texi-${PV} info
 
 	# we'd like to build pdf from the same sources we build info
 
 	# html doesn't build
-	# use html && emake -C dpans2texi-master html
+	# use html && emake -C dpans2texi-${PV} html
 	# or
-	# use html && emake -C dpans2texi-master html && HTML_DOCS="ansicl.html"
+	# use html && emake -C dpans2texi-${PV} html && HTML_DOCS="ansicl.html"
 }
 
 src_install() {
-	use info && emake DESTDIR="${D}" -C dpans2texi-master install-info
+	use info && emake DESTDIR="${D}" -C dpans2texi-${PV} install-info
 
 	# html doesn't build
-	# use html && emake DESTDIR="${D}" -C dpans2texi-master install-html
+	# use html && emake DESTDIR="${D}" -C dpans2texi-${PV} install-html
 	# or
 	# use html && dodoc
 }

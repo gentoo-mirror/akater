@@ -1,7 +1,7 @@
 Add suffix so that e.g. Helm can find ansicl
 
---- a/dpans2texi-master/dpans2texi.el
-+++ b/dpans2texi-master/dpans2texi.el
+--- a/dpans2texi.el
++++ b/dpans2texi.el
 @@ -59,7 +59,7 @@
  (defvar dp-preamble
    "\\input texinfo                  @c -*-texinfo-*-
@@ -13,8 +13,8 @@ Add suffix so that e.g. Helm can find ansicl
  @exampleindent 0
 
 
---- a/dpans2texi-master/Makefile.in
-+++ b/dpans2texi-master/Makefile.in
+--- a/Makefile.in
++++ b/Makefile.in
 @@ -45,7 +45,7 @@
  CONFIG_CLEAN_FILES =
  SOURCES =
