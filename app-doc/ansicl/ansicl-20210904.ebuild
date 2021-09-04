@@ -35,25 +35,35 @@ BDEPEND="
 # which makes it incompatible with modern texinfo
 
 src_prepare() {
-	cd dpans2texi-${PV}
-	eapply "${FILESDIR}"/dpans2texi-fix.patch
-	eapply "${FILESDIR}"/info-fix.patch
+	if use info ; then
+		cd dpans2texi-${PV}
+		eapply "${FILESDIR}"/dpans2texi-fix.patch
+		eapply "${FILESDIR}"/info-fix.patch
+	fi
 	default
 }
 
 src_configure() {
-	cd dpans2texi-${PV}
-	econf
-	# it's done after configure in the README so I abide
-	cp /usr/share/ansicl-sources/* "${WORKDIR}"/dpans2texi-${PV}
-	# todo: support custom ansicl-sources dir in the procedure
-	# so that there's no need to copy
+	if use info ; then
+		cd dpans2texi-${PV}
+		econf
+		# it's done after configure in the README so I abide
+		cp /usr/share/ansicl-sources/* "${WORKDIR}"/dpans2texi-${PV}
+		# todo: support custom ansicl-sources dir in the procedure
+		# so that there's no need to copy
+	fi
 }
 
 src_compile() {
 	use info && emake -C dpans2texi-${PV} info
 
 	# we'd like to build pdf from the same sources we build info
+	# but we can't yet
+	if use pdf ; then
+		cd clstandard_build-master
+		pdftex includer.tex
+		cp includer.pdf cl-ansi-standard-draft.pdf
+	fi
 
 	# html doesn't build
 	# use html && emake -C dpans2texi-${PV} html
@@ -63,6 +73,8 @@ src_compile() {
 
 src_install() {
 	use info && emake DESTDIR="${D}" -C dpans2texi-${PV} install-info
+
+	use pdf && dodoc clstandard_build-master/cl-ansi-standard-draft.pdf
 
 	# html doesn't build
 	# use html && emake DESTDIR="${D}" -C dpans2texi-${PV} install-html
