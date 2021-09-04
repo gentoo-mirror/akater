@@ -1,6 +1,6 @@
 app-admin/pass 9999: Stores, retrieves, generates, and synchronizes passwords securely
 app-crypt/openpgp-keys-gnu-elpa 20190923: OpenPGP keys used to sign GNU ELPA packages
-app-doc/ansicl 20210723 20210724: Common Lisp ANSI standard (draft)
+app-doc/ansicl 20210723 20210724 20210904: Common Lisp ANSI standard (draft)
 app-doc/ansicl-dpANS-sources 15.17-r1: Common Lisp ANSI standard (draft): TeX sources
 app-editors/emacs 27.2-r4 27.2.9999 28.0.9999: The extensible, customizable, self-documenting real-time display editor
 app-emacs/ace-isearch 9999: A seamless bridge between isearch, ace-jump-mode, avy, helm-swoop and swiper
