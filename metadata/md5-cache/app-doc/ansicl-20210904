@@ -1,5 +1,5 @@
 BDEPEND==app-doc/ansicl-dpANS-sources-15.17-r1 info? ( >=sys-apps/texinfo-6.5.0 app-editors/emacs ) pdf? ( app-text/texlive-core )
-DEFINED_PHASES=compile configure install
+DEFINED_PHASES=compile configure install prepare
 DESCRIPTION=Common Lisp ANSI standard (draft)
 EAPI=8
 HOMEPAGE=https://gitlab.com/akater/ansicl
@@ -10,4 +10,4 @@ REQUIRED_USE=|| ( info pdf )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=info? ( https://gitlab.com/akater/dpans2texi/-/archive/20210904/dpans2texi-20210904.tar.bz2 -> ansicl-dpans2texi.tar.bz2 ) pdf? ( https://gitlab.com/vancan1ty/clstandard_build/-/archive/master/clstandard_build-master.tar.bz2 -> ansicl-pdfbuild.tar.bz2 )
-_md5_=299444afef9d85ad1822f2e62a95ede8
+_md5_=332f9c81c021108db1732fd3cc51c550
