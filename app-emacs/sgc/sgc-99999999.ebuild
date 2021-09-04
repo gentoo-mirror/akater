@@ -7,10 +7,9 @@ NEED_EMACS="24.1"
 MY_PN="elisp-${PN}"
 inherit elisp-common akater-live-release
 
-DESCRIPTION="Major mode for Emacs buffers where ebuild commands are run"
+DESCRIPTION="Sufficiently Generic Completion (Emacs Lisp)"
 HOMEPAGE="https://gitlab.com/akater/elisp-sgc/-/blob/master/elisp-sgc.org"
-# EGIT_REPO_URI="https://gitlab.com/akater/elisp-sgc.git"
-EGIT_REPO_URI="file:///usr/local/src/elisp-sgc/"
+EGIT_REPO_URI="https://gitlab.com/akater/elisp-sgc.git"
 
 LICENSE="GPL-3+"
 SLOT="0"
