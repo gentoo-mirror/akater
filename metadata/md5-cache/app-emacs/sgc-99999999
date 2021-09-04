@@ -1,6 +1,6 @@
 BDEPEND=app-emacs/cl-format app-emacs/defmacro-gensym >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=postinst postrm unpack
-DESCRIPTION=Major mode for Emacs buffers where ebuild commands are run
+DESCRIPTION=Sufficiently Generic Completion (Emacs Lisp)
 EAPI=8
 HOMEPAGE=https://gitlab.com/akater/elisp-sgc/-/blob/master/elisp-sgc.org
 INHERIT=elisp-common akater-live-release
@@ -10,4 +10,4 @@ PROPERTIES=live
 RDEPEND=app-emacs/cl-format
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	akater-live-release	942df88ed415db6ad0c73baae7a02cb7
-_md5_=c82e443610d1360285931aacc67463f3
+_md5_=b3103a522f15ab8fa9d2e384f67ebb29

@@ -118,7 +118,7 @@ app-emacs/request 9999: Compatible layer for URL request in Emacs
 app-emacs/rich-minority 9999: Clean-up and Beautify the list of minor-modes.
 app-emacs/s 9999: The long lost Emacs string manipulation library.
 app-emacs/set-endos 99999999: Elisp package that provides some interfaces to finite dynamical systems
-app-emacs/sgc 99999999: Major mode for Emacs buffers where ebuild commands are run
+app-emacs/sgc 99999999: Sufficiently Generic Completion (Emacs Lisp)
 app-emacs/shut-up 0.3.3 9999: Shut up would you!
 app-emacs/simple-httpd 9999: Pure elisp HTTP server
 app-emacs/slime 2.26.1 9999: SLIME, the Superior Lisp Interaction Mode (Extended)
