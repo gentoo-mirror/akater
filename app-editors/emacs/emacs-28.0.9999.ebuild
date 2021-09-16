@@ -181,6 +181,7 @@ src_prepare() {
 	git switch work
 
 	git-merge cl-generic-lambda-fix
+	git-merge cl-map-into
 
 	git-merge minimal/base
 
@@ -191,7 +192,7 @@ src_prepare() {
 		git-merge minimal/no-modus-themes
 		git-merge minimal/no-org
 	fi
-	# breaks to much, leave it so far
+	# breaks too much, leave it so far
 	# use dbus || git merge minimal/no-dbus
 
 	default
