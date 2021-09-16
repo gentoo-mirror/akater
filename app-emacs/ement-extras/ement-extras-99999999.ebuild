@@ -10,6 +10,7 @@ inherit elisp-common akater-live-release
 DESCRIPTION="Extra features for Ement, Matrix client for GNU Emacs"
 HOMEPAGE="https://gitlab.com/akater/emacs-ement-extras/-/blob/master/emacs-ement-extras.org"
 EGIT_REPO_URI="https://gitlab.com/akater/${MY_PN}.git"
+EGIT_BRANCH="release"
 
 LICENSE="GPL-3+"
 SLOT="0"
