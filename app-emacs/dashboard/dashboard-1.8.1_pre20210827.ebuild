@@ -11,7 +11,7 @@ HOMEPAGE="https://github.com/emacs-dashboard/emacs-dashboard"
 
 EGIT_REPO_URI="https://github.com/emacs-dashboard/emacs-dashboard.git"
 EGIT_COMMIT="f7287f026103a44cf290fe737b6b9d841eddcaca"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 ~x86 ~arm ~arm64"
 
 LICENSE="GPL-3"
 SLOT="0"

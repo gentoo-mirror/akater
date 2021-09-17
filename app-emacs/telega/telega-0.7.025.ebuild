@@ -15,7 +15,7 @@ RESTRICT="mirror"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~arm ~arm64 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~arm arm64 ~amd64-linux ~x86-linux"
 IUSE="contrib dbus doc geo org tray test"
 # emerging with geo not tested
 SITEFILE="50${PN}-gentoo.el"

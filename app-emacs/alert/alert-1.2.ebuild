@@ -11,7 +11,7 @@ HOMEPAGE="https://github.com/jwiegley/alert"
 
 SRC_URI="https://github.com/jwiegley/alert/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 RESTRICT="mirror"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~arm ~arm64"
 
 LICENSE="GPL-3"
 SLOT="0"
