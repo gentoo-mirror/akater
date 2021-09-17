@@ -9,7 +9,7 @@ case "$1" in
         ;;
 esac
 
-exec emac                                              \
+exec emacs                                             \
      -Q                                                \
      -L /usr/share/emacs/site-lisp/rainbow-identifiers \
      -L /usr/share/emacs/site-lisp/visual-fill-column  \
