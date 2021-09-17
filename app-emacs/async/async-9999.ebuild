@@ -14,7 +14,7 @@ EGIT_REPO_URI="https://github.com/jwiegley/emacs-async.git"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 
 # S="${WORKDIR}/${MY_P}"
 SITEFILE="50${PN}-gentoo.el"

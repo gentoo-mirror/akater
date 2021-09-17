@@ -10,6 +10,6 @@ inherit elpa
 
 DESCRIPTION="Asynchronous processing in Emacs"
 
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 ~x86 ~arm ~arm64"
 
 SLOT="0"
