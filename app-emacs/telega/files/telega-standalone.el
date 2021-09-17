@@ -51,6 +51,8 @@
 		      :foreground (face-foreground 'default)
 		      :background (face-background 'default)
 		      :inherit nil))
+(telega-standalone-tone-down-vertical-border)
+
 (require 'frame)
 (defun telega-standalone-tone-down-frame-elements (frame)
   (select-frame frame)
