@@ -13,7 +13,7 @@ HOMEPAGE="https://git.sr.ht/~oldosfan/geo-xdg.el"
 
 SRC_URI="https://gitlab.com/akater/${MY_PN}/-/archive/${PV}/${MY_P}.tar.gz -> ${P}.tar.gz"
 RESTRICT="mirror"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 ~x86 ~arm ~arm64"
 
 LICENSE="GPL-3"
 SLOT="0"

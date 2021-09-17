@@ -13,7 +13,7 @@ HOMEPAGE="https://github.com/domtronn/all-the-icons.el"
 SRC_URI="https://github.com/domtronn/all-the-icons.el/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 RESTRICT="mirror"
 S="${WORKDIR}/${MY_PN}-${PV}"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 ~x86 ~arm ~arm64"
 
 LICENSE="GPL-3"
 SLOT="0"

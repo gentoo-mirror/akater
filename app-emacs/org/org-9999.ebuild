@@ -17,7 +17,7 @@ EGIT_CLONE_TYPE="mirror"
 
 LICENSE="GPL-3+ FDL-1.3+ odt-schema? ( OASIS-Open )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~arm ~arm64"
 IUSE="doc odt-schema"
 RESTRICT="test"
 
