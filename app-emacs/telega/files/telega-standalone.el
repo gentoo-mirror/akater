@@ -66,5 +66,4 @@
             ?\n "Press M-> to go to the end of buffer"
             ?\n "Press M-x to do anything"
             ?\n "Press C-x C-c to leave Emacs (and kill telega-server)")
-    (display-buffer (current-buffer)))
-  (other-window 1))
+    (display-buffer (current-buffer))))
