@@ -21,8 +21,8 @@
 (global-company-mode)
 
 (require 'telega)
-(setq telega-root-fill-column (1- (/ (1- (frame-width)) 2))
-      telega-chat-fill-column (- telega-root-fill-column 11))
+(setq telega-root-fill-column (- (/ (1- (frame-width)) 2) 2)
+      telega-chat-fill-column (- telega-root-fill-column 10))
 (custom-set-variables
  '(telega-completing-read-function #'helm--completing-read-default))
 (define-key global-map [f5] #'telega-chat-with)
@@ -40,18 +40,37 @@
 (define-key global-map [f11] #'delete-other-windows)
 (define-key global-map [f12] #'split-window-right)
 
+(require 'disp-table)
+;; solid window separators in terminal
+(set-display-table-slot standard-display-table
+			'vertical-border
+			(make-glyph-code ?│))
+(require 'faces)
+(defun telega-standalone-tone-down-vertical-border ()
+  (set-face-attribute 'vertical-border nil
+		      :foreground (face-background 'default)
+		      :background (face-background 'default)
+		      :inherit nil))
+(require 'frame)
+(defun telega-standalone-tone-down-frame-elements (frame)
+  (select-frame frame)
+  ;; (telega-standalone-tone-down-fringes)
+  (telega-standalone-tone-down-vertical-border))
+(add-hook 'after-make-frame-functions
+          #'telega-standalone-tone-down-frame-elements)
+
 (provide 'telega-standalone)
 
 (telega)
 (sit-for 4)
 (progn
   (split-window-right)
-  (other-window 1)
+  (other-window 2)
   (with-current-buffer (get-buffer-create "*Help: app-emacs/telega*")
     (insert "Press F1 F2 for keys"
             ?\n "Press F1 t for tutorial"
             ?\n "C-h means Ctrl+h, M-x means Alt+x, and so on."
-            ?\n "RET means Enter, SPC means Spacebar"
+            ?\n "RET means Enter, DEL means Backspace (!), SPC means Spacebar"
             ?\n "To leave most menus, press C-g (remember this)"
             ?\n "To select a candidate in a menu, press RET"
             ?\n "Press F5 to switch between Telegram chats"
