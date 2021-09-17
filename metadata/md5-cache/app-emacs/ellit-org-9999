@@ -5,10 +5,10 @@ EAPI=8
 HOMEPAGE=https://github.com/zevlg/ellit-org.el
 INHERIT=elisp git-r3
 IUSE=test
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~x86 ~arm ~arm64
 LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) ) >=app-editors/emacs-25.1:*
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=6138b23a1d63a8562b99a484ff21d343
+_md5_=f4c8e608a01b5be7ea6bab3a597be479
