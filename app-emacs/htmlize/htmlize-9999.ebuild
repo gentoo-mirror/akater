@@ -16,7 +16,7 @@ EGIT_BRANCH="master"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~arm ~arm64"
 
 # S="${WORKDIR}/${MY_PN}"
 SITEFILE="50${PN}-gentoo.el"

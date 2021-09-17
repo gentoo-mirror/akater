@@ -46,13 +46,13 @@
 (sit-for 4)
 (progn
   (split-window-right)
-  (other-window 2)
+  (other-window 1)
   (with-current-buffer (get-buffer-create "*Help: app-emacs/telega*")
     (insert "Press F1 F2 for keys"
             ?\n "Press F1 t for tutorial"
             ?\n "C-h means Ctrl+h, M-x means Alt+x, and so on."
             ?\n "RET means Enter, SPC means Spacebar"
-            ?\n "To leave most menus, press C-g"
+            ?\n "To leave most menus, press C-g (remember this)"
             ?\n "To select a candidate in a menu, press RET"
             ?\n "Press F5 to switch between Telegram chats"
             ?\n "Press @ TAB in chat buffers to complete user names"
@@ -66,4 +66,5 @@
             ?\n "Press M-> to go to the end of buffer"
             ?\n "Press M-x to do anything"
             ?\n "Press C-x C-c to leave Emacs (and kill telega-server)")
-    (display-buffer (current-buffer))))
+    (display-buffer (current-buffer)))
+  (other-window 1))

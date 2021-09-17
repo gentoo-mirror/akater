@@ -10,7 +10,7 @@ DESCRIPTION="Emacs Lisp Literate programming tool"
 HOMEPAGE="https://github.com/zevlg/ellit-org.el"
 
 EGIT_REPO_URI="https://github.com/zevlg/ellit-org.el.git"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 
 LICENSE="GPL-3"
 SLOT="0"
