@@ -59,7 +59,7 @@ app-emacs/gentoolkit 99999999: Use Portage's equery from Emacs
 app-emacs/geo 2.0 9999: Geolocation library for Emacs
 app-emacs/ghub 9999: Minuscule client libraries for Git forge APIs.
 app-emacs/gntp 0.1 9999: Growl Notification Protocol for Emacs
-app-emacs/helm 9999: Emacs incremental completion and selection narrowing framework
+app-emacs/helm 3.8.0 9999: Emacs incremental completion and selection narrowing framework
 app-emacs/helm-company 9999: Helm interface for company-mode
 app-emacs/htmlize 9999: HTML-ize font-lock buffers in Emacs
 app-emacs/hydra 9999: Make bindings that stick around.

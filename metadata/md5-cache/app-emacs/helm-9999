@@ -5,10 +5,10 @@ EAPI=8
 HOMEPAGE=https://emacs-helm.github.io/helm/
 INHERIT=elisp git-r3 git-extras
 IUSE=X
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~x86 ~arm ~arm64
 LICENSE=GPL-3+
 PROPERTIES=live
 RDEPEND=X? ( >=app-editors/emacs-25.1[gui] ) !X? ( >=app-editors/emacs-25.1 ) >=app-emacs/async-1.9.4 app-emacs/popup >=app-editors/emacs-25.1:*
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	git-extras	777fa0483983a1d7b01104db85fb267a
-_md5_=e2433fc1149e9c86ee2b3341a0246701
+_md5_=503c92d4e158ae64a7446772aa83830d

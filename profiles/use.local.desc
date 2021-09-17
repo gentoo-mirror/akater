@@ -64,6 +64,7 @@ app-emacs/telega:contrib - Install miscellanous extra features
 app-emacs/telega:dbus - Ensure Emacs supports dbus, for notifications
 app-emacs/telega:geo - Enable geolocation support with app-emacs/geo
 app-emacs/telega:org - Enable Org links
+app-emacs/telega:standalone - Accessibility for users without Emacs knowledge
 app-emacs/telega:tray - Enable AppIndicator support
 app-emacs/vterm:fish - Install Friendly Shell scripts.
 app-emacs/vterm:system-libvterm - Use the system-wide dev-libs/libvterm instead of bundled.

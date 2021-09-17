@@ -5,11 +5,11 @@ EAPI=8
 HOMEPAGE=https://elpa.gnu.org/packages/company.html
 INHERIT=elpa
 IUSE=verify-sig +verify-sig
-KEYWORDS=amd64 ~x86
+KEYWORDS=amd64 ~x86 ~arm ~arm64
 LICENSE=GPL-3+
 RDEPEND=>=app-editors/emacs-24.3:*
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://elpa.gnu.org/packages/company-0.9.13.tar verify-sig? ( https://elpa.gnu.org/packages/company-0.9.13.tar.sig )
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	verify-sig	c777c0c815c60c9460f1ded02a8edb0a	elpa	0b71d0a73691da7a5b46377159457b86
-_md5_=4e08d7b697d18735a573a9636b054f82
+_md5_=5ada900bc1e39690ebc9b40005773b21

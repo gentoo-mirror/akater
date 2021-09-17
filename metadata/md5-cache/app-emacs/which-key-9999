@@ -5,10 +5,10 @@ EAPI=8
 HOMEPAGE=https://github.com/justbur/emacs-which-key
 INHERIT=elisp git-r3
 IUSE=test
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~x86 ~arm ~arm64
 LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=>=app-editors/emacs-24.4:*
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=e612e81ff05910e1251b025c10cd4735
+_md5_=c6935fa499e021e5e4483e07458af7a3
