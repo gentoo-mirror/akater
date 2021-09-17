@@ -48,7 +48,7 @@
 (require 'faces)
 (defun telega-standalone-tone-down-vertical-border ()
   (set-face-attribute 'vertical-border nil
-		      :foreground (face-background 'default)
+		      :foreground (face-foreground 'default)
 		      :background (face-background 'default)
 		      :inherit nil))
 (require 'frame)
@@ -65,7 +65,6 @@
 (sit-for 4)
 (progn
   (split-window-right)
-  (other-window 2)
   (with-current-buffer (get-buffer-create "*Help: app-emacs/telega*")
     (insert "Press F1 F2 for keys"
             ?\n "Press F1 t for tutorial"
