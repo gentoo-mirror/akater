@@ -10,13 +10,15 @@ DESCRIPTION="Modular text completion framework"
 HOMEPAGE="http://company-mode.github.io/"
 
 EGIT_REPO_URI="https://github.com/company-mode/company-mode.git"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 IUSE="helm"
 
 LICENSE="GPL-3"
 SLOT="0"
 
 DOCS="NEWS.md README.md"
+
+SITEFILE="50${PN}-gentoo.el"
 
 RDEPEND="
 	helm? ( app-emacs/helm-company )
