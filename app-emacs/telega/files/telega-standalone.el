@@ -64,5 +64,6 @@
             ?\n "Press F12 to split current window in the middle"
             ?\n "Press M-< to go to the beginning of buffer"
             ?\n "Press M-> to go to the end of buffer"
-            ?\n "Press M-x to do anything")
+            ?\n "Press M-x to do anything"
+            ?\n "Press C-x C-c to leave Emacs (and kill telega-server)")
     (display-buffer (current-buffer))))
