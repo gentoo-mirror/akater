@@ -4,10 +4,10 @@ DESCRIPTION=Simple library for asynchronous processing in Emacs
 EAPI=8
 HOMEPAGE=https://github.com/jwiegley/emacs-async
 INHERIT=elisp git-r3
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~x86 ~arm ~arm64
 LICENSE=GPL-2+
 PROPERTIES=live
 RDEPEND=>=app-editors/emacs-24.3:*
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=c040988639924c6c66cda6b6123cae5c
+_md5_=b46f951a846652dd7265f0d0524f5b57
