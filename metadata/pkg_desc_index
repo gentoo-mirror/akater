@@ -26,6 +26,7 @@ app-emacs/company 0.9.13 9999: Modular text completion framework
 app-emacs/company-ebdb 1.1 1.1-r1: company-mode completion backend for EBDB in message-mode
 app-emacs/concurrent 9999: Concurrent utility functions for Emacs Lisp
 app-emacs/console-colors 99999999: Emacs interface to console colors
+app-emacs/consult 0.11: GnuPG Pinentry server implementation
 app-emacs/ctable 20171006 99999999: Table component for Emacs Lisp
 app-emacs/dash 9999: A modern list library for Emacs
 app-emacs/dashboard 1.7.0 1.8.1_pre20210827 9999: A startup screen extracted from Spacemacs
