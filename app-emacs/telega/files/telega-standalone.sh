@@ -9,17 +9,17 @@ case "$1" in
         ;;
 esac
 
-exec emacs                                             \
+exec emac                                              \
      -Q                                                \
      -L /usr/share/emacs/site-lisp/rainbow-identifiers \
-      -L /usr/share/emacs/site-lisp/visual-fill-column \
-      -L /usr/share/emacs/site-lisp/org                \
-      -L /usr/share/emacs/site-lisp/telega             \
-      -L /usr/share/emacs/site-lisp/which-key          \
-      -L /usr/share/emacs/site-lisp/async              \
-      -L /usr/share/emacs/site-lisp/helm               \
-      -L /usr/share/emacs/site-lisp/company            \
-      --eval "                                         \
+     -L /usr/share/emacs/site-lisp/visual-fill-column  \
+     -L /usr/share/emacs/site-lisp/org                 \
+     -L /usr/share/emacs/site-lisp/telega              \
+     -L /usr/share/emacs/site-lisp/which-key           \
+     -L /usr/share/emacs/site-lisp/async               \
+     -L /usr/share/emacs/site-lisp/helm                \
+     -L /usr/share/emacs/site-lisp/company             \
+     --eval "                                          \
 (add-to-list 'load-path                                \
              (concat user-emacs-directory \"lisp\"))   \
 "                                                      \
