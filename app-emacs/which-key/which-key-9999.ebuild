@@ -10,12 +10,14 @@ DESCRIPTION="Display available keybindings in popup"
 HOMEPAGE="https://github.com/justbur/emacs-which-key"
 
 EGIT_REPO_URI="https://github.com/justbur/emacs-which-key.git"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 
 LICENSE="GPL-3"
 SLOT="0"
 IUSE="test"
 DOCS="README.org"
+
+SITEFILE="50${PN}-gentoo.el"
 
 src_prepare() {
 	use test || rm *-tests.el*

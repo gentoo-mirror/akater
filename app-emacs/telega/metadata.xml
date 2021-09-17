@@ -19,6 +19,7 @@
   <flag name="dbus">Ensure Emacs supports dbus, for notifications</flag>
   <flag name="geo">Enable geolocation support with app-emacs/geo</flag>
   <flag name="org">Enable Org links</flag>
+  <flag name="standalone">Accessibility for users without Emacs knowledge</flag>
   <flag name="tray">Enable AppIndicator support</flag>
 </use>
 <upstream>

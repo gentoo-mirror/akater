@@ -16,7 +16,7 @@ RESTRICT="mirror"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~x86 ~arm arm64 ~amd64-linux ~x86-linux"
-IUSE="contrib dbus doc geo org tray test"
+IUSE="contrib dbus doc geo org standalone tray test"
 # emerging with geo not tested
 SITEFILE="50${PN}-gentoo.el"
 
@@ -58,6 +58,7 @@ RDEPEND="
 	dbus? ( app-editors/emacs[dbus] )
 	geo? ( app-emacs/geo )
 	org? ( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) )
+	standalone? ( app-emacs/company app-emacs/helm app-emacs/which-key )
 	tray? ( >=dev-libs/libappindicator-3 )
 "
 
@@ -107,5 +108,8 @@ src_install () {
 	rm contrib/ol-telega*
 	use contrib && elisp-install "${PN}" contrib/*.el contrib/*.elc
 
-	dobin "${FILESDIR}"/telega-standalone.sh
+	if use standalone ; then
+		elisp-install "${PN}" "${FILESDIR}"/telega-standalone.el
+		dobin "${FILESDIR}"/telega-standalone.sh
+	fi
 }

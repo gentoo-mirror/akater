@@ -10,6 +10,8 @@ inherit elpa
 
 DESCRIPTION="Modular text completion framework"
 
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 ~x86 ~arm ~arm64"
 
 SLOT="0"
+
+SITEFILE="50${PN}-gentoo.el"
