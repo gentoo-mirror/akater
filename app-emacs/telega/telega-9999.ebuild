@@ -26,7 +26,7 @@ SITEFILE="50${PN}-gentoo.el"
 DOCS="README.md"
 
 BDEPEND="
-	>=net-libs/tdlib-1.7.4
+	>=net-libs/tdlib-1.7.7
 	sys-devel/make
 	virtual/pkgconfig
 	doc? ( app-emacs/ellit-org
