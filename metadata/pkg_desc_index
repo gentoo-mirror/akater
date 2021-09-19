@@ -133,7 +133,7 @@ app-emacs/sqorm 9999: An ORM for Emacs sqlite3
 app-emacs/srv 9999: perform SRV DNS requests
 app-emacs/sudo-edit 9999: Open files as another user
 app-emacs/sx 9999: StackExchange client for Emacs
-app-emacs/telega 0.7.025 9999: GNU Emacs telegram client (unofficial)
+app-emacs/telega 0.7.025 0.7.030 9999: GNU Emacs telegram client (unofficial)
 app-emacs/timestamp-util 99999999: Define Elisp timestamp matchers
 app-emacs/trace-mode 99999999: Attempt at mode for trace output and one extra feature for trace
 app-emacs/transient 0.3.6 9999: Convenient infix arguments and suffix commands in Emacs
