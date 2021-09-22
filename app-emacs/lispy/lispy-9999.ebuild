@@ -33,6 +33,8 @@ app-emacs/zoutline
 "
 
 src_prepare() {
+	rm lispy-pkg.el
+
 	if ! use clojure ; then
 		rm le-clojure.el
 		rm *.cljs
