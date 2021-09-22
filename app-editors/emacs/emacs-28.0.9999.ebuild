@@ -180,6 +180,7 @@ src_prepare() {
 	git branch work
 	git switch work
 
+	git-merge cl-flet-improvement
 	git-merge cl-generic-lambda-fix
 	git-merge cl-map-into
 
