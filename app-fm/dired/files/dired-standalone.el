@@ -11,7 +11,6 @@
 (require 'wdired)
 (custom-set-variables
  '(wdired-allow-to-change-permissions nil))
-(define-key dired-mode-map [f8] #'wdired-change-to-wdired-mode)
 
 (require 'which-key)
 (custom-set-variables
@@ -93,7 +92,8 @@
 (add-hook 'after-make-frame-functions
           #'dired-standalone-tone-down-frame-elements)
 
-(progn
+(defun dired-standalone-init ()
+  (make-frame)
   (split-window-right)
   (with-current-buffer (get-buffer-create "*Help: app-fm/dired*")
     (insert "Press F1 F2 for keys"
@@ -107,7 +107,6 @@
             ?\n "Press PgUp, PgDown to go up, down and scroll history"
             ?\n "Press F6 to switch between buffers (remember this, and you won't get lost)"
             ?\n "Press F7 to switch between windows"
-            ?\n "Press F8 to edit file names in current buffer"
             ?\n "Press F11 to maximize current window"
             ?\n "Press F12 to split current window in the middle"
             ?\n "Press M-< to go to the beginning of buffer"

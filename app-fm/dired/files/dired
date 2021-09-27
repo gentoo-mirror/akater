@@ -1,14 +1,27 @@
 #!/bin/sh
 
-exec emacs                                           \
-     -Q                                              \
-     -L /usr/share/emacs/site-lisp/dired-standalone  \
-     -L /usr/share/emacs/site-lisp/org               \
-     -L /usr/share/emacs/site-lisp/which-key         \
-     -L /usr/share/emacs/site-lisp/async             \
-     -L /usr/share/emacs/site-lisp/helm              \
-     --eval "                                        \
-(add-to-list 'load-path                              \
-             (concat user-emacs-directory \"lisp\")) \
-"                                                    \
-      -l dired-standalone
+PROCESSES=`ps x o cmd`
+DAEMON_RUNNING=`echo "${PROCESSES}" | grep -e "emacs.*--daemon"`
+DAEMON_CUSTOM=`echo "${DAEMON_RUNNING}" | awk -F--daemon= '{ print $2 }'`
+
+if [[ -n "$DAEMON_RUNNING" ]] ; then
+    if [[ -n "$DAEMON_CUSTOM" ]] ; then
+        exec emacsclient -cs "${DAEMON_CUSTOM}" \
+             --eval "(dired default-directory)"
+    else
+        exec emacsclient -c --eval "(dired default-directory)"
+    fi
+else
+    emacs                                                                 \
+        -Q                                                                \
+        --daemon                                                          \
+        -L /usr/share/emacs/site-lisp/dired-standalone                    \
+        -L /usr/share/emacs/site-lisp/org                                 \
+        -L /usr/share/emacs/site-lisp/which-key                           \
+        -L /usr/share/emacs/site-lisp/async                               \
+        -L /usr/share/emacs/site-lisp/helm                                \
+        --eval                                                            \
+        "(add-to-list 'load-path (concat user-emacs-directory \"lisp\"))" \
+	-l dired-standalone                                               \
+    && exec emacsclient -c --eval "(dired-standalone-init)"
+fi
