@@ -181,8 +181,10 @@ src_prepare() {
 	git switch work
 
 	git-merge cl-flet-improvement
+	# git-merge cl-flet-indentation
 	git-merge cl-generic-lambda-fix
 	git-merge cl-map-into
+	# git-merge cl-remove-method
 
 	git-merge minimal/base
 
