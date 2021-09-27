@@ -1,0 +1,14 @@
+#!/bin/sh
+
+exec emacs                                           \
+     -Q                                              \
+     -L /usr/share/emacs/site-lisp/dired-standalone  \
+     -L /usr/share/emacs/site-lisp/org               \
+     -L /usr/share/emacs/site-lisp/which-key         \
+     -L /usr/share/emacs/site-lisp/async             \
+     -L /usr/share/emacs/site-lisp/helm              \
+     --eval "                                        \
+(add-to-list 'load-path                              \
+             (concat user-emacs-directory \"lisp\")) \
+"                                                    \
+      -l dired-standalone

@@ -1,0 +1,14 @@
+Disable inotify in Helm.
+
+--- a/dired-standalone.el
++++ b/dired-standalone.el
+@@ -25,7 +25,7 @@
+ (require 'helm-config)
+ (custom-set-variables
+  '(helm-visible-mark-prefix "")
+- '(helm-ff-use-notify t)
++ '(helm-ff-use-notify nil)
+  '(helm-ff-skip-boring-files t))
+ (helm-mode 1)
+ (define-key global-map [?\M-x] #'helm-M-x)
+
