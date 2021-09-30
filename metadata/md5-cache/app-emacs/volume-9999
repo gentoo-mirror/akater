@@ -3,11 +3,11 @@ DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
 DESCRIPTION=Tweak your sound card volume from Emacs
 EAPI=8
 HOMEPAGE=https://github.com/dbrock/volume-el
-INHERIT=elisp git-r3
+INHERIT=elisp git-r3 git-extras
 KEYWORDS=~amd64 ~ppc ~sparc ~x86
 LICENSE=GPL-2+
 PROPERTIES=live
 RDEPEND=>=app-editors/emacs-23.1:*
 SLOT=0
-_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=6cf2ac268ffd42a0bd20c2e1de85ed61
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	git-extras	777fa0483983a1d7b01104db85fb267a
+_md5_=360c69d9ddd31830da33b3a9acc09116
