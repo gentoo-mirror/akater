@@ -3,7 +3,7 @@
 
 EAPI=7
 
-EGIT_REPO_URI="https://github.com/akater/emacs-ebuild-mode.git"
+EGIT_REPO_URI="https://gitlab.com/akater/emacs-ebuild-mode.git"
 EGIT_BRANCH="tramp-ebuild-run"
 EGIT_CHECKOUT_DIR="${WORKDIR}/${PN}"
 
