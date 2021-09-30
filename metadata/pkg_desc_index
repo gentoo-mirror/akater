@@ -34,6 +34,7 @@ app-emacs/deferred 9999: Simple asynchronous functions for Emacs Lisp
 app-emacs/defmacro-gensym 99999999: Convenient gensyms for defmacro (Emacs Lisp)
 app-emacs/dired-rsync 9999: Allow rsync from dired buffers
 app-emacs/ebdb 0.8.2 9999: Contact management package
+app-emacs/ebuild-mode 9999: Emacs modes for editing ebuilds and other Gentoo specific files
 app-emacs/ebuild-run-mode 20210707 20210713 99999999: Major mode for Emacs buffers where ebuild commands are run
 app-emacs/ebuild-tools 99999999: Functions to deal with ebuilds in Emacs Lisp
 app-emacs/edbi 9999: Database independent interface for Emacs

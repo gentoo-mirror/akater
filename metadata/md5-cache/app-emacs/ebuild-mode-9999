@@ -1,0 +1,12 @@
+BDEPEND=sys-apps/texinfo >=app-editors/emacs-23.1:* >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DESCRIPTION=Emacs modes for editing ebuilds and other Gentoo specific files
+EAPI=7
+HOMEPAGE=https://wiki.gentoo.org/wiki/Project:Emacs
+INHERIT=elisp git-r3 readme.gentoo-r1
+LICENSE=GPL-2+
+PROPERTIES=live
+RDEPEND=>=app-editors/emacs-23.1:*
+SLOT=0
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	readme.gentoo-r1	c9646d622541c023f5159b86a14e930c
+_md5_=ae9c2c61bba94424eef8a11324fcd344
