@@ -10,9 +10,9 @@ DESCRIPTION="An Emacs mode for notes and project planning"
 HOMEPAGE="https://www.orgmode.org/"
 
 EGIT_REPO_URI="https://gitlab.com/akater/org-mode.git"
-EGIT_BRANCH="master"
+EGIT_BRANCH="main"
 EGIT_CLONE_TYPE="mirror"
-# EGIT_REPO_URI="https://code.orgmode.org/bzg/org-mode"
+# EGIT_REPO_URI="https://git.savannah.gnu.org/emacs/org-mode.git"
 # EGIT_BRANCH="single+tags"
 
 LICENSE="GPL-3+ FDL-1.3+ odt-schema? ( OASIS-Open )"
