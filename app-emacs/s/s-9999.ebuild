@@ -15,4 +15,5 @@ KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~x86"
 LICENSE="GPL-3+"
 SLOT="0"
 
+SITEFILE="50${PN}-gentoo.el"
 DOCS="README.md"

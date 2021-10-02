@@ -11,14 +11,14 @@ HOMEPAGE="https://github.com/alphapapa/plz.el"
 
 EGIT_REPO_URI="https://github.com/alphapapa/plz.el.git"
 EGIT_BRANCH="master"
-# EGIT_REPO_URI="https://github.com/akater/plz.el.git"
-# EGIT_BRANCH="master"
 EGIT_CLONE_TYPE="single+tags"
 
 KEYWORDS="amd64 x86"
 
 LICENSE="GPL-3"
 SLOT="0"
+
+SITEFILE="50${PN}-gentoo.el"
 
 RDEPEND="net-misc/curl"
 
