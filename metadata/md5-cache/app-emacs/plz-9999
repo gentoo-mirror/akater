@@ -10,4 +10,4 @@ PROPERTIES=live
 RDEPEND=net-misc/curl >=app-editors/emacs-26.3:*
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=bad108f63380f07f9532602c35fb14b5
+_md5_=9b5fbbdc7a66dd553998774c1a67fe19
