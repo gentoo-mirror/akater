@@ -7,26 +7,11 @@ inherit autotools elisp-common flag-o-matic readme.gentoo-r1 toolchain-funcs git
 
 if [[ ${PV##*.} = 9999 ]]; then
 	inherit git-r3
+	# EGIT_REPO_URI="https://git.savannah.gnu.org/git/emacs.git"
 	EGIT_REPO_URI="https://gitlab.com/akater/emacs.git"
+	# EGIT_BRANCH="master"
 	EGIT_BRANCH="master"
 	EGIT_CLONE_TYPE="mirror"
-
-	# EGIT_REPO_URI="https://git.savannah.gnu.org/git/emacs.git"
-	# EGIT_BRANCH="master"
-
-	# temporary, for bug report
-	# EGIT_COMMIT="ec574a72f7198d9793b466f33382fff397ac4ce1"
-
-	# # this commit
-	# # update from Gnulib
-	# EGIT_COMMIT="118c07e02e939c9f52688091509d4bff2a897032"
-	# # breaks uclibc build
-	# # the previous is
-	# Merge from origin/emacs-27
-	# EGIT_COMMIT="ffb89ed5f07491e33fc79d8b4be49d9deba2ad4a"
-	# I was able to build somewhere before
-	# 300c581370073fbaad025465edc39bcbfe5e7c81
-
 	EGIT_CHECKOUT_DIR="${WORKDIR}/emacs"
 	S="${EGIT_CHECKOUT_DIR}"
 	SLOT="${PV%%.*}-vcs"
