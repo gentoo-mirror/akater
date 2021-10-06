@@ -1,0 +1,15 @@
+BDEPEND=>=app-editors/emacs-26.1:* verify-sig? ( app-crypt/gnupg >=app-portage/gemato-16 ) verify-sig? ( app-crypt/openpgp-keys-gnu-elpa )
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DESCRIPTION=Convert string regexp to rx notation
+EAPI=8
+HOMEPAGE=https://elpa.gnu.org/packages/xr.html
+INHERIT=elpa
+IUSE=verify-sig +verify-sig
+KEYWORDS=amd64 ~x86
+LICENSE=GPL-3+
+RDEPEND=>=app-editors/emacs-26.1:*
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://elpa.gnu.org/packages/xr-1.21.tar verify-sig? ( https://elpa.gnu.org/packages/xr-1.21.tar.sig )
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	verify-sig	c777c0c815c60c9460f1ded02a8edb0a	elpa	0b71d0a73691da7a5b46377159457b86
+_md5_=008e9df245a6bcddf7416e3adae28e92
