@@ -50,11 +50,14 @@ src_test() {
 			 -L ${SITELISP}/undercover	\
 				-L ${SITELISP}/dash		\
 				-L ${SITELISP}/shut-up  \
-			 -L lisp -L test			\
-			 -l test-helper				\
-			 -l pdf-cache-test			\
-			 -l pdf-info-test			\
-			 -l pdf-loader-test			\
+			 -L lisp -L test		    \
+			 -l test-helper			    \
+			 --eval "				    \
+(setq default-directory				    \
+  (expand-file-name \"test\"))"		    \
+			 -l pdf-cache-test		    \
+			 -l pdf-info-test		    \
+			 -l pdf-loader-test		    \
 			 -l pdf-sync-test			\
 			 -l pdf-tools-test			\
 			 -l pdf-util-test			\
