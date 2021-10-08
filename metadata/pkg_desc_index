@@ -103,6 +103,7 @@ app-emacs/ox-json 9999: JSON export backend for Org mode
 app-emacs/page-break-lines 0.14 9999: Display ^L page breaks as tidy horizontal lines
 app-emacs/paredit 9999: Minor mode for performing structured editing of S-expressions
 app-emacs/pdf-mode 99999999: Major mode for editing PDF files
+app-emacs/pdf-tools 9999: Support library for PDF documents
 app-emacs/pg 9999: Emacs Lisp interface to the PostgreSQL RDBMS
 app-emacs/pinentry 0.1 9999: GnuPG Pinentry server implementation
 app-emacs/pkg-info 9999: Information about packages
@@ -134,6 +135,7 @@ app-emacs/sqorm 9999: An ORM for Emacs sqlite3
 app-emacs/srv 9999: perform SRV DNS requests
 app-emacs/sudo-edit 9999: Open files as another user
 app-emacs/sx 9999: StackExchange client for Emacs
+app-emacs/tablist 1.0 9999: Extended tabulated-list-mode
 app-emacs/telega 0.7.025 0.7.030 9999: GNU Emacs telegram client (unofficial)
 app-emacs/timestamp-util 99999999: Define Elisp timestamp matchers
 app-emacs/trace-mode 99999999: Attempt at mode for trace output and one extra feature for trace

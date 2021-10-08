@@ -1,0 +1,14 @@
+BDEPEND=app-editors/emacs[gui] >=app-emacs/tablist-1.0 test? ( app-emacs/cask dev-libs/glib ) >=app-editors/emacs-24.3:* >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DESCRIPTION=Support library for PDF documents
+EAPI=8
+HOMEPAGE=https://github.com/vedang/pdf-tools/
+INHERIT=elisp git-r3
+IUSE=test
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+PROPERTIES=live
+RDEPEND=app-editors/emacs[gui] >=app-emacs/tablist-1.0 dev-libs/glib >=app-editors/emacs-24.3:*
+SLOT=0
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_md5_=1d457704e472783b7a9e7092ae218149
