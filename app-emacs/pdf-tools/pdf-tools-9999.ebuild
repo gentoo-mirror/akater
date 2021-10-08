@@ -9,7 +9,9 @@ inherit elisp git-r3
 DESCRIPTION="Support library for PDF documents"
 HOMEPAGE="https://github.com/vedang/pdf-tools/"
 
-EGIT_REPO_URI="https://github.com/vedang/pdf-tools.git"
+# EGIT_REPO_URI="https://github.com/vedang/pdf-tools.git"
+EGIT_REPO_URI="https://github.com/akater/pdf-tools.git"
+EGIT_BRANCH="gentoo-fix-tests"
 KEYWORDS="~amd64 ~x86"
 
 LICENSE="GPL-3"
@@ -21,7 +23,8 @@ BDEPEND="
 	app-editors/emacs[gui]
 	>=app-emacs/tablist-1.0
 	>=app-text/poppler-0.16[cairo,png]
-	test? ( app-emacs/cask app-emacs/undercover dev-libs/glib )
+	dev-libs/glib
+	test? ( app-emacs/f app-emacs/undercover )
 "
 RDEPEND="
 	app-editors/emacs[gui]
@@ -40,7 +43,28 @@ src_compile() {
 }
 
 src_test() {
-	emake check
+	# emake check
+	${EMACS} -Q -batch					\
+			 -L ${SITELISP}/f			\
+				-L ${SITELISP}/s		\
+			 -L ${SITELISP}/undercover	\
+				-L ${SITELISP}/dash		\
+				-L ${SITELISP}/shut-up  \
+			 -L lisp -L test		    \
+			 -l test-helper			    \
+			 --eval "				    \
+(setq default-directory				    \
+  (expand-file-name \"test\"))"		    \
+			 -l pdf-cache-test		    \
+			 -l pdf-info-test		    \
+			 -l pdf-loader-test		    \
+			 -l pdf-sync-test			\
+			 -l pdf-tools-test			\
+			 -l pdf-util-test			\
+			 -l pdf-view-test			\
+			 -l pdf-virtual-test		\
+			 -f ert-run-tests-batch-and-exit
+
 	emake server-test
 }
 
