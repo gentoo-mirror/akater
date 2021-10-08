@@ -144,6 +144,7 @@ app-emacs/transient-mount 99999999: Emacs interface to mount via transient
 app-emacs/transmission 9999: Emacs interface to a Transmission session
 app-emacs/treepy 9999: Generic tree traversal tools
 app-emacs/ts 9999: Timestamp and date/time library
+app-emacs/undercover 9999: Test coverage library for Emacs Lisp
 app-emacs/undo-tree 0.7.5 9999: Undo trees and visualization
 app-emacs/use-package 9999: A configuration macro for simplifying your .emacs
 app-emacs/visual-fill-column 2.4 9999: fill-column for visual-line-mode
