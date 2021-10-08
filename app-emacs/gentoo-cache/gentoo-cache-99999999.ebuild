@@ -17,6 +17,8 @@ SLOT="0"
 
 DOCS="README.org"
 
+SITEFILE="50${PN}-gentoo.el"
+
 BDEPEND="
 	app-emacs/akater-misc
 	app-emacs/anaphora"

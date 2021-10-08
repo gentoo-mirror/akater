@@ -20,13 +20,13 @@ IUSE="test"
 BDEPEND="
 	app-editors/emacs[gui]
 	>=app-emacs/tablist-1.0
-	app-text/poppler[cairo,png]
+	>=app-text/poppler-0.16[cairo,png]
 	test? ( app-emacs/cask dev-libs/glib )
 "
 RDEPEND="
 	app-editors/emacs[gui]
 	>=app-emacs/tablist-1.0
-	app-text/poppler[cairo,png]
+	>=app-text/poppler-0.16[cairo,png]
 	dev-libs/glib
 "
 
@@ -40,5 +40,26 @@ src_compile() {
 }
 
 src_test() {
-	make check
+	emake check
+	emake server-test
+}
+
+src_install() {
+	# elisp_src_install:
+	elisp-install ${PN} lisp/*.el lisp/*.elc
+	if [[ -n ${SITEFILE} ]]; then
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
+	fi
+	if [[ -n ${ELISP_TEXINFO} ]]; then
+		set -- ${ELISP_TEXINFO}
+		set -- ${@##*/}
+		doinfo ${@/%.*/.info*}
+	fi
+	# install documentation only when explicitly requested
+	[[ $(declare -p DOCS 2>/dev/null) == *=* ]] && einstalldocs
+	if declare -f readme.gentoo_create_doc >/dev/null; then
+		readme.gentoo_create_doc
+	fi
+
+	dobin server/epdfinfo
 }
