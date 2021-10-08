@@ -13,7 +13,7 @@ HOMEPAGE="https://github.com/kiwanami/emacs-epc"
 EGIT_REPO_URI="https://github.com/akater/emacs-epc.git"
 EGIT_BRANCH="master"
 EGIT_CLONE_TYPE="mirror"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 LICENSE="GPL-3"
 SLOT="0"
