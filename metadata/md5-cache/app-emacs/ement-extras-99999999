@@ -10,4 +10,4 @@ PROPERTIES=live
 RDEPEND=app-emacs/ement app-emacs/sgc
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	akater-live-release	942df88ed415db6ad0c73baae7a02cb7
-_md5_=5ced0a8388e63f966a12eefd3573dc63
+_md5_=bf6241b93fbbf45fc71cb5572cca3459

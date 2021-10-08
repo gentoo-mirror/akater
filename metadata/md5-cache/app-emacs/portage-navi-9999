@@ -3,11 +3,11 @@ DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
 DESCRIPTION=Portage viewer
 EAPI=8
 HOMEPAGE=https://github.com/kiwanami/emacs-portage-navi
-INHERIT=elisp git-r3
+INHERIT=elisp git-r3 git-extras
 KEYWORDS=amd64 x86
 LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=>=app-emacs/concurrent-0.3.1 >=app-emacs/ctable-0.1.2 app-portage/eix app-portage/gentoolkit >=app-editors/emacs-24:*
 SLOT=0
-_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=afaf867e2bd89131bfacb53b556a5e57
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	git-extras	777fa0483983a1d7b01104db85fb267a
+_md5_=ed0485b8206faa85ac1e41ad102988c2

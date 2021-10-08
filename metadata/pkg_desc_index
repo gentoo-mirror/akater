@@ -37,7 +37,7 @@ app-emacs/ebdb 0.8.2 9999: Contact management package
 app-emacs/ebuild-mode 9999: Emacs modes for editing ebuilds and other Gentoo specific files
 app-emacs/ebuild-run-mode 20210707 20210713 99999999: Major mode for Emacs buffers where ebuild commands are run
 app-emacs/ebuild-tools 99999999: Functions to deal with ebuilds in Emacs Lisp
-app-emacs/edbi 9999: Database independent interface for Emacs
+app-emacs/edbi 0.1.3_pre20211008 9999: Database independent interface for Emacs
 app-emacs/eix 99999999: Emacs Lisp interface to app-portage/eix
 app-emacs/elfeed 9999: An Emacs Atom/RSS feed reader
 app-emacs/elisp-slime-nav 9999: Make M-. and M-, work in elisp like they do in slime
@@ -47,7 +47,7 @@ app-emacs/emacsql 9999: high-level SQL database front-end
 app-emacs/embark 9999: Conveniently act on minibuffer completions
 app-emacs/ement 9999: Matrix client for GNU Emacs
 app-emacs/ement-extras 99999999: Extra features for Ement, Matrix client for GNU Emacs
-app-emacs/epc 9999: A RPC stack for the Emacs Lisp
+app-emacs/epc 0.1.2_pre20211008 9999: A RPC stack for the Emacs Lisp
 app-emacs/epl 0.9 9999: Emacs Package Library
 app-emacs/ert-runner 0.8.0 9999: Opinionated Ert testing workflow
 app-emacs/expand-region 9999: Emacs extension to increase selected region by semantic units
