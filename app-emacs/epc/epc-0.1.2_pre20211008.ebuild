@@ -4,15 +4,14 @@
 EAPI=8
 NEED_EMACS="24"
 
-inherit elisp git-r3 git-extras
+MY_P="emacs-${P}"
+inherit elisp
 
 DESCRIPTION="A RPC stack for the Emacs Lisp"
 HOMEPAGE="https://github.com/kiwanami/emacs-epc"
 
-# EGIT_REPO_URI="https://github.com/kiwanami/emacs-epc.git"
-EGIT_REPO_URI="https://github.com/akater/emacs-epc.git"
-EGIT_BRANCH="master"
-EGIT_CLONE_TYPE="mirror"
+SRC_URI="https://github.com/akater/emacs-epc/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+RESTRICT="mirror"
 KEYWORDS="amd64 x86"
 
 LICENSE="GPL-3"
@@ -30,14 +29,15 @@ RDEPEND="
 	>=app-emacs/ctable-0.1.2
 "
 
-src_prepare() {
-	git branch work
-	git switch work
-	git-merge lexical-binding
-	git-merge fix-tests
+S="${WORKDIR}/${MY_P}"
 
-	use test || rm test-epc.el
+src_prepare() {
 	default
+	if use test ; then
+		eapply "${FILESDIR}/${P}-fix-tests.patch"
+	else
+		rm test-epc.el
+	fi
 }
 
 src_test() {

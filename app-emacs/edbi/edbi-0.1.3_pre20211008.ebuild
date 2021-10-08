@@ -4,16 +4,15 @@
 EAPI=8
 NEED_EMACS="24"
 
-inherit elisp git-r3
+MY_P="emacs-${P}"
+inherit elisp
 
 DESCRIPTION="Database independent interface for Emacs"
 HOMEPAGE="https://github.com/kiwanami/emacs-edbi"
 
-# EGIT_REPO_URI="https://github.com/kiwanami/emacs-edbi.git"
-EGIT_REPO_URI="https://github.com/akater/emacs-edbi.git"
-# EGIT_BRANCH="master"
-EGIT_BRANCH="lexical-binding-and-style"
-KEYWORDS="~amd64 ~x86"
+SRC_URI="https://github.com/akater/emacs-edbi/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+RESTRICT="mirror"
+KEYWORDS="amd64 ~x86"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -28,6 +27,8 @@ RDEPEND="
 "
 # Also rdepend: `RPC::EPC::Service', DBI and Database drivers with CPAN.
 # But I'm not yet aqcuainted with CPAN packaging
+
+S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	elisp_src_prepare
