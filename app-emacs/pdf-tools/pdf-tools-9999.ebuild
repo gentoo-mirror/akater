@@ -21,7 +21,7 @@ BDEPEND="
 	app-editors/emacs[gui]
 	>=app-emacs/tablist-1.0
 	>=app-text/poppler-0.16[cairo,png]
-	test? ( app-emacs/cask dev-libs/glib )
+	test? ( app-emacs/cask app-emacs/undercover dev-libs/glib )
 "
 RDEPEND="
 	app-editors/emacs[gui]
