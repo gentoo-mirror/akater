@@ -20,11 +20,13 @@ IUSE="test"
 BDEPEND="
 	app-editors/emacs[gui]
 	>=app-emacs/tablist-1.0
+	app-text/poppler[cairo,png]
 	test? ( app-emacs/cask dev-libs/glib )
 "
 RDEPEND="
 	app-editors/emacs[gui]
 	>=app-emacs/tablist-1.0
+	app-text/poppler[cairo,png]
 	dev-libs/glib
 "
 
