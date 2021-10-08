@@ -4,13 +4,14 @@
 EAPI=8
 NEED_EMACS="24"
 
-inherit elisp git-r3
+inherit elisp git-r3 git-extras
 
 DESCRIPTION="Portage viewer"
 HOMEPAGE="https://github.com/kiwanami/emacs-portage-navi"
 
 EGIT_REPO_URI="https://github.com/akater/emacs-portage-navi.git"
-EGIT_BRANCH="introduce-defcustoms"
+EGIT_BRANCH="master"
+EGIT_CLONE_TYPE="mirror"
 KEYWORDS="amd64 x86"
 
 LICENSE="GPL-3"
@@ -22,3 +23,13 @@ RDEPEND="
 	app-portage/eix
 	app-portage/gentoolkit
 "
+
+src_prepare() {
+	git branch work
+	git switch work
+	git-merge fix-build
+	git-merge stylistic-fixes
+	git-merge introduce-defcustoms
+
+	default
+}
