@@ -4,15 +4,14 @@
 EAPI=8
 NEED_EMACS="24.3"
 
-inherit elisp git-r3
+inherit elisp
 
 DESCRIPTION="Support library for PDF documents"
 HOMEPAGE="https://github.com/vedang/pdf-tools/"
 
-# EGIT_REPO_URI="https://github.com/vedang/pdf-tools.git"
-EGIT_REPO_URI="https://github.com/akater/pdf-tools.git"
-EGIT_BRANCH="gentoo-fix-tests"
-KEYWORDS="~amd64 ~x86"
+SRC_URI="https://github.com/akater/pdf-tools/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+RESTRICT="mirror"
+KEYWORDS="amd64 ~x86"
 
 LICENSE="GPL-3"
 SLOT="0"
