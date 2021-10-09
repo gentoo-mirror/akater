@@ -45,6 +45,7 @@ src_compile() {
 src_test() {
 	# emake check
 	${EMACS} -Q -batch					\
+			 -L ${SITELISP}/tablist     \
 			 -L ${SITELISP}/f			\
 				-L ${SITELISP}/s		\
 			 -L ${SITELISP}/undercover	\
@@ -63,7 +64,7 @@ src_test() {
 			 -l pdf-util-test			\
 			 -l pdf-view-test			\
 			 -l pdf-virtual-test		\
-			 -f ert-run-tests-batch-and-exit
+			 -f ert-run-tests-batch-and-exit || die "ERT test(s) failed."
 
 	# I don't understand what is supposed to happen here:
 	# emake server-test
