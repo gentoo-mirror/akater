@@ -12,4 +12,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/akater/pdf-tools/archive/refs/tags/v0.91_pre20211008.tar.gz -> pdf-tools-0.91_pre20211008.tar.gz
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9
-_md5_=5929d44cf0907b92a6efe6d77507532e
+_md5_=4a38778b9880109cacd82d89cd1496ca

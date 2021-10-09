@@ -11,4 +11,4 @@ PROPERTIES=live
 RDEPEND=app-editors/emacs[gui] >=app-emacs/tablist-1.0 >=app-text/poppler-0.16[cairo,png] dev-libs/glib >=app-editors/emacs-24.3:*
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=7093b4f7c1d18c4ac62a7f106035d48d
+_md5_=e412b6cf75f252b0fdab508bd896dda4
