@@ -2,7 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-NEED_EMACS="24.3"
+NEED_EMACS="25.1"
+# Actually it's 24.3 but 24.3 is missing let-alist
+# and ebuild won't allow to specify this unambiguously.
 
 inherit elisp git-r3
 
@@ -17,14 +19,11 @@ KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-3"
 SLOT="0"
 
-IUSE="test"
-
 BDEPEND="
 	app-editors/emacs[gui]
 	>=app-emacs/tablist-1.0
 	>=app-text/poppler-0.16[cairo,png]
 	dev-libs/glib
-	test? ( app-emacs/f app-emacs/undercover )
 "
 RDEPEND="
 	app-editors/emacs[gui]
@@ -46,11 +45,6 @@ src_test() {
 	# emake check
 	${EMACS} -Q -batch					\
 			 -L ${SITELISP}/tablist     \
-			 -L ${SITELISP}/f			\
-				-L ${SITELISP}/s		\
-			 -L ${SITELISP}/undercover	\
-				-L ${SITELISP}/dash		\
-				-L ${SITELISP}/shut-up  \
 			 -L lisp -L test		    \
 			 -l test-helper			    \
 			 --eval "				    \
