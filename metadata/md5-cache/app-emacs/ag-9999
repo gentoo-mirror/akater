@@ -1,4 +1,4 @@
-BDEPEND=doc? ( dev-python/sphinx ) test? ( app-emacs/cask ) >=app-editors/emacs-24:* >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=doc? ( dev-python/sphinx ) test? ( app-emacs/dash app-emacs/f ) >=app-editors/emacs-24:* >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
 DESCRIPTION=An Emacs front-end for ag ('the silver searcher')
 EAPI=8
@@ -11,4 +11,4 @@ PROPERTIES=live
 RDEPEND=>=app-emacs/dash-2.8.0 >=app-emacs/s-1.9.0 >=app-editors/emacs-24:*
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=1310a8cb472b6c5c59e3b9ba0cdaff64
+_md5_=59dc6bdd16f27aac7f89a68c44320efb

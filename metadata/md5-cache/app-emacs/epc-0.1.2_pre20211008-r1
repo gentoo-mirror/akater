@@ -12,4 +12,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/akater/emacs-epc/archive/refs/tags/v0.1.2_pre20211008.tar.gz -> epc-0.1.2_pre20211008.tar.gz
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9
-_md5_=12caa13be9895e2d0f8039e2eba4613f
+_md5_=84f584d8205a04b6962b95c7d8ece020
