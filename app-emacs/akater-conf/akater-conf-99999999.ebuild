@@ -27,7 +27,7 @@ BDEPEND="${RDEPEND}
 DEPEND="test? ( app-emacs/akater-misc
 				app-emacs/org-development-elisp )"
 
-SITEFILE="50{PN}-gentoo.el"
+SITEFILE="50${PN}-gentoo.el"
 
 src_prepare() {
 	use test || rm ${PN}-tests.org

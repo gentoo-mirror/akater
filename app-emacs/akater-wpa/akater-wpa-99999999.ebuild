@@ -31,4 +31,4 @@ RDEPEND="
 	app-emacs/akater-sh
 "
 
-SITEFILE="50{PN}-gentoo.el"
+SITEFILE="50${PN}-gentoo.el"
