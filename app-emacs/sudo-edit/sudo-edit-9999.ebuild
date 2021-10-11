@@ -16,3 +16,5 @@ KEYWORDS="~amd64 ~x86"
 
 LICENSE="GPL-3"
 SLOT="0"
+
+SITEFILE="50${PN}-gentoo.el"
