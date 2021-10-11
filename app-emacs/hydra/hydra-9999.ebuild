@@ -24,6 +24,8 @@ RDEPEND="
 >=app-emacs/lv-0
 "
 
+SITEFILE="50${PN}-gentoo.el"
+
 src_prepare() {
 	rm lv.el
 	default
