@@ -12,4 +12,4 @@ PROPERTIES=live
 RDEPEND=>=app-editors/emacs-26:* >=app-editors/emacs-26:*
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	orgmode	9e5f4ff9aad72de0024e6fee24653b43	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	akater-live-release	942df88ed415db6ad0c73baae7a02cb7
-_md5_=366eac3bada413ace44cda838fe8ebf3
+_md5_=b0d2a298421d7af5171531236a69b571
