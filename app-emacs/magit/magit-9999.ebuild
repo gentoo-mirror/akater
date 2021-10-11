@@ -25,7 +25,6 @@ ELISP_TEXINFO="../Documentation/*.texi"
 DOCS="../README.md ../Documentation/AUTHORS.md ../Documentation/RelNotes/*"
 
 BDEPEND="
-	>=app-emacs/dash-2.14.1
 	app-emacs/transient
 	>=app-emacs/with-editor-2.8.0
 	sys-apps/texinfo
