@@ -44,7 +44,8 @@ src_test() {
 	${EMACS} -L . -batch \
 			 -L ${SITELISP}/deferred \
 			 -L ${SITELISP}/concurrent \
-			 -l test-epc -f ert-run-tests-batch-and-exit || die "ERT test(s) failed."
+			 -l test-epc \
+			 -f ert-run-tests-batch-and-exit || die "ERT test(s) failed."
 }
 
 src_install() {

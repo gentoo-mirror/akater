@@ -20,20 +20,28 @@ DOCS="README.md"
 
 BDEPEND="
 	doc? ( dev-python/sphinx )
-	test? ( app-emacs/cask )
+	test? ( app-emacs/dash app-emacs/f )
 "
 RDEPEND="
 	>=app-emacs/dash-2.8.0
 	>=app-emacs/s-1.9.0
 "
 
-src_test() {
-	emake unit
-}
-
 src_compile() {
 	elisp_src_compile
-	use doc && emake -C docs || die
+	if use doc ; then
+		emake -C docs || die
+	fi
+}
+
+src_test() {
+	${EMACS} -Q -batch -L . -L test \
+			 -L ${SITELISP}/dash	\
+			 -L ${SITELISP}/f		\
+			 -L ${SITELISP}/s		\
+			 -l f					\
+			 -l ert -l unit-test	\
+			 -f ert-run-tests-batch-and-exit || die "ERT test(s) failed."
 }
 
 src_install() {

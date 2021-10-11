@@ -27,7 +27,8 @@ src_prepare() {
 
 src_test() {
 	${EMACS} -q -batch -L . \
-			 -l which-key-tests -f ert-run-tests-batch-and-exit \
+			 -l which-key-tests \
+			 -f ert-run-tests-batch-and-exit || die "ERT test(s) failed." \
 		&& rm *-tests.el*
 }
 

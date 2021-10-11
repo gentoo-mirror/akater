@@ -20,7 +20,3 @@ BDEPEND="sys-apps/texinfo"
 SITEFILE="50${PN}-gentoo.el"
 ELISP_TEXINFO="dash.texi"
 DOCS="README.md"
-
-src_test() {
-	./run-tests.sh || die
-}
