@@ -34,3 +34,5 @@ RDEPEND="${BDEPEND}
 	gentoolkit? ( app-portage/gentoolkit )
 	app-emacs/gentoo-cache
 "
+
+SITEFILE="50${PN}-gentoo.el"
