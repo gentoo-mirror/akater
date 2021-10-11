@@ -27,6 +27,8 @@ RDEPEND="${BDEPEND}
 DEPEND="test? ( app-emacs/ebuild-mode
 				app-emacs/org-development-elisp )"
 
+SITEFILE="50{PN}-gentoo.el"
+
 src_prepare() {
 	use test || rm ${PN}-tests.org
 

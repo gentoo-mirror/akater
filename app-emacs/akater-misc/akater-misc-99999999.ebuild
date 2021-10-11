@@ -20,3 +20,5 @@ IUSE=""
 BDEPEND="
 	app-emacs/anaphora
 "
+
+SITEFILE="50{PN}-gentoo.el"
