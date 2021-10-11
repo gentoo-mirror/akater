@@ -45,7 +45,8 @@ src_test() {
 	${EMACS} ${EMACSFLAGS} ${BYTECOMPFLAGS} -L tests -f batch-byte-compile \
 			 tests/*-tests.el
 	${EMACS} -batch -Q -L . -L tests -L ${SITELISP}/pg \
-			 -l tests/emacsql-tests.elc -f ert-run-tests-batch
+			 -l tests/emacsql-tests.elc \
+			 -f ert-run-tests-batch-and-exit || die "ERT test(s) failed."
 }
 
 src_install() {

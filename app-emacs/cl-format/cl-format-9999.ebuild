@@ -24,5 +24,5 @@ src_prepare() {
 
 src_test() {
 	emacs -Q -L . --batch -l ert -l cl-format.ert \
-		  -f ert-run-tests-batch-and-exit
+		  -f ert-run-tests-batch-and-exit || die "ERT test(s) failed."
 }

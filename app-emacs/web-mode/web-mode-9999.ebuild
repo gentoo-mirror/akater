@@ -19,6 +19,12 @@ IUSE="test"
 DOCS="README.md"
 
 src_test() {
-	chmod ug+x run.sh
-	./run.sh
+	${EMACS} -batch -no-site-file -Q \
+			 --eval '(setq standard-indent 2)' \
+			 --eval '(setq-default indent-tabs-mode nil)' \
+			 --eval '(load-file "web-mode.el")' \
+			 --eval '(web-mode)' \
+			 -l "${FILESDIR}/gentoo-${PN}-test.el" \
+			 -f web-mode-test -f gentoo--web-mode-test-wrap-up \
+		|| die "web-mode tests failed."
 }

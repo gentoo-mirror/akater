@@ -35,6 +35,11 @@ src_compile() {
 }
 
 src_test() {
-	${EMACS} -q --no-site-file --batch --load paredit.elc --load test.elc && \
-	rm test.el*
+	${EMACS} -q --no-site-file --batch					\
+			 --load paredit.elc							\
+			 --load "${FILESDIR}/gentoo-${PN}-test.el"	\
+			 --load test.elc							\
+			 -f gentoo--paredit-test-wrap-up			\
+		|| die "Paredit tests failed."					\
+	&& rm test.el*
 }

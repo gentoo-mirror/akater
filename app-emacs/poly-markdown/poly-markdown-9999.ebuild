@@ -35,5 +35,5 @@ src_test() {
 	elisp-compile targets/test.el
 
 	${EMACS} ${EMACSFLAGS} -L tests --eval "(require 'ert)" \
-			 --load targets/test.elc
+			 --load targets/test.elc || die "ERT test(s) failed."
 }

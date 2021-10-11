@@ -31,11 +31,13 @@ src_prepare() {
 src_test() {
 	${EMACS} ${EMACSFLAGS} -L . \
 			 -l wgrep.el -l wgrep-test.elc \
-			 -f ert-run-tests-batch-and-exit
+			 -f ert-run-tests-batch-and-exit \
+		|| die "(wgrep.el) ERT tests failed."
 
 	${EMACS} ${EMACSFLAGS} -L . \
 			 -l wgrep.elc -l wgrep-test.elc \
-			 -f ert-run-tests-batch-and-exit
+			 -f ert-run-tests-batch-and-exit \
+		|| die "(wgrep.elc) ERT tests failed."
 
 }
 

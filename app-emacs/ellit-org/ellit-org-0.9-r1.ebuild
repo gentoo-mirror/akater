@@ -4,13 +4,16 @@
 EAPI=8
 NEED_EMACS="25.1"
 
-inherit elisp git-r3
+MY_PN="${PN}.el"
+MY_P="${MY_PN}-${PV}"
+inherit elisp
 
 DESCRIPTION="Emacs Lisp Literate programming tool"
 HOMEPAGE="https://github.com/zevlg/ellit-org.el"
 
-EGIT_REPO_URI="https://github.com/zevlg/ellit-org.el.git"
-KEYWORDS="~amd64 ~x86 ~arm ~arm64"
+SRC_URI="https://github.com/zevlg/${MY_PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+RESTRICT="mirror"
+KEYWORDS="amd64 ~x86 ~arm ~arm64"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -22,6 +25,8 @@ SITEFILE="50${PN}-gentoo.el"
 RDEPEND="
 	( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) )
 "
+
+S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	if use test ; then
