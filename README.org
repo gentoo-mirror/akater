@@ -8,6 +8,7 @@
 | =app-emacs/ement-extras= | Use Matrix from Emacs with encryption        |
 | =app-emacs/telega=       | A featureful Telegram client for Emacs       |
 | =app-emacs/portage=      | Issue ~emerge~ commands from Emacs           |
+| =app-emacs/pdf-tools=    | Read PDF with poppler in GUI Emacs           |
 | =dev-lisp/sbcl=          | Bootstrappable with a user-specified Lisp    |
 | =app-doc/ansicl=         | ANSI Common Lisp Draft: Info and PDF         |
 | =app-emacs/imdb=         | Emacs IMDB client with local database        |
