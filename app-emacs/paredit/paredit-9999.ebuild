@@ -18,6 +18,8 @@ IUSE="test"
 DOCS=( NEWS CREDITS )
 HTML_DOCS="paredit.html"
 
+SITEFILE="50${PN}-gentoo.el"
+
 src_prepare() {
 	default
 
