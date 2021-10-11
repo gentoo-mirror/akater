@@ -47,7 +47,7 @@ app-emacs/emacsql 9999: high-level SQL database front-end
 app-emacs/embark 9999: Conveniently act on minibuffer completions
 app-emacs/ement 9999: Matrix client for GNU Emacs
 app-emacs/ement-extras 99999999: Extra features for Ement, Matrix client for GNU Emacs
-app-emacs/epc 0.1.2_pre20211008 9999: A RPC stack for the Emacs Lisp
+app-emacs/epc 0.1.2_pre20211008 0.1.2_pre20211008-r1 9999: A RPC stack for the Emacs Lisp
 app-emacs/epl 0.9 9999: Emacs Package Library
 app-emacs/ert-runner 0.8.0 9999: Opinionated Ert testing workflow
 app-emacs/expand-region 9999: Emacs extension to increase selected region by semantic units

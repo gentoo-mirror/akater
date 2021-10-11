@@ -11,4 +11,4 @@ PROPERTIES=live
 RDEPEND=>=app-emacs/concurrent-0.3.1 >=app-emacs/ctable-0.1.2 >=app-editors/emacs-24:*
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	git-extras	777fa0483983a1d7b01104db85fb267a
-_md5_=8081fb50c184a7dff13562cc27ed3328
+_md5_=31dd2a50ee57b3c00cb792f17eecfb4f
