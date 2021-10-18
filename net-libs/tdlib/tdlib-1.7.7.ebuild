@@ -7,7 +7,7 @@ inherit cmake git-r3
 
 DESCRIPTION="Cross-platform library for building Telegram clients"
 HOMEPAGE="https://core.telegram.org/tdlib"
-EGIT_REPO_URI="https://github.com/tdlib/td"
+EGIT_REPO_URI="https://github.com/tdlib/td.git"
 EGIT_CLONE_TYPE="single"
 EGIT_COMMIT="c582ab0bbfaa9ed2566de501f7e03b65a4c3613c"
 

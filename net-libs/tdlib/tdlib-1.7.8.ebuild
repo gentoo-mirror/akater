@@ -9,11 +9,11 @@ DESCRIPTION="Cross-platform library for building Telegram clients"
 HOMEPAGE="https://core.telegram.org/tdlib"
 EGIT_REPO_URI="https://github.com/tdlib/td.git"
 EGIT_CLONE_TYPE="single"
-EGIT_COMMIT="5bd0c2c46ded5c75a641829cfe84c0b5fead5bfc"
+EGIT_COMMIT="49282f35a5eb6a53a6005a8a7d3cbb2fd99c992b"
 
 LICENSE="Boost-1.0"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 IUSE="clang cli debug doc +gcc java low-ram lto test"
 
 REQUIRED_USE="
