@@ -11,7 +11,7 @@ inherit cmake git-r3
 
 DESCRIPTION="Cross-platform library for building Telegram clients"
 HOMEPAGE="https://core.telegram.org/tdlib"
-EGIT_REPO_URI="https://github.com/tdlib/td"
+EGIT_REPO_URI="https://github.com/tdlib/td.git"
 EGIT_COMMIT_TYPE="single+tags"
 
 LICENSE="Boost-1.0"
@@ -60,16 +60,7 @@ BDEPEND="gcc? ( >=sys-devel/gcc-4.9:= )
 RDEPEND="dev-libs/openssl:0=
 	sys-libs/zlib"
 
-# from mva
-# DEPEND="
-# 	${BDEPEND}
-# 	${RDEPEND}
-# 	>=dev-util/cmake-3.0.2
-# "
-
 DOCS=( README.md )
-
-CMAKE_MIN_VERSION=3.0.2
 
 # from mva
 src_prepare() {
@@ -82,165 +73,47 @@ src_prepare() {
 src_configure(){
 	local mycmakeargs=(
 		-DCMAKE_BUILD_TYPE=$(usex debug Debug Release)
-		# ebuild must not install into /usr/local
-		# Any binary which links against a library under /usr must itself go into /usr
-		# -DCMAKE_INSTALL_PREFIX=/usr
+		-DCMAKE_INSTALL_PREFIX=/usr
 		-DTD_ENABLE_LTO=$(usex lto ON OFF)
-		# java target compilation seems to be a totally separate procedure with its own logic
-		# maybe even requiring net-im/tdlib-java
 		-DTD_ENABLE_JNI=$(usex java ON OFF)
-		# According to TDLib build instructions, the following is only needed
+		# According to TDLib build instructions, DOTNET=ON is only needed
 		# for using tdlib from C# under Windows through C++/CLI
 		-DTD_ENABLE_DOTNET=OFF
 	)
 
-	# doesn't seem necessary
-	# if use lto ; then
-	# 	# default on my Gentoo profile:
-	# 	# LDFLAGS="-Wl,-O1 -Wl,--as-needed"
-	# 	LDFLAGS="-Wl,-O1 -Wl,--as-needed -Wl,-flto"
-	# fi
-
-	# why do TDLib build instructions recommend empty cxxflags?
-
-	# if clang ; then
-	# 	export CXXFLAGS="-stdlib=libc++"
-	# 	CC=/usr/bin/clang
-	# 	CXX=/usr/bin/clang++
-	# else
-	# 	export CXXFLAGS=""
-	# fi
+	cmake_src_configure
 
 	if use low-ram; then
-
-		MAKEOPTS="-j1"
-		# todo: set target via $CTARGET as told in devmanual.gentoo.org
-		cmake_src_configure --target prepare_cross_compiling
-
-		# todo: die on errors here
+		cmake --build "${BUILD_DIR}" --target prepare_cross_compiling
 		php SplitSource.php
-		# as of now, it won't split three files
-
-	else
-		cmake_src_configure
+		# todo: we need to die on errors here but I don't know how
 	fi
 
 }
 
-# If less than 3.5 Gb RAM
-
-# cmake --build . --target prepare_cross_compiling
-# cd ..
-# php SplitSource.php
-# cd S
-# cmake --build . --target install
-# cd ..
-# php SplitSource.php --undo
-# cd ..
-# ls -l td/tdlib
-
-# Run these commands in Bash to build TDLib and to install it to td/tdlib:
-
-# git clone https://github.com/tdlib/td.git
-# cd td
-# rm -rf S
-# mkdir S
-# cd S
-# export CXXFLAGS=""
-# cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX:PATH=../tdlib -DTD_ENABLE_LTO=ON ..
-# cmake --build . --target install
-# cd ..
-# cd ..
-# ls -l td/tdlib
-
-# If java
-
-# export CXXFLAGS=""
-
-# mva doesn't have src_compile We have because we attempted to support doxygen
-
 src_compile() {
-
-	# with java, we seemingly have to configure again
-	# so we have to configure inside src_compile which doesn't make much sense to me
-	# if use java ; then
-
-	# 	die "Java use not ready."
-
-	# /example/java is here:
-	# /var/tmp/portage/net-im/tdlib-1.4.0/work/td-1.4.0
-
-	# 	mycmakeargs+=(
-	# 		-DCMAKE_INSTALL_PREFIX=../example/java/td
-	# 		-DTD_ENABLE_JNI=ON
-	# 	)
-	# 	# cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX:PATH=../example/java/td -DTD_ENABLE_JNI=ON ..
-	# 	# cmake --build . --target install
-	# 	# cd ..
-
-	# 	# my guess:
-	# 	# S=${WORKDIR}/example/java
-
-	# 	# cd example/java
-	# 	# rm -rf build
-	# 	# mkdir build
-	# 	# cd build
-	# 	mycmakeargs+=(
-	# 		-DCMAKE_INSTALL_PREFIX=../../../tdlib
-	# 		-DTd_DIR=$(readlink -e ../td/lib/cmake/Td)
-	# 	)
-	# 	# cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX:PATH=../../../tdlib -DTd_DIR:PATH=$(readlink -e ../td/lib/cmake/Td) ..
-	# 	# cmake_src_make
-	# 	# cmake --build . --target install
-	# 	# cd ../../..
-	# 	# cd ..
-	# 	# ls -l td/tdlib
-	# fi
-	# maybe all this should go to src_prepare() ?
-
-	# cmake_src_configure --target tdjson
 
 	cmake_src_compile
 
-	# if use low-ram; then
-
-	# 	echo "directory I'm in before running php SplitSource.php --undo "
-	# 	echo `ls`
-
-	# 	# cd ..
-	# 	php SplitSource.php --undo
-	# 	cd ..
-	# fi
-
-	if use doc; then
-		"${EPYTHON}" doxybuild.py --doxygen="${EPREFIX}"/usr/bin/doxygen || die
-		HTML_DOCS=( dist/doxygen/tdlib*/. )
+	# from pg_overlay
+	if use doc ; then
+		doxygen Doxyfile || die "Could not build docs with doxygen"
 	fi
+	# completes without errors but I don't know if it's sensible
 }
 
 src_install() {
 
-	if use low-ram; then
-
-		echo "directory I'm in before running php SplitSource.php --undo "
-		echo `ls`
-
-		# cd ..
-		php SplitSource.php --undo
-		# cd ..
-	fi
+	# was suggested by upstream but seems redundant
+	# use low-ram && php SplitSource.php --undo
 
 	cmake_src_install
 
 	use cli && dobin "${BUILD_DIR}"/tg_cli
+	# can't we just skip it during build?
 
-	# from mva
-	#	exeinto "/usr/$(get_libdir)"
-	#	doexe "${BUILD_DIR}"/libtdjson.so
-	#	^ NULLed DT_RUNPATH :'(
-
-	# from old multilib note
-	# Do not violate multilib strict
-	# mv "${ED}/usr/lib" "${ED}/usr/$(get_libdir)" || die "mv failed"
+	# from pg_overlay
+	use doc && local HTML_DOCS=( docs/html/. )
+	einstalldocs
 
 }
