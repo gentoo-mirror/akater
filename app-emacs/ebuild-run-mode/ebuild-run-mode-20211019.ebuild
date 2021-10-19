@@ -16,6 +16,7 @@ LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="amd64 x86"
 DOCS="" # README.org is a relative symlink
+SITEFILE="50${PN}-gentoo.el"
 
 RDEPEND="
 	app-emacs/ebuild-mode
