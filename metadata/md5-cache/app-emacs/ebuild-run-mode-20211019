@@ -5,8 +5,8 @@ HOMEPAGE=https://gitlab.com/akater/emacs-ebuild-run-mode/-/blob/master/ebuild-ru
 INHERIT=elisp-common
 KEYWORDS=amd64 x86
 LICENSE=GPL-2+
-RDEPEND=app-emacs/ebuild-mode
+RDEPEND=>=app-emacs/ebuild-mode-1.53
 SLOT=0
 SRC_URI=https://gitlab.com/akater/emacs-ebuild-run-mode/-/archive/v20211019/emacs-ebuild-run-mode-v20211019.tar.gz -> ebuild-run-mode-20211019.tar.gz
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a
-_md5_=395aab6e7b9b984877acff913ec5706a
+_md5_=57fb794f2c2b2a40cc1d5f8299f11b19

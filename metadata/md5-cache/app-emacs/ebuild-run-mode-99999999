@@ -4,10 +4,10 @@ DESCRIPTION=Major mode for Emacs buffers where ebuild commands are run
 EAPI=8
 HOMEPAGE=https://gitlab.com/akater/emacs-ebuild-run-mode/-/blob/master/ebuild-run-mode.org
 INHERIT=elisp-common git-r3
-KEYWORDS=amd64 x86
+KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2+
 PROPERTIES=live
-RDEPEND=app-emacs/ebuild-mode
+RDEPEND=>=app-emacs/ebuild-mode-1.53
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=9adba7112c3bbf0c65cc87f309b90956
+_md5_=d18007efc8ddd477d282194a33bdf77a
