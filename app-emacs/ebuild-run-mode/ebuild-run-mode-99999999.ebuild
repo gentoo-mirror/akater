@@ -9,9 +9,7 @@ inherit elisp-common git-r3
 DESCRIPTION="Major mode for Emacs buffers where ebuild commands are run"
 HOMEPAGE="https://gitlab.com/akater/emacs-ebuild-run-mode/-/blob/master/ebuild-run-mode.org"
 EGIT_REPO_URI="https://gitlab.com/akater/emacs-ebuild-run-mode.git"
-# EGIT_REPO_URI="file:///tmp/emacs-ebuild-run-mode/"
 EGIT_BRANCH="master"
-# EGIT_BRANCH="release"
 
 LICENSE="GPL-2+"
 SLOT="0"
