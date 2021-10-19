@@ -10,10 +10,11 @@ DESCRIPTION="Logging framework for Elisp"
 HOMEPAGE="https://github.com/aki2o/log4e"
 
 EGIT_REPO_URI="https://github.com/aki2o/log4e.git"
-EGIT_BRANCH="master"
-KEYWORDS="~amd64 ~x86"
+EGIT_CLONE_TYPE="single+tags"
+EGIT_COMMIT="737d275eac28dbdfb0b26d28e99da148bfce9d16"
+KEYWORDS="amd64 x86"
 
 LICENSE="GPL-3"
 SLOT="0"
 
-DOCS=( "README.md" "README.org" )
+SITEFILE="50${PN}-gentoo.el"

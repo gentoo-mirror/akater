@@ -71,7 +71,11 @@ orgmode_src_configure() {
 			 --eval "${EMACSCUSTOMCODE}"                                  \
 			 --eval "(require 'ob-tangle)"                                \
 			 --eval "(require 'org)"                                      \
-			 --eval "(defalias 'org-development-elisp-mode 'org-mode)"    \
+			 --eval "(require 'org-element)"                              \
+			 --eval "(require 'org-persist nil t)"                      \
+			 --eval "(ignore-errors										\
+(make-directory org-persist-directory t))"								\
+			 --eval "(defalias 'org-development-elisp-mode 'org-mode)"  \
 			 --eval "(require 'files)"                                    \
 			 --eval "(defvar use-flags '(${USE}))"                        \
 			 --eval "(defvar ob-flags use-flags)"                         \
