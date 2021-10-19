@@ -10,4 +10,4 @@ PROPERTIES=live
 RDEPEND=app-emacs/ebuild-mode
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=77d1288f54c0d647ac37016b2bc69de7
+_md5_=9adba7112c3bbf0c65cc87f309b90956
