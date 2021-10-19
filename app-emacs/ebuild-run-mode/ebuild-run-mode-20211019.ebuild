@@ -8,7 +8,7 @@ inherit elisp-common
 
 MY_PN="emacs-${PN}"
 DESCRIPTION="Major mode for Emacs buffers where ebuild commands are run"
-HOMEPAGE="https://framagit.org/akater/emacs-ebuild-run-mode/-/blob/master/ebuild-run-mode.org"
+HOMEPAGE="https://gitlab.com/akater/emacs-ebuild-run-mode/-/blob/master/ebuild-run-mode.org"
 SRC_URI="https://gitlab.com/akater/${MY_PN}/-/archive/v${PV}/${MY_PN}-v${PV}.tar.gz -> ${P}.tar.gz"
 S="${WORKDIR}/${MY_PN}-v${PV}"
 
