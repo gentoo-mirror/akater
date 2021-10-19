@@ -21,5 +21,7 @@
 git-merge() {
 	local branch=${1}
 	einfo "Merging branch ${branch}"
+	git config user.email "portage@gentoohost.example"
+	git config user.name "portage"
 	git merge "${branch}" || die "Could not merge ${branch}"
 }
