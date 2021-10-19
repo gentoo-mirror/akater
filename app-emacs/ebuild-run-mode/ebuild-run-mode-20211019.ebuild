@@ -6,14 +6,17 @@ NEED_EMACS="24.1"
 
 inherit elisp-common
 
+MY_PN="emacs-${PN}"
 DESCRIPTION="Major mode for Emacs buffers where ebuild commands are run"
 HOMEPAGE="https://gitlab.com/akater/emacs-ebuild-run-mode/-/blob/master/ebuild-run-mode.org"
-SRC_URI="https://gitlab.com/akater/emacs-${PN}/-/archive/v${PV}/emacs-${P}.tar.bz2 -> ${P}.tar.bz2"
+SRC_URI="https://gitlab.com/akater/${MY_PN}/-/archive/v${PV}/${MY_PN}-v${PV}.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/${MY_PN}-v${PV}"
 
 LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="amd64 x86"
 DOCS="" # README.org is a relative symlink
+SITEFILE="50${PN}-gentoo.el"
 
 RDEPEND="
 	app-emacs/ebuild-mode
