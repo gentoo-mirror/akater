@@ -35,7 +35,7 @@ app-emacs/defmacro-gensym 99999999: Convenient gensyms for defmacro (Emacs Lisp)
 app-emacs/dired-rsync 9999: Allow rsync from dired buffers
 app-emacs/ebdb 0.8.2 9999: Contact management package
 app-emacs/ebuild-mode 9999: Emacs modes for editing ebuilds and other Gentoo specific files
-app-emacs/ebuild-run-mode 20210707 20210713 99999999: Major mode for Emacs buffers where ebuild commands are run
+app-emacs/ebuild-run-mode 20210713 99999999: Major mode for Emacs buffers where ebuild commands are run
 app-emacs/ebuild-tools 99999999: Functions to deal with ebuilds in Emacs Lisp
 app-emacs/edbi 0.1.3_pre20211008 9999: Database independent interface for Emacs
 app-emacs/eix 99999999: Emacs Lisp interface to app-portage/eix
@@ -79,7 +79,7 @@ app-emacs/libegit2 9999: Emacs module for libgit2
 app-emacs/lisp-extra-font-lock 9999: Highlight bound variables and quoted exprs.
 app-emacs/lispy 9999: vi-like Paredit.
 app-emacs/literate-elisp 9999: A library to write Emacs Lisp codes in org mode
-app-emacs/log4e 0.3.3 9999: Logging framework for Elisp
+app-emacs/log4e 0.3.3 0.3.3_p1 9999: Logging framework for Elisp
 app-emacs/looking-through 99999999: Emacs Lisp's looking-at, followed by movement if match succeeded
 app-emacs/lv 9999: Other echo area
 app-emacs/macrostep 9999: Interactive macro expander

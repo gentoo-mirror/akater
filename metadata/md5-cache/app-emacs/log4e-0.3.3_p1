@@ -4,10 +4,10 @@ DESCRIPTION=Logging framework for Elisp
 EAPI=8
 HOMEPAGE=https://github.com/aki2o/log4e
 INHERIT=elisp git-r3
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=>=app-editors/emacs-24:*
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=290fb70dd8aca1862ac87b5d2be84979
+_md5_=236ff582fb8310ed3b4a44bc9507d7c6
