@@ -18,7 +18,7 @@ KEYWORDS="amd64 x86"
 DOCS="" # README.org is a relative symlink
 
 RDEPEND="
-	app-emacs/ebuild-mode
+	>=app-emacs/ebuild-mode-1.53
 "
 
 export ORG_IMMUTABLE_SOURCES_DIRECTORY="${SITEETC}/${PN}"
