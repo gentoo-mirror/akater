@@ -43,6 +43,9 @@ RDEPEND="dev-libs/openssl:0=
 DOCS=( README.md )
 
 src_prepare() {
+
+	eapply "${FILESDIR}/${PN}"-1.7.0-fix-runpath.patch
+
 	# from mva
 	sed -r \
 		-e '/install\(TARGETS/,/  INCLUDES/{s@(LIBRARY DESTINATION).*@\1 ${CMAKE_INSTALL_LIBDIR}@;s@(ARCHIVE DESTINATION).*@\1 ${CMAKE_INSTALL_LIBDIR}@;s@(RUNTIME DESTINATION).*@\1 ${CMAKE_INSTALL_BINDIR}@}' \
