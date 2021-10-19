@@ -9,9 +9,8 @@ inherit elisp git-r3
 DESCRIPTION="Logging framework for Elisp"
 HOMEPAGE="https://github.com/aki2o/log4e"
 
-# EGIT_REPO_URI="https://github.com/aki2o/log4e.git"
-EGIT_REPO_URI="https://github.com/akater/log4e.git"
-EGIT_BRANCH="cleaner-build"
+EGIT_REPO_URI="https://github.com/aki2o/log4e.git"
+EGIT_BRANCH="master"
 KEYWORDS="~amd64 ~x86"
 
 LICENSE="GPL-3"
