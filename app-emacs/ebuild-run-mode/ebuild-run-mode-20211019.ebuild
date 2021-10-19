@@ -19,7 +19,7 @@ DOCS="" # README.org is a relative symlink
 SITEFILE="50${PN}-gentoo.el"
 
 RDEPEND="
-	app-emacs/ebuild-mode
+	>=app-emacs/ebuild-mode-1.53
 "
 
 export ORG_IMMUTABLE_SOURCES_DIRECTORY="${SITEETC}/${PN}"
