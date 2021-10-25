@@ -16,6 +16,7 @@ KEYWORDS="amd64 ~x86"
 IUSE="nopasswd"
 
 DOCS="README.org"
+SITEFILE="50${PN}-gentoo.el"
 
 BDEPEND="
 	app-emacs/anaphora
