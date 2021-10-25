@@ -15,21 +15,30 @@ EGIT_REPO_URI="https://gitlab.com/akater/emacs-portage.git"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
-IUSE="smart-live-rebuild"
+IUSE="pona smart-live-rebuild"
 
 DOCS="README.org"
+
+BDEPEND="
+	app-emacs/akater-misc
+	app-emacs/akater-sh
+	app-emacs/ebuild-tools
+	app-emacs/gentoo-cache
+	pona? ( app-emacs/portage-navi )
+	app-emacs/transient
+"
 
 RDEPEND="
 	app-admin/sudo
 	app-portage/eix
 	app-portage/gentoolkit
 	smart-live-rebuild? ( app-portage/smart-live-rebuild )
-	app-emacs/portage-navi
-	app-emacs/gentoo-cache
-	app-emacs/transient
 	app-emacs/akater-misc
 	app-emacs/akater-sh
 	app-emacs/ebuild-tools
+	app-emacs/gentoo-cache
+	pona? ( app-emacs/portage-navi )
+	app-emacs/transient
 "
 
 SITEFILE=70emacs-${PN}-gentoo.el
