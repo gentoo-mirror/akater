@@ -29,7 +29,7 @@ BDEPEND="
 "
 
 RDEPEND="
-	app-admin/sudo
+	|| ( app-admin/sudo app-admin/doas sys-apps/shadow )
 	app-portage/eix
 	app-portage/gentoolkit
 	smart-live-rebuild? ( app-portage/smart-live-rebuild )
