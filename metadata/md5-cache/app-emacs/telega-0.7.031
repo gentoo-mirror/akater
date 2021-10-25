@@ -12,4 +12,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/zevlg/telega.el/archive/v0.7.031.tar.gz -> telega-0.7.031.tar.gz
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9
-_md5_=25bf8e3f93ff4514d24b4195a740666e
+_md5_=52a3733ad5b6238a1d8f0f206fcfd105
