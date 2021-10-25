@@ -17,6 +17,8 @@ KEYWORDS="amd64 x86"
 LICENSE="GPL-3"
 SLOT="0"
 
+SITEFILE="50${PN}-gentoo.el"
+
 RDEPEND="
 	>=app-emacs/concurrent-0.3.1
 	>=app-emacs/ctable-0.1.2
