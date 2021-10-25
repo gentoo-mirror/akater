@@ -1,0 +1,16 @@
+--- a/docs/Makefile
++++ b/docs/Makefile
+@@ -2,6 +2,11 @@
+ BUILDDEPS = alert all-the-icons dashboard ellit-org htmlize org \
+             rainbow-identifiers transient visual-fill-column
+ BUILDDEPS:=$(BUILDDEPS:%=-L $(SITELISP)/%)
+-EMACS=emacs -Q -batch -L ../ $(BUILDDEPS) -l ellit-org
++EMACS=emacs -Q -batch -L ../ $(BUILDDEPS) -l ellit-org	\
++	--eval "(require 'org-element)"			\
++	--eval "(require 'org-persist nil t)"		\
++	--eval "					\
++(ignore-errors						\
++  (make-directory org-persist-directory t))"		\
+ 
+ DOC_EL_SOURCES=../telega.el ../telega-*.el ../contrib/*.el
+
