@@ -12,8 +12,10 @@ HOMEPAGE="https://github.com/kiwanami/emacs-deferred/blob/master/README-concurre
 EGIT_REPO_URI="https://github.com/kiwanami/emacs-deferred.git"
 KEYWORDS="amd64 x86"
 
-LICENSE=GPL-3
-SLOT=0
+LICENSE="GPL-3"
+SLOT="0"
+
+SITEFILE="50${PN}-gentoo.el"
 
 RDEPEND="
 	>=app-emacs/deferred-0.5.0
