@@ -12,4 +12,4 @@ PROPERTIES=live
 RDEPEND=app-emacs/akater-misc app-emacs/akater-sh >=app-portage/eix-0.34.4 >=app-editors/emacs-24:* >=app-editors/emacs-24:*
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	orgmode	b8c966aa3de46358b6dc7bfd38e64abd	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	akater-live-release	942df88ed415db6ad0c73baae7a02cb7
-_md5_=0d9608fca5eac50453db6e6e95a5abb9
+_md5_=e0e732b19b5117d3afe533cff3088fe0

@@ -10,4 +10,4 @@ PROPERTIES=live
 RDEPEND=>=app-emacs/rich-minority-0.1.1 >=app-editors/emacs-24.3:*
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=1e5dfdbd951822e0589862814b0b6dcd
+_md5_=3ce58a786fddd9effa4cb09bb086504d
