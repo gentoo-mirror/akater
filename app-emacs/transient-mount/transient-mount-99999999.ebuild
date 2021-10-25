@@ -16,6 +16,8 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
 
+SITEFILE="50${PN}-gentoo.el"
+
 BDEPEND="
 	app-emacs/anaphora
 "
