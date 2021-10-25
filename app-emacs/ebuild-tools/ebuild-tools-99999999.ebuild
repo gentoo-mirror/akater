@@ -17,7 +17,7 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE="+eix gentoolkit"
 # it does not really work with gentoolkit
-REQUIRED_USE="|| ( eix gentoolkit )"
+REQUIRED_USE="|| ( eix gentoolkit ) eix"
 
 DOCS="README.org"
 
@@ -26,7 +26,7 @@ BDEPEND="
 	app-emacs/akater-misc
 "
 RDEPEND="${BDEPEND}
-	app-admin/sudo
+	|| ( app-admin/sudo app-admin/doas sys-apps/shadow )
 	app-emacs/akater-sh
 	app-emacs/akater-conf
 	eix? ( app-emacs/eix
