@@ -82,9 +82,7 @@ orgdev_src_configure() {
 			 --eval "(require 'ob-tangle)"                                \
 			 --eval "(require 'org)"                                      \
 			 --eval "(require 'org-element)"                              \
-			 --eval "(require 'org-persist nil t)"                      \
-			 --eval "(ignore-errors										\
-(make-directory org-persist-directory t))"								\
+			 --eval "(setq org-element-cache-persistent nil)"             \
 			 --eval "(defalias 'org-development-elisp-mode 'org-mode)"    \
 			 --eval "(require 'files)"                                    \
 			 --eval "(defvar use-flags '(${USE}))"                        \
