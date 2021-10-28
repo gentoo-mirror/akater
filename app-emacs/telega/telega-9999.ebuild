@@ -56,6 +56,7 @@ RDEPEND="
 	contrib? ( app-emacs/alert
 			   app-emacs/all-the-icons
 			   app-emacs/dashboard
+			   app-emacs/esxml
 			   app-emacs/language-detection
 			   app-emacs/transient )
 	dbus? ( app-editors/emacs[dbus] )
