@@ -50,6 +50,7 @@ app-emacs/ement-extras 99999999: Extra features for Ement, Matrix client for GNU
 app-emacs/epc 0.1.2_pre20211008 0.1.2_pre20211008-r1 9999: A RPC stack for the Emacs Lisp
 app-emacs/epl 0.9 9999: Emacs Package Library
 app-emacs/ert-runner 0.8.0 9999: Opinionated Ert testing workflow
+app-emacs/esxml 9999: Library for working with xml via esxml and sxml
 app-emacs/expand-region 9999: Emacs extension to increase selected region by semantic units
 app-emacs/file-tree 99999999: Manipulation of symbolic file trees in Elisp
 app-emacs/findr 0.9.11 9999: Breadth-first file-finding facility for (X)Emacs
@@ -73,6 +74,7 @@ app-emacs/ivy 9999: Incremental Vertical completYon
 app-emacs/jabber 9999: A Jabber client for Emacs.
 app-emacs/jack-connect 9999: Manage jack connections within Emacs
 app-emacs/jump 9999: Build functions which contextually jump between files
+app-emacs/kv 9999: key/value data structure functions
 app-emacs/language-detection 0_pre20160923 9999: Automatic language detection from code snippets
 app-emacs/let-alist 1.0.6 1.0.6-r1: Easily let-bind values of an assoc-list by their names
 app-emacs/libegit2 9999: Emacs module for libgit2
