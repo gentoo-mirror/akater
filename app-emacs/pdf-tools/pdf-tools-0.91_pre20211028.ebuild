@@ -9,24 +9,23 @@ inherit elisp
 DESCRIPTION="Support library for PDF documents"
 HOMEPAGE="https://github.com/vedang/pdf-tools/"
 
-SRC_URI="https://github.com/akater/pdf-tools/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/akater/pdf-tools/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 RESTRICT="mirror"
 KEYWORDS="amd64 ~x86"
 
 LICENSE="GPL-3"
 SLOT="0"
 
-IUSE="test"
-
 BDEPEND="
 	app-editors/emacs[gui]
+	|| ( >=app-editors/emacs-25.1 app-emacs/let-alist )
 	>=app-emacs/tablist-1.0
 	>=app-text/poppler-0.16[cairo,png]
 	dev-libs/glib
-	test? ( app-emacs/f app-emacs/undercover )
 "
 RDEPEND="
 	app-editors/emacs[gui]
+	|| ( >=app-editors/emacs-25.1 app-emacs/let-alist )
 	>=app-emacs/tablist-1.0
 	>=app-text/poppler-0.16[cairo,png]
 	dev-libs/glib
@@ -45,11 +44,6 @@ src_test() {
 	# emake check
 	${EMACS} -Q -batch					\
 			 -L ${SITELISP}/tablist     \
-			 -L ${SITELISP}/f			\
-				-L ${SITELISP}/s		\
-			 -L ${SITELISP}/undercover	\
-				-L ${SITELISP}/dash		\
-				-L ${SITELISP}/shut-up  \
 			 -L lisp -L test		    \
 			 -l test-helper			    \
 			 --eval "				    \
