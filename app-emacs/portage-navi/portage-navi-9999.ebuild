@@ -32,6 +32,7 @@ src_prepare() {
 	git-merge fix-build
 	git-merge stylistic-fixes
 	git-merge introduce-defcustoms
+	git-merge store-package-object
 
 	default
 }
