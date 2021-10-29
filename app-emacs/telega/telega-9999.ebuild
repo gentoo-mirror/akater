@@ -35,6 +35,7 @@ BDEPEND="
 		   app-emacs/alert
 		   app-emacs/all-the-icons
 		   >=app-emacs/dashboard-1.8.0
+		   app-emacs/esxml
 		   >=app-emacs/rainbow-identifiers-0.2.2
 		   app-emacs/transient
 		   >=app-emacs/visual-fill-column-1.9 )
@@ -68,8 +69,8 @@ RDEPEND="
 src_prepare() {
 
 	if use doc; then
-		eapply "${FILESDIR}/${PN}"-0.7.025-fix-make-doc.patch
-		eapply "${FILESDIR}/${PN}"-0.7.025-fix-make-doc-org-persist.patch
+		eapply "${FILESDIR}/${PN}"-9999-fix-make-doc.patch
+		eapply "${FILESDIR}/${PN}"-9999-fix-make-doc-org-persist.patch
 		cp "${FILESDIR}"/theme-readtheorg.setup docs
 	fi
 
