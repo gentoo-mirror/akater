@@ -69,8 +69,8 @@ RDEPEND="
 src_prepare() {
 
 	if use doc; then
-		eapply "${FILESDIR}/${PN}"-0.7.025-fix-make-doc.patch
-		eapply "${FILESDIR}/${PN}"-0.7.025-fix-make-doc-org-persist.patch
+		eapply "${FILESDIR}/${PN}"-9999-fix-make-doc.patch
+		eapply "${FILESDIR}/${PN}"-9999-fix-make-doc-org-persist.patch
 		cp "${FILESDIR}"/theme-readtheorg.setup docs
 	fi
 
