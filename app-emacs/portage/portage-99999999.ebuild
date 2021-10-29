@@ -35,10 +35,9 @@ RDEPEND="
 	smart-live-rebuild? ( app-portage/smart-live-rebuild )
 	app-emacs/akater-misc
 	app-emacs/akater-sh
-	app-emacs/deferred
 	app-emacs/ebuild-tools
 	app-emacs/gentoo-cache
-	pona? ( app-emacs/portage-navi )
+	pona? ( app-emacs/deferred app-emacs/portage-navi )
 	app-emacs/transient
 "
 
