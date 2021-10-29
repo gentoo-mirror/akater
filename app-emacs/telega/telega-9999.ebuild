@@ -35,6 +35,7 @@ BDEPEND="
 		   app-emacs/alert
 		   app-emacs/all-the-icons
 		   >=app-emacs/dashboard-1.8.0
+		   app-emacs/esxml
 		   >=app-emacs/rainbow-identifiers-0.2.2
 		   app-emacs/transient
 		   >=app-emacs/visual-fill-column-1.9 )
