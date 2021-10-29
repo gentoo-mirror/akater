@@ -1,4 +1,4 @@
-BDEPEND=>=net-libs/tdlib-1.7.8 sys-devel/make virtual/pkgconfig doc? ( app-emacs/ellit-org >=app-emacs/htmlize-1.34 app-emacs/alert app-emacs/all-the-icons >=app-emacs/dashboard-1.8.0 >=app-emacs/rainbow-identifiers-0.2.2 app-emacs/transient >=app-emacs/visual-fill-column-1.9 ) org? ( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) ) test? ( >=dev-lang/python-3 ) tray? ( >=dev-libs/libappindicator-3 ) >=app-editors/emacs-26.1:* >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=>=net-libs/tdlib-1.7.8 sys-devel/make virtual/pkgconfig doc? ( app-emacs/ellit-org >=app-emacs/htmlize-1.34 app-emacs/alert app-emacs/all-the-icons >=app-emacs/dashboard-1.8.0 app-emacs/esxml >=app-emacs/rainbow-identifiers-0.2.2 app-emacs/transient >=app-emacs/visual-fill-column-1.9 ) org? ( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) ) test? ( >=dev-lang/python-3 ) tray? ( >=dev-libs/libappindicator-3 ) >=app-editors/emacs-26.1:* >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
 DESCRIPTION=GNU Emacs telegram client (unofficial)
 EAPI=8
@@ -11,4 +11,4 @@ PROPERTIES=live
 RDEPEND=>=net-libs/tdlib-1.7.8 >=app-emacs/visual-fill-column-1.9 >=app-emacs/rainbow-identifiers-0.2.2 contrib? ( app-emacs/alert app-emacs/all-the-icons app-emacs/dashboard app-emacs/esxml app-emacs/language-detection app-emacs/transient ) dbus? ( app-editors/emacs[dbus] ) geo? ( app-emacs/geo ) org? ( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) ) tray? ( >=dev-libs/libappindicator-3 ) >=app-editors/emacs-26.1:*
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=6fa42fbef56662d4273caa742ce1de85
+_md5_=f5f6eb6280662192df3236af8943c3b9

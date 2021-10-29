@@ -1,0 +1,13 @@
+BDEPEND=>=app-editors/emacs-24:* >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DESCRIPTION=A database for EmacsLisp
+EAPI=8
+HOMEPAGE=https://github.com/nicferrier/emacs-db
+INHERIT=elisp git-r3
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+PROPERTIES=live
+RDEPEND=>=app-emacs/kv-0.0.11 >=app-editors/emacs-24:*
+SLOT=0
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_md5_=7cabe8edb428b19a785da60bc7f312a6
