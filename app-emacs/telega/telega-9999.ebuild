@@ -73,7 +73,6 @@ src_prepare() {
 	git branch work
 	git switch work
 	git-merge tty-compatibility
-	git-merge dired-dwim-target
 
 	if use doc; then
 		eapply "${FILESDIR}/${PN}"-9999-fix-make-doc.patch
