@@ -39,6 +39,7 @@ RDEPEND="
 	app-emacs/gentoo-cache
 	pona? ( app-emacs/deferred app-emacs/portage-navi )
 	app-emacs/transient
+	>=sys-apps/portage-2.3.7
 "
 
 SITEFILE=70emacs-${PN}-gentoo.el
