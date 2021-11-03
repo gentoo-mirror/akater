@@ -49,6 +49,7 @@ app-emacs/libegit2:system-libgit - Use the system-wide dev-libs/libgit2 instead 
 app-emacs/lispy:clojure - Support Clojure
 app-emacs/literate-elisp:bootstrap - Compile with itself
 app-emacs/magit:libgit - Install with libgit2 support (experimental)
+app-emacs/magit:magit-section - Install magit-section.el
 app-emacs/melpa-sources:package-build - Compile and system-wide install `package-build' Elisp package
 app-emacs/melpa-sources:recipes - Install MELPA recipes
 app-emacs/melpa-sources:sources - Install MELPA build scripts meant to build packages from recipes

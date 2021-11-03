@@ -87,6 +87,7 @@ app-emacs/looking-through 99999999: Emacs Lisp's looking-at, followed by movemen
 app-emacs/lv 9999: Other echo area
 app-emacs/macrostep 9999: Interactive macro expander
 app-emacs/magit 9999: A Git porcelain inside Emacs
+app-emacs/magit-section 9999: Sections for read-only buffers
 app-emacs/markdown-mode 9999: Major mode for Markdown-formatted text
 app-emacs/melpa-sources 99999999: Milkman Emacs Lisp Package Archive recipes
 app-emacs/modus-themes 9999: Highly accessible themes (WCAG AAA) for Emacs
