@@ -40,6 +40,8 @@ RDEPEND="${BDEPEND}
 src_prepare() {
 	default
 
+	rm *-pkg.el
+
 	if ! use libgit ; then
 		rm magit-libgit.el
 	fi
