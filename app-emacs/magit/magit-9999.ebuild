@@ -17,7 +17,7 @@ EGIT_BRANCH="relaxed-conditions-for-password-functions"
 LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="libgit"
+IUSE="libgit +magit-section"
 
 S="${WORKDIR}/${P}/lisp"
 SITEFILE="50${PN}-gentoo.el"
@@ -29,18 +29,25 @@ BDEPEND="
 	>=app-emacs/with-editor-2.8.0
 	sys-apps/texinfo
 	libgit? ( app-emacs/libegit2 )
+	!magit-section? ( app-emacs/magit-section )
 "
 # transient 20190812 is required but we don't have support for such versions
 RDEPEND="${BDEPEND}
 	>=dev-vcs/git-2.0.0
 	libgit? ( dev-libs/libgit2
 			  app-emacs/libegit2 )
+	!magit-section? ( app-emacs/magit-section )
 "
 
 src_prepare() {
 	default
 
 	rm *-pkg.el
+
+	if ! use magit-section ; then
+		rm magit-section.el
+		rm ../Documentation/magit-section.texi
+	fi
 
 	if ! use libgit ; then
 		rm magit-libgit.el

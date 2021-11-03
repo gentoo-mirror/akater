@@ -17,6 +17,7 @@
 </longdescription>
 <use>
   <flag name="libgit">Install with libgit2 support (experimental)</flag>
+  <flag name="magit-section">Install magit-section.el</flag>
 </use>
 
 <stabilize-allarches/>
