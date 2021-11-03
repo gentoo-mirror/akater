@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+  <email>nuclearspace@gmail.com</email>
+  <name>Dima Akater</name>
+</maintainer>
+<longdescription>
+  Magit-section implements the main user interface of Magit — the
+collapsible sections that make up its buffers.  This package used
+to be distributed as part of Magit but now it can also be used by
+other packages that have nothing to do with Magit or Git.
+</longdescription>
+
+<stabilize-allarches/>
+<upstream>
+  <remote-id type="github">magit/magit</remote-id>
+</upstream>
+</pkgmetadata>
