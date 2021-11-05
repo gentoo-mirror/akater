@@ -97,7 +97,7 @@ src_compile () {
 
 	use geo || rm contrib/telega-live-location.el
 	use geo && elisp-compile contrib/telega-live-location.el
-	use org && elisp-compile contrib/ol-*.el
+	use org && elisp-compile contrib/ol-telega.el
 
 	use contrib && elisp-compile contrib/telega-*.el
 }
@@ -114,7 +114,7 @@ src_install () {
 	use geo && rm contrib/telega-live-location*
 	use org && elisp-install org contrib/ol-telega.{el,elc}
 	rm contrib/ol-telega*
-	use contrib && elisp-install "${PN}" contrib/*.el contrib/*.elc
+	use contrib && elisp-install "${PN}" contrib/*.{el,elc}
 
 	if use standalone ; then
 		elisp-install "${PN}" "${FILESDIR}"/telega-standalone.el
