@@ -5,6 +5,10 @@
   <email>nuclearspace@gmail.com</email>
   <name>Dima Akater</name>
 </maintainer>
+<longdescription>Gentoo Dashboard for Emacs</longdescription>
+<use>
+  <flag name="magit-section">Use standalone magit-section</flag>
+</use>
 <stabilize-allarches/>
 <upstream>
   <remote-id type="framagit">akater/emacs-magentoo</remote-id>
