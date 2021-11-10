@@ -20,16 +20,18 @@ KEYWORDS="amd64 ~x86"
 DOCS="" # README.org is a relative symlink
 
 # IUSE="esdf test"
-IUSE="debug"
+IUSE="debug magit-section"
 
 BDEPEND="
 	app-emacs/eieio-akater-extras
-	app-emacs/magit-section
+	magit-section? ( app-emacs/magit-section )
+	!magit-section? ( app-emacs/magit )
 	app-emacs/transient
 "
 RDEPEND="
 	app-emacs/eieio-akater-extras
-	app-emacs/magit-section
+	magit-section? ( app-emacs/magit-section )
+	!magit-section? ( app-emacs/magit )
 	app-emacs/transient
 "
 
