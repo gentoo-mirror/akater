@@ -35,6 +35,7 @@ app-emacs/console-colors:nopasswd - Presume setvtrgb can be executed without a p
 app-emacs/ebdb:company - Use company completion framework
 app-emacs/ebuild-tools:eix - Use app-emacs/eix backend
 app-emacs/ebuild-tools:gentoolkit - (broken!) Use app-emacs/gentoolkit backend
+app-emacs/eieio-akater-extras:pona - Use some facilities of app-emacs/portage-navi
 app-emacs/elfeed:emms - Support EMMS
 app-emacs/elfeed:org - Support Org links
 app-emacs/elfeed:web - Install web interface view of the database

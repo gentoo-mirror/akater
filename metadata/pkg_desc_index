@@ -39,6 +39,7 @@ app-emacs/ebuild-mode 9999: Emacs modes for editing ebuilds and other Gentoo spe
 app-emacs/ebuild-run-mode 20211026 99999999: Major mode for Emacs buffers where ebuild commands are run
 app-emacs/ebuild-tools 99999999: Functions to deal with ebuilds in Emacs Lisp
 app-emacs/edbi 0.1.3_pre20211008 9999: Database independent interface for Emacs
+app-emacs/eieio-akater-extras 99999999: Little extensions and fixes for EIEIO
 app-emacs/eix 99999999: Emacs Lisp interface to app-portage/eix
 app-emacs/elfeed 9999: An Emacs Atom/RSS feed reader
 app-emacs/elisp-slime-nav 9999: Make M-. and M-, work in elisp like they do in slime
@@ -86,6 +87,7 @@ app-emacs/log4e 0.3.3 0.3.3_p1 9999: Logging framework for Elisp
 app-emacs/looking-through 99999999: Emacs Lisp's looking-at, followed by movement if match succeeded
 app-emacs/lv 9999: Other echo area
 app-emacs/macrostep 9999: Interactive macro expander
+app-emacs/magentoo 99999999: Gentoo dashboard for Emacs
 app-emacs/magit 9999: A Git porcelain inside Emacs
 app-emacs/magit-section 9999: Sections for read-only buffers
 app-emacs/markdown-mode 9999: Major mode for Markdown-formatted text

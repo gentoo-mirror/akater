@@ -1,0 +1,14 @@
+BDEPEND=app-emacs/eieio-akater-extras app-emacs/magit-section app-emacs/transient >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=postinst postrm unpack
+DESCRIPTION=Gentoo dashboard for Emacs
+EAPI=8
+HOMEPAGE=https://framagit.org/akater/emacs-magentoo
+INHERIT=elisp-common akater-live-release
+IUSE=debug
+KEYWORDS=amd64 ~x86
+LICENSE=GPL-3
+PROPERTIES=live
+RDEPEND=app-emacs/eieio-akater-extras app-emacs/magit-section app-emacs/transient
+SLOT=0
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	akater-live-release	942df88ed415db6ad0c73baae7a02cb7
+_md5_=dbb737ff88edd2bf8913ad03d1b29279
