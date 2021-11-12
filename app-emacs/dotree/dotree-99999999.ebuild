@@ -7,7 +7,7 @@ NEED_EMACS="25"
 MY_PN="elisp-${PN}"
 inherit elisp-common akater-live-release
 
-DESCRIPTION="Emacs Lisp's looking-at, followed by movement if match succeeded"
+DESCRIPTION="Iterating over cons trees in Emacs Lisp"
 HOMEPAGE="https://framagit.org/akater/elisp-dotree"
 
 EGIT_REPO_URI="https://framagit.org/akater/${MY_PN}.git"
