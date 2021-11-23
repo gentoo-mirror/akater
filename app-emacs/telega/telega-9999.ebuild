@@ -29,7 +29,7 @@ DOCS="README.md"
 
 # todo: tgs2png
 BDEPEND="
-	>=net-libs/tdlib-1.7.8
+	>=net-libs/tdlib-1.7.9
 	sys-devel/make
 	virtual/pkgconfig
 	doc? ( app-emacs/ellit-org
