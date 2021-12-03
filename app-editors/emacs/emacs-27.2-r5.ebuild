@@ -200,12 +200,14 @@ src_prepare() {
 
 		rm -rf lisp/play
 	else
-		eapply "${WORKDIR}/patch/01_all_erc-libera.patch"
+		eapply "${WORKDIR}/patch/01_all_irc-libera.patch"
 	fi
 
 	if ! use dbus; then
 		eapply "${FILESDIR}"/minimal-docs-01-no-dbus.patch
 	fi
+
+	use elibc_glibc && eapply "${WORKDIR}/patch/02_all_glibc-2.34.patch"
 
 	default
 
