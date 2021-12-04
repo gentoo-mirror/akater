@@ -15,7 +15,7 @@ EGIT_REPO_URI="https://gitlab.com/akater/emacs-portage.git"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
-IUSE="pona smart-live-rebuild"
+IUSE="helm pona smart-live-rebuild"
 
 DOCS="README.org"
 
@@ -24,6 +24,7 @@ BDEPEND="
 	app-emacs/akater-sh
 	app-emacs/ebuild-tools
 	app-emacs/gentoo-cache
+	helm? ( app-emacs/helm )
 	pona? ( app-emacs/portage-navi )
 	app-emacs/transient
 "
@@ -37,6 +38,7 @@ RDEPEND="
 	app-emacs/akater-sh
 	app-emacs/ebuild-tools
 	app-emacs/gentoo-cache
+	helm? ( app-emacs/helm )
 	pona? ( app-emacs/deferred app-emacs/portage-navi )
 	app-emacs/transient
 	>=sys-apps/portage-2.3.7
