@@ -1,15 +1,15 @@
-BDEPEND=app-emacs/akater-misc app-emacs/akater-sh app-emacs/ebuild-tools app-emacs/gentoo-cache pona? ( app-emacs/portage-navi ) app-emacs/transient >=app-editors/emacs-26:* >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=app-emacs/akater-misc app-emacs/akater-sh app-emacs/ebuild-tools app-emacs/gentoo-cache helm? ( app-emacs/helm ) pona? ( app-emacs/portage-navi ) app-emacs/transient >=app-editors/emacs-26:* >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
 DEPEND=test? ( app-emacs/org-development-elisp )
 DESCRIPTION=Emacs interface to Portage
 EAPI=8
 HOMEPAGE=https://gitlab.com/akater/emacs-portage
 INHERIT=orgmode akater-live-release
-IUSE=pona smart-live-rebuild test
+IUSE=helm pona smart-live-rebuild test
 KEYWORDS=amd64 ~x86
 LICENSE=GPL-3
 PROPERTIES=live
-RDEPEND=|| ( app-admin/sudo app-admin/doas sys-apps/shadow ) app-portage/eix app-portage/gentoolkit smart-live-rebuild? ( app-portage/smart-live-rebuild ) app-emacs/akater-misc app-emacs/akater-sh app-emacs/ebuild-tools app-emacs/gentoo-cache pona? ( app-emacs/deferred app-emacs/portage-navi ) app-emacs/transient >=sys-apps/portage-2.3.7 >=app-editors/emacs-26:*
+RDEPEND=|| ( app-admin/sudo app-admin/doas sys-apps/shadow ) app-portage/eix app-portage/gentoolkit smart-live-rebuild? ( app-portage/smart-live-rebuild ) app-emacs/akater-misc app-emacs/akater-sh app-emacs/ebuild-tools app-emacs/gentoo-cache helm? ( app-emacs/helm ) pona? ( app-emacs/deferred app-emacs/portage-navi ) app-emacs/transient >=sys-apps/portage-2.3.7 >=app-editors/emacs-26:*
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	orgmode	c9ae69582e07e40a0a7511f2616dc2fd	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	akater-live-release	942df88ed415db6ad0c73baae7a02cb7
-_md5_=d9203735b0aa3cd7d5fa47c4d9908b45
+_md5_=dde73d9b29f8dee0d836f7786bbf63ca
