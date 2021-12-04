@@ -7,6 +7,9 @@
 	</maintainer>
 	<longdescription>Emacs interface to Portage</longdescription>
 	<use>
+		<flag name="helm">Offer some support for app-emacs/helm</flag>
+	</use>
+	<use>
 		<flag name="pona">Use some facilities of app-emacs/portage-navi</flag>
 	</use>
 	<use>
