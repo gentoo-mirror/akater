@@ -5,18 +5,13 @@ EAPI=8
 NEED_EMACS="26.1"
 
 MY_PN="${PN}.el"
-inherit elisp git-r3 git-extras
+inherit elisp git-r3
 
 DESCRIPTION="GNU Emacs telegram client (unofficial)"
 HOMEPAGE="https://zevlg.github.io/telega.el"
-# EGIT_REPO_URI="https://github.com/zevlg/${MY_PN}.git"
-# EGIT_BRANCH="master"
-# EGIT_CLONE_TYPE="single+tags"
-
-EGIT_REPO_URI="https://github.com/akater/${MY_PN}.git"
-# EGIT_BRANCH="tty-compatibility"
+EGIT_REPO_URI="https://github.com/zevlg/${MY_PN}.git"
 EGIT_BRANCH="master"
-EGIT_CLONE_TYPE="mirror"
+EGIT_CLONE_TYPE="single+tags"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -69,11 +64,6 @@ RDEPEND="
 "
 
 src_prepare() {
-
-	# Something breaks but it's usable in tty without it
-	# git branch work
-	# git switch work
-	# git-merge tty-compatibility
 
 	if use doc; then
 		eapply "${FILESDIR}/${PN}"-9999-fix-make-doc.patch
