@@ -70,9 +70,10 @@ RDEPEND="
 
 src_prepare() {
 
-	git branch work
-	git switch work
-	git-merge tty-compatibility
+	# Something breaks but it's usable in tty without it
+	# git branch work
+	# git switch work
+	# git-merge tty-compatibility
 
 	if use doc; then
 		eapply "${FILESDIR}/${PN}"-9999-fix-make-doc.patch
