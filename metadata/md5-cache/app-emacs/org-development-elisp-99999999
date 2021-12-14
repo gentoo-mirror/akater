@@ -1,4 +1,4 @@
-BDEPEND=app-emacs/org-development >=app-editors/emacs-26:* >=app-editors/emacs-26:* >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=app-emacs/org-development app-emacs/org-project >=app-editors/emacs-26:* >=app-editors/emacs-26:* >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
 DEPEND=test? ( app-emacs/org-development-elisp )
 DESCRIPTION=Elisp package that streamlines development of Elisp packages in org
@@ -9,7 +9,7 @@ IUSE=test
 KEYWORDS=amd64 ~x86
 LICENSE=GPL-3
 PROPERTIES=live
-RDEPEND=app-emacs/org-development >=app-editors/emacs-26:* >=app-editors/emacs-26:*
+RDEPEND=app-emacs/org-development app-emacs/org-project >=app-editors/emacs-26:* >=app-editors/emacs-26:*
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	orgmode	c9ae69582e07e40a0a7511f2616dc2fd	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	akater-live-release	942df88ed415db6ad0c73baae7a02cb7
-_md5_=64e4743d8379ffd118d05d23e344002c
+_md5_=04cfb498e1a01ff25fcdf81176d75c30
