@@ -1,15 +1,13 @@
-BDEPEND=app-emacs/akater-misc >=app-editors/emacs-26:* >=app-editors/emacs-26:* >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
-DEPEND=test? ( app-emacs/org-development-elisp )
-DESCRIPTION=Elisp package to create systems of org files from templates
+BDEPEND=app-emacs/akater-misc app-emacs/eieio-akater-extras >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=postinst postrm unpack
+DESCRIPTION=Create systems of org files from templates
 EAPI=8
 HOMEPAGE=https://gitlab.com/akater/org-project
-INHERIT=elisp orgmode akater-live-release
-IUSE=test
+INHERIT=elisp-common akater-live-release
 KEYWORDS=amd64 ~x86
-LICENSE=GPL-3
+LICENSE=GPL-3+
 PROPERTIES=live
-RDEPEND=app-emacs/akater-misc >=app-editors/emacs-26:* >=app-editors/emacs-26:*
+RDEPEND=app-emacs/akater-misc app-emacs/eieio-akater-extras
 SLOT=0
-_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	orgmode	c9ae69582e07e40a0a7511f2616dc2fd	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	akater-live-release	942df88ed415db6ad0c73baae7a02cb7
-_md5_=f0163e5c7c92b3dba8fc2b5005c2197a
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	akater-live-release	942df88ed415db6ad0c73baae7a02cb7
+_md5_=d6f7aec8455b97f0ff65e799fb82e2bf
