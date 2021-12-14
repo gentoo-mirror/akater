@@ -20,6 +20,7 @@ IUSE=""
 
 RDEPEND="
 	app-emacs/org-development
+	app-emacs/org-project
 "
 
 BDEPEND="${RDEPEND}"
