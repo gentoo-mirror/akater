@@ -7,7 +7,7 @@ NEED_EMACS="26"
 MY_PN="elisp-${PN}"
 inherit elisp orgmode akater-live-release
 
-DESCRIPTION="Manipulation of symbolic file trees in Elisp"
+DESCRIPTION="Manipulating symbolic file trees in Elisp"
 HOMEPAGE="https://gitlab.com/akater/elisp-file-tree"
 
 EGIT_REPO_URI="https://gitlab.com/akater/${MY_PN}.git"
@@ -22,6 +22,7 @@ SITEFILE="50${PN}-gentoo.el"
 BDEPEND="
 	app-emacs/anaphora
 	app-emacs/akater-misc
+	app-emacs/dotree
 "
 
 RDEPEND="${BDEPEND}
