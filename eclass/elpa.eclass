@@ -15,8 +15,6 @@
 
 inherit elisp
 
-EXPORT_FUNCTIONS src_unpack src_prepare
-
 # @ECLASS-VARIABLE: ELPA_CONTAINER_KIND
 # @DESCRIPTION:
 # How the package is served by an ELPA.  Set this before “inherit elpa”.
@@ -235,3 +233,5 @@ elpa_src_unpack() {
 }
 
 fi
+
+EXPORT_FUNCTIONS src_unpack src_prepare
