@@ -1,7 +1,7 @@
-BDEPEND=app-emacs/anaphora app-emacs/akater-misc >=app-editors/emacs-26:* >=app-editors/emacs-26:* >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=app-emacs/anaphora app-emacs/akater-misc app-emacs/dotree >=app-editors/emacs-26:* >=app-editors/emacs-26:* >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
 DEPEND=test? ( app-emacs/org-development-elisp )
-DESCRIPTION=Manipulation of symbolic file trees in Elisp
+DESCRIPTION=Manipulating symbolic file trees in Elisp
 EAPI=8
 HOMEPAGE=https://gitlab.com/akater/elisp-file-tree
 INHERIT=elisp orgmode akater-live-release
@@ -9,7 +9,7 @@ IUSE=test
 KEYWORDS=amd64 ~x86
 LICENSE=GPL-3
 PROPERTIES=live
-RDEPEND=app-emacs/anaphora app-emacs/akater-misc >=app-editors/emacs-26:* >=app-editors/emacs-26:*
+RDEPEND=app-emacs/anaphora app-emacs/akater-misc app-emacs/dotree >=app-editors/emacs-26:* >=app-editors/emacs-26:*
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	orgmode	c9ae69582e07e40a0a7511f2616dc2fd	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	akater-live-release	942df88ed415db6ad0c73baae7a02cb7
-_md5_=bc996685abf131239448c3633cea946f
+_md5_=b416d4a958b4ff2da250d15deac5bb77

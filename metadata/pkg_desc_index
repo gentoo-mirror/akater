@@ -55,7 +55,7 @@ app-emacs/epl 0.9 9999: Emacs Package Library
 app-emacs/ert-runner 0.8.0 9999: Opinionated Ert testing workflow
 app-emacs/esxml 9999: Library for working with xml via esxml and sxml
 app-emacs/expand-region 9999: Emacs extension to increase selected region by semantic units
-app-emacs/file-tree 99999999: Manipulation of symbolic file trees in Elisp
+app-emacs/file-tree 99999999: Manipulating symbolic file trees in Elisp
 app-emacs/findr 0.9.11 9999: Breadth-first file-finding facility for (X)Emacs
 app-emacs/forge 9999: Access Git forges from Magit
 app-emacs/fsm 0.2.1 9999: State machine library
