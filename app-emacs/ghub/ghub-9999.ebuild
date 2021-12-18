@@ -15,15 +15,16 @@ LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 
+S="${WORKDIR}/${P}/lisp"
 SITEFILE="50${PN}-gentoo.el"
-ELISP_TEXINFO="*.texi"
-DOCS="README.md"
+ELISP_TEXINFO="../docs/*.texi"
+DOCS="../README.md"
 
 BDEPEND="
-sys-apps/texinfo
+	sys-apps/texinfo
 "
 RDEPEND="
->=app-emacs/treepy-0.1.1
+	>=app-emacs/treepy-0.1.1
 "
 
 src_prepare() {

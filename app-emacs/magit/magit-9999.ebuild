@@ -21,8 +21,8 @@ IUSE="libgit +magit-section"
 
 S="${WORKDIR}/${P}/lisp"
 SITEFILE="50${PN}-gentoo.el"
-ELISP_TEXINFO="../Documentation/*.texi"
-DOCS="../README.md ../Documentation/AUTHORS.md ../Documentation/RelNotes/*"
+ELISP_TEXINFO="../docs/*.texi"
+DOCS="../README.md ../docs/AUTHORS.md ../docs/RelNotes/*"
 
 BDEPEND="
 	app-emacs/transient
@@ -46,7 +46,7 @@ src_prepare() {
 
 	if ! use magit-section ; then
 		rm magit-section.el
-		rm ../Documentation/magit-section.texi
+		rm ../docs/magit-section.texi
 	fi
 
 	if ! use libgit ; then

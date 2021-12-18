@@ -15,13 +15,14 @@ LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
+S="${WORKDIR}/${P}/lisp"
 SITEFILE="50${PN}-gentoo.el"
-ELISP_TEXINFO="*.texi"
-DOCS="README.md with-editor.org"
+ELISP_TEXINFO="../docs/*.texi"
+DOCS="../README.md ../docs/with-editor.org"
 
 BDEPEND="
-sys-apps/texinfo
+	sys-apps/texinfo
 "
 RDEPEND="
->=app-emacs/async-1.9
+	>=app-emacs/async-1.9
 "
