@@ -1,7 +1,7 @@
 --- a/docs/Makefile
 +++ b/docs/Makefile
 @@ -2,7 +2,9 @@
- BUILDDEPS = alert all-the-icons dashboard ellit-org htmlize org \
+ BUILDDEPS = alert all-the-icons dashboard ellit-org esxml htmlize org \
              rainbow-identifiers transient visual-fill-column
  BUILDDEPS:=$(BUILDDEPS:%=-L $(SITELISP)/%)
 -EMACS=emacs -Q -batch -L ../ $(BUILDDEPS) -l ellit-org
