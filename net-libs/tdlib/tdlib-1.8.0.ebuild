@@ -1,19 +1,18 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-inherit cmake git-r3
+inherit cmake
 
 DESCRIPTION="Cross-platform library for building Telegram clients"
 HOMEPAGE="https://core.telegram.org/tdlib"
-EGIT_REPO_URI="https://github.com/tdlib/td.git"
-EGIT_CLONE_TYPE="single"
-EGIT_COMMIT="0c554fbe0446339411b9b111e024a83f786558e0"
+SRC_URI="https://github.com/tdlib/td/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+RESTRICT="mirror"
 
 LICENSE="Boost-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~arm ~arm64"
+KEYWORDS="amd64 ~x86 ~arm ~arm64"
 IUSE="clang cli debug doc +gcc java low-ram lto test"
 
 REQUIRED_USE="
@@ -21,6 +20,8 @@ REQUIRED_USE="
 	!gcc? ( clang )
 	java? ( !lto )
 "
+
+S="${WORKDIR}/td-${PV}"
 
 # according to TDLib build instructions, lto excludes java
 
@@ -44,7 +45,7 @@ DOCS=( README.md )
 
 src_prepare() {
 
-	eapply "${FILESDIR}/${PN}"-1.7.0-fix-runpath.patch
+	eapply "${FILESDIR}/${PN}"-1.8.0-fix-runpath.patch
 
 	# from mva
 	sed -r \

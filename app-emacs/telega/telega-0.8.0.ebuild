@@ -5,21 +5,22 @@ EAPI=8
 NEED_EMACS="26.1"
 
 MY_PN="${PN}.el"
-inherit elisp git-r3
+inherit elisp
 
 DESCRIPTION="GNU Emacs telegram client (unofficial)"
 HOMEPAGE="https://zevlg.github.io/telega.el"
-EGIT_REPO_URI="https://github.com/zevlg/${MY_PN}.git"
-EGIT_BRANCH="master"
-EGIT_CLONE_TYPE="single+tags"
+
+SRC_URI="https://github.com/zevlg/${MY_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+RESTRICT="mirror"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~arm ~arm64 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~arm arm64 ~amd64-linux ~x86-linux"
 IUSE="contrib dbus doc geo org standalone tray test"
 # emerging with geo not tested
 SITEFILE="50${PN}-gentoo.el"
 
+S="${WORKDIR}/${MY_PN}-${PV}"
 DOCS="README.md"
 
 # todo: tgs2png
@@ -60,20 +61,21 @@ RDEPEND="
 	dbus? ( app-editors/emacs[dbus] )
 	geo? ( app-emacs/geo )
 	org? ( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) )
+	standalone? ( app-emacs/company app-emacs/helm app-emacs/which-key )
 	tray? ( >=dev-libs/libappindicator-3 )
 "
 
 src_prepare() {
 
 	if use doc; then
-		eapply "${FILESDIR}/${PN}"-9999-fix-make-doc.patch
-		eapply "${FILESDIR}/${PN}"-9999-fix-make-doc-org-persist.patch
+		eapply "${FILESDIR}/${PN}"-0.8.0-fix-make-doc.patch
+		eapply "${FILESDIR}/${PN}"-0.8.0-fix-make-doc-org-persist.patch
 		cp "${FILESDIR}"/theme-readtheorg.setup docs
 	fi
 
 	if use test; then
-		eapply "${FILESDIR}/${PN}"-0.7.025-no-installs-during-test.patch
-		eapply "${FILESDIR}/${PN}"-0.7.025-fix-tests-bin-path.patch
+		eapply "${FILESDIR}/${PN}"-0.8.0-no-installs-during-test.patch
+		eapply "${FILESDIR}/${PN}"-0.8.0-fix-tests-bin-path.patch
 	fi
 
 	default
