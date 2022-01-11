@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -58,7 +58,7 @@ RDEPEND="app-emacs/emacs-common[games?,gui(-)?]
 	imagemagick? ( >=media-gfx/imagemagick-6.6.2:0= )
 	!inotify? ( gfile? ( >=dev-libs/glib-2.28.6 ) )
 	jit? ( sys-devel/gcc:=[jit(-)] )
-	json? ( dev-libs/jansson )
+	json? ( dev-libs/jansson:= )
 	kerberos? ( virtual/krb5 )
 	lcms? ( media-libs/lcms:2 )
 	libxml2? ( >=dev-libs/libxml2-2.2.0 )
