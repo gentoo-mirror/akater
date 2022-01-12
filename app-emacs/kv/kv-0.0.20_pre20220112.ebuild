@@ -36,7 +36,6 @@ src_test() {
 			 -L .					\
 			 -l "${PN}-tests.elc"	\
 			 -f ert-run-tests-batch-and-exit || die "ERT test(s) failed."
-
 }
 
 src_install() {

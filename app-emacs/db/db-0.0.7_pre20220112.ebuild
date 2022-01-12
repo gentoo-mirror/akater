@@ -5,7 +5,6 @@ EAPI=8
 NEED_EMACS="24"
 
 MY_PN="emacs-${PN}"
-MY_PV="${MY_PN}-${PV}"
 inherit elisp
 
 DESCRIPTION="A database for EmacsLisp"
@@ -24,7 +23,7 @@ RDEPEND="
 	>=app-emacs/kv-0.0.11
 "
 
-S="${WORKDIR}/${MY_PV}"
+S="${WORKDIR}/${MY_PN}-${PV}"
 
 SITEFILE="50${PN}-gentoo.el"
 
