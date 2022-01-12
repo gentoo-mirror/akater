@@ -18,6 +18,7 @@ KEYWORDS="amd64 ~x86"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE="test"
+DOCS="README.org"
 
 RDEPEND="
 	>=app-emacs/kv-0.0.11
