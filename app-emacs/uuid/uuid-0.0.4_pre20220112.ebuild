@@ -1,0 +1,24 @@
+# Copyright 1999-2022 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=8
+NEED_EMACS="24"
+
+MY_PN="emacs-${PN}"
+MY_PV="${MY_PN}-${PV}"
+inherit elisp
+
+DESCRIPTION="UUID's for EmacsLisp"
+HOMEPAGE="https://github.com/nicferrier/emacs-uuid"
+
+SRC_URI="https://github.com/akater/emacs-uuid/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+RESTRICT="mirror"
+KEYWORDS="amd64 ~x86"
+
+LICENSE="GPL-3"
+SLOT="0"
+DOCS="README.creole"
+
+SITEFILE="50${PN}-gentoo.el"
+
+S="${WORKDIR}/${MY_PV}"
