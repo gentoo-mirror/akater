@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -17,7 +17,7 @@ EGIT_CLONE_TYPE="mirror"
 
 LICENSE="GPL-3+ FDL-1.3+ odt-schema? ( OASIS-Open )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~arm ~arm64"
+KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~x86"
 IUSE="doc odt-schema"
 RESTRICT="test"
 
