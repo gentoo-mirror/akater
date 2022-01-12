@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -14,9 +14,30 @@ KEYWORDS="~amd64 ~x86"
 
 LICENSE="GPL-3"
 SLOT="0"
+IUSE="test"
+DOCS="README.org"
 
 RDEPEND="
 	>=app-emacs/kv-0.0.11
 "
 
 SITEFILE="50${PN}-gentoo.el"
+
+src_prepare() {
+	use test || rm "${PN}-tests.el"
+	default
+}
+
+src_test() {
+	${EMACS} -Q -batch				\
+			 -L .					\
+			 -L "${SITELISP}/kv"    \
+			 -l "${PN}-tests.elc"	\
+			 -f ert-run-tests-batch-and-exit || die "ERT test(s) failed."
+}
+
+src_install() {
+	use test && rm "${PN}-tests.el"
+	use test && rm "${PN}-tests.elc"
+	elisp_src_install
+}
