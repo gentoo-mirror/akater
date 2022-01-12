@@ -4,10 +4,10 @@ DESCRIPTION=A startup screen extracted from Spacemacs
 EAPI=8
 HOMEPAGE=https://github.com/emacs-dashboard/emacs-dashboard
 INHERIT=elisp git-r3
-KEYWORDS=amd64 ~x86 ~arm ~arm64
+KEYWORDS=amd64 ~arm ~arm64 ~x86
 LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=>=app-emacs/page-break-lines-0.11 >=app-editors/emacs-25.3:*
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=baef12706b1f432eb870218c5c3a220b
+_md5_=b78166387a9c0858ff859426e173c618

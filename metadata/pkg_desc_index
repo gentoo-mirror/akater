@@ -16,7 +16,7 @@ app-emacs/anaphora 1.0.4 9999: Anaphoric macros for Emacs Lisp providing implici
 app-emacs/ansi 0.4.1 9999: Emacs library to convert strings into ansi
 app-emacs/async 1.9.5 9999: Simple library for asynchronous processing in Emacs
 app-emacs/auctex 13.0.14 9999: Extensible package for writing and formatting TeX files in Emacs
-app-emacs/avy 9999: Jump to arbitrary positions in visible text and select text quickly.
+app-emacs/avy 0.5.0 9999: Jump to arbitrary positions in visible text and select text quickly.
 app-emacs/buttercup 1.24 9999: Behavior-Driven Emacs Lisp Testing
 app-emacs/cask 0.8.7 9999: Cask: Project management for package development
 app-emacs/cl-format 1.2 9999: CL format routine
@@ -30,7 +30,7 @@ app-emacs/consult 0.11: GnuPG Pinentry server implementation
 app-emacs/ctable 20171006 99999999: Table component for Emacs Lisp
 app-emacs/dash 9999: A modern list library for Emacs
 app-emacs/dashboard 1.7.0 1.8.1_pre20210827 9999: A startup screen extracted from Spacemacs
-app-emacs/db 9999: A database for EmacsLisp
+app-emacs/db 0.0.7_pre20220112 9999: A database for EmacsLisp
 app-emacs/deferred 9999: Simple asynchronous functions for Emacs Lisp
 app-emacs/defmacro-gensym 99999999: Convenient gensyms for defmacro (Emacs Lisp)
 app-emacs/dired-rsync 9999: Allow rsync from dired buffers
@@ -53,7 +53,7 @@ app-emacs/ement-extras 99999999: Extra features for Ement, Matrix client for GNU
 app-emacs/epc 0.1.2_pre20211008 0.1.2_pre20211008-r1 9999: A RPC stack for the Emacs Lisp
 app-emacs/epl 0.9 9999: Emacs Package Library
 app-emacs/ert-runner 0.8.0 9999: Opinionated Ert testing workflow
-app-emacs/esxml 9999: Library for working with xml via esxml and sxml
+app-emacs/esxml 0.3.8_pre20220112 9999: Library for working with xml via esxml and sxml
 app-emacs/expand-region 9999: Emacs extension to increase selected region by semantic units
 app-emacs/file-tree 99999999: Manipulating symbolic file trees in Elisp
 app-emacs/findr 0.9.11 9999: Breadth-first file-finding facility for (X)Emacs
@@ -77,7 +77,7 @@ app-emacs/ivy 9999: Incremental Vertical completYon
 app-emacs/jabber 9999: A Jabber client for Emacs.
 app-emacs/jack-connect 9999: Manage jack connections within Emacs
 app-emacs/jump 9999: Build functions which contextually jump between files
-app-emacs/kv 9999: key/value data structure functions
+app-emacs/kv 0.0.20_pre20220112 9999: key/value data structure functions
 app-emacs/language-detection 0_pre20160923 9999: Automatic language detection from code snippets
 app-emacs/let-alist 1.0.6 1.0.6-r1: Easily let-bind values of an assoc-list by their names
 app-emacs/libegit2 9999: Emacs module for libgit2
@@ -154,7 +154,7 @@ app-emacs/ts 9999: Timestamp and date/time library
 app-emacs/undercover 9999: Test coverage library for Emacs Lisp
 app-emacs/undo-tree 0.7.5 9999: Undo trees and visualization
 app-emacs/use-package 9999: A configuration macro for simplifying your .emacs
-app-emacs/uuid 9999: UUID's for EmacsLisp
+app-emacs/uuid 0.0.4_pre20220112 9999: UUID's for EmacsLisp
 app-emacs/visual-fill-column 2.4 9999: fill-column for visual-line-mode
 app-emacs/vlf 9999: View Large Files
 app-emacs/volume 9999: Tweak your sound card volume from Emacs
@@ -162,7 +162,7 @@ app-emacs/vterm 9999: Emacs package implementing a terminal via libvterm
 app-emacs/web-mode 9999: Major mode for editing web templates
 app-emacs/webpaste 9999: Paste to pastebin-like services
 app-emacs/wgrep 9999: Writable grep buffer and apply the changes to files
-app-emacs/which-key 9999: Display available keybindings in popup
+app-emacs/which-key 3.5.4 9999: Display available keybindings in popup
 app-emacs/with-editor 9999: Use the Emacsclient as the $EDITOR of child processes
 app-emacs/xah-fly-keys 11.5.20200625041453 9999: ergonomic modal keybinding minor mode.
 app-emacs/xr 1.21: Convert string regexp to rx notation

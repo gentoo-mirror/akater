@@ -1,0 +1,15 @@
+BDEPEND=test? ( app-emacs/db app-emacs/uuid ) >=app-editors/emacs-24:*
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DESCRIPTION=Library for working with xml via esxml and sxml
+EAPI=8
+HOMEPAGE=https://github.com/tali713/esxml
+INHERIT=elisp
+IUSE=test
+KEYWORDS=amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=>=app-emacs/kv-0.0.5 >=app-editors/emacs-24:*
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/akater/esxml/archive/refs/tags/0.3.8_pre20220112.tar.gz -> esxml-0.3.8_pre20220112.tar.gz
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9
+_md5_=3e47fa5266f4a944d8f3292491e2bf86

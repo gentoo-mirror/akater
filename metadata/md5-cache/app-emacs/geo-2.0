@@ -4,11 +4,11 @@ DESCRIPTION=Geolocation library for Emacs
 EAPI=8
 HOMEPAGE=https://git.sr.ht/~oldosfan/geo-xdg.el
 INHERIT=autotools
-KEYWORDS=amd64 ~x86 ~arm ~arm64
+KEYWORDS=amd64 ~arm ~arm64 ~x86
 LICENSE=GPL-3
 RDEPEND=>=app-editors/emacs-24[dbus] app-emacs/async net-misc/networkmanager
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://gitlab.com/akater/elisp-geo-mirror/-/archive/2.0/elisp-geo-mirror-2.0.tar.gz -> geo-2.0.tar.gz
 _eclasses_=gnuconfig	262062cef0ba4f22b397193da514a350	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	libtool	241a8f577b9781a42a7421e53448a44e	autotools	c9df06c186913b43eb211100ef5fe2cf
-_md5_=aa12b4375b3855925ef5ad5af401512a
+_md5_=08671b965d2eccdb667539981299f0c9

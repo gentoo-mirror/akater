@@ -4,10 +4,10 @@ DESCRIPTION=HTML-ize font-lock buffers in Emacs
 EAPI=8
 HOMEPAGE=https://www.emacswiki.org/emacs/Htmlize https://github.com/hniksic/emacs-htmlize
 INHERIT=elisp git-r3
-KEYWORDS=~amd64 ~ppc ~x86 ~arm ~arm64
+KEYWORDS=~amd64 ~arm ~arm64 ~ppc ~x86
 LICENSE=GPL-2+
 PROPERTIES=live
 RDEPEND=>=app-editors/emacs-23.1:*
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=2cdd804f2a7307020117fd701c8da617
+_md5_=acb5c86da52642d77b2dd0823ee0cb53

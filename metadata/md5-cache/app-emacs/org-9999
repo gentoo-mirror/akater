@@ -5,11 +5,11 @@ EAPI=8
 HOMEPAGE=https://www.orgmode.org/
 INHERIT=elisp readme.gentoo-r1 git-r3 git-extras
 IUSE=doc odt-schema
-KEYWORDS=~amd64 ~ppc ~x86 ~arm ~arm64
+KEYWORDS=~amd64 ~arm ~arm64 ~ppc ~x86
 LICENSE=GPL-3+ FDL-1.3+ odt-schema? ( OASIS-Open )
 PROPERTIES=live
 RDEPEND=>=app-editors/emacs-24:*
 RESTRICT=test
 SLOT=0
 _eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	readme.gentoo-r1	eebd0164fe61f4f7b64a683e83fdceb1	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	git-extras	b78a103217ada95e56ce5c5a5ec7f421
-_md5_=ada5f6464423c8857f780cabaff41bf8
+_md5_=b79e552ea0e955d4ecabdb93ff26a4c1

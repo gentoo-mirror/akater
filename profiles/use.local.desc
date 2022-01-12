@@ -35,7 +35,6 @@ app-emacs/console-colors:nopasswd - Presume setvtrgb can be executed without a p
 app-emacs/ebdb:company - Use company completion framework
 app-emacs/ebuild-tools:eix - Use app-emacs/eix backend
 app-emacs/ebuild-tools:gentoolkit - (broken!) Use app-emacs/gentoolkit backend
-app-emacs/eieio-akater-extras:pona - Use some facilities of app-emacs/portage-navi
 app-emacs/elfeed:emms - Support EMMS
 app-emacs/elfeed:org - Support Org links
 app-emacs/elfeed:web - Install web interface view of the database
@@ -57,6 +56,8 @@ app-emacs/melpa-sources:recipes - Install MELPA recipes
 app-emacs/melpa-sources:sources - Install MELPA build scripts meant to build packages from recipes
 app-emacs/org:odt-schema - Install non-free schema files for OpenDocument Text exporter
 app-emacs/portage:helm - Offer some support for app-emacs/helm
+app-emacs/portage:pona - Use some facilities of app-emacs/portage-navi
+app-emacs/portage:smart-live-rebuild - Include smart-live-rebuild related functions
 app-emacs/projectile-rails:hydra - Install “hydra keymap”
 app-emacs/slime:company - Also install slime-company
 app-emacs/slime:system-cl-lib - Use system-wide cl-lib instead of bundled
