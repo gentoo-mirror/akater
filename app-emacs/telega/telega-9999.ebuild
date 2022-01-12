@@ -72,8 +72,8 @@ src_prepare() {
 	fi
 
 	if use test; then
-		eapply "${FILESDIR}/${PN}"-0.7.025-no-installs-during-test.patch
-		eapply "${FILESDIR}/${PN}"-0.7.025-fix-tests-bin-path.patch
+		eapply "${FILESDIR}/${PN}"-0.8.0-no-installs-during-test.patch
+		eapply "${FILESDIR}/${PN}"-0.8.0-fix-tests-bin-path.patch
 	fi
 
 	default
