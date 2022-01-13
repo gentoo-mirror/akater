@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: akater-live-release.eclass
@@ -30,6 +30,6 @@ if [ ! -z ${ORG_LOCAL_SOURCES_PREFIX+x} ] ; then
 	export ORG_LOCAL_SOURCES_DIRECTORY=${ORG_LOCAL_SOURCES_PREFIX}/${MY_PN}
 fi
 
-EGIT_REPO_URI="$ORG_LOCAL_SOURCES_DIRECTORY"
+EGIT_REPO_URI="${ORG_LOCAL_SOURCES_DIRECTORY}"
 
 export ORG_IMMUTABLE_SOURCES_DIRECTORY="${SITEETC}/${PN}"
