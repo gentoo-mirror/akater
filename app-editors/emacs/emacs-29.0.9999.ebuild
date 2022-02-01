@@ -281,9 +281,6 @@ src_configure() {
 		else
 			einfo "Configuring to build with no toolkit"
 			myconf+=" --with-x-toolkit=no"
-
-			# hotfix, needs further investigation:
-			myconf+=" --without-harfbuzz"
 		fi
 		if ! use gtk; then
 			use gtk2 && ewarn \
