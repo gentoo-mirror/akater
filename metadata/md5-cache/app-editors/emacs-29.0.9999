@@ -13,4 +13,4 @@ RDEPEND=app-emacs/emacs-common[games?,gui(-)?] sys-libs/ncurses:0= acl? ( virtua
 RESTRICT=test
 SLOT=29-vcs
 _eclasses_=gnuconfig	262062cef0ba4f22b397193da514a350	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	libtool	241a8f577b9781a42a7421e53448a44e	autotools	6cc26735fa9dd59e8c62880beda05b6e	elisp-common	cf4fd1b0835b9f3e638724840468064a	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	readme.gentoo-r1	eebd0164fe61f4f7b64a683e83fdceb1	git-extras	b78a103217ada95e56ce5c5a5ec7f421	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=4800ae1d96f39f504f2b9b63b970384c
+_md5_=db25d5a03c8c8e93248eea1152514311
