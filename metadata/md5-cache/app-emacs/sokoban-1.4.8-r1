@@ -11,5 +11,5 @@ RDEPEND=>=app-editors/emacs-23.1:*
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://elpa.gnu.org/packages/sokoban-1.4.8.tar verify-sig? ( https://elpa.gnu.org/packages/sokoban-1.4.8.tar.sig )
-_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	verify-sig	f933d5d7363ccab1615d9b8b416ea28f	elpa	5d418d732ff72242897d8f781cbe17c8
+_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9	verify-sig	d26b16f086121845b63131322b786925	elpa	5d418d732ff72242897d8f781cbe17c8
 _md5_=de096f0dd85c454db3ed6bb5583b36e0
