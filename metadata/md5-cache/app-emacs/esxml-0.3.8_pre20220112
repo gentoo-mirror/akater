@@ -11,5 +11,5 @@ RDEPEND=>=app-emacs/kv-0.0.5 >=app-editors/emacs-24:*
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/akater/esxml/archive/refs/tags/0.3.8_pre20220112.tar.gz -> esxml-0.3.8_pre20220112.tar.gz
-_eclasses_=elisp-common	cf4fd1b0835b9f3e638724840468064a	elisp	532fa549a4f54b2a3f83b827b272a4a9
+_eclasses_=elisp-common	f9c72486dbcb18b633c9d0949211d86e	elisp	ba40293f44b2e5c3c19d4671c19ce01a
 _md5_=3e47fa5266f4a944d8f3292491e2bf86
