@@ -29,6 +29,7 @@ src_prepare() {
 	git branch work
 	git switch work
 	git-merge ob-lisp-traces-and-errors
+	git-merge ob-lisp-fix-quotes
 	git-merge org-element-cleaner-parsers
 	# git-merge ob-generic-blocks
 
