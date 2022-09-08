@@ -7,7 +7,7 @@ NEED_EMACS=27
 MY_PN="elisp-${PN}"
 inherit orgdev akater-live-release
 
-DESCRIPTION="A shallow mock of ASDF for Elisp"
+DESCRIPTION="A port of dev-lisp/asdf to Emacs Lisp"
 HOMEPAGE="https://framagit.org/akater/elisp-esdf"
 
 EGIT_REPO_URI="https://framagit.org/akater/elisp-esdf.git"
