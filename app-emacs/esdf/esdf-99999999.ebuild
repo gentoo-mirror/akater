@@ -10,11 +10,12 @@ inherit orgdev akater-live-release
 DESCRIPTION="A port of dev-lisp/asdf to Emacs Lisp"
 HOMEPAGE="https://framagit.org/akater/elisp-esdf"
 
-EGIT_REPO_URI="https://framagit.org/akater/elisp-esdf.git"
+EGIT_REPO_URI="https://framagit.org/akater/${MY_PN}.git"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
+DOCS="" # README.org is a relative symlink
 
 DEPEND="test? ( app-emacs/akater-misc )"
 
