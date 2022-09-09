@@ -10,4 +10,4 @@ PROPERTIES=live
 RDEPEND=>=app-emacs/polymode-0.2 >=app-editors/emacs-25:*
 SLOT=0
 _eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	c1c17e9c24d72d3bd58c611de8116fb6	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
-_md5_=ed05d8c8a59c9bfff731d75185ce6248
+_md5_=5126eda86b470994faed2185a9262228
