@@ -19,6 +19,7 @@ DOCS="" # README.org is a relative symlink
 
 BDEPEND="
 	app-emacs/anaphora
+	app-emacs/mmxx-macros
 "
 
 pkg_postinst() {
