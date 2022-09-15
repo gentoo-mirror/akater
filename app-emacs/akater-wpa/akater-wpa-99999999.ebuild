@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -11,7 +11,6 @@ DESCRIPTION="Emacs interface to wpa_supplicant"
 HOMEPAGE="https://gitlab.com/akater/emacs-wpa"
 
 EGIT_REPO_URI="https://gitlab.com/akater/${MY_PN}.git"
-EGIT_BRANCH="release"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -24,6 +23,7 @@ BDEPEND="
 	net-wireless/wpa_supplicant
 	app-emacs/anaphora
 	app-emacs/akater-misc
+	app-emacs/mmxx-macros
 "
 RDEPEND="
 	net-wireless/wpa_supplicant
