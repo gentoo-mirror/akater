@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -23,6 +23,7 @@ RDEPEND="
 	app-emacs/org-header-cycling
 	app-emacs/org-project
 	app-emacs/akater-misc
+	app-emacs/mmxx-macros
 	>=app-emacs/poly-org-0.2
 "
 
