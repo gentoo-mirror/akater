@@ -2,7 +2,7 @@ BDEPEND=app-emacs/pg system-sqlite? ( >=dev-db/sqlite-3 ) >=app-editors/emacs-25
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
 DESCRIPTION=high-level SQL database front-end
 EAPI=8
-HOMEPAGE=https://github.com/skeeto/emacsql
+HOMEPAGE=https://github.com/magit/emacsql
 INHERIT=elisp git-r3
 IUSE=+system-sqlite
 KEYWORDS=~amd64 ~x86
@@ -11,4 +11,4 @@ PROPERTIES=live
 RDEPEND=>=app-editors/emacs-25.1[dynamic-loading] >=app-editors/emacs-25.1:*
 SLOT=0
 _eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	c1c17e9c24d72d3bd58c611de8116fb6	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
-_md5_=ff5731145d8f6eaca50d730e3c98f4b1
+_md5_=3019f7d10be27d73bf61dafdd2abfd13
