@@ -23,12 +23,11 @@ RDEPEND="
 	app-emacs/org-header-cycling
 	app-emacs/org-project
 	app-emacs/akater-misc
-	app-emacs/mmxx-macros
 	>=app-emacs/poly-org-0.2
 "
 
 BDEPEND="${RDEPEND}
-	app-emacs/anaphora
+	app-emacs/mmxx-macros
 	app-emacs/looking-through
 	app-emacs/set-endos
 "
