@@ -7,20 +7,15 @@ NEED_EMACS="26"
 MY_PN="elisp-${PN}"
 inherit elisp-common akater-live-release
 
-DESCRIPTION="Emacs Lisp accessory functions used by akater"
-HOMEPAGE="https://gitlab.com/akater/elisp-akater-misc"
+DESCRIPTION="Useful Lisp macros developed ca. 2020"
+HOMEPAGE="https://framagit.org/akater/elisp-mmxx-macros"
 
-EGIT_REPO_URI="https://gitlab.com/akater/${MY_PN}.git"
+EGIT_REPO_URI="https://framagit.org/akater/${MY_PN}.git"
 
 LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
 DOCS="" # README.org is a relative symlink
-
-BDEPEND="
-	app-emacs/anaphora
-	app-emacs/mmxx-macros
-"
 
 pkg_postinst() {
 	elisp-site-regen

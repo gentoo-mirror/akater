@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -24,6 +24,7 @@ DOCS="README.org"
 BDEPEND="
 	app-emacs/file-tree
 	app-emacs/akater-misc
+	app-emacs/mmxx-macros
 "
 RDEPEND="${BDEPEND}
 	|| ( app-admin/sudo app-admin/doas sys-apps/shadow )

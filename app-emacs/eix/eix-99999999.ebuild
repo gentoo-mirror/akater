@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -21,6 +21,7 @@ SITEFILE="50${PN}-gentoo.el"
 BDEPEND="
 	app-emacs/akater-misc
 	app-emacs/akater-sh
+	app-emacs/mmxx-macros
 "
 RDEPEND="${BDEPEND}
 	>=app-portage/eix-0.34.4
