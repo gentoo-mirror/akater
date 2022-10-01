@@ -20,7 +20,6 @@ IUSE=""
 # DOCS="README.org"
 
 BDEPEND="
-	app-emacs/anaphora
 	app-emacs/akater-misc
 	app-emacs/mmxx-macros
 "
