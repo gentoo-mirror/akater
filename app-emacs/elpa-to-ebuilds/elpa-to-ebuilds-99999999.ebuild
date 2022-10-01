@@ -21,7 +21,6 @@ IUSE="melpa"
 DOCS="README.org"
 
 BDEPEND="
-	app-emacs/anaphora
 	app-emacs/akater-misc
 	app-emacs/looking-through
 	app-emacs/mmxx-macros
