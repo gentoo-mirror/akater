@@ -1,4 +1,4 @@
-BDEPEND=app-emacs/akater-misc app-emacs/anaphora app-emacs/mmxx-macros >=app-editors/emacs-26:* >=app-editors/emacs-26:* >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=app-emacs/akater-misc app-emacs/mmxx-macros >=app-editors/emacs-26:* >=app-editors/emacs-26:* >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
 DEPEND=test? ( app-emacs/akater-misc app-emacs/org-development-elisp ) test? ( app-emacs/org-development-elisp )
 DESCRIPTION=Emacs Lisp conf-related functions and macros used by akater
@@ -12,4 +12,4 @@ PROPERTIES=live
 RDEPEND=app-emacs/akater-misc >=app-editors/emacs-26:* >=app-editors/emacs-26:*
 SLOT=0
 _eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	c1c17e9c24d72d3bd58c611de8116fb6	orgmode	c9ae69582e07e40a0a7511f2616dc2fd	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
-_md5_=adb1c77cd52e6fc3df51452b5d1f7b4d
+_md5_=4e4e86db10c9051267121a427700cdba

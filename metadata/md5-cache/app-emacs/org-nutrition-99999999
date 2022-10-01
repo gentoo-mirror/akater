@@ -1,4 +1,4 @@
-BDEPEND=app-emacs/anaphora app-emacs/akater-misc app-emacs/mmxx-macros >=app-editors/emacs-25:* >=app-editors/emacs-25:* >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=app-emacs/akater-misc app-emacs/mmxx-macros >=app-editors/emacs-25:* >=app-editors/emacs-25:* >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
 DEPEND=test? ( app-emacs/org-development-elisp )
 DESCRIPTION=Simple nutrition tracking in Org
@@ -12,4 +12,4 @@ PROPERTIES=live
 RDEPEND=app-emacs/akater-misc >=app-editors/emacs-25:* >=app-editors/emacs-25:*
 SLOT=0
 _eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	c1c17e9c24d72d3bd58c611de8116fb6	orgmode	c9ae69582e07e40a0a7511f2616dc2fd	git-r3	b9ac6f96d2a88edb5b351df634dc5e53	akater-live-release	07de41d8d90ca2bb4367f2341e7e2fd3
-_md5_=961388842a037f26741dea1ac0471878
+_md5_=5940a7b84fdf71f6ea6ff923f5155ac4
