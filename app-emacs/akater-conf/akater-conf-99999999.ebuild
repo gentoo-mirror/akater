@@ -10,7 +10,6 @@ DESCRIPTION="Emacs Lisp conf-related functions and macros used by akater"
 HOMEPAGE="https://gitlab.com/akater/elisp-akater-conf"
 
 EGIT_REPO_URI="https://gitlab.com/akater/elisp-akater-conf.git"
-# EGIT_REPO_URI="file:///tmp/elisp-akater-conf/"
 EGIT_BRANCH="master"
 KEYWORDS="amd64 ~x86"
 
@@ -21,7 +20,6 @@ IUSE="test"
 RDEPEND="
 	app-emacs/akater-misc"
 BDEPEND="${RDEPEND}
-	app-emacs/anaphora
 	app-emacs/mmxx-macros
 "
 
@@ -35,11 +33,3 @@ src_prepare() {
 
 	eapply_user
 }
-
-# src_compile() {
-# 	:;
-# }
-
-# src_install() {
-# 	elisp-install ${PN} build/*.el || die "Cannot install elisp files"
-# }

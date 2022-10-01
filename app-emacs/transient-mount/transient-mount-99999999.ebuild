@@ -19,7 +19,6 @@ KEYWORDS="amd64 ~x86"
 SITEFILE="50${PN}-gentoo.el"
 
 BDEPEND="
-	app-emacs/anaphora
 	app-emacs/mmxx-macros
 "
 RDEPEND="

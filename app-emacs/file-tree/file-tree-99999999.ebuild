@@ -20,7 +20,6 @@ IUSE=""
 SITEFILE="50${PN}-gentoo.el"
 
 BDEPEND="
-	app-emacs/anaphora
 	app-emacs/akater-misc
 	app-emacs/mmxx-macros
 "

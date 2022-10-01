@@ -21,7 +21,6 @@ DOCS="README.org"
 
 BDEPEND="
 	net-wireless/wpa_supplicant
-	app-emacs/anaphora
 	app-emacs/akater-misc
 	app-emacs/mmxx-macros
 "
