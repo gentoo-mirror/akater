@@ -20,7 +20,6 @@ DOCS="README.org"
 
 BDEPEND="
 	app-emacs/akater-misc
-	app-emacs/anaphora
 	app-emacs/looking-through
 	app-emacs/mmxx-macros
 "
