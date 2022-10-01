@@ -9,9 +9,7 @@ inherit elisp orgmode akater-live-release
 DESCRIPTION="Elisp package that streamlines development of Elisp packages in org"
 HOMEPAGE="https://gitlab.com/akater/org-development-elisp"
 
-inherit git-r3
 EGIT_REPO_URI="https://gitlab.com/akater/org-development-elisp.git"
-# EGIT_BRANCH="test-require"
 KEYWORDS="amd64 ~x86"
 
 LICENSE="GPL-3"
