@@ -18,14 +18,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gui"
 
-BDEPEND="sys-libs/glibc
+BDEPEND="
+	sys-libs/glibc
 	gui? ( dev-libs/atk
 		   x11-libs/cairo
 		   x11-libs/gtk+
 		   x11-libs/gdk-pixbuf
 		   dev-libs/glib
-		   x11-libs/pango )"
-RDEPEND="net-print/cups"
+		   x11-libs/pango )
+"
+RDEPEND="
+	${BDEPEND}
+	net-print/cups
+"
 
 src_unpack() {
 	unpack "${A}"
