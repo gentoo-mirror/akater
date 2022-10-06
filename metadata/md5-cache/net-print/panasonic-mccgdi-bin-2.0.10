@@ -1,0 +1,14 @@
+BDEPEND=sys-libs/glibc
+DEFINED_PHASES=install postinst prepare unpack
+DESCRIPTION=Panasonic Multi-Function Printers drivers
+EAPI=8
+HOMEPAGE=https://panasonic.net/cns/pcc/support/fax/common/table/linuxdriver.html
+INHERIT=desktop prefix
+KEYWORDS=~amd64 ~x86
+LICENSE=Panasonic-EULA
+RDEPEND=net-print/cups
+RESTRICT=mirror
+SLOT=0
+SRC_URI=x86? ( https://www.psn-web.net/cs/support/fax/common/file/Linux_PrnDriver/Driver_Install_files/mccgdi-2.0.10-i686.tar.gz -> panasonic-mccgdi-bin-2.0.10-i686.tar.gz ) amd64? ( https://www.psn-web.net/cs/support/fax/common/file/Linux_PrnDriver/Driver_Install_files/mccgdi-2.0.10-x86_64.tar.gz -> panasonic-mccgdi-bin-2.0.10-x86_64.tar.gz )
+_eclasses_=desktop	22952d8f27cac191d75529d4c38e6bfa	prefix	eab3c99d77fe00506c109c8a736186f7
+_md5_=98840856b34fdcda118e3045e574d8a4
