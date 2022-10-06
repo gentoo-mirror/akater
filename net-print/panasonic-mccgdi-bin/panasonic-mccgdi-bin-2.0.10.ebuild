@@ -16,9 +16,21 @@ RESTRICT="mirror"
 LICENSE="Panasonic-EULA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE="gui"
 
-BDEPEND="sys-libs/glibc"
-RDEPEND="net-print/cups"
+BDEPEND="
+	sys-libs/glibc
+	gui? ( dev-libs/atk
+		   x11-libs/cairo
+		   x11-libs/gtk+
+		   x11-libs/gdk-pixbuf
+		   dev-libs/glib
+		   x11-libs/pango )
+"
+RDEPEND="
+	${BDEPEND}
+	net-print/cups
+"
 
 src_unpack() {
 	unpack "${A}"
@@ -61,41 +73,44 @@ src_install() {
 	doins "${S}"/ppd/*
 	doexe "${S}"/filter/L_H0JDGCZAZ
 
-	# this should be removed
-	DESTTREE="/opt/panasonic/printer"
+	if use gui ; then
 
-	into "/opt/panasonic/printer"
-	dobin "${S}/panautil/L_H0JDUIZAZ"
-	dobin "${S}/panautil/L_H0JDUCZAZ"
+		# this should be removed
+		DESTTREE="/opt/panasonic/printer"
 
-	insinto "/opt/panasonic/printer" && doins Version.html
+		into "/opt/panasonic/printer"
+		dobin "${S}/panautil/L_H0JDUIZAZ"
+		dobin "${S}/panautil/L_H0JDUCZAZ"
 
-	# this
-	insinto "${DESTTREE}/data"
-	# should be replaced with something like
-	# insinto "data"
-	# but relative path does not work the expected way
-	doins -r data/*
+		insinto "/opt/panasonic/printer" && doins Version.html
 
-	# Upstream installs the icon into bin subdirectory
-	# this
-	insinto "${DESTTREE}/bin"
-	# should be replaced with something like
-	# insinto "bin"
-	# but relative path does not work the expected way
-	doins "${S}/panautil/L_H0JDUIZAZ.png"
+		# this
+		insinto "${DESTTREE}/data"
+		# should be replaced with something like
+		# insinto "data"
+		# but relative path does not work the expected way
+		doins -r data/*
 
-	# diropts 777
-	# this
-	keepdir "${DESTTREE}/conf"
-	# should be replaced with something like
-	# keepdr "conf"
-	# but relative path does not work the expected way
-	keepdir "/var/spool/.panamfs"
+		# Upstream installs the icon into bin subdirectory
+		# this
+		insinto "${DESTTREE}/bin"
+		# should be replaced with something like
+		# insinto "bin"
+		# but relative path does not work the expected way
+		doins "${S}/panautil/L_H0JDUIZAZ.png"
 
-	sed -i 's:/usr/local/share/:/opt/:g' "${S}/panautil/L_H0JDUIZAZ.desktop"
-	domenu "${S}/panautil/L_H0JDUIZAZ.desktop"
+		# diropts 777
+		# this
+		keepdir "${DESTTREE}/conf"
+		# should be replaced with something like
+		# keepdr "conf"
+		# but relative path does not work the expected way
+		keepdir "/var/spool/.panamfs"
 
+		sed -i 's:/usr/local/share/:/opt/:g' "${S}/panautil/L_H0JDUIZAZ.desktop"
+		domenu "${S}/panautil/L_H0JDUIZAZ.desktop"
+
+	fi
 }
 
 pkg_postinst() {
