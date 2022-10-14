@@ -112,7 +112,7 @@ app-emacs/ox-json 9999: JSON export backend for Org mode
 app-emacs/page-break-lines 0.14 9999: Display ^L page breaks as tidy horizontal lines
 app-emacs/paredit 9999: Minor mode for performing structured editing of S-expressions
 app-emacs/pdf-mode 99999999: Major mode for editing PDF files
-app-emacs/pdf-tools 0.91_pre20211028 9999: Support library for PDF documents
+app-emacs/pdf-tools 0.91_pre20211028 0.91 9999: Support library for PDF documents
 app-emacs/pg 9999: Emacs Lisp interface to the PostgreSQL RDBMS
 app-emacs/pinentry 0.1 9999: GnuPG Pinentry server implementation
 app-emacs/pkg-info 9999: Information about packages
