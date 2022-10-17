@@ -4,23 +4,27 @@
 EAPI=8
 NEED_EMACS="26"
 
-inherit elisp orgmode git-r3
+inherit elisp-common akater-live-release
 
 DESCRIPTION="Emacs Lisp conf-related functions and macros used by akater"
 HOMEPAGE="https://gitlab.com/akater/elisp-akater-conf"
 
 EGIT_REPO_URI="https://gitlab.com/akater/elisp-akater-conf.git"
-EGIT_BRANCH="master"
-KEYWORDS="amd64 ~x86"
 
 LICENSE="GPL-3"
 SLOT="0"
+KEYWORDS="amd64 ~x86"
+
 IUSE="test"
 
-RDEPEND="
-	app-emacs/akater-misc"
-BDEPEND="${RDEPEND}
+DOCS="" # README.org is a relative symlink
+
+BDEPEND="
+	app-emacs/akater-misc
 	app-emacs/mmxx-macros
+"
+RDEPEND="
+	app-emacs/akater-misc
 "
 
 DEPEND="test? ( app-emacs/akater-misc
