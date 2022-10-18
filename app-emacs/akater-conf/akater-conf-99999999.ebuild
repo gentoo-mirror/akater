@@ -3,13 +3,14 @@
 
 EAPI=8
 NEED_EMACS="26"
+MY_PN="elisp-${PN}"
 
 inherit elisp-common akater-live-release
 
 DESCRIPTION="Emacs Lisp conf-related functions and macros used by akater"
 HOMEPAGE="https://gitlab.com/akater/elisp-akater-conf"
 
-EGIT_REPO_URI="https://gitlab.com/akater/elisp-akater-conf.git"
+EGIT_REPO_URI="https://gitlab.com/akater/${MY_PN}.git"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -31,9 +32,3 @@ DEPEND="test? ( app-emacs/akater-misc
 				app-emacs/org-development-elisp )"
 
 SITEFILE="50${PN}-gentoo.el"
-
-src_prepare() {
-	use test || rm ${PN}-tests.org
-
-	eapply_user
-}
