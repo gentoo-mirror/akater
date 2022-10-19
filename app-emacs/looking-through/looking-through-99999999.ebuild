@@ -22,7 +22,6 @@ IUSE="test"
 
 BDEPEND="
 	app-emacs/akater-misc
-	app-emacs/anaphora
 	app-emacs/mmxx-macros
 "
 
