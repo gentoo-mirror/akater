@@ -1,15 +1,14 @@
-BDEPEND=app-emacs/akater-misc app-emacs/looking-through app-emacs/mmxx-macros >=app-editors/emacs-26:* >=app-editors/emacs-26:* >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
-DEPEND=test? ( app-emacs/org-development-elisp )
+BDEPEND=app-emacs/akater-misc app-emacs/looking-through app-emacs/mmxx-macros >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=unpack
 DESCRIPTION=Convert Elisp packages to ebuilds
 EAPI=8
 HOMEPAGE=https://gitlab.com/akater/elpa-to-ebuilds
-INHERIT=elisp orgmode akater-live-release
-IUSE=melpa test
+INHERIT=elisp-common akater-live-release
+IUSE=melpa
 KEYWORDS=amd64 ~x86
 LICENSE=GPL-3
 PROPERTIES=live
-RDEPEND=app-emacs/akater-misc app-emacs/akater-sh app-emacs/ebuild-mode app-emacs/ebuild-tools app-emacs/file-tree melpa? ( app-emacs/melpa-sources[package-build,recipes] ) >=app-editors/emacs-26:* >=app-editors/emacs-26:*
+RDEPEND=app-emacs/akater-misc app-emacs/akater-sh app-emacs/ebuild-mode app-emacs/ebuild-tools app-emacs/file-tree melpa? ( app-emacs/melpa-sources[package-build,recipes] )
 SLOT=0
-_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	c1c17e9c24d72d3bd58c611de8116fb6	orgmode	c9ae69582e07e40a0a7511f2616dc2fd	git-r3	b9ac6f96d2a88edb5b351df634dc5e53	akater-live-release	5c025c752f992da81399e15adf355e52
-_md5_=12ced767fe7fc47230cd8028434d6ad9
+_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	git-r3	b9ac6f96d2a88edb5b351df634dc5e53	akater-live-release	5c025c752f992da81399e15adf355e52
+_md5_=4a6d25e56395bfc415c2f58a0c87e3db
