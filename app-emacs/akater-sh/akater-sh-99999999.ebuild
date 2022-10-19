@@ -11,11 +11,14 @@ DESCRIPTION="Emacs shell script related helper functions and macros"
 HOMEPAGE="https://gitlab.com/akater/elisp-akater-sh"
 
 EGIT_REPO_URI="https://gitlab.com/akater/${MY_PN}.git"
-KEYWORDS="amd64 ~x86"
 
 LICENSE="GPL-3"
 SLOT="0"
+KEYWORDS="amd64 ~x86"
+
 IUSE="test"
+
+DOCS="" # README.org is a relative symlink
 
 BDEPEND="
 	app-emacs/akater-misc
