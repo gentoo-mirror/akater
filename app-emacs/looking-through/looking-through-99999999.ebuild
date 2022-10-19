@@ -18,11 +18,10 @@ KEYWORDS="amd64 ~x86"
 
 DOCS="" # README.org is a relative symlink
 
-IUSE="test"
+IUSE="esdf test"
 
 BDEPEND="
 	app-emacs/akater-misc
-	app-emacs/anaphora
 	app-emacs/mmxx-macros
 "
 
@@ -30,4 +29,5 @@ RDEPEND="
 	app-emacs/akater-misc
 "
 
-DEPEND="test? ( app-emacs/akater-misc )"
+DEPEND="test? ( app-emacs/akater-misc
+				app-emacs/org-development-elisp )"
