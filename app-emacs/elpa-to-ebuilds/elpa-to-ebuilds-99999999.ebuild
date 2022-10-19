@@ -5,7 +5,7 @@ EAPI=8
 NEED_EMACS="26"
 
 MY_PN="${PN}"
-inherit elisp orgmode akater-live-release
+inherit elisp-common akater-live-release
 
 DESCRIPTION="Convert Elisp packages to ebuilds"
 HOMEPAGE="https://gitlab.com/akater/elpa-to-ebuilds"
@@ -18,7 +18,7 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE="melpa"
 
-DOCS="README.org"
+DOCS="" # README.org is a relative symlink
 
 BDEPEND="
 	app-emacs/akater-misc
