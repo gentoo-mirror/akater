@@ -5,7 +5,7 @@ EAPI=8
 NEED_EMACS="26"
 
 MY_PN="elisp-${PN}"
-inherit elisp orgmode akater-live-release
+inherit elisp-common akater-live-release
 
 DESCRIPTION="Emacs shell script related helper functions and macros"
 HOMEPAGE="https://gitlab.com/akater/elisp-akater-sh"
@@ -32,9 +32,3 @@ DEPEND="test? ( app-emacs/ebuild-mode
 				app-emacs/org-development-elisp )"
 
 SITEFILE="50${PN}-gentoo.el"
-
-src_prepare() {
-	use test || rm ${PN}-tests.org
-
-	eapply_user
-}
