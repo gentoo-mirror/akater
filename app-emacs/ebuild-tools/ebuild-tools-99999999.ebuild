@@ -5,7 +5,7 @@ EAPI=8
 NEED_EMACS="24"
 
 MY_PN="emacs-${PN}"
-inherit elisp orgmode akater-live-release
+inherit elisp-common akater-live-release
 
 DESCRIPTION="Functions to deal with ebuilds in Emacs Lisp"
 HOMEPAGE="https://gitlab.com/akater/emacs-ebuild-tools"
@@ -19,7 +19,7 @@ IUSE="+eix gentoolkit"
 # it does not really work with gentoolkit
 REQUIRED_USE="|| ( eix gentoolkit ) eix"
 
-DOCS="README.org"
+DOCS="" # README.org is a relative symlink
 
 BDEPEND="
 	app-emacs/file-tree
