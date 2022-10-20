@@ -5,7 +5,7 @@ EAPI=8
 NEED_EMACS="24"
 MY_PN="elisp-${PN}"
 
-inherit elisp orgmode akater-live-release
+inherit elisp-common akater-live-release
 
 DESCRIPTION="Emacs Lisp interface to app-portage/eix"
 HOMEPAGE="https://gitlab.com/akater/elisp-eix"
