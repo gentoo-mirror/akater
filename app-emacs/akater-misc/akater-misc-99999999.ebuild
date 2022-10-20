@@ -18,6 +18,8 @@ KEYWORDS="amd64 ~x86"
 
 DOCS="" # README.org is a relative symlink
 
+IUSE="esdf"
+
 BDEPEND="
 	app-emacs/mmxx-macros
 "
