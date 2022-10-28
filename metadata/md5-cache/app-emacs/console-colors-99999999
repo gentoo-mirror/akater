@@ -11,5 +11,5 @@ LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=app-admin/sudo sys-apps/kbd app-emacs/akater-misc app-emacs/akater-sh >=app-editors/emacs-23.1:* >=app-editors/emacs-23.1:*
 SLOT=0
-_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	c1c17e9c24d72d3bd58c611de8116fb6	orgmode	c9ae69582e07e40a0a7511f2616dc2fd	git-r3	b9ac6f96d2a88edb5b351df634dc5e53	akater-live-release	5c025c752f992da81399e15adf355e52
+_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	8aab2c847b5894dc40503ae1d203abcf	orgmode	c9ae69582e07e40a0a7511f2616dc2fd	git-r3	b9ac6f96d2a88edb5b351df634dc5e53	akater-live-release	5c025c752f992da81399e15adf355e52
 _md5_=8e89e8cc63bf29452209e1d4210d63b8

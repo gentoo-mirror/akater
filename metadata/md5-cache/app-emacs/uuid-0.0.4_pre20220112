@@ -10,5 +10,5 @@ RDEPEND=>=app-editors/emacs-24:*
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/akater/emacs-uuid/archive/refs/tags/0.0.4_pre20220112.tar.gz -> uuid-0.0.4_pre20220112.tar.gz
-_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	c1c17e9c24d72d3bd58c611de8116fb6
+_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	8aab2c847b5894dc40503ae1d203abcf
 _md5_=a567007b2e9cd776fd4209d7f3f2dfcb
