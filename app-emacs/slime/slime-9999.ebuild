@@ -1,16 +1,17 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-inherit elisp git-r3
+inherit elisp git-r3 git-extras
 
 DESCRIPTION="SLIME, the Superior Lisp Interaction Mode (Extended)"
 HOMEPAGE="http://common-lisp.net/project/slime/"
 # EGIT_REPO_URI="https://github.com/slime/slime.git"
 # EGIT_BRANCH="master"
 EGIT_REPO_URI="https://github.com/akater/slime.git"
-EGIT_BRANCH="grab-multiple-outputs"
+EGIT_BRANCH="master"
+EGIT_CLONE_TYPE="mirror"
 
 LICENSE="GPL-2 xref? ( xref.lisp )"
 SLOT="0"
@@ -33,6 +34,14 @@ CLSYSTEMS=swank
 SITEFILE=70${PN}-gentoo.el
 
 src_prepare() {
+	git branch work
+	git switch work
+	git-merge modern-symbols
+	git-merge no-obsolete-functions
+	git-merge main-fixes
+	git-merge slime-asdf-fixes
+	git-merge grab-multiple-outputs
+
 	# bundled cl-lib is likely only needed for emacs 23
 	if use system-cl-lib ; then
 		rm lib/cl-lib.el
