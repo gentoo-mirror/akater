@@ -2,21 +2,23 @@
 #+author: =#<PERSON akater A24961DE3ADD04E057ADCF4599555CE6F2E1B21D>=
 
 * Things of interest (in order of decreasing interest)
-| Package                  | Rationale                                    |
-|--------------------------+----------------------------------------------|
-| =app-emacs/ebuild-tools= | Access ebuilds quickly from Emacs            |
-| =app-emacs/ement-extras= | Use Matrix from Emacs with encryption        |
-| =app-emacs/telega=       | A featureful Telegram client for Emacs       |
-| =app-emacs/portage=      | Issue ~emerge~ commands from Emacs           |
-| =app-emacs/pdf-tools=    | Read PDF with poppler in GUI Emacs           |
-| =dev-lisp/sbcl=          | Bootstrappable with a user-specified Lisp    |
-| =app-doc/ansicl=         | ANSI Common Lisp Draft: Info and PDF         |
-| =app-emacs/imdb=         | Emacs IMDB client with local database        |
-| =app-emacs/vterm=        | USE =system-libvterm=; native =emacs-module= |
+| Package                     | Rationale                                    |
+|-----------------------------+----------------------------------------------|
+| =app-emacs/ebuild-tools=    | Access ebuilds quickly from Emacs            |
+| =app-emacs/ement-extras=    | Use Matrix from Emacs with encryption        |
+| =app-emacs/telega=          | A featureful Telegram client for Emacs       |
+| =app-emacs/portage=         | Issue ~emerge~ commands from Emacs           |
+| =app-emacs/magentoo=        | A Gentoo dashboard based on =magit-section=  |
+| =app-emacs/pdf-tools=       | Read PDF with poppler in GUI Emacs           |
+| =dev-lisp/sbcl=             | Bootstrappable with a user-specified Lisp    |
+| =app-doc/ansicl=            | ANSI Common Lisp Draft: Info and PDF         |
+| =app-emacs/elpa-to-ebuilds= | Generate ebuilds for Elisp packages          |
+| =app-emacs/imdb=            | Emacs IMDB client with local database        |
+| =app-emacs/vterm=           | USE =system-libvterm=; native =emacs-module= |
 
 =dev-lisp/sbcl= also allows omitting html doc thus avoiding dependency on =graphviz=.
 
-There is a variety of other =app-emacs/*= packages in the repository, some mine.
+There is a variety of other =app-emacs/*= packages in the repository, some mine.  Some are not present in elpas, e.g. =app-emacs/pdf-mode=.
 
 * Installation
 ** With =eselect repository=
