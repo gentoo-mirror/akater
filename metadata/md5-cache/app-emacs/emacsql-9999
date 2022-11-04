@@ -1,4 +1,4 @@
-BDEPEND=app-emacs/pg system-sqlite? ( >=dev-db/sqlite-3 ) >=app-editors/emacs-25.1:* >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=app-emacs/pg system-sqlite? ( >=dev-db/sqlite-3 ) >=app-editors/emacs-29:* >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
 DESCRIPTION=high-level SQL database front-end
 EAPI=8
@@ -8,7 +8,7 @@ IUSE=+system-sqlite
 KEYWORDS=~amd64 ~x86
 LICENSE=Unlicense
 PROPERTIES=live
-RDEPEND=>=app-editors/emacs-25.1[dynamic-loading] >=app-editors/emacs-25.1:*
+RDEPEND=>=app-editors/emacs-25.1[dynamic-loading] >=app-editors/emacs-29:*
 SLOT=0
 _eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	8aab2c847b5894dc40503ae1d203abcf	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
-_md5_=3019f7d10be27d73bf61dafdd2abfd13
+_md5_=fe3d3c320498c057f00d7e89c1868f95

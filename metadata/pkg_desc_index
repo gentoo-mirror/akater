@@ -46,7 +46,7 @@ app-emacs/elfeed 9999: An Emacs Atom/RSS feed reader
 app-emacs/elisp-slime-nav 9999: Make M-. and M-, work in elisp like they do in slime
 app-emacs/ellit-org 0.9 0.9-r1 9999: Emacs Lisp Literate programming tool
 app-emacs/elpa-to-ebuilds 99999999: Convert Elisp packages to ebuilds
-app-emacs/emacsql 9999: high-level SQL database front-end
+app-emacs/emacsql 3.1.1 9999: high-level SQL database front-end
 app-emacs/embark 9999: Conveniently act on minibuffer completions
 app-emacs/ement 9999: Matrix client for GNU Emacs
 app-emacs/ement-extras 99999999: Extra features for Ement, Matrix client for GNU Emacs
