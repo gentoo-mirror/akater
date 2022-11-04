@@ -1,9 +1,9 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-inherit autotools elisp-common flag-o-matic readme.gentoo-r1 toolchain-funcs
+inherit elisp-common readme.gentoo-r1 toolchain-funcs #autotools
 
 if [[ ${PV##*.} = 9999 ]]; then
 	inherit git-r3
@@ -33,16 +33,17 @@ else
 	fi
 	# Patchset from proj/emacs-patches.git
 	SRC_URI+=" https://dev.gentoo.org/~ulm/emacs/${P}-patches-3.tar.xz"
+	# PATCHES=("${WORKDIR}/patch")
 	SLOT="${PV%%.*}"
 	[[ ${PV} == *.*.* ]] && SLOT+="-vcs"
-	KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 ~mips ppc ppc64 ~riscv sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos"
+	KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos"
 fi
 
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
 HOMEPAGE="https://www.gnu.org/software/emacs/"
 
 LICENSE="GPL-3+ FDL-1.3+ BSD HPND MIT W3C unicode PSF-2"
-IUSE="acl alsa aqua athena cairo dbus dynamic-loading games gconf gfile gif +gmp gpm gsettings gtk gui gzip-el harfbuzz imagemagick +inotify jpeg json kerberos lcms libxml2 livecd m17n-lib mailutils minimal motif png selinux sound source ssl svg systemd +threads tiff toolkit-scroll-bars wide-int Xaw3d xft +xpm xwidgets zlib"
+IUSE="acl alsa aqua athena cairo dbus dynamic-loading games gfile gif +gmp gpm gsettings gtk gui gzip-el harfbuzz imagemagick +inotify jpeg json kerberos lcms libxml2 livecd m17n-lib mailutils minimal motif png selinux sound source ssl svg systemd +threads tiff toolkit-scroll-bars wide-int Xaw3d xft +xpm xwidgets zlib"
 RESTRICT="test"
 
 RDEPEND="app-emacs/emacs-common[games?,gui(-)?]
@@ -74,10 +75,9 @@ RDEPEND="app-emacs/emacs-common[games?,gui(-)?]
 		x11-libs/libXrandr
 		x11-libs/libxcb
 		x11-misc/xbitmaps
-		gconf? ( >=gnome-base/gconf-2.26.2 )
 		gsettings? ( >=dev-libs/glib-2.28.6 )
 		gif? ( media-libs/giflib:0= )
-		jpeg? ( virtual/jpeg:0= )
+		jpeg? ( media-libs/libjpeg-turbo:0= )
 		png? ( >=media-libs/libpng-1.4:0= )
 		svg? ( >=gnome-base/librsvg-2.0 )
 		tiff? ( media-libs/tiff:0 )
@@ -88,7 +88,7 @@ RDEPEND="app-emacs/emacs-common[games?,gui(-)?]
 			media-libs/freetype
 			x11-libs/libXft
 			x11-libs/libXrender
-			cairo? ( >=x11-libs/cairo-1.12.18 )
+			cairo? ( >=x11-libs/cairo-1.12.18[X] )
 			harfbuzz? ( media-libs/harfbuzz:0= )
 			m17n-lib? (
 				>=dev-libs/libotf-0.9.4
@@ -133,8 +133,7 @@ BDEPEND="sys-apps/texinfo
 
 IDEPEND="app-eselect/eselect-emacs"
 
-RDEPEND+=" ${IDEPEND}
-	!app-editors/emacs-vcs:27"
+RDEPEND+=" ${IDEPEND}"
 
 EMACS_SUFFIX="emacs-${SLOT}"
 SITEFILE="20${EMACS_SUFFIX}-gentoo.el"
@@ -150,6 +149,9 @@ src_prepare() {
 		[[ ${FULL_VERSION} =~ ^${PV%.*}(\..*)?$ ]] \
 			|| die "Upstream version number changed to ${FULL_VERSION}"
 	fi
+
+	eapply "${WORKDIR}/patch"/01_all_irc-libera.patch
+	use elibc_glibc && eapply "${WORKDIR}/patch"/02_all_glibc-2.34.patch
 
 	eapply "${FILESDIR}"/emacs-27.2-minimal-docs-00-prepare.patch
 
@@ -218,15 +220,6 @@ src_prepare() {
 }
 
 src_configure() {
-	strip-flags
-	filter-flags -pie					#526948
-
-	if use ia64; then
-		replace-flags "-O[2-9]" -O1		#325373
-	else
-		replace-flags "-O[3-9]" -O2
-	fi
-
 	local myconf
 
 	if use alsa; then
@@ -246,7 +239,7 @@ src_configure() {
 		myconf+=" --without-x"
 	else
 		myconf+=" --with-x --without-ns"
-		myconf+=" $(use_with gconf)"
+		myconf+=" --without-gconf"
 		myconf+=" $(use_with gsettings)"
 		myconf+=" $(use_with toolkit-scroll-bars)"
 		myconf+=" $(use_with gif)"
@@ -316,6 +309,9 @@ src_configure() {
 		popd >/dev/null || die
 		# Don't try to execute the binary for dumping during the build
 		myconf+=" --with-dumping=none"
+	elif use m68k; then
+		# Workaround for https://debbugs.gnu.org/44531
+		myconf+=" --with-dumping=unexec"
 	else
 		myconf+=" --with-dumping=pdumper"
 	fi
