@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: orgmode.eclass
@@ -83,7 +83,7 @@ orgmode_src_configure() {
 						 (org-babel-tangle-file filename)))"              \
 			 --eval "(mapc #'tangle-unless-readme                         \
 					   (directory-files default-directory                 \
-										t \"\\\\.org$\" t))"              \
+										t \"\\\\.org$\" t))"
 	eend $? "org-babel-tangle-file: failed to tangle" || die
 }
 
