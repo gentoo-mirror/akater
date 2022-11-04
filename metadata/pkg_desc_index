@@ -2,7 +2,7 @@ app-admin/pass 9999: Stores, retrieves, generates, and synchronizes passwords se
 app-crypt/openpgp-keys-gnu-elpa 20190923: OpenPGP keys used to sign GNU ELPA packages
 app-doc/ansicl 20210723 20210724 20210904: Common Lisp ANSI standard (draft)
 app-doc/ansicl-dpANS-sources 15.17-r1: Common Lisp ANSI standard (draft): TeX sources
-app-editors/emacs 27.2-r5 27.2.9999 28.0.9999-r1 29.0.9999: The extensible, customizable, self-documenting real-time display editor
+app-editors/emacs 27.2-r6 27.2.9999 28.0.9999-r1 29.0.9999: The extensible, customizable, self-documenting real-time display editor
 app-emacs/ace-isearch 9999: A seamless bridge between isearch, ace-jump-mode, avy, helm-swoop and swiper
 app-emacs/ace-window 9999: Quickly switch windows.
 app-emacs/ag 0.48 9999: An Emacs front-end for ag ('the silver searcher')
@@ -125,6 +125,7 @@ app-emacs/portage 99999999: Emacs interface to Portage
 app-emacs/portage-navi 9999: Portage viewer
 app-emacs/projectile 9999: Manage and navigate projects in Emacs easily
 app-emacs/projectile-rails 9999: Minor mode for Rails projects based on projectile-mode
+app-emacs/queue 0.2: Queue data structure
 app-emacs/rainbow-identifiers 0.2.2 9999: Highlight identifiers according to their names
 app-emacs/rake 9999: Run rake commands
 app-emacs/request 9999: Compatible layer for URL request in Emacs
@@ -155,7 +156,7 @@ app-emacs/transmission 9999: Emacs interface to a Transmission session
 app-emacs/treepy 9999: Generic tree traversal tools
 app-emacs/ts 9999: Timestamp and date/time library
 app-emacs/undercover 9999: Test coverage library for Emacs Lisp
-app-emacs/undo-tree 0.7.5 9999: Undo trees and visualization
+app-emacs/undo-tree 0.8.2 9999: Undo trees and visualization
 app-emacs/use-package 9999: A configuration macro for simplifying your .emacs
 app-emacs/uuid 0.0.4_pre20220112 9999: UUID's for EmacsLisp
 app-emacs/visual-fill-column 2.4 9999: fill-column for visual-line-mode

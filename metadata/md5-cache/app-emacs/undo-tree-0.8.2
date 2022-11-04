@@ -1,5 +1,6 @@
 BDEPEND=>=app-editors/emacs-24:* verify-sig? ( app-crypt/gnupg >=app-portage/gemato-16 ) verify-sig? ( app-crypt/openpgp-keys-gnu-elpa )
 DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DEPEND=app-emacs/queue
 DESCRIPTION=Undo trees and visualization
 EAPI=8
 HOMEPAGE=http://www.dr-qubit.org/undo-tree.html
@@ -7,9 +8,9 @@ INHERIT=readme.gentoo-r1 elpa
 IUSE=verify-sig +verify-sig
 KEYWORDS=amd64 x86
 LICENSE=GPL-3+
-RDEPEND=>=app-editors/emacs-24:*
+RDEPEND=app-emacs/queue >=app-editors/emacs-24:*
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://elpa.gnu.org/packages/undo-tree-0.7.5.el verify-sig? ( https://elpa.gnu.org/packages/undo-tree-0.7.5.el.sig )
+SRC_URI=https://elpa.gnu.org/packages/undo-tree-0.8.2.tar verify-sig? ( https://elpa.gnu.org/packages/undo-tree-0.8.2.tar.sig )
 _eclasses_=readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55	elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	8aab2c847b5894dc40503ae1d203abcf	verify-sig	0748d665fa664a87add00152ed046e16	elpa	5d418d732ff72242897d8f781cbe17c8
-_md5_=bb3e53807f459861b8e33ba6e733642b
+_md5_=6e30da2699e3e10c75af30b66511b0bc
