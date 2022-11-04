@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -18,9 +18,10 @@ SLOT="0"
 
 S="${WORKDIR}/${P}/lisp"
 ELISP_TEXINFO="../docs/transient.texi"
-DOCS="../README.md"
+DOCS="../README.org"
 
 SITEFILE="50${PN}-gentoo.el"
 
 BDEPEND="
+	>=app-emacs/compat-28.1.1.0
 	sys-apps/texinfo"
