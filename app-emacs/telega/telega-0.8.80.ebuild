@@ -11,11 +11,11 @@ HOMEPAGE="https://zevlg.github.io/telega.el"
 
 EGIT_REPO_URI="https://github.com/zevlg/telega.el.git"
 EGIT_CLONE_TYPE="single"
-EGIT_COMMIT="a02b9a7"
+EGIT_COMMIT="bf6c560"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~arm arm64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm arm64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="contrib dbus doc geo org standalone tray test"
 # emerging with geo not tested
 SITEFILE="50${PN}-gentoo.el"
@@ -24,10 +24,11 @@ DOCS="README.md"
 
 # todo: tgs2png
 BDEPEND="
-	>=net-libs/tdlib-1.8.7
+	>=net-libs/tdlib-1.8.8
 	sys-devel/make
 	virtual/pkgconfig
 	doc? ( app-emacs/ellit-org
+		   app-emacs/compat
 		   >=app-emacs/htmlize-1.34
 		   app-emacs/alert
 		   app-emacs/all-the-icons
@@ -49,7 +50,7 @@ BDEPEND="
 # fixme: tray support will be built if libappindicator is installed,
 # regardless of USE
 RDEPEND="
-	>=net-libs/tdlib-1.8.7
+	>=net-libs/tdlib-1.8.8
 	>=app-emacs/visual-fill-column-1.9
 	>=app-emacs/rainbow-identifiers-0.2.2
 	contrib? ( app-emacs/alert
@@ -66,8 +67,6 @@ RDEPEND="
 "
 
 src_prepare() {
-
-	eapply "${FILESDIR}/${PN}"-0.8.75-provide-setf-plist-get.patch
 
 	if use doc; then
 		eapply "${FILESDIR}/${PN}"-0.8.75-fix-make-doc.patch

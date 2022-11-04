@@ -10,7 +10,6 @@ inherit elisp git-r3
 DESCRIPTION="GNU Emacs telegram client (unofficial)"
 HOMEPAGE="https://zevlg.github.io/telega.el"
 EGIT_REPO_URI="https://github.com/zevlg/${MY_PN}.git"
-EGIT_BRANCH="master"
 EGIT_CLONE_TYPE="single+tags"
 
 LICENSE="GPL-3"
@@ -65,8 +64,6 @@ RDEPEND="
 "
 
 src_prepare() {
-
-	eapply "${FILESDIR}/${PN}"-0.8.75-provide-setf-plist-get.patch
 
 	if use doc; then
 		eapply "${FILESDIR}/${PN}"-9999-fix-make-doc.patch
