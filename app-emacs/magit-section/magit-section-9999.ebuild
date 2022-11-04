@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -20,6 +20,7 @@ SITEFILE="50${PN}-gentoo.el"
 ELISP_TEXINFO="docs/magit-section.texi"
 
 BDEPEND="
+	>=app-emacs/compat-28.1.1.2
 	>=app-emacs/dash-2.19.1
 	sys-apps/texinfo
 "
