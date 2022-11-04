@@ -1,4 +1,4 @@
-BDEPEND=sys-apps/texinfo >=app-editors/emacs-25.1:* >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=>=app-emacs/compat-28.1.1.0 sys-apps/texinfo >=app-editors/emacs-25.1:* >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
 DESCRIPTION=Convenient infix arguments and suffix commands in Emacs
 EAPI=8
@@ -10,4 +10,4 @@ PROPERTIES=live
 RDEPEND=>=app-editors/emacs-25.1:*
 SLOT=0
 _eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	8aab2c847b5894dc40503ae1d203abcf	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
-_md5_=79bc0e01b8d5d1d24bcf5759e2ef374c
+_md5_=8746ed5f507239e130205a012dfff838

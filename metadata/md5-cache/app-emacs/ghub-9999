@@ -10,4 +10,4 @@ PROPERTIES=live
 RDEPEND=>=app-emacs/treepy-0.1.1 >=app-editors/emacs-25.1:*
 SLOT=0
 _eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	8aab2c847b5894dc40503ae1d203abcf	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
-_md5_=5a07518e26c82e0b620e7e593adf5e97
+_md5_=b83371f26955ca638a20eb610dec2a64
