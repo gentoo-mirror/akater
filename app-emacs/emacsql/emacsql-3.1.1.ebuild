@@ -2,22 +2,25 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-NEED_EMACS="29"
+NEED_EMACS="25.1"
 
-inherit elisp git-r3
+inherit elisp
 
-DESCRIPTION="high-level SQL database front-end"
+DESCRIPTION="High-level SQL database front-end"
 HOMEPAGE="https://github.com/magit/emacsql"
 
-EGIT_REPO_URI="https://github.com/magit/emacsql.git"
-KEYWORDS="~amd64 ~x86"
+SRC_URI="https://github.com/magit/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+RESTRICT="mirror"
 
 LICENSE="Unlicense"
 SLOT="0"
-DOCS="README.md"
+KEYWORDS="~amd64 ~x86"
 IUSE="+system-sqlite"
 
 SITEFILE="50${PN}-gentoo.el"
+
+DOCS="README.md"
+
 
 BDEPEND="
 	app-emacs/pg
@@ -28,7 +31,7 @@ RDEPEND="
 
 src_prepare() {
 	if use system-sqlite ; then
-		eapply "${FILESDIR}/system-sqlite3.patch"
+		eapply "${FILESDIR}/emacsql-3.1.1-system-sqlite.patch"
 		rm sqlite/sqlite*
 	fi
 	default
