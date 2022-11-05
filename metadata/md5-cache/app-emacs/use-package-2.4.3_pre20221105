@@ -1,0 +1,14 @@
+BDEPEND=doc? ( virtual/tex-base ) >=app-editors/emacs-24.3:* >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DESCRIPTION=A configuration macro for simplifying your .emacs
+EAPI=8
+HOMEPAGE=https://github.com/jwiegley/use-package
+INHERIT=elisp git-r3
+IUSE=doc
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+PROPERTIES=live
+RDEPEND=>=app-editors/emacs-24.3:*
+SLOT=0
+_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	8aab2c847b5894dc40503ae1d203abcf	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
+_md5_=1c1bae52c540b276cfbe509b0c77e40c

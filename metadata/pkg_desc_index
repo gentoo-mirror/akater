@@ -157,7 +157,7 @@ app-emacs/treepy 9999: Generic tree traversal tools
 app-emacs/ts 9999: Timestamp and date/time library
 app-emacs/undercover 9999: Test coverage library for Emacs Lisp
 app-emacs/undo-tree 0.8.2 9999: Undo trees and visualization
-app-emacs/use-package 9999: A configuration macro for simplifying your .emacs
+app-emacs/use-package 2.4.3_pre20221105 9999: A configuration macro for simplifying your .emacs
 app-emacs/uuid 0.0.4_pre20220112 9999: UUID's for EmacsLisp
 app-emacs/visual-fill-column 2.4 9999: fill-column for visual-line-mode
 app-emacs/vlf 9999: View Large Files
