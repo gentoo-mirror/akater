@@ -1,11 +1,11 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 NEED_EMACS="25"
 
 MY_PN="emacs-${PN}"
-inherit elisp-common akater-live-release
+inherit elisp-common akater-live-release akater-emacs-nojit
 
 DESCRIPTION="Gentoo dashboard for Emacs"
 HOMEPAGE="https://framagit.org/akater/emacs-magentoo"

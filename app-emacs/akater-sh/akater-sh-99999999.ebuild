@@ -5,7 +5,7 @@ EAPI=8
 NEED_EMACS="26"
 
 MY_PN="elisp-${PN}"
-inherit elisp-common akater-live-release
+inherit elisp-common akater-live-release akater-emacs-nojit
 
 DESCRIPTION="Emacs shell script related helper functions and macros"
 HOMEPAGE="https://gitlab.com/akater/elisp-akater-sh"
