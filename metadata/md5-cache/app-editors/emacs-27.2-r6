@@ -14,4 +14,4 @@ RESTRICT=test
 SLOT=27
 SRC_URI=mirror://gnu/emacs/emacs-27.2.tar.xz https://dev.gentoo.org/~ulm/emacs/emacs-27.2-patches-3.tar.xz
 _eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55	toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144	multilib	5ca4e49abed8e3a2f7b56920eadee157
-_md5_=aa88d774d52d4545f96e930c232c33f1
+_md5_=5b39d81aa67dbf9ce8fcfc624ef9ba15
