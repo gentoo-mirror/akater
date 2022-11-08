@@ -52,7 +52,7 @@ src_compile() {
 	elisp-compile lisp/*.el
 	elisp-make-autoload-file lisp/${PN}-autoloads.el lisp
 
-	emake server/epdfinfo
+	emake -C server
 }
 
 src_test() {
@@ -95,5 +95,5 @@ src_install() {
 		readme.gentoo_create_doc
 	fi
 
-	dobin server/epdfinfo
+	emake -C server DESTDIR="${D}" install
 }
