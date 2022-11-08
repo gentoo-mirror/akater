@@ -56,6 +56,7 @@ app-emacs/ert-runner 0.8.0 9999: Opinionated Ert testing workflow
 app-emacs/esdf 99999999: A port of dev-lisp/asdf to Emacs Lisp
 app-emacs/esxml 0.3.8_pre20220112 9999: Library for working with xml via esxml and sxml
 app-emacs/expand-region 9999: Emacs extension to increase selected region by semantic units
+app-emacs/exwm 9999: Emacs X Window Manager
 app-emacs/file-tree 99999999: Manipulating symbolic file trees in Elisp
 app-emacs/findr 0.9.11 9999: Breadth-first file-finding facility for (X)Emacs
 app-emacs/forge 9999: Access Git forges from Magit
@@ -169,6 +170,7 @@ app-emacs/wgrep 9999: Writable grep buffer and apply the changes to files
 app-emacs/which-key 3.5.4 9999: Display available keybindings in popup
 app-emacs/with-editor 9999: Use the Emacsclient as the $EDITOR of child processes
 app-emacs/xah-fly-keys 11.5.20200625041453 9999: ergonomic modal keybinding minor mode.
+app-emacs/xelb 9999: X protocol Emacs Lisp Binding
 app-emacs/xr 1.21: Convert string regexp to rx notation
 app-emacs/xrdb-mode 3.0-r1: An Emacs major mode for editing X resource database files
 app-emacs/yaml 9999: YAML parser for Elisp
