@@ -11,4 +11,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/akater/pdf-tools/archive/refs/tags/0.91-gentoo.tar.gz -> pdf-tools-0.91.tar.gz
 _eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	8aab2c847b5894dc40503ae1d203abcf
-_md5_=5b5336f9d4bcf1cc20fd74a8ce12959e
+_md5_=7ae5d8c1007dc639620d039380c32755
