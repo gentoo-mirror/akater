@@ -1,4 +1,4 @@
-BDEPEND=app-editors/emacs[gui] || ( >=app-editors/emacs-25.1 app-emacs/let-alist ) >=app-emacs/tablist-1.0 >=app-text/poppler-0.16[cairo,png] dev-libs/glib >=app-editors/emacs-24.3:*
+BDEPEND=app-editors/emacs[gui] || ( >=app-editors/emacs-25.1 app-emacs/let-alist ) >=app-emacs/tablist-1.0 >=app-text/poppler-0.16[cairo,png] <=app-text/poppler-22.03[cairo,png] dev-libs/glib >=app-editors/emacs-24.3:*
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
 DESCRIPTION=Support library for PDF documents
 EAPI=8
@@ -6,9 +6,9 @@ HOMEPAGE=https://github.com/vedang/pdf-tools/
 INHERIT=elisp
 KEYWORDS=amd64 ~x86
 LICENSE=GPL-3
-RDEPEND=app-editors/emacs[gui] || ( >=app-editors/emacs-25.1 app-emacs/let-alist ) >=app-emacs/tablist-1.0 >=app-text/poppler-0.16[cairo,png] dev-libs/glib >=app-editors/emacs-24.3:*
+RDEPEND=app-editors/emacs[gui] || ( >=app-editors/emacs-25.1 app-emacs/let-alist ) >=app-emacs/tablist-1.0 >=app-text/poppler-0.16[cairo,png] <=app-text/poppler-22.03[cairo,png] dev-libs/glib >=app-editors/emacs-24.3:*
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/akater/pdf-tools/archive/refs/tags/0.91-gentoo.tar.gz -> pdf-tools-0.91.tar.gz
 _eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	8aab2c847b5894dc40503ae1d203abcf
-_md5_=79317a3a1421c9b10bc6fe56e6122080
+_md5_=5b5336f9d4bcf1cc20fd74a8ce12959e
