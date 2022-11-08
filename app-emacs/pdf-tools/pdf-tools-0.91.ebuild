@@ -41,6 +41,8 @@ S="${WORKDIR}/${P}"-gentoo
 src_compile() {
 	BYTECOMPFLAGS="-L lisp"
 	elisp-compile lisp/*.el
+	elisp-make-autoload-file lisp/${PN}-autoloads.el lisp
+
 	emake server/epdfinfo
 }
 
