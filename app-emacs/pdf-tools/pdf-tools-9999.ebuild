@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -38,6 +38,8 @@ DOCS="NEWS README.org"
 src_compile() {
 	BYTECOMPFLAGS="-L lisp"
 	elisp-compile lisp/*.el
+	elisp-make-autoload-file lisp/${PN}-autoloads.el lisp
+
 	emake server/epdfinfo
 }
 
