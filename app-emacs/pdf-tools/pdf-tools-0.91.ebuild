@@ -21,6 +21,7 @@ BDEPEND="
 	|| ( >=app-editors/emacs-25.1 app-emacs/let-alist )
 	>=app-emacs/tablist-1.0
 	>=app-text/poppler-0.16[cairo,png]
+	<=app-text/poppler-22.03[cairo,png]
 	dev-libs/glib
 "
 RDEPEND="
@@ -28,6 +29,7 @@ RDEPEND="
 	|| ( >=app-editors/emacs-25.1 app-emacs/let-alist )
 	>=app-emacs/tablist-1.0
 	>=app-text/poppler-0.16[cairo,png]
+	<=app-text/poppler-22.03[cairo,png]
 	dev-libs/glib
 "
 
