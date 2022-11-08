@@ -4,7 +4,7 @@
 EAPI=8
 NEED_EMACS="24.3"
 
-inherit elisp git-r3
+inherit autotools elisp git-r3
 
 DESCRIPTION="Support library for PDF documents"
 HOMEPAGE="https://github.com/vedang/pdf-tools/"
@@ -34,6 +34,18 @@ RDEPEND="
 
 SITEFILE="50${PN}-gentoo.el"
 DOCS="NEWS README.org"
+
+src_prepare() {
+	elisp_src_prepare
+
+	cd server || die
+	eautoreconf
+}
+
+src_configure() {
+	cd server || die
+	econf
+}
 
 src_compile() {
 	BYTECOMPFLAGS="-L lisp"
