@@ -31,6 +31,7 @@ BDEPEND="
 		   >=app-emacs/htmlize-1.34
 		   app-emacs/alert
 		   app-emacs/all-the-icons
+		   >=app-emacs/compat-28.1.2.2
 		   >=app-emacs/dashboard-1.8.0
 		   app-emacs/esxml
 		   >=app-emacs/rainbow-identifiers-0.2.2

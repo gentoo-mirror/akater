@@ -5,7 +5,7 @@ Use local Elisp dependencies.
 @@ -1,4 +1,8 @@
 -EMACS=emacs -Q -batch -f package-initialize -L ../ -L ../../ellit-org.el -l ellit-org
 +SITELISP = /usr/share/emacs/site-lisp
-+BUILDDEPS = alert all-the-icons dashboard ellit-org esxml htmlize org \
++BUILDDEPS = alert all-the-icons dashboard compat ellit-org esxml htmlize org \
 +            rainbow-identifiers transient visual-fill-column
 +BUILDDEPS:=$(BUILDDEPS:%=-L $(SITELISP)/%)
 +EMACS=emacs -Q -batch -L ../ $(BUILDDEPS) -l ellit-org
