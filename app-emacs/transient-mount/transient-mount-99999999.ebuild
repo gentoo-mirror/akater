@@ -23,8 +23,12 @@ BDEPEND="
 "
 RDEPEND="
 	>=sys-apps/util-linux-2.18
-	app-admin/sudo
 	app-emacs/transient
 	app-emacs/akater-misc
-	app-emacs/akater-sh
+	app-emacs/shmu[privileged]
 "
+# todo: consider
+# suid? ( util-linux/util-linux[suid] )
+# !suid? ( app-emacs/shmu[privileged] )
+# see euse -i suid
+# in the util-linux section
