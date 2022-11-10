@@ -1,4 +1,4 @@
-BDEPEND=app-emacs/akater-misc app-emacs/mmxx-macros >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=app-emacs/akater-misc app-emacs/eix app-emacs/mmxx-macros >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=unpack
 DESCRIPTION=Elisp package that provides cached data about underlying Gentoo system to Emacs
 EAPI=8
@@ -10,4 +10,4 @@ PROPERTIES=live
 RDEPEND=app-emacs/akater-misc app-emacs/akater-sh app-portage/eix
 SLOT=0
 _eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	git-r3	2347f8fe2d392b2a091191f94be37e6f	akater-live-release	5c025c752f992da81399e15adf355e52
-_md5_=0dfe98617fc8ab739bb0c6699f987dcb
+_md5_=908af22555e281bd2db6eb9fc70a765c
