@@ -22,6 +22,7 @@ SITEFILE="50${PN}-gentoo.el"
 
 BDEPEND="
 	app-emacs/akater-misc
+	app-emacs/eix
 	app-emacs/mmxx-macros
 "
 RDEPEND="
