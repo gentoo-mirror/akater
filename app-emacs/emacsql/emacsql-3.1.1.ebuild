@@ -15,12 +15,12 @@ RESTRICT="mirror"
 LICENSE="Unlicense"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+system-sqlite"
 
-SITEFILE="50${PN}-gentoo.el"
+IUSE="+system-sqlite test"
 
 DOCS="README.md"
 
+SITEFILE="50${PN}-gentoo.el"
 
 BDEPEND="
 	app-emacs/pg
@@ -39,19 +39,29 @@ src_prepare() {
 
 src_compile() {
 	elisp_src_compile
+
+	if use test ; then
+		${EMACS} ${EMACSFLAGS} ${BYTECOMPFLAGS} -L tests \
+				 -f batch-byte-compile                   \
+				 tests/*-tests.el
+	fi
+
 	emake -C sqlite
 }
 
 src_test() {
-	${EMACS} ${EMACSFLAGS} ${BYTECOMPFLAGS} -L tests -f batch-byte-compile \
-			 tests/*-tests.el
 	${EMACS} -batch -Q -L . -L tests -L ${SITELISP}/pg \
-			 -l tests/emacsql-tests.elc \
+			 -l tests/${PN}-tests.elc                  \
 			 -f ert-run-tests-batch-and-exit || die "ERT test(s) failed."
 }
 
 src_install() {
 	elisp_src_install
+
+	if use test ; then
+		elisp-install ${PN} tests/*.el tests/*.elc
+	fi
+
 	exeinto "/usr/bin"
 	doexe sqlite/emacsql-sqlite
 }

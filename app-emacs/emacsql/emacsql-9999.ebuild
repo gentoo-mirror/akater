@@ -6,16 +6,18 @@ NEED_EMACS="29"
 
 inherit elisp git-r3
 
-DESCRIPTION="high-level SQL database front-end"
+DESCRIPTION="High-level SQL database front-end"
 HOMEPAGE="https://github.com/magit/emacsql"
 
-EGIT_REPO_URI="https://github.com/magit/emacsql.git"
-KEYWORDS="~amd64 ~x86"
+EGIT_REPO_URI="https://github.com/magit/${PN}.git"
 
 LICENSE="Unlicense"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
+
+IUSE="+system-sqlite test"
+
 DOCS="README.md"
-IUSE="+system-sqlite"
 
 SITEFILE="50${PN}-gentoo.el"
 
@@ -36,19 +38,29 @@ src_prepare() {
 
 src_compile() {
 	elisp_src_compile
+
+	if use test ; then
+		${EMACS} ${EMACSFLAGS} ${BYTECOMPFLAGS} -L tests \
+				 -f batch-byte-compile                   \
+				 tests/*-tests.el
+	fi
+
 	emake -C sqlite
 }
 
 src_test() {
-	${EMACS} ${EMACSFLAGS} ${BYTECOMPFLAGS} -L tests -f batch-byte-compile \
-			 tests/*-tests.el
 	${EMACS} -batch -Q -L . -L tests -L ${SITELISP}/pg \
-			 -l tests/emacsql-tests.elc \
+			 -l tests/${PN}-tests.elc                  \
 			 -f ert-run-tests-batch-and-exit || die "ERT test(s) failed."
 }
 
 src_install() {
 	elisp_src_install
+
+	if use test ; then
+		elisp-install ${PN} tests/*.el tests/*.elc
+	fi
+
 	exeinto "/usr/bin"
 	doexe sqlite/emacsql-sqlite
 }
