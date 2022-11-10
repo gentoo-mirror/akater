@@ -1,0 +1,14 @@
+BDEPEND=>=app-editors/emacs-24:* >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DESCRIPTION=License and header template
+EAPI=8
+HOMEPAGE=https://github.com/buzztaiki/lice-el
+INHERIT=elisp git-r3
+IUSE=test
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+PROPERTIES=live
+RDEPEND=>=app-editors/emacs-24:*
+SLOT=0
+_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	8aab2c847b5894dc40503ae1d203abcf	git-r3	2347f8fe2d392b2a091191f94be37e6f
+_md5_=c9ef3983a87abf59387432964ae70790

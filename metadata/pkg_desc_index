@@ -83,6 +83,7 @@ app-emacs/kv 0.0.20_pre20220112 9999: key/value data structure functions
 app-emacs/language-detection 0_pre20160923 9999: Automatic language detection from code snippets
 app-emacs/let-alist 1.0.6 1.0.6-r1: Easily let-bind values of an assoc-list by their names
 app-emacs/libegit2 9999: Emacs module for libgit2
+app-emacs/lice 9999: License and header template
 app-emacs/lisp-extra-font-lock 9999: Highlight bound variables and quoted exprs.
 app-emacs/lispy 9999: vi-like Paredit.
 app-emacs/literate-elisp 9999: A library to write Emacs Lisp codes in org mode
