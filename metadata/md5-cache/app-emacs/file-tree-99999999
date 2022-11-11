@@ -1,14 +1,14 @@
 BDEPEND=app-emacs/akater-misc app-emacs/mmxx-macros test? ( app-emacs/org-development-elisp app-emacs/akater-sh ) >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=unpack
+DEFINED_PHASES=setup unpack
 DESCRIPTION=Manipulating symbolic file trees in Elisp
 EAPI=8
 HOMEPAGE=https://gitlab.com/akater/elisp-file-tree
-INHERIT=elisp-common akater-live-release
+INHERIT=elisp-common akater-live-release akater-emacs-nojit
 IUSE=test
 KEYWORDS=amd64 ~x86
 LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=app-emacs/akater-misc app-emacs/mmxx-macros test? ( app-emacs/org-development-elisp app-emacs/akater-sh ) app-emacs/akater-sh
 SLOT=0
-_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	git-r3	2347f8fe2d392b2a091191f94be37e6f	akater-live-release	5c025c752f992da81399e15adf355e52
-_md5_=77caaeb8875ae03387db288c238c200a
+_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	git-r3	2347f8fe2d392b2a091191f94be37e6f	akater-live-release	5c025c752f992da81399e15adf355e52	akater-emacs-nojit	05b3bacae453f93ecec4cbb9dddfa9cf
+_md5_=527675186765c368be0a3b58426d5df0

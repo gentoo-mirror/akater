@@ -135,6 +135,7 @@ app-emacs/rich-minority 9999: Clean-up and Beautify the list of minor-modes.
 app-emacs/s 9999: The long lost Emacs string manipulation library.
 app-emacs/set-endos 99999999: Elisp package that provides some interfaces to finite dynamical systems
 app-emacs/sgc 99999999: Sufficiently Generic Completion (Emacs Lisp)
+app-emacs/shmu 99999999: A sexp to sh translator and other *nix-related convenience stuff
 app-emacs/shut-up 0.3.3 9999: Shut up would you!
 app-emacs/simple-httpd 9999: Pure elisp HTTP server
 app-emacs/slime 2.26.1 9999: SLIME, the Superior Lisp Interaction Mode (Extended)

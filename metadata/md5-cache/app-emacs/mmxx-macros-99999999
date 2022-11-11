@@ -1,12 +1,12 @@
 BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=unpack
+DEFINED_PHASES=setup unpack
 DESCRIPTION=Useful Lisp macros developed ca. 2020
 EAPI=8
 HOMEPAGE=https://framagit.org/akater/elisp-mmxx-macros
-INHERIT=elisp-common akater-live-release
+INHERIT=elisp-common akater-live-release akater-emacs-nojit
 KEYWORDS=amd64 ~x86
 LICENSE=GPL-3+
 PROPERTIES=live
 SLOT=0
-_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	git-r3	2347f8fe2d392b2a091191f94be37e6f	akater-live-release	5c025c752f992da81399e15adf355e52
-_md5_=04a37b3668ba33c445b1244e1108eb96
+_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	git-r3	2347f8fe2d392b2a091191f94be37e6f	akater-live-release	5c025c752f992da81399e15adf355e52	akater-emacs-nojit	05b3bacae453f93ecec4cbb9dddfa9cf
+_md5_=c37a6866b536f75b72dac0778b13f2d3

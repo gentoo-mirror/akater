@@ -1,12 +1,12 @@
 BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=postinst postrm unpack
+DEFINED_PHASES=postinst postrm setup unpack
 DESCRIPTION=Convenient gensyms for defmacro (Emacs Lisp)
 EAPI=8
 HOMEPAGE=https://gitlab.com/akater/defmacro-gensym/-/blob/master/defmacro-gensym.org
-INHERIT=elisp-common git-r3
+INHERIT=elisp-common git-r3 akater-emacs-nojit
 KEYWORDS=amd64 ~x86
 LICENSE=Unlicense
 PROPERTIES=live
 SLOT=0
-_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	git-r3	2347f8fe2d392b2a091191f94be37e6f
-_md5_=12641e6a2876e2dfca3966e9c5ee441a
+_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	git-r3	2347f8fe2d392b2a091191f94be37e6f	akater-emacs-nojit	05b3bacae453f93ecec4cbb9dddfa9cf
+_md5_=c64aafd7eb67e06bf4c63b4ed9f25464

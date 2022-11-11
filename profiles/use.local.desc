@@ -61,6 +61,7 @@ app-emacs/portage:helm - Offer some support for app-emacs/helm
 app-emacs/portage:pona - Use some facilities of app-emacs/portage-navi
 app-emacs/portage:smart-live-rebuild - Include smart-live-rebuild related functions
 app-emacs/projectile-rails:hydra - Install “hydra keymap”
+app-emacs/shmu:privileged - Install support for sudo, doas, etc.
 app-emacs/slime:company - Also install slime-company
 app-emacs/slime:system-cl-lib - Use system-wide cl-lib instead of bundled
 app-emacs/slime:system-ert - Use system-wide ert instead of bundled
