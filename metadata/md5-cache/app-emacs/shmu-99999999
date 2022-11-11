@@ -1,6 +1,6 @@
 BDEPEND=app-emacs/mmxx-macros >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=setup unpack
-DEPEND=test? ( app-emacs/ebuild-mode app-emacs/org-development-elisp )
+DEPEND=test? ( app-emacs/akater-misc app-emacs/ebuild-mode app-emacs/org-development-elisp )
 DESCRIPTION=A sexp to sh translator and other *nix-related convenience stuff
 EAPI=8
 HOMEPAGE=https://framagit.org/akater/elisp-shmu
@@ -12,4 +12,4 @@ PROPERTIES=live
 RDEPEND=app-emacs/mmxx-macros privileged? ( || ( app-admin/sudo app-admin/doas sys-apps/shadow ) )
 SLOT=0
 _eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	git-r3	2347f8fe2d392b2a091191f94be37e6f	akater-live-release	5c025c752f992da81399e15adf355e52	akater-emacs-nojit	05b3bacae453f93ecec4cbb9dddfa9cf
-_md5_=39d3ce54d3bf5fc2528583cbf367d824
+_md5_=9dc741d06029d3461db3da6f7b94a752
