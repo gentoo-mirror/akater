@@ -5,7 +5,7 @@ EAPI=8
 NEED_EMACS="24"
 
 MY_PN="emacs-${PN}"
-inherit elisp-common akater-live-release
+inherit elisp-common akater-live-release akater-emacs-nojit
 
 DESCRIPTION="Functions to deal with ebuilds in Emacs Lisp"
 HOMEPAGE="https://gitlab.com/akater/emacs-ebuild-tools"

@@ -1,11 +1,11 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 NEED_EMACS="24.1"
 
 MY_PN="${PN}"
-inherit elisp-common git-r3
+inherit elisp-common git-r3 akater-emacs-nojit
 
 DESCRIPTION="Convenient gensyms for defmacro (Emacs Lisp)"
 HOMEPAGE="https://gitlab.com/akater/defmacro-gensym/-/blob/master/defmacro-gensym.org"

@@ -5,7 +5,7 @@ EAPI=8
 NEED_EMACS=27
 
 MY_PN="elisp-${PN}"
-inherit elisp-common akater-live-release
+inherit elisp-common akater-live-release akater-emacs-nojit
 
 DESCRIPTION="A port of dev-lisp/asdf to Emacs Lisp"
 HOMEPAGE="https://framagit.org/akater/elisp-esdf"

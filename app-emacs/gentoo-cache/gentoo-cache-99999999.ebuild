@@ -5,7 +5,7 @@ EAPI=8
 NEED_EMACS="25"
 MY_PN="emacs-${PN}"
 
-inherit elisp-common akater-live-release
+inherit elisp-common akater-live-release akater-emacs-nojit
 
 DESCRIPTION="Elisp package that provides cached data about underlying Gentoo system to Emacs"
 HOMEPAGE="https://gitlab.com/akater/emacs-gentoo-cache"

@@ -7,25 +7,25 @@ NEED_EMACS="26"
 MY_PN="elisp-${PN}"
 inherit elisp-common akater-live-release akater-emacs-nojit
 
-DESCRIPTION="Emacs shell script related helper functions and macros"
-HOMEPAGE="https://gitlab.com/akater/elisp-akater-sh"
+DESCRIPTION="A sexp to sh translator and other *nix-related convenience stuff"
+HOMEPAGE="https://framagit.org/akater/elisp-shmu"
 
-EGIT_REPO_URI="https://gitlab.com/akater/${MY_PN}.git"
+EGIT_REPO_URI="https://framagit.org/akater/${MY_PN}.git"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
 
-IUSE="test"
+IUSE="+privileged test"
 
 DOCS="" # README.org is a relative symlink
 
 BDEPEND="
-	app-emacs/akater-misc
 	app-emacs/mmxx-macros
 "
 
 RDEPEND="${BDEPEND}
+	privileged? ( || ( app-admin/sudo app-admin/doas sys-apps/shadow ) )
 "
 
 DEPEND="test? ( app-emacs/ebuild-mode
