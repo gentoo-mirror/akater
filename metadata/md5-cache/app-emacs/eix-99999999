@@ -5,9 +5,9 @@ EAPI=8
 HOMEPAGE=https://gitlab.com/akater/elisp-eix
 INHERIT=elisp-common akater-live-release
 KEYWORDS=amd64 ~x86
-LICENSE=GPL-3
+LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=app-emacs/akater-misc app-emacs/akater-sh app-emacs/mmxx-macros >=app-portage/eix-0.34.4
 SLOT=0
 _eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	git-r3	2347f8fe2d392b2a091191f94be37e6f	akater-live-release	5c025c752f992da81399e15adf355e52
-_md5_=9a7883c4327fc3bcf0b4c6f3aa747485
+_md5_=4a6556f6d212600f67078b34e90ef28f
