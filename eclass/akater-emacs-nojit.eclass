@@ -28,7 +28,11 @@ akater-emacs-nojit-emacs-jitp() {
 	# Run without timeout if the command is not available
 	${tmout} true &>/dev/null || tmout=""
 	# The following will work for at least versions 18-24.
-	echo "(progn (require (quote comp) nil t) (princ (featurep (quote comp))))" >"${T}"/emacs-native-comp-p.el
+	echo "(princ (memq (quote NATIVE_COMP)    \
+					   (car (read-from-string \
+							  (format \"(%s)\"\
+									  system-configuration-features)))))" \
+		 >"${T}"/emacs-native-comp-p.el
 	native_comp=$(
 		# EMACS could be a microemacs variant that ignores the -batch
 		# option and would therefore hang, waiting for user interaction.
