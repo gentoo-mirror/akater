@@ -48,4 +48,7 @@ src_install() {
 		doins -r template
 	)
 	eend $? "doins failed" || die
+
+	# So that lice works in emacs -Q:
+	dosym -r "${SITEETC}/${PN}"/template "${SITELISP}/${PN}"/template
 }
