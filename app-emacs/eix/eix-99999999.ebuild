@@ -12,7 +12,7 @@ HOMEPAGE="https://gitlab.com/akater/elisp-eix"
 
 EGIT_REPO_URI="https://gitlab.com/akater/${MY_PN}.git"
 
-LICENSE="GPL-3"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
 
