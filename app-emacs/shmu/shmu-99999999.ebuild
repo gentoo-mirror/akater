@@ -28,7 +28,8 @@ RDEPEND="${BDEPEND}
 	privileged? ( || ( app-admin/sudo app-admin/doas sys-apps/shadow ) )
 "
 
-DEPEND="test? ( app-emacs/ebuild-mode
+DEPEND="test? ( app-emacs/akater-misc
+				app-emacs/ebuild-mode
 				app-emacs/org-development-elisp )"
 
 SITEFILE="50${PN}-gentoo.el"
