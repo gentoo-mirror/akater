@@ -16,7 +16,7 @@ KEYWORDS="amd64 ~x86"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="mysql postgres sqlite"
+IUSE="examples mysql postgres sqlite"
 
 DOCS="readme.md"
 SITEFILE="50${PN}-gentoo.el"
@@ -43,6 +43,10 @@ src_compile() {
 src_install() {
 	elisp_src_install
 	elisp-install ${PN} edbi-bridge.pl
+	if use examples ; then
+		insinto ${SITEETC}/${PN}/examples
+		doins examples/api.pl
+	fi
 	# I don't know anything about Perl installs
 	# but we need to place this to load-path, according to readme,
 	# so it's not
