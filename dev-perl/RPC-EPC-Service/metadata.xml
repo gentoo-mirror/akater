@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>nuclearspace@gmail.com</email>
+    <name>Dima Akater</name>
+  </maintainer>
+  <longdescription>This module enables to connect the other process
+  with the S-expression protocol, like the Swank protocol of the
+  SLIME.
+  </longdescription>
+  <upstream>
+    <remote-id type="cpan">RPC-EPC-Service</remote-id>
+    <remote-id type="cpan-module">RPC::EPC::Service</remote-id>
+  </upstream>
+</pkgmetadata>
