@@ -1,16 +1,15 @@
-BDEPEND=test? ( app-emacs/window-layout ) >=app-editors/emacs-24:* >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=test? ( app-emacs/window-layout ) >=app-editors/emacs-24:*
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
 DESCRIPTION=Simple window manager for Emacs
 EAPI=8
 HOMEPAGE=https://github.com/kiwanami/emacs-window-manager
-INHERIT=elisp git-r3
+INHERIT=elisp
 IUSE=test
 KEYWORDS=amd64 x86
 LICENSE=GPL-3
-PROPERTIES=live
 RDEPEND=>=app-emacs/window-layout-1.4 >=app-editors/emacs-24:*
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/akater/emacs-e2wm-1.5_pre20221130/archive/refs/tags/v1.5_pre20221130.tar.gz -> e2wm-1.5_pre20221130.tar.gz
-_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	8aab2c847b5894dc40503ae1d203abcf	git-r3	2347f8fe2d392b2a091191f94be37e6f
-_md5_=62a1ab5ea166acb54e783cebd6800bd9
+SRC_URI=https://github.com/akater/emacs-window-manager/archive/refs/tags/v1.5_pre20221130.tar.gz -> e2wm-1.5_pre20221130.tar.gz
+_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	8aab2c847b5894dc40503ae1d203abcf
+_md5_=42cbc5b8d9933bf18d51cf5cb72f2c00
