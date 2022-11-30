@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -17,26 +17,25 @@ KEYWORDS="~amd64 ~x86"
 
 LICENSE="GPL-3"
 SLOT="0"
+IUSE="examples mysql postgres sqlite"
+
+REQUIRED_USE="|| ( mysql postgres sqlite )"
 
 DOCS="readme.md"
 SITEFILE="50${PN}-gentoo.el"
 
+BDEPEND="app-emacs/auto-complete"
 RDEPEND="
 	>=app-emacs/concurrent-0.3.1
 	>=app-emacs/ctable-0.1.2
 	>=app-emacs/epc-0.1.1
+	app-emacs/e2wm
+	dev-perl/DBI
+	sqlite? ( dev-perl/DBD-SQLite )
+	postgres? ( dev-perl/DBD-Pg )
+	mysql? ( dev-perl/DBD-mysql )
+	>=dev-perl/RPC-EPC-Service-0.0.11
 "
-# Also rdepend: `RPC::EPC::Service', DBI and Database drivers with CPAN.
-# But I'm not yet aqcuainted with CPAN packaging
-
-src_prepare() {
-	elisp_src_prepare
-
-	ewarn "Perl support will not be installed.  No time for packaging, sorry."
-	rm e2wm-edbi.el
-
-	default
-}
 
 src_compile() {
 	mv edbi-pkg.el edbi-pkg
@@ -46,7 +45,14 @@ src_compile() {
 
 src_install() {
 	elisp_src_install
-	# I don't know anything about Perl installs:
+	elisp-install ${PN} edbi-bridge.pl
+	if use examples ; then
+		insinto ${SITEETC}/${PN}/examples
+		doins examples/api.pl
+	fi
+	# I don't know anything about Perl installs
+	# but we need to place this to load-path, according to readme,
+	# so it's not
 	# insinto /usr/lib/perl5
 	# doins edbi-bridge.pl
 }
