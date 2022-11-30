@@ -14,6 +14,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 
 BDEPEND="dev-perl/Module-Install"
-# RDEPEND="
-# 	dev-perl/AnyEvent
-# "
+RDEPEND="
+	dev-perl/Class-Accessor
+"
