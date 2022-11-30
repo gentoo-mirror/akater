@@ -25,6 +25,7 @@ RDEPEND="
 	>=app-emacs/concurrent-0.3.1
 	>=app-emacs/ctable-0.1.2
 	>=app-emacs/epc-0.1.1
+	app-emacs/e2wm
 	dev-perl/DBI
 	sqlite? ( dev-perl/DBD-SQLite )
 	postgres? ( dev-perl/DBD-Pg )
