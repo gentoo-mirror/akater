@@ -1,0 +1,14 @@
+BDEPEND=>=app-editors/emacs-24:*
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DESCRIPTION=Window layout manager
+EAPI=8
+HOMEPAGE=https://github.com/kiwanami/emacs-window-layout
+INHERIT=elisp
+KEYWORDS=amd64 x86
+LICENSE=GPL-3
+RDEPEND=>=app-editors/emacs-24:*
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/akater/emacs-window-layout-1.5_pre20221130/archive/refs/tags/v1.5_pre20221130.tar.gz -> window-layout-1.5_pre20221130.tar.gz
+_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	8aab2c847b5894dc40503ae1d203abcf
+_md5_=8fdab73376aa5816d6c51e5ffe411d1b

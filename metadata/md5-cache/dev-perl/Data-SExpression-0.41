@@ -1,0 +1,16 @@
+BDEPEND=dev-perl/Module-Install dev-lang/perl test? ( virtual/perl-Test-Simple )
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-lang/perl
+DESCRIPTION=Parse Lisp S-Expressions into perl data structures.
+EAPI=8
+HOMEPAGE=https://metacpan.org/release/Data-SExpression
+INHERIT=perl-module
+IUSE=test
+KEYWORDS=~amd64 ~arm ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux
+LICENSE=|| ( Artistic GPL-1+ )
+RDEPEND=dev-lang/perl:=
+RESTRICT=mirror !test? ( test )
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/N/NE/NELHAGE/Data-SExpression-0.41.tar.gz
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	perl-functions	c3fca037246e877693badea0df3b0ef8	readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55	perl-module	21a0cb6221498d0e7894bdf445b79887
+_md5_=a95b4a0f1a009c29e10bd098c6c04960
