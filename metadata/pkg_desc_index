@@ -40,7 +40,7 @@ app-emacs/ebdb 0.8.2 9999: Contact management package
 app-emacs/ebuild-mode 9999: Emacs modes for editing ebuilds and other Gentoo specific files
 app-emacs/ebuild-run-mode 20211026 20221116 99999999: Major mode for Emacs buffers where ebuild commands are run
 app-emacs/ebuild-tools 99999999: Functions to deal with ebuilds in Emacs Lisp
-app-emacs/edbi 0.1.3_pre20211008 9999: Database independent interface for Emacs
+app-emacs/edbi 0.1.4_pre20221130 9999: Database independent interface for Emacs
 app-emacs/eieio-akater-extras 99999999: Little extensions and fixes for EIEIO
 app-emacs/eix 99999999: Emacs Lisp interface to app-portage/eix
 app-emacs/elfeed 9999: An Emacs Atom/RSS feed reader

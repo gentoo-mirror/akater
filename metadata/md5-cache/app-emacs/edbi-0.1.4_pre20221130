@@ -1,4 +1,4 @@
-BDEPEND=>=app-editors/emacs-24:*
+BDEPEND=app-emacs/auto-complete >=app-editors/emacs-24:*
 DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
 DESCRIPTION=Database independent interface for Emacs
 EAPI=8
@@ -8,8 +8,9 @@ IUSE=examples mysql postgres sqlite
 KEYWORDS=amd64 ~x86
 LICENSE=GPL-3
 RDEPEND=>=app-emacs/concurrent-0.3.1 >=app-emacs/ctable-0.1.2 >=app-emacs/epc-0.1.1 app-emacs/e2wm dev-perl/DBI sqlite? ( dev-perl/DBD-SQLite ) postgres? ( dev-perl/DBD-Pg ) mysql? ( dev-perl/DBD-mysql ) >=dev-perl/RPC-EPC-Service-0.0.11 >=app-editors/emacs-24:*
+REQUIRED_USE=|| ( mysql postgres sqlite )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/akater/emacs-edbi/archive/refs/tags/v0.1.3_pre20211008.tar.gz -> edbi-0.1.3_pre20211008.tar.gz
+SRC_URI=https://github.com/akater/emacs-edbi/archive/refs/tags/v0.1.4_pre20221130.tar.gz -> edbi-0.1.4_pre20221130.tar.gz
 _eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	8aab2c847b5894dc40503ae1d203abcf
-_md5_=7f91690ff1c2af16d905144b050cae83
+_md5_=13b6977022c5da78709ff704cdc9c9fb
