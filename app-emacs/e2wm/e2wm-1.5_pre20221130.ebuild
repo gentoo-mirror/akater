@@ -11,6 +11,7 @@ DESCRIPTION="Simple window manager for Emacs"
 HOMEPAGE="https://github.com/kiwanami/emacs-window-manager"
 
 SRC_URI="https://github.com/akater/${MY_P}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+RESTRICT="mirror"
 
 KEYWORDS="amd64 x86"
 LICENSE="GPL-3"
