@@ -5,7 +5,7 @@ EAPI=8
 NEED_EMACS=24
 MY_P="emacs-${P}"
 
-inherit elisp git-r3
+inherit elisp
 
 DESCRIPTION="Simple window manager for Emacs"
 HOMEPAGE="https://github.com/kiwanami/emacs-window-manager"
