@@ -18,9 +18,12 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE="examples mysql postgres sqlite"
 
+REQUIRED_USE="|| ( mysql postgres sqlite )"
+
 DOCS="readme.md"
 SITEFILE="50${PN}-gentoo.el"
 
+BDEPEND="app-emacs/auto-complete"
 RDEPEND="
 	>=app-emacs/concurrent-0.3.1
 	>=app-emacs/ctable-0.1.2
