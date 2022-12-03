@@ -1,13 +1,9 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-# inherit multilib
 inherit cmake git-r3
-
-# from mva
-#inherit multibuild
 
 DESCRIPTION="Cross-platform library for building Telegram clients"
 HOMEPAGE="https://core.telegram.org/tdlib"
@@ -62,11 +58,23 @@ RDEPEND="dev-libs/openssl:0=
 
 DOCS=( README.md )
 
-# from mva
 src_prepare() {
-	sed -r \
-		-e '/install\(TARGETS/,/  INCLUDES/{s@(LIBRARY DESTINATION).*@\1 ${CMAKE_INSTALL_LIBDIR}@;s@(ARCHIVE DESTINATION).*@\1 ${CMAKE_INSTALL_LIBDIR}@;s@(RUNTIME DESTINATION).*@\1 ${CMAKE_INSTALL_BINDIR}@}' \
-		-i CMakeLists.txt
+
+	eapply "${FILESDIR}/${PN}"-1.8.0-fix-runpath.patch
+
+	# from pg_overlay
+	if use test
+	then
+		sed -i -e '/run_all_tests/! {/all_tests/d}' \
+			test/CMakeLists.txt || die
+	else
+		sed -i \
+			-e '/enable_testing/d' \
+			-e '/add_subdirectory.*test/d' \
+			CMakeLists.txt || die
+	fi
+	# for now, tests segfault for me on glibc and musl
+
 	cmake_src_prepare
 }
 

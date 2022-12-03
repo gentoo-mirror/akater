@@ -13,7 +13,7 @@ EGIT_COMMIT="2e6ac1f22"
 
 LICENSE="Boost-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~x86"
+KEYWORDS="amd64 ~arm ~arm64 ~x86"
 IUSE="clang cli debug doc +gcc java low-ram lto test"
 
 REQUIRED_USE="
@@ -45,11 +45,6 @@ DOCS=( README.md )
 src_prepare() {
 
 	eapply "${FILESDIR}/${PN}"-1.8.0-fix-runpath.patch
-
-	# from mva
-	sed -r \
-		-e '/install\(TARGETS/,/  INCLUDES/{s@(LIBRARY DESTINATION).*@\1 ${CMAKE_INSTALL_LIBDIR}@;s@(ARCHIVE DESTINATION).*@\1 ${CMAKE_INSTALL_LIBDIR}@;s@(RUNTIME DESTINATION).*@\1 ${CMAKE_INSTALL_BINDIR}@}' \
-		-i CMakeLists.txt
 
 	# from pg_overlay
 	if use test
