@@ -15,7 +15,7 @@ EGIT_COMMIT="bf6c560"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm arm64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm arm64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="contrib dbus doc geo org standalone tray test"
 # emerging with geo not tested
 SITEFILE="50${PN}-gentoo.el"
