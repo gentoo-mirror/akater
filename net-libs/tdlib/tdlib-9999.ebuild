@@ -13,7 +13,7 @@ EGIT_COMMIT_TYPE="single+tags"
 LICENSE="Boost-1.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="clang cli debug doc +gcc low-ram lto java javascript"
+IUSE="clang cli debug doc +gcc java low-ram lto test"
 
 REQUIRED_USE="
 	gcc? ( !clang )
