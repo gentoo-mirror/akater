@@ -4,15 +4,14 @@
 EAPI=8
 NEED_EMACS="26.3"
 
-inherit autotools elisp git-r3
+inherit autotools elisp
 
 DESCRIPTION="Support library for PDF documents"
 HOMEPAGE="https://github.com/vedang/pdf-tools/"
 
-# EGIT_REPO_URI="https://github.com/vedang/pdf-tools.git"
-EGIT_REPO_URI="https://github.com/akater/pdf-tools.git"
-EGIT_BRANCH="gentoo-fix-tests"
-KEYWORDS="~amd64 ~x86"
+SRC_URI="https://github.com/akater/pdf-tools/archive/refs/tags/${PV}-gentoo.tar.gz -> ${P}.tar.gz"
+RESTRICT="mirror"
+KEYWORDS="amd64 ~x86"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -34,6 +33,8 @@ RDEPEND="
 
 SITEFILE="50${PN}-gentoo.el"
 DOCS="NEWS README.org"
+
+S="${WORKDIR}/${P}"-gentoo
 
 src_prepare() {
 	elisp_src_prepare
