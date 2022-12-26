@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-NEED_EMACS="24.3"
+NEED_EMACS="26.3"
 
 inherit autotools elisp git-r3
 
