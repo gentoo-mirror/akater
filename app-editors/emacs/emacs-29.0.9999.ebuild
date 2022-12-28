@@ -138,6 +138,11 @@ RDEPEND+=" ${IDEPEND}"
 EMACS_SUFFIX="emacs-${SLOT}"
 SITEFILE="20${EMACS_SUFFIX}-gentoo.el"
 
+pkg_setup() {
+	ewarn "This ebuild is meant for private use."
+	ewarn "Please don't report bugs."
+}
+
 src_prepare() {
 	if [[ ${PV##*.} = 9999 ]]; then
 		FULL_VERSION=$(sed -n 's/^AC_INIT([^,]*,[ \t]*\([^ \t,)]*\).*/\1/p' \
