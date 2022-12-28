@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -140,6 +140,11 @@ RDEPEND+=" ${IDEPEND}
 
 EMACS_SUFFIX="emacs-${SLOT}"
 SITEFILE="20${EMACS_SUFFIX}-gentoo.el"
+
+pkg_setup() {
+	ewarn "This ebuild is meant for private use."
+	ewarn "Please don't report bugs."
+}
 
 src_prepare() {
 	if [[ ${PV##*.} = 9999 ]]; then
