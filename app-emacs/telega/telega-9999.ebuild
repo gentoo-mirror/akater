@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -23,7 +23,7 @@ DOCS="README.md"
 
 # todo: tgs2png
 BDEPEND="
-	>=net-libs/tdlib-1.8.7
+	>=net-libs/tdlib-1.8.10
 	sys-devel/make
 	virtual/pkgconfig
 	doc? ( app-emacs/ellit-org
@@ -48,7 +48,7 @@ BDEPEND="
 # fixme: tray support will be built if libappindicator is installed,
 # regardless of USE
 RDEPEND="
-	>=net-libs/tdlib-1.8.7
+	>=net-libs/tdlib-1.8.10
 	>=app-emacs/visual-fill-column-1.9
 	>=app-emacs/rainbow-identifiers-0.2.2
 	contrib? ( app-emacs/alert
@@ -60,6 +60,7 @@ RDEPEND="
 	dbus? ( app-editors/emacs[dbus] )
 	geo? ( app-emacs/geo )
 	org? ( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) )
+	standalone? ( app-emacs/company app-emacs/helm app-emacs/which-key )
 	tray? ( >=dev-libs/libappindicator-3 )
 "
 

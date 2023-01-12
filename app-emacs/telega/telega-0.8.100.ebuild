@@ -28,7 +28,6 @@ BDEPEND="
 	sys-devel/make
 	virtual/pkgconfig
 	doc? ( app-emacs/ellit-org
-		   app-emacs/compat
 		   >=app-emacs/htmlize-1.34
 		   app-emacs/alert
 		   app-emacs/all-the-icons
