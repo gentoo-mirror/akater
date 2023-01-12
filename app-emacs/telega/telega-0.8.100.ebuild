@@ -71,6 +71,10 @@ src_prepare() {
 		eapply "${FILESDIR}/${PN}"-0.8.75-fix-make-doc.patch
 		eapply "${FILESDIR}/${PN}"-0.8.0-fix-make-doc-org-persist.patch
 		cp "${FILESDIR}"/theme-readtheorg.setup docs
+		rm docs/index-0.7.2.html
+		rm docs/index-release.html
+		rm docs/index.html
+		rm docs/telega-manual.org
 	fi
 
 	if use test; then
