@@ -11,4 +11,4 @@ PROPERTIES=live
 RDEPEND=>=net-libs/tdlib-1.8.10 >=app-emacs/visual-fill-column-1.9 >=app-emacs/rainbow-identifiers-0.2.2 contrib? ( app-emacs/alert app-emacs/all-the-icons app-emacs/dashboard app-emacs/esxml app-emacs/language-detection app-emacs/transient ) dbus? ( app-editors/emacs[dbus] ) geo? ( app-emacs/geo ) org? ( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) ) standalone? ( app-emacs/company app-emacs/helm app-emacs/which-key ) tray? ( >=dev-libs/libappindicator-3 ) >=app-editors/emacs-26.1:*
 SLOT=0
 _eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	8aab2c847b5894dc40503ae1d203abcf	git-r3	2347f8fe2d392b2a091191f94be37e6f
-_md5_=635ceffde0386a289ff8fbc7b09d4773
+_md5_=9aa320f1b25b45f767930b0532e12c11
