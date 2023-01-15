@@ -21,6 +21,7 @@
   <flag name="org">Enable Org links</flag>
   <flag name="standalone">Accessibility for users without Emacs knowledge</flag>
   <flag name="tray">Enable AppIndicator support</flag>
+  <flag name="texinfo">Build and install Info documentation</flag>
 </use>
 <upstream>
   <remote-id type="github">zevlg/telega.el</remote-id>
