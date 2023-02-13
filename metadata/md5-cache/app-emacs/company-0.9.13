@@ -1,4 +1,4 @@
-BDEPEND=>=app-editors/emacs-24.3:* verify-sig? ( app-crypt/gnupg >=app-portage/gemato-18.0 ) verify-sig? ( app-crypt/openpgp-keys-gnu-elpa )
+BDEPEND=>=app-editors/emacs-24.3:* verify-sig? ( app-crypt/gnupg >=app-portage/gemato-16 ) verify-sig? ( app-crypt/openpgp-keys-gnu-elpa )
 DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
 DESCRIPTION=Modular text completion framework
 EAPI=8
@@ -11,5 +11,5 @@ RDEPEND=>=app-editors/emacs-24.3:*
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://elpa.gnu.org/packages/company-0.9.13.tar verify-sig? ( https://elpa.gnu.org/packages/company-0.9.13.tar.sig )
-_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	8aab2c847b5894dc40503ae1d203abcf	verify-sig	b4c85caec7a10c3bd60a51de932bbfab	elpa	5d418d732ff72242897d8f781cbe17c8
+_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	8aab2c847b5894dc40503ae1d203abcf	verify-sig	85e14d0a93afa75c621382409ada8732	elpa	5d418d732ff72242897d8f781cbe17c8
 _md5_=2c6bcc389f56419c842fcf0aff89360b
