@@ -10,5 +10,5 @@ LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=app-emacs/eieio-akater-extras magit-section? ( app-emacs/magit-section ) !magit-section? ( app-emacs/magit ) app-emacs/transient
 SLOT=0
-_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	git-r3	2347f8fe2d392b2a091191f94be37e6f	akater-live-release	5c025c752f992da81399e15adf355e52	akater-emacs-nojit	05b3bacae453f93ecec4cbb9dddfa9cf
+_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	git-r3	c57c50c922e121043788de0b40ada60a	akater-live-release	5c025c752f992da81399e15adf355e52	akater-emacs-nojit	05b3bacae453f93ecec4cbb9dddfa9cf
 _md5_=7549de426837ada91405a5935c6ec0f5

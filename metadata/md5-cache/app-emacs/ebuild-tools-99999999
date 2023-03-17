@@ -11,5 +11,5 @@ PROPERTIES=live
 RDEPEND=app-emacs/file-tree app-emacs/akater-misc app-emacs/mmxx-macros || ( app-admin/sudo app-admin/doas sys-apps/shadow ) app-emacs/akater-sh app-emacs/akater-conf eix? ( app-emacs/eix app-portage/eix ) gentoolkit? ( app-portage/gentoolkit ) app-emacs/gentoo-cache
 REQUIRED_USE=|| ( eix gentoolkit ) eix
 SLOT=0
-_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	git-r3	2347f8fe2d392b2a091191f94be37e6f	akater-live-release	5c025c752f992da81399e15adf355e52	akater-emacs-nojit	05b3bacae453f93ecec4cbb9dddfa9cf
+_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	git-r3	c57c50c922e121043788de0b40ada60a	akater-live-release	5c025c752f992da81399e15adf355e52	akater-emacs-nojit	05b3bacae453f93ecec4cbb9dddfa9cf
 _md5_=48a9a1a8380ad6e9e297613c3d418c4d

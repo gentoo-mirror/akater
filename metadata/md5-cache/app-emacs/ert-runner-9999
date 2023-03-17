@@ -9,5 +9,5 @@ LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=>=app-emacs/ansi-0.1.0 >=app-emacs/commander-0.2.0 >=app-emacs/dash-1.8.0 >=app-emacs/f-0.10.0 >=app-emacs/s-1.6.1 >=app-emacs/shut-up-0.1.0 >=app-editors/emacs-24:*
 SLOT=0
-_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	8aab2c847b5894dc40503ae1d203abcf	git-r3	2347f8fe2d392b2a091191f94be37e6f
+_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	4d1c0e88698cac71b148578be8359db3	git-r3	c57c50c922e121043788de0b40ada60a
 _md5_=3b54eaa2d05fd6c1d4f6247a71ee8cb0
