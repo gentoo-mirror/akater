@@ -11,5 +11,5 @@ RDEPEND=>=net-libs/tdlib-1.8.0 >=app-emacs/visual-fill-column-1.9 >=app-emacs/ra
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/zevlg/telega.el/archive/v0.8.0.tar.gz -> telega-0.8.0.tar.gz
-_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	4d1c0e88698cac71b148578be8359db3
+_eclasses_=elisp-common	4f91d24ccf86f94b3f28c6470aab24d3	elisp	4885a6bf2026d3a2d5b9789f3b76d1f3
 _md5_=267cde26f1257816f04a0ecf3e3f2054

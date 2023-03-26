@@ -8,5 +8,5 @@ KEYWORDS=amd64 ~x86
 LICENSE=GPL-3
 PROPERTIES=live
 SLOT=0
-_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	git-r3	c57c50c922e121043788de0b40ada60a	akater-live-release	5c025c752f992da81399e15adf355e52	akater-emacs-nojit	05b3bacae453f93ecec4cbb9dddfa9cf
+_eclasses_=elisp-common	4f91d24ccf86f94b3f28c6470aab24d3	git-r3	27e13c09a4c7e4c78ac812f74727e676	akater-live-release	5c025c752f992da81399e15adf355e52	akater-emacs-nojit	05b3bacae453f93ecec4cbb9dddfa9cf
 _md5_=980503165899ee1af034822acb61998f
