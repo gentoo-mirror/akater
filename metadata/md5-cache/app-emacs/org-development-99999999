@@ -11,5 +11,5 @@ LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=app-emacs/org-header-cycling app-emacs/org-project app-emacs/akater-misc >=app-emacs/poly-org-0.2 >=app-editors/emacs-26:* >=app-editors/emacs-26:*
 SLOT=0
-_eclasses_=elisp-common	4f91d24ccf86f94b3f28c6470aab24d3	elisp	4885a6bf2026d3a2d5b9789f3b76d1f3	orgmode	e532a02a56f4fe94f626e66a625792e3	git-r3	27e13c09a4c7e4c78ac812f74727e676
+_eclasses_=elisp-common	1d6e8d43be4713f04a441f721d890d48	elisp	4885a6bf2026d3a2d5b9789f3b76d1f3	orgmode	e532a02a56f4fe94f626e66a625792e3	git-r3	27e13c09a4c7e4c78ac812f74727e676
 _md5_=19e4e8e4f63c221fe91d6693d1625c4b

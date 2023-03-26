@@ -9,5 +9,5 @@ LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=app-emacs/akater-misc app-emacs/akater-sh app-emacs/mmxx-macros >=app-portage/eix-0.34.4
 SLOT=0
-_eclasses_=elisp-common	4f91d24ccf86f94b3f28c6470aab24d3	git-r3	27e13c09a4c7e4c78ac812f74727e676	akater-live-release	5c025c752f992da81399e15adf355e52	akater-emacs-nojit	05b3bacae453f93ecec4cbb9dddfa9cf
+_eclasses_=elisp-common	1d6e8d43be4713f04a441f721d890d48	git-r3	27e13c09a4c7e4c78ac812f74727e676	akater-live-release	5c025c752f992da81399e15adf355e52	akater-emacs-nojit	05b3bacae453f93ecec4cbb9dddfa9cf
 _md5_=e85f4e1c39bd47a1348110ef5854ced1

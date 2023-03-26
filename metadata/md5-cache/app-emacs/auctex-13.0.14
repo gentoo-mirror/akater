@@ -11,5 +11,5 @@ RDEPEND=tex? ( virtual/latex-base ) preview-latex? ( app-text/dvipng app-text/gh
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://elpa.gnu.org/packages/auctex-13.0.14.tar verify-sig? ( https://elpa.gnu.org/packages/auctex-13.0.14.tar.sig )
-_eclasses_=elisp-common	4f91d24ccf86f94b3f28c6470aab24d3	elisp	4885a6bf2026d3a2d5b9789f3b76d1f3	verify-sig	ed3712fa46ee0fdc2dbbad539e20ff26	elpa	5d418d732ff72242897d8f781cbe17c8
+_eclasses_=elisp-common	1d6e8d43be4713f04a441f721d890d48	elisp	4885a6bf2026d3a2d5b9789f3b76d1f3	verify-sig	ed3712fa46ee0fdc2dbbad539e20ff26	elpa	5d418d732ff72242897d8f781cbe17c8
 _md5_=dc2cfde97308d48ec64187682ace175d

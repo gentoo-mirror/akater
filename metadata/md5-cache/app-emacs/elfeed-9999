@@ -10,5 +10,5 @@ LICENSE=Unlicense
 PROPERTIES=live
 RDEPEND=app-emacs/async org? ( || ( app-emacs/org app-emacs/org-mode ) ) emms? ( app-emacs/emms ) web? ( >=app-emacs/simple-httpd-1.5.1 ) >=app-editors/emacs-24.3:*
 SLOT=0
-_eclasses_=elisp-common	4f91d24ccf86f94b3f28c6470aab24d3	elisp	4885a6bf2026d3a2d5b9789f3b76d1f3	git-r3	27e13c09a4c7e4c78ac812f74727e676
+_eclasses_=elisp-common	1d6e8d43be4713f04a441f721d890d48	elisp	4885a6bf2026d3a2d5b9789f3b76d1f3	git-r3	27e13c09a4c7e4c78ac812f74727e676
 _md5_=9f815e10f9dd2accae3bde3b718a67fa
