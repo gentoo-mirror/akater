@@ -1,5 +1,5 @@
 BDEPEND=>=net-libs/tdlib-1.8.8 sys-devel/make virtual/pkgconfig doc? ( app-emacs/ellit-org app-emacs/compat >=app-emacs/htmlize-1.34 app-emacs/alert app-emacs/all-the-icons >=app-emacs/compat-28.1.2.2 >=app-emacs/dashboard-1.8.0 app-emacs/esxml >=app-emacs/rainbow-identifiers-0.2.2 app-emacs/transient >=app-emacs/visual-fill-column-1.9 ) org? ( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) ) test? ( >=dev-lang/python-3 ) tray? ( >=dev-libs/libappindicator-3 ) >=app-editors/emacs-26.1:* >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
 DESCRIPTION=GNU Emacs telegram client (unofficial)
 EAPI=8
 HOMEPAGE=https://zevlg.github.io/telega.el
@@ -10,5 +10,5 @@ LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=>=net-libs/tdlib-1.8.8 >=app-emacs/visual-fill-column-1.9 >=app-emacs/rainbow-identifiers-0.2.2 contrib? ( app-emacs/alert app-emacs/all-the-icons app-emacs/dashboard app-emacs/esxml app-emacs/language-detection app-emacs/transient ) dbus? ( app-editors/emacs[dbus] ) geo? ( app-emacs/geo ) org? ( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) ) standalone? ( app-emacs/company app-emacs/helm app-emacs/which-key ) tray? ( >=dev-libs/libappindicator-3 ) >=app-editors/emacs-26.1:*
 SLOT=0
-_eclasses_=elisp-common	1d6e8d43be4713f04a441f721d890d48	elisp	4885a6bf2026d3a2d5b9789f3b76d1f3	git-r3	27e13c09a4c7e4c78ac812f74727e676
+_eclasses_=elisp-common	dcd21c5d379fc2217e95f529504c5fe0	elisp	7190c722d9e06fabcae26ef1e1dc9183	git-r3	27e13c09a4c7e4c78ac812f74727e676
 _md5_=914f0c1e83492810b76b6abbaf9586d5

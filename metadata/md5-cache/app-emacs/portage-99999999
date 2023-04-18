@@ -11,5 +11,5 @@ LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=|| ( app-admin/sudo app-admin/doas sys-apps/shadow ) app-portage/eix app-portage/gentoolkit smart-live-rebuild? ( app-portage/smart-live-rebuild ) app-emacs/akater-misc app-emacs/akater-sh app-emacs/ebuild-tools app-emacs/gentoo-cache helm? ( app-emacs/helm ) pona? ( app-emacs/deferred app-emacs/portage-navi ) app-emacs/transient >=sys-apps/portage-2.3.7 >=app-editors/emacs-26:*
 SLOT=0
-_eclasses_=elisp-common	1d6e8d43be4713f04a441f721d890d48	elisp	4885a6bf2026d3a2d5b9789f3b76d1f3	orgmode	e532a02a56f4fe94f626e66a625792e3	git-r3	27e13c09a4c7e4c78ac812f74727e676	akater-live-release	5c025c752f992da81399e15adf355e52
+_eclasses_=elisp-common	dcd21c5d379fc2217e95f529504c5fe0	elisp	7190c722d9e06fabcae26ef1e1dc9183	orgmode	e532a02a56f4fe94f626e66a625792e3	git-r3	27e13c09a4c7e4c78ac812f74727e676	akater-live-release	5c025c752f992da81399e15adf355e52
 _md5_=ed8de89810cb84237f7a75a9e7b13928

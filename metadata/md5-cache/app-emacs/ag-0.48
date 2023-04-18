@@ -11,5 +11,5 @@ RDEPEND=>=app-emacs/dash-2.8.0 >=app-emacs/s-1.9.0 >=app-editors/emacs-24:*
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/Wilfred/ag.el/archive/refs/tags/0.48.tar.gz -> ag-0.48.tar.gz
-_eclasses_=elisp-common	1d6e8d43be4713f04a441f721d890d48	elisp	4885a6bf2026d3a2d5b9789f3b76d1f3
+_eclasses_=elisp-common	dcd21c5d379fc2217e95f529504c5fe0	elisp	7190c722d9e06fabcae26ef1e1dc9183
 _md5_=eb38be47ea7196d3e0207f928293e850

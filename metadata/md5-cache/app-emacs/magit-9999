@@ -1,5 +1,5 @@
 BDEPEND=>=app-emacs/compat-28.1.1.2 app-emacs/transient >=app-emacs/with-editor-2.8.0 sys-apps/texinfo libgit? ( app-emacs/libegit2 ) !magit-section? ( app-emacs/magit-section ) >=app-editors/emacs-25:* >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
 DESCRIPTION=A Git porcelain inside Emacs
 EAPI=8
 HOMEPAGE=https://magit.vc/
@@ -10,5 +10,5 @@ LICENSE=GPL-3+
 PROPERTIES=live
 RDEPEND=>=app-emacs/compat-28.1.1.2 app-emacs/transient >=app-emacs/with-editor-2.8.0 sys-apps/texinfo libgit? ( app-emacs/libegit2 ) !magit-section? ( app-emacs/magit-section ) >=dev-vcs/git-2.0.0 libgit? ( dev-libs/libgit2 app-emacs/libegit2 ) !magit-section? ( app-emacs/magit-section ) >=app-editors/emacs-25:*
 SLOT=0
-_eclasses_=elisp-common	1d6e8d43be4713f04a441f721d890d48	elisp	4885a6bf2026d3a2d5b9789f3b76d1f3	git-r3	27e13c09a4c7e4c78ac812f74727e676
+_eclasses_=elisp-common	dcd21c5d379fc2217e95f529504c5fe0	elisp	7190c722d9e06fabcae26ef1e1dc9183	git-r3	27e13c09a4c7e4c78ac812f74727e676
 _md5_=851858ae284a7acc6b6067eaf99ee09e
