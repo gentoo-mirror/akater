@@ -1,0 +1,14 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=postinst postrm setup unpack
+DEPEND=test? ( app-emacs/org-development-elisp )
+DESCRIPTION=Surface-level non-English (NonEn) Elisp in Emacs
+EAPI=8
+HOMEPAGE=https://framagit.org/akater/emacs-nonen
+INHERIT=elisp-common akater-live-release akater-emacs-nojit
+IUSE=test
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+PROPERTIES=live
+SLOT=0
+_eclasses_=elisp-common	dcd21c5d379fc2217e95f529504c5fe0	git-r3	27e13c09a4c7e4c78ac812f74727e676	akater-live-release	5c025c752f992da81399e15adf355e52	akater-emacs-nojit	05b3bacae453f93ecec4cbb9dddfa9cf
+_md5_=702b8387bc2f98621f7763ac72e3b2cf

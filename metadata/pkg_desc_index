@@ -100,6 +100,7 @@ app-emacs/melpa-sources 99999999: Milkman Emacs Lisp Package Archive recipes
 app-emacs/mmxx-macros 99999999: Useful Lisp macros developed ca. 2020
 app-emacs/modus-themes 9999: Highly accessible themes (WCAG AAA) for Emacs
 app-emacs/multitran 9999: Interface to multitran
+app-emacs/nonen 99999999: Surface-level non-English (NonEn) Elisp in Emacs
 app-emacs/org 9999: An Emacs mode for notes and project planning
 app-emacs/org-board 9999: Bookmarking and web archival system for Org mode.
 app-emacs/org-clhs 99999999: Support for links to CLHS in Org mode
