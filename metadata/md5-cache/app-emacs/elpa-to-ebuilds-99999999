@@ -10,5 +10,5 @@ LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=app-emacs/akater-misc app-emacs/akater-sh app-emacs/ebuild-mode app-emacs/ebuild-tools app-emacs/file-tree melpa? ( app-emacs/melpa-sources[package-build,recipes] )
 SLOT=0
-_eclasses_=elisp-common	dcd21c5d379fc2217e95f529504c5fe0	git-r3	27e13c09a4c7e4c78ac812f74727e676	akater-live-release	5c025c752f992da81399e15adf355e52	akater-emacs-nojit	05b3bacae453f93ecec4cbb9dddfa9cf
+_eclasses_=elisp-common	01bc6dc778b74a9deebe4e419a3b790e	git-r3	27e13c09a4c7e4c78ac812f74727e676	akater-live-release	5c025c752f992da81399e15adf355e52	akater-emacs-nojit	05b3bacae453f93ecec4cbb9dddfa9cf
 _md5_=10f4a9239ffd09b997f13deb86a3fe6b

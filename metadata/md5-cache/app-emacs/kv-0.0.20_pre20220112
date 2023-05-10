@@ -11,5 +11,5 @@ RDEPEND=>=app-editors/emacs-24:*
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/akater/emacs-kv/archive/refs/tags/0.0.20_pre20220112.tar.gz -> kv-0.0.20_pre20220112.tar.gz
-_eclasses_=elisp-common	dcd21c5d379fc2217e95f529504c5fe0	elisp	7190c722d9e06fabcae26ef1e1dc9183
+_eclasses_=elisp-common	01bc6dc778b74a9deebe4e419a3b790e	elisp	7190c722d9e06fabcae26ef1e1dc9183
 _md5_=274701f9c3767834b8ef4d22a2f45f12
