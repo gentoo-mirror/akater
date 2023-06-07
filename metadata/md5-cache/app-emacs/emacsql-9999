@@ -1,14 +1,14 @@
-BDEPEND=app-emacs/pg system-sqlite? ( >=dev-db/sqlite-3 ) >=app-editors/emacs-29:* >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=app-emacs/pg system-sqlite? ( >=dev-db/sqlite-3 ) builtin? ( >=app-editors/emacs-29 ) >=app-editors/emacs-25.1:* >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
 DESCRIPTION=High-level SQL database front-end
 EAPI=8
 HOMEPAGE=https://github.com/magit/emacsql
 INHERIT=elisp git-r3
-IUSE=+system-sqlite test
+IUSE=builtin +system-sqlite test
 KEYWORDS=~amd64 ~x86
 LICENSE=Unlicense
 PROPERTIES=live
-RDEPEND=>=app-editors/emacs-25.1[dynamic-loading] >=app-editors/emacs-29:*
+RDEPEND=>=app-editors/emacs-25.1[dynamic-loading] builtin? ( >=app-editors/emacs-29 ) >=app-editors/emacs-25.1:*
 SLOT=0
 _eclasses_=elisp-common	01bc6dc778b74a9deebe4e419a3b790e	elisp	7190c722d9e06fabcae26ef1e1dc9183	git-r3	27e13c09a4c7e4c78ac812f74727e676
-_md5_=a63ec0afbe330efefec1334aec2970b9
+_md5_=378292cd8ca176614e3030a2177bf85b

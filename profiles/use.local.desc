@@ -40,6 +40,7 @@ app-emacs/elfeed:emms - Support EMMS
 app-emacs/elfeed:org - Support Org links
 app-emacs/elfeed:web - Install web interface view of the database
 app-emacs/elpa-to-ebuilds:melpa - Use melpa recipes as additional data source
+app-emacs/emacsql:builtin - Compile emacsql-sqlite-builtin (requires Emacs 29)
 app-emacs/emacsql:system-sqlite - Use system-wide sqlite instead of bundled
 app-emacs/ement:e2e - Enable end to end encryption support via pantalaimon
 app-emacs/ement:extras - Install extra features (auth-source and proxy support)
