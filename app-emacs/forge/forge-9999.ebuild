@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -10,9 +10,9 @@ DESCRIPTION="Access Git forges from Magit"
 HOMEPAGE="https://github.com/magit/forge"
 
 EGIT_REPO_URI="https://github.com/magit/forge.git"
-EGIT_BRANCH="master"
+EGIT_BRANCH="main"
 # EGIT_REPO_URI="https://github.com/akater/forge.git"
-# EGIT_BRANCH="master"
+# EGIT_BRANCH="main"
 EGIT_CLONE_TYPE="mirror"
 
 KEYWORDS="~amd64 ~x86"
