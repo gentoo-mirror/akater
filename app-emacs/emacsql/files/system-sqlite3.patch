@@ -1,10 +1,12 @@
 
 --- a/sqlite/Makefile
 +++ b/sqlite/Makefile
-@@ -1,17 +1,8 @@
+@@ -1,19 +1,10 @@
+ -include ../.config.mk
+ 
  .POSIX:
 -LDLIBS = -ldl -lm
--CFLAGS = -O2 -Wall -Wextra \
+-CFLAGS = -O2 -Wall -Wextra -Wno-implicit-fallthrough \
 -    -DSQLITE_THREADSAFE=0 \
 -    -DSQLITE_DEFAULT_FOREIGN_KEYS=1 \
 -    -DSQLITE_ENABLE_FTS5 \
@@ -26,7 +28,7 @@
 
 --- a/sqlite/emacsql.c
 +++ b/sqlite/emacsql.c
-@@ -1,7 +1,7 @@
+@@ -3,7 +3,7 @@
  #include <stdio.h>
  #include <stdlib.h>
  #include <string.h>

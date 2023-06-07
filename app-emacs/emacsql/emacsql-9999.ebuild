@@ -1,8 +1,8 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-NEED_EMACS="29"
+NEED_EMACS="25.1"
 
 inherit elisp git-r3
 
@@ -15,7 +15,7 @@ LICENSE="Unlicense"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="+system-sqlite test"
+IUSE="builtin +system-sqlite test"
 
 DOCS="README.md"
 
@@ -23,12 +23,18 @@ SITEFILE="50${PN}-gentoo.el"
 
 BDEPEND="
 	app-emacs/pg
-	system-sqlite? ( >=dev-db/sqlite-3 )"
+	system-sqlite? ( >=dev-db/sqlite-3 )
+	builtin? ( >=app-editors/emacs-29 )
+"
 RDEPEND="
 	>=app-editors/emacs-25.1[dynamic-loading]
+	builtin? ( >=app-editors/emacs-29 )
 "
 
 src_prepare() {
+	if ! use builtin ; then
+		rm emacsql-sqlite-builtin.el
+	fi
 	if use system-sqlite ; then
 		eapply "${FILESDIR}/system-sqlite3.patch"
 		rm sqlite/sqlite*

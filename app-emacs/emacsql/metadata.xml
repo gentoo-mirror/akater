@@ -7,9 +7,10 @@
 </maintainer>
 <stabilize-allarches/>
 <use>
+  <flag name="builtin">Compile emacsql-sqlite-builtin (requires Emacs 29)</flag>
   <flag name="system-sqlite">Use system-wide sqlite instead of bundled</flag>
 </use>
 <upstream>
-  <remote-id type="github">skeeto/emacsql</remote-id>
+  <remote-id type="github">magit/emacsql</remote-id>
 </upstream>
 </pkgmetadata>
