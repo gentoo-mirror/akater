@@ -18,7 +18,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="
-	app-emacs/akater-misc
+	app-emacs/mmxx-macros
 "
 
 BDEPEND="
