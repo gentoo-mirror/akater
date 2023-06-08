@@ -42,15 +42,12 @@ app-emacs/elfeed:web - Install web interface view of the database
 app-emacs/elpa-to-ebuilds:melpa - Use melpa recipes as additional data source
 app-emacs/emacsql:builtin - Compile emacsql-sqlite-builtin (requires Emacs 29)
 app-emacs/emacsql:system-sqlite - Use system-wide sqlite instead of bundled
-app-emacs/ement:e2e - Enable end to end encryption support via pantalaimon
-app-emacs/ement:extras - Install extra features (auth-source and proxy support)
 app-emacs/ivy:counsel - Also install counsel
 app-emacs/ivy:hydra - Install ivy-hydra
 app-emacs/ivy:swiper - Also install swiper
 app-emacs/libegit2:system-libgit - Use the system-wide dev-libs/libgit2 instead of bundled.
 app-emacs/lispy:clojure - Support Clojure
 app-emacs/literate-elisp:bootstrap - Compile with itself
-app-emacs/looking-through:esdf - Install ESDF definition files
 app-emacs/magentoo:magit-section - Use standalone magit-section
 app-emacs/magit:libgit - Install with libgit2 support (experimental)
 app-emacs/magit:magit-section - Install magit-section.el
@@ -98,9 +95,6 @@ media-gfx/fim:dia - Enable DIA file support via app-office/dia
 media-gfx/fim:imagemagick - Use convert from media-gfx/imagemagick as fallback file opener
 media-gfx/fim:pcx - Enable PCX file support
 media-gfx/fim:xfig - Enable FIG file support via media-gfx/xfig
-net-im/pantalaimon:dbus - Support additional features that require dbus
-net-im/pantalaimon:panctl - Install a CLI utility to control pantalaimon
-net-im/pantalaimon:systemd - Install systemd .service script
 net-libs/tdlib:clang - Compile using Clang
 net-libs/tdlib:cli - Install tg_cli
 net-libs/tdlib:gcc - Compile using GCC
