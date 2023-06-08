@@ -25,11 +25,10 @@ BDEPEND="
 	app-emacs/file-tree
 	app-emacs/akater-misc
 	app-emacs/mmxx-macros
-	app-emacs/sudo-edit
+	app-emacs/shmu
 "
 RDEPEND="${BDEPEND}
-	|| ( app-admin/sudo app-admin/doas sys-apps/shadow )
-	app-emacs/shmu
+	app-emacs/shmu[privileged]
 	app-emacs/akater-conf
 	eix? ( app-emacs/eix
 		   app-portage/eix )
