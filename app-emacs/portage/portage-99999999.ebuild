@@ -31,12 +31,11 @@ BDEPEND="
 "
 
 RDEPEND="
-	|| ( app-admin/sudo app-admin/doas sys-apps/shadow )
 	app-portage/eix
 	app-portage/gentoolkit
 	smart-live-rebuild? ( app-portage/smart-live-rebuild )
 	app-emacs/akater-misc
-	app-emacs/shmu
+	app-emacs/shmu[privileged]
 	app-emacs/ebuild-tools
 	app-emacs/gentoo-cache
 	helm? ( app-emacs/helm )
