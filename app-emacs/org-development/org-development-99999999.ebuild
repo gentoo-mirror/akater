@@ -32,5 +32,4 @@ BDEPEND="${RDEPEND}
 	app-emacs/set-endos
 "
 
-DEPEND="test? ( app-emacs/akater-misc
-				app-emacs/org-development-elisp )"
+DEPEND="test? ( app-emacs/org-development-elisp )"
