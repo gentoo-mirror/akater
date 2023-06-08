@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -21,7 +21,7 @@ DOCS="README.org"
 
 BDEPEND="
 	app-emacs/akater-misc
-	app-emacs/akater-sh
+	app-emacs/shmu
 	app-emacs/ebuild-tools
 	app-emacs/gentoo-cache
 	app-emacs/mmxx-macros
@@ -36,7 +36,7 @@ RDEPEND="
 	app-portage/gentoolkit
 	smart-live-rebuild? ( app-portage/smart-live-rebuild )
 	app-emacs/akater-misc
-	app-emacs/akater-sh
+	app-emacs/shmu
 	app-emacs/ebuild-tools
 	app-emacs/gentoo-cache
 	helm? ( app-emacs/helm )
