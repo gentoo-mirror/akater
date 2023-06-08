@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: akater-live-release.eclass
@@ -29,8 +29,6 @@ MY_PN=${MY_PN=${PN}}
 if [ ! -z ${ORG_LOCAL_SOURCES_PREFIX+x} ] ; then
 	export ORG_LOCAL_SOURCES_DIRECTORY=${ORG_LOCAL_SOURCES_PREFIX}/${MY_PN}
 fi
-
-EGIT_REPO_URI="${ORG_LOCAL_SOURCES_DIRECTORY}"
 
 export ORG_UPSTREAM_SOURCES_DIRECTORY="${SITEETC}/${PN}"
 # deprecated name:
