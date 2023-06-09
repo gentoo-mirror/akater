@@ -1,0 +1,12 @@
+BDEPEND=dev-vcs/git >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=postinst postrm unpack
+DESCRIPTION=A minimalistic build system for Elisp software
+EAPI=8
+HOMEPAGE=https://framagit.org/akater/emacs-fakemake
+INHERIT=elisp-common akater-live-release
+KEYWORDS=amd64 ~x86
+LICENSE=GPL-3+
+PROPERTIES=live
+SLOT=0
+_eclasses_=elisp-common	01bc6dc778b74a9deebe4e419a3b790e	git-r3	27e13c09a4c7e4c78ac812f74727e676	akater-live-release	897a1f1f3cc888930f723d152f685879
+_md5_=c4c6b57018c06e6394145b68c0851273
