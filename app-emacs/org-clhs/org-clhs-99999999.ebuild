@@ -1,10 +1,10 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 NEED_EMACS="26"
 
-inherit elisp-common akater-live-release akater-emacs-nojit
+inherit elisp-common akater-live-release
 
 DESCRIPTION="Support for links to CLHS in Org mode"
 HOMEPAGE="https://framagit.org/akater/org-clhs"
