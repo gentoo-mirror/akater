@@ -5,7 +5,7 @@ EAPI=8
 NEED_EMACS="25"
 
 MY_PN="emacs-${PN}"
-inherit elisp-common akater-live-release akater-emacs-nojit
+inherit elisp-common akater-live-release
 
 DESCRIPTION="Gentoo dashboard for Emacs"
 HOMEPAGE="https://framagit.org/akater/emacs-magentoo"
