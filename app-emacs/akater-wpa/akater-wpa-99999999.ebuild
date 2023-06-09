@@ -5,7 +5,7 @@ EAPI=8
 NEED_EMACS="25"
 
 MY_PN="emacs-wpa"
-inherit elisp-common akater-live-release akater-emacs-nojit
+inherit elisp-common akater-live-release
 
 DESCRIPTION="Emacs interface to wpa_supplicant"
 HOMEPAGE="https://gitlab.com/akater/emacs-wpa"
