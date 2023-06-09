@@ -8,7 +8,6 @@ app-emacs/ace-window 9999: Quickly switch windows.
 app-emacs/ag 0.48 9999: An Emacs front-end for ag ('the silver searcher')
 app-emacs/akater-conf 99999999: Emacs Lisp conf-related functions and macros used by akater
 app-emacs/akater-misc 99999999: Emacs Lisp accessory functions used by akater
-app-emacs/akater-sh 99999999: Emacs shell script related helper functions and macros
 app-emacs/akater-wpa 99999999: Emacs interface to wpa_supplicant
 app-emacs/alert 1.2 9999: Growl-style notification system for Emacs
 app-emacs/all-the-icons 5.0.0 9999: A library for inserting Developer icons
@@ -32,9 +31,7 @@ app-emacs/dash 9999: A modern list library for Emacs
 app-emacs/dashboard 1.7.0 1.8.1_pre20210827 9999: A startup screen extracted from Spacemacs
 app-emacs/db 0.0.7_pre20220112 9999: A database for EmacsLisp
 app-emacs/deferred 9999: Simple asynchronous functions for Emacs Lisp
-app-emacs/defmacro-gensym 99999999: Convenient gensyms for defmacro (Emacs Lisp)
 app-emacs/dired-rsync 9999: Allow rsync from dired buffers
-app-emacs/dotree 99999999: Iterating over cons trees in Emacs Lisp
 app-emacs/e2wm 1.5_pre20221130 9999: Simple window manager for Emacs
 app-emacs/ebdb 0.8.2 9999: Contact management package
 app-emacs/ebuild-mode 9999: Emacs modes for editing ebuilds and other Gentoo specific files
@@ -61,7 +58,6 @@ app-emacs/findr 0.9.11 9999: Breadth-first file-finding facility for (X)Emacs
 app-emacs/forge 9999: Access Git forges from Magit
 app-emacs/fsm 0.2.1 9999: State machine library
 app-emacs/gentoo-cache 99999999: Elisp package that provides cached data about underlying Gentoo system to Emacs
-app-emacs/gentoolkit 99999999: Use Portage's equery from Emacs
 app-emacs/geo 2.0 9999: Geolocation library for Emacs
 app-emacs/ghub 9999: Minuscule client libraries for Git forge APIs.
 app-emacs/gntp 0.1 9999: Growl Notification Protocol for Emacs
