@@ -5,7 +5,7 @@ EAPI=8
 NEED_EMACS="26"
 
 MY_PN="${PN}"
-inherit elisp-common akater-live-release akater-emacs-nojit
+inherit elisp-common akater-live-release
 
 DESCRIPTION="Convert Elisp packages to ebuilds"
 HOMEPAGE="https://gitlab.com/akater/elpa-to-ebuilds"
