@@ -5,7 +5,7 @@ EAPI=8
 NEED_EMACS="26"
 
 MY_PN="${PN}"
-inherit elisp-common akater-live-release akater-emacs-nojit
+inherit elisp-common akater-live-release
 
 DESCRIPTION="Create systems of org files from templates"
 HOMEPAGE="https://gitlab.com/akater/org-project"
