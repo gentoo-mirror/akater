@@ -1,15 +1,15 @@
-BDEPEND=app-emacs/file-tree app-emacs/akater-misc app-emacs/mmxx-macros >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=setup unpack
+BDEPEND=app-emacs/file-tree app-emacs/akater-misc app-emacs/mmxx-macros app-emacs/shmu >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=unpack
 DESCRIPTION=Functions to deal with ebuilds in Emacs Lisp
 EAPI=8
 HOMEPAGE=https://gitlab.com/akater/emacs-ebuild-tools
-INHERIT=elisp-common akater-live-release akater-emacs-nojit
+INHERIT=elisp-common akater-live-release
 IUSE=+eix gentoolkit
 KEYWORDS=amd64 ~x86
 LICENSE=GPL-3
 PROPERTIES=live
-RDEPEND=app-emacs/file-tree app-emacs/akater-misc app-emacs/mmxx-macros || ( app-admin/sudo app-admin/doas sys-apps/shadow ) app-emacs/akater-sh app-emacs/akater-conf eix? ( app-emacs/eix app-portage/eix ) gentoolkit? ( app-portage/gentoolkit ) app-emacs/gentoo-cache
+RDEPEND=app-emacs/file-tree app-emacs/akater-misc app-emacs/mmxx-macros app-emacs/shmu app-emacs/shmu[privileged] app-emacs/akater-conf eix? ( app-emacs/eix app-portage/eix ) gentoolkit? ( app-portage/gentoolkit ) app-emacs/gentoo-cache
 REQUIRED_USE=|| ( eix gentoolkit ) eix
 SLOT=0
-_eclasses_=elisp-common	01bc6dc778b74a9deebe4e419a3b790e	git-r3	27e13c09a4c7e4c78ac812f74727e676	akater-live-release	897a1f1f3cc888930f723d152f685879	akater-emacs-nojit	05b3bacae453f93ecec4cbb9dddfa9cf
-_md5_=48a9a1a8380ad6e9e297613c3d418c4d
+_eclasses_=elisp-common	01bc6dc778b74a9deebe4e419a3b790e	git-r3	27e13c09a4c7e4c78ac812f74727e676	akater-live-release	897a1f1f3cc888930f723d152f685879
+_md5_=6f4f1f459aeb22c1777d461044a59ad2
