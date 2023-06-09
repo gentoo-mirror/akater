@@ -1,11 +1,11 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 NEED_EMACS="24"
 
 MY_PN="emacs-${PN}"
-inherit elisp-common akater-live-release akater-emacs-nojit
+inherit elisp-common akater-live-release
 
 DESCRIPTION="Functions to deal with ebuilds in Emacs Lisp"
 HOMEPAGE="https://gitlab.com/akater/emacs-ebuild-tools"
@@ -25,10 +25,10 @@ BDEPEND="
 	app-emacs/file-tree
 	app-emacs/akater-misc
 	app-emacs/mmxx-macros
+	app-emacs/shmu
 "
 RDEPEND="${BDEPEND}
-	|| ( app-admin/sudo app-admin/doas sys-apps/shadow )
-	app-emacs/akater-sh
+	app-emacs/shmu[privileged]
 	app-emacs/akater-conf
 	eix? ( app-emacs/eix
 		   app-portage/eix )
