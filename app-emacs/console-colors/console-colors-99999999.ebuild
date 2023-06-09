@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -23,13 +23,13 @@ SITEFILE="50${PN}-gentoo.el"
 BDEPEND="
 	app-emacs/mmxx-macros
 	app-emacs/akater-misc
-	app-emacs/akater-sh
+	app-emacs/shmu
 "
 RDEPEND="
 	app-admin/sudo
 	sys-apps/kbd
 	app-emacs/akater-misc
-	app-emacs/akater-sh"
+	app-emacs/shmu"
 
 pkg_postinst() {
 	elisp-site-regen
