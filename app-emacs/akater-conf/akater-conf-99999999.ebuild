@@ -1,11 +1,11 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 NEED_EMACS="26"
 MY_PN="elisp-${PN}"
 
-inherit elisp-common akater-live-release akater-emacs-nojit
+inherit elisp-common akater-live-release
 
 DESCRIPTION="Emacs Lisp conf-related functions and macros used by akater"
 HOMEPAGE="https://gitlab.com/akater/elisp-akater-conf"
@@ -28,7 +28,6 @@ RDEPEND="
 	app-emacs/akater-misc
 "
 
-DEPEND="test? ( app-emacs/akater-misc
-				app-emacs/org-development-elisp )"
+DEPEND="test? ( app-emacs/org-development-elisp )"
 
 SITEFILE="50${PN}-gentoo.el"
