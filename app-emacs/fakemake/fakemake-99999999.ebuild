@@ -18,9 +18,13 @@ KEYWORDS="amd64 ~x86"
 
 DOCS="" # README.org is a relative symlink
 
+IUSE="test"
+
 SITEFILE="50${PN}-gentoo.el"
 
 BDEPEND="dev-vcs/git"
+
+DEPEND="test? ( app-emacs/org-development-elisp )"
 
 pkg_postinst() {
 	elisp-site-regen
