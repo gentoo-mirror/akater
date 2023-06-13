@@ -18,6 +18,8 @@ IUSE="nopasswd"
 
 DOCS="" # README.org is a relative symlink
 
+IUSE="test"
+
 SITEFILE="50${PN}-gentoo.el"
 
 BDEPEND="
@@ -30,6 +32,8 @@ RDEPEND="
 	sys-apps/kbd
 	app-emacs/akater-misc
 	app-emacs/shmu"
+
+DEPEND="test? ( app-emacs/org-development-elisp )"
 
 pkg_postinst() {
 	elisp-site-regen
