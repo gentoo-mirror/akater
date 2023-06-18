@@ -16,7 +16,7 @@ KEYWORDS="amd64 ~x86"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="melpa"
+IUSE="melpa test"
 
 DOCS="" # README.org is a relative symlink
 
@@ -33,4 +33,8 @@ RDEPEND="
 	app-emacs/ebuild-tools
 	app-emacs/file-tree
 	melpa? ( app-emacs/melpa-sources[package-build,recipes] )
+"
+
+DEPEND="
+	test? ( app-emacs/org-development-elisp )
 "
