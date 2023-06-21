@@ -20,6 +20,8 @@ IUSE="melpa test"
 
 DOCS="" # README.org is a relative symlink
 
+REQUIRED_USE="test? ( melpa )"
+
 BDEPEND="
 	app-emacs/akater-misc
 	app-emacs/looking-through
