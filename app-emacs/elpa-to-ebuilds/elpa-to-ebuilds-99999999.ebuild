@@ -38,5 +38,5 @@ RDEPEND="
 "
 
 DEPEND="
-	test? ( app-emacs/org-development-elisp )
+	test? ( app-emacs/ort )
 "
