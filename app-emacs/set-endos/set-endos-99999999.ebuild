@@ -16,7 +16,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
 
-IUSE=""
+IUSE="test"
 
 DOCS="" # README.org is a relative symlink
 
@@ -25,6 +25,8 @@ DOCS="" # README.org is a relative symlink
 BDEPEND="
 	app-emacs/mmxx-macros
 "
+
+DEPEND="test? ( app-emacs/ort )"
 
 pkg_postinst() {
 	elisp-site-regen
