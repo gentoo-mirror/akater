@@ -30,6 +30,7 @@ DEPEND="
 	test? (
 			app-emacs/mmxx-macros
 			app-emacs/akater-misc
+			app-emacs/org-src-elisp-extras
 			app-emacs/ort
 			)
 "
