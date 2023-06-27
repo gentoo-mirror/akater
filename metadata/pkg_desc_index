@@ -105,8 +105,10 @@ app-emacs/org-development-lisp 99999999: Elisp package that streamlines developm
 app-emacs/org-header-cycling 99999999: Elisp package that allows convenient cycling of org src block headers
 app-emacs/org-nutrition 99999999: Simple nutrition tracking in Org
 app-emacs/org-project 99999999: Create systems of org files from templates
+app-emacs/org-src-elisp-extras 99999999: Additional ways to evaluate elisp src blocks
 app-emacs/org-trello 9999: Minor mode to synchronize org-mode buffer and trello board
 app-emacs/orgit 9999: Support for Org links to Magit buffers
+app-emacs/ort 99999999: Treat Org blocks like tests
 app-emacs/ox-json 9999: JSON export backend for Org mode
 app-emacs/page-break-lines 0.14 9999: Display ^L page breaks as tidy horizontal lines
 app-emacs/paredit 9999: Minor mode for performing structured editing of S-expressions
@@ -130,7 +132,7 @@ app-emacs/rake 9999: Run rake commands
 app-emacs/request 9999: Compatible layer for URL request in Emacs
 app-emacs/rich-minority 9999: Clean-up and Beautify the list of minor-modes.
 app-emacs/s 9999: The long lost Emacs string manipulation library.
-app-emacs/set-endos 99999999: Elisp package that provides some interfaces to finite dynamical systems
+app-emacs/set-endos 99999999: Elisp library that provides some interface to finite dynamical systems
 app-emacs/sgc 99999999: Sufficiently Generic Completion (Emacs Lisp)
 app-emacs/shmu 99999999: A sexp to sh translator and other *nix-related convenience stuff
 app-emacs/shut-up 0.3.3 9999: Shut up would you!
