@@ -33,7 +33,7 @@ RDEPEND="
 	app-emacs/akater-misc
 	app-emacs/shmu"
 
-DEPEND="test? ( app-emacs/org-development-elisp )"
+DEPEND="test? ( app-emacs/ort )"
 
 pkg_postinst() {
 	elisp-site-regen
