@@ -13,6 +13,8 @@ EGIT_REPO_URI="https://framagit.org/akater/org-clhs.git"
 
 LICENSE="GPL-3"
 SLOT="0"
+KEYWORDS="amd64 ~x86"
+
 IUSE="test"
 
 DOCS="" # README.org is a relative symlink
@@ -20,14 +22,18 @@ DOCS="" # README.org is a relative symlink
 RDEPEND="
 	dev-lisp/hyperspec
 	app-emacs/slime
-	test? (
-			app-emacs/mmxx-macros
-			app-emacs/akater-misc
-			app-emacs/org-development-elisp
-			)
 "
 
 BDEPEND="${RDEPEND}"
+
+DEPEND="
+	test? (
+			app-emacs/mmxx-macros
+			app-emacs/akater-misc
+			app-emacs/org-src-elisp-extras
+			app-emacs/ort
+			)
+"
 
 pkg_postinst() {
 	elisp-site-regen
