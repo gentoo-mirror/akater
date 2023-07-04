@@ -24,4 +24,8 @@ BDEPEND="
 	app-emacs/mmxx-macros
 "
 
-DEPEND="test? ( app-emacs/org-development-elisp )"
+DEPEND="
+	test? (
+			app-emacs/ort
+			app-emacs/org-src-elisp-extras
+)"
