@@ -21,7 +21,7 @@ IUSE="test"
 
 DOCS="" # README.org is a relative symlink
 
-depend="test? ( app-emacs/ort )"
+DEPEND="test? ( app-emacs/ort )"
 
 pkg_postinst() {
 	elisp-site-regen
