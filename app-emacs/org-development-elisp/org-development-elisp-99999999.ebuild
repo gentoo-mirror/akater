@@ -1,36 +1,43 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 NEED_EMACS="26"
 
-inherit elisp orgmode akater-live-release
+inherit elisp-common akater-live-release
 
-DESCRIPTION="Elisp package that streamlines development of Elisp packages in org"
+DESCRIPTION="Elisp package that streamlines development of Elisp packages in Org"
 HOMEPAGE="https://gitlab.com/akater/org-development-elisp"
 
 EGIT_REPO_URI="https://gitlab.com/akater/org-development-elisp.git"
-KEYWORDS="amd64 ~x86"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE=""
+KEYWORDS="amd64 ~x86"
+
+IUSE="test"
+
+DOCS="" # README.org is a relative symlink
 
 RDEPEND="
 	app-emacs/org-development
-	app-emacs/org-project
+	app-emacs/org-src-elisp-extras
 "
 
 BDEPEND="${RDEPEND}
 	app-emacs/mmxx-macros
+	app-emacs/etemplate
 "
 
-src_install() {
+DEPEND="test? ( app-emacs/ort )"
 
-	elisp-install ${PN} build/*.{el,elc}
+pkg_postinst() {
+	elisp-site-regen
+	if declare -f readme.gentoo_print_elog >/dev/null; then
+		readme.gentoo_print_elog
+	fi
+}
 
-	elisp-install ${PN} -r templates
-
-	elisp-install ${PN} -r testing
-
+pkg_postrm() {
+	elisp-site-regen
 }
