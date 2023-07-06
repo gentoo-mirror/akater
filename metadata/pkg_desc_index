@@ -51,6 +51,7 @@ app-emacs/epl 0.9 9999: Emacs Package Library
 app-emacs/ert-runner 0.8.0 9999: Opinionated Ert testing workflow
 app-emacs/esdf 99999999: A port of dev-lisp/asdf to Emacs Lisp
 app-emacs/esxml 0.3.8_pre20220112 9999: Library for working with xml via esxml and sxml
+app-emacs/etemplate 99999999: Create systems of org files from templates
 app-emacs/expand-region 9999: Emacs extension to increase selected region by semantic units
 app-emacs/exwm 9999: Emacs X Window Manager
 app-emacs/fakemake 99999999: A minimalistic build system for Elisp software
@@ -99,12 +100,11 @@ app-emacs/nonen 99999999: Surface-level non-English (NonEn) Elisp in Emacs
 app-emacs/org 9999: An Emacs mode for notes and project planning
 app-emacs/org-board 9999: Bookmarking and web archival system for Org mode.
 app-emacs/org-clhs 99999999: Support for links to CLHS in Org mode
-app-emacs/org-development 99999999: Elisp package that streamlines software development in org
-app-emacs/org-development-elisp 99999999: Elisp package that streamlines development of Elisp packages in org
-app-emacs/org-development-lisp 99999999: Elisp package that streamlines development of Common Lisp packages in org
+app-emacs/org-development 99999999: Elisp package that streamlines software development in Org
+app-emacs/org-development-elisp 99999999: Elisp package that streamlines development of Elisp packages in Org
+app-emacs/org-development-lisp 99999999: Elisp package that streamlines development of Common Lisp packages in Org
 app-emacs/org-header-cycling 99999999: Elisp package that allows convenient cycling of org src block headers
 app-emacs/org-nutrition 99999999: Simple nutrition tracking in Org
-app-emacs/org-project 99999999: Create systems of org files from templates
 app-emacs/org-src-elisp-extras 99999999: Additional ways to evaluate elisp src blocks
 app-emacs/org-trello 9999: Minor mode to synchronize org-mode buffer and trello board
 app-emacs/orgit 9999: Support for Org links to Magit buffers
