@@ -3,21 +3,22 @@
 
 EAPI=8
 NEED_EMACS="26"
+MY_PN="emacs-${PN}"
 
-inherit orgmode akater-live-release
-# inherit orgdev git-r3
+inherit elisp-common akater-live-release
 
 DESCRIPTION="Emacs interface to Portage"
 HOMEPAGE="https://gitlab.com/akater/emacs-portage"
 
-EGIT_REPO_URI="https://gitlab.com/akater/emacs-portage.git"
+EGIT_REPO_URI="https://gitlab.com/akater/${MY_PN}.git"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
-IUSE="helm pona smart-live-rebuild"
 
-DOCS="README.org"
+IUSE="helm pona smart-live-rebuild test"
+
+DOCS="" # README.org is a relative symlink
 
 BDEPEND="
 	app-emacs/akater-misc
@@ -44,4 +45,17 @@ RDEPEND="
 	>=sys-apps/portage-2.3.7
 "
 
-SITEFILE=70emacs-${PN}-gentoo.el
+DEPEND="test? ( app-emacs/ort app-emacs/org-src-elisp-extras )"
+
+SITEFILE="70emacs-${PN}-gentoo.el"
+
+pkg_postinst() {
+	elisp-site-regen
+	if declare -f readme.gentoo_print_elog >/dev/null; then
+		readme.gentoo_print_elog
+	fi
+}
+
+pkg_postrm() {
+	elisp-site-regen
+}
