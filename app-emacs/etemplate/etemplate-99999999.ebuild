@@ -10,10 +10,11 @@ DESCRIPTION="Create systems of org files from templates"
 HOMEPAGE="https://gitlab.com/akater/etemplate"
 
 EGIT_REPO_URI="https://gitlab.com/akater/etemplate.git"
-KEYWORDS="amd64 ~x86"
 
+KEYWORDS="amd64 ~x86"
 LICENSE="GPL-3+"
 SLOT="0"
+
 IUSE="test"
 
 DOCS="" # README.org is a relative symlink
