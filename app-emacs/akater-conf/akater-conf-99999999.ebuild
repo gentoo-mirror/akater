@@ -28,6 +28,6 @@ RDEPEND="
 	app-emacs/akater-misc
 "
 
-DEPEND="test? ( app-emacs/org-development-elisp )"
+DEPEND="test? ( app-emacs/ort )"
 
 SITEFILE="50${PN}-gentoo.el"
