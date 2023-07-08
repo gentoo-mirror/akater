@@ -104,7 +104,7 @@ app-emacs/org-development 99999999: Elisp package that streamlines software deve
 app-emacs/org-development-elisp 99999999: Elisp package that streamlines development of Elisp packages in Org
 app-emacs/org-development-lisp 99999999: Elisp package that streamlines development of Common Lisp packages in Org
 app-emacs/org-header-cycling 99999999: Elisp package that allows convenient cycling of org src block headers
-app-emacs/org-nutrition 99999999: Simple nutrition tracking in Org
+app-emacs/org-nutrition 99999999: Nutrition tracking in Org
 app-emacs/org-src-elisp-extras 99999999: Additional ways to evaluate elisp src blocks
 app-emacs/org-trello 9999: Minor mode to synchronize org-mode buffer and trello board
 app-emacs/orgit 9999: Support for Org links to Magit buffers
