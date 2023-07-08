@@ -1,13 +1,13 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 NEED_EMACS="25"
 
 MY_PN="${PN}"
-inherit elisp orgmode akater-live-release
+inherit elisp-common akater-live-release
 
-DESCRIPTION="Simple nutrition tracking in Org"
+DESCRIPTION="Nutrition tracking in Org"
 HOMEPAGE="https://gitlab.com/akater/org-nutrition"
 
 EGIT_REPO_URI="https://gitlab.com/akater/${MY_PN}.git"
@@ -15,9 +15,10 @@ EGIT_REPO_URI="https://gitlab.com/akater/${MY_PN}.git"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
-IUSE=""
 
-DOCS="README.org"
+IUSE="test"
+
+DOCS="" # README.org is a relative symlink
 
 BDEPEND="
 	app-emacs/akater-misc
@@ -26,15 +27,4 @@ BDEPEND="
 RDEPEND="
 	app-emacs/akater-misc"
 
-src_configure() {
-	local orgmode_configure_pn_defvars=("install-systemwide t")
-
-	orgmode_src_configure
-}
-
-src_install() {
-	orgmode_src_install
-	insinto "/usr/share/${PN}/"
-	doins examples/nutrition-data-sample.org
-	doins examples/nutrition-sample.org
-}
+DEPEND="test? ( app-emacs/ort )"
