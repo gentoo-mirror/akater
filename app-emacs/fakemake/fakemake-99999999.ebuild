@@ -24,7 +24,7 @@ SITEFILE="50${PN}-gentoo.el"
 
 BDEPEND="dev-vcs/git"
 
-DEPEND="test? ( app-emacs/org-development-elisp )"
+DEPEND="test? ( app-emacs/ort app-emacs/org-src-elisp-extras )"
 
 pkg_postinst() {
 	elisp-site-regen
