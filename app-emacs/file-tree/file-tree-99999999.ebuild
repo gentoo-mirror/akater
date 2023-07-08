@@ -11,10 +11,11 @@ DESCRIPTION="Manipulating symbolic file trees in Elisp"
 HOMEPAGE="https://gitlab.com/akater/elisp-file-tree"
 
 EGIT_REPO_URI="https://gitlab.com/akater/${MY_PN}.git"
-KEYWORDS="amd64 ~x86"
 
+KEYWORDS="amd64 ~x86"
 LICENSE="GPL-3"
 SLOT="0"
+
 IUSE="test"
 
 DOCS="" # README.org is a relative symlink
@@ -22,7 +23,7 @@ DOCS="" # README.org is a relative symlink
 BDEPEND="
 	app-emacs/akater-misc
 	app-emacs/mmxx-macros
-	test? ( app-emacs/org-development-elisp
+	test? ( app-emacs/ort app-emacs/org-src-elisp-extras
 			app-emacs/shmu )
 "
 
