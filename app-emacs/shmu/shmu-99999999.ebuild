@@ -29,6 +29,7 @@ RDEPEND="${BDEPEND}
 "
 
 DEPEND="test? ( app-emacs/ebuild-mode
-				app-emacs/org-development-elisp )"
+				app-emacs/ort
+				app-emacs/org-src-elisp-extras )"
 
 SITEFILE="50${PN}-gentoo.el"
