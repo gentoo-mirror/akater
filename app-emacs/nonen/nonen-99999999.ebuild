@@ -20,7 +20,7 @@ IUSE="test"
 
 DOCS="" # README.org is a relative symlink
 
-DEPEND="test? ( app-emacs/org-development-elisp )"
+DEPEND="test? ( app-emacs/ort )"
 
 SITEFILE="50${PN}-gentoo.el"
 
