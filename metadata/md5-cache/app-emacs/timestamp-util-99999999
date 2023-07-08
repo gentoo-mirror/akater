@@ -1,15 +1,15 @@
-BDEPEND=app-emacs/akater-misc app-emacs/looking-through app-emacs/mmxx-macros >=app-editors/emacs-27:* >=app-editors/emacs-27:* >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
-DEPEND=test? ( app-emacs/org-development-elisp )
+BDEPEND=app-emacs/akater-misc app-emacs/looking-through app-emacs/mmxx-macros >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=unpack
+DEPEND=test? ( app-emacs/ort )
 DESCRIPTION=Define Elisp timestamp matchers
 EAPI=8
 HOMEPAGE=https://gitlab.com/akater/elisp-timestamp-util
-INHERIT=elisp orgmode akater-live-release
+INHERIT=elisp-common akater-live-release
 IUSE=test
 KEYWORDS=amd64 ~x86
 LICENSE=GPL-3
 PROPERTIES=live
-RDEPEND=app-emacs/akater-misc >=app-editors/emacs-27:* >=app-editors/emacs-27:*
+RDEPEND=app-emacs/akater-misc >=app-emacs/compat-28
 SLOT=0
-_eclasses_=elisp-common	dde4f515dde15603a26a3755438e9c78	elisp	d5d9361b9698f474179a2ac3f8bf46e8	orgmode	e532a02a56f4fe94f626e66a625792e3	git-r3	27e13c09a4c7e4c78ac812f74727e676	akater-live-release	897a1f1f3cc888930f723d152f685879
-_md5_=90665fa0769d2aef3361945d99f12f44
+_eclasses_=elisp-common	dde4f515dde15603a26a3755438e9c78	git-r3	27e13c09a4c7e4c78ac812f74727e676	akater-live-release	897a1f1f3cc888930f723d152f685879
+_md5_=af997ef832ea3625e453c94b0a0840cb
