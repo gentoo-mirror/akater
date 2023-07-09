@@ -13,7 +13,7 @@ EGIT_COMMIT="4580cfc23"
 
 LICENSE="Boost-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~x86"
+KEYWORDS="amd64 ~arm ~arm64 ~x86"
 IUSE="clang cli debug doc +gcc java low-ram lto test"
 
 REQUIRED_USE="
