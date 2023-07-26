@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer type="person">
-  <email>nuclearspace@gmail.com</email>
-  <name>Dima Akater</name>
-</maintainer>
-<stabilize-allarches/>
-<upstream>
-  <remote-id type="gitlab">akater/org-nutrition</remote-id>
-</upstream>
+  <maintainer type="person">
+    <email>nuclearspace@gmail.com</email>
+    <name>Dima Akater</name>
+  </maintainer>
+  <stabilize-allarches/>
+  <use>
+    <flag name="minimal">Do not install greeting code (OK for minimally experienced users)</flag>
+  </use>
+  <upstream>
+    <remote-id type="gitlab">akater/org-nutrition</remote-id>
+  </upstream>
 </pkgmetadata>
