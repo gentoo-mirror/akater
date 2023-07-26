@@ -9,5 +9,5 @@ LICENSE=GPL-3+
 PROPERTIES=live
 RDEPEND=>=app-crypt/gnupg-2.1.5 >=app-editors/emacs-24:*
 SLOT=0
-_eclasses_=elisp-common	b3b15bdbe800c721e93b69b70cce2b67	elisp	fbefa95f5e9ab880a34bc69832b7c0d7	git-r3	97f7f638070d17e4c2b6542589bb4575	elpa	5d418d732ff72242897d8f781cbe17c8
+_eclasses_=elisp-common	b3b15bdbe800c721e93b69b70cce2b67	elisp	fbefa95f5e9ab880a34bc69832b7c0d7	git-r3	2358a7b20091609e24bd3a83b3ac5991	elpa	5d418d732ff72242897d8f781cbe17c8
 _md5_=f390083d6f8266bc395fd6a384eede89
