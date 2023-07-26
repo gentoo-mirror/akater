@@ -18,10 +18,23 @@ KEYWORDS="amd64 ~x86"
 
 DOCS="" # README.org is a relative symlink
 
-IUSE="esdf"
+IUSE="ansi-color esdf test"
+REQUIRED_USE="test? ( ansi-color )"
 
 BDEPEND="
 	app-emacs/mmxx-macros
+	ansi-color? ( app-emacs/ansi )
 "
 
-SITEFILE="50${PN}-gentoo.el"
+DEPEND="test? ( app-emacs/ort app-emacs/org-src-elisp-extras )"
+
+pkg_postinst() {
+	elisp-site-regen
+	if declare -f readme.gentoo_print_elog >/dev/null; then
+		readme.gentoo_print_elog
+	fi
+}
+
+pkg_postrm() {
+	elisp-site-regen
+}
