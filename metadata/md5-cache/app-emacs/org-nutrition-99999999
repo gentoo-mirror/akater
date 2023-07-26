@@ -1,15 +1,15 @@
 BDEPEND=app-emacs/akater-misc app-emacs/mmxx-macros >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=unpack
+DEFINED_PHASES=postinst postrm unpack
 DEPEND=test? ( app-emacs/ort )
 DESCRIPTION=Nutrition tracking in Org
 EAPI=8
 HOMEPAGE=https://gitlab.com/akater/org-nutrition
 INHERIT=elisp-common akater-live-release
-IUSE=test
+IUSE=test minimal
 KEYWORDS=amd64 ~x86
 LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=app-emacs/akater-misc
 SLOT=0
 _eclasses_=elisp-common	b3b15bdbe800c721e93b69b70cce2b67	git-r3	97f7f638070d17e4c2b6542589bb4575	akater-live-release	897a1f1f3cc888930f723d152f685879
-_md5_=5a654e611df5fc38b0aecabeb72c9f5c
+_md5_=059c2b11161b1d19ad123ff2de21cc13
