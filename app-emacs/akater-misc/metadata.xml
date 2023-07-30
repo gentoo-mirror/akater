@@ -7,6 +7,7 @@
 </maintainer>
 <stabilize-allarches/>
 <use>
+  <flag name="ansi-color">Also build akater-misc-ansi</flag>
   <flag name="esdf">Install ESDF definition files</flag>
 </use>
 <upstream>
