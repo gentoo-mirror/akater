@@ -1,13 +1,15 @@
 BDEPEND=app-emacs/akater-misc app-emacs/eix app-emacs/mmxx-macros app-emacs/shmu >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=unpack
+DEPEND=test? ( app-emacs/ort )
 DESCRIPTION=Elisp package that provides cached data about underlying Gentoo system to Emacs
 EAPI=8
 HOMEPAGE=https://gitlab.com/akater/emacs-gentoo-cache
 INHERIT=elisp-common akater-live-release
+IUSE=test
 KEYWORDS=amd64 ~x86
 LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=app-emacs/akater-misc app-emacs/shmu app-portage/eix
 SLOT=0
 _eclasses_=elisp-common	b3b15bdbe800c721e93b69b70cce2b67	git-r3	2358a7b20091609e24bd3a83b3ac5991	akater-live-release	897a1f1f3cc888930f723d152f685879
-_md5_=cba8d991fc1c95a480f058e525192f74
+_md5_=9085f06bb18b14c08a64bbcfcd1b671d
