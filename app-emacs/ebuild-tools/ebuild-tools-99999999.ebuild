@@ -15,9 +15,7 @@ KEYWORDS="amd64 ~x86"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="+eix gentoolkit"
-# it does not really work with gentoolkit
-REQUIRED_USE="|| ( eix gentoolkit ) eix"
+IUSE="test"
 
 DOCS="" # README.org is a relative symlink
 
@@ -30,10 +28,11 @@ BDEPEND="
 RDEPEND="${BDEPEND}
 	app-emacs/shmu[privileged]
 	app-emacs/akater-conf
-	eix? ( app-emacs/eix
-		   app-portage/eix )
-	gentoolkit? ( app-portage/gentoolkit )
+	app-emacs/eix
+	app-portage/eix
 	app-emacs/gentoo-cache
 "
+
+DEPEND="test? ( app-emacs/ort app-emacs/org-src-elisp-extras )"
 
 SITEFILE="50${PN}-gentoo.el"
