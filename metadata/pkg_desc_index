@@ -183,7 +183,7 @@ app-xemacs/ebuild-mode 9999: Emacs modes for editing ebuilds and other Gentoo sp
 dev-db/sqlite 3.34.1 3.35.5: SQL database engine
 dev-libs/mxml 2.11 9999: Tiny XML library
 dev-libs/sqlite3-pcre 9999: REGEXP() for sqlite3
-dev-lisp/sbcl 2.1.4 2.1.5 2.1.8 2.1.10 2.2.9: Steel Bank Common Lisp (SBCL) is an implementation of ANSI Common Lisp
+dev-lisp/sbcl 2.1.4 2.1.5 2.1.8 2.1.10 2.2.9 2.3.7: Steel Bank Common Lisp (SBCL) is an implementation of ANSI Common Lisp
 dev-perl/Data-SExpression 0.41: Parse Lisp S-Expressions into perl data structures.
 dev-perl/RPC-EPC-Service 0.0.11: An Asynchronous Remote Procedure Stack
 dev-python/janus 0.4.0-r1 0.5.0: Implementation of the asyncio (PEP 3156) event-loop with Qt
