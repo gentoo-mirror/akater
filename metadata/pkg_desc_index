@@ -18,7 +18,7 @@ app-emacs/auctex 13.0.14 9999: Extensible package for writing and formatting TeX
 app-emacs/avy 0.5.0 9999: Jump to arbitrary positions in visible text and select text quickly.
 app-emacs/buttercup 1.24 9999: Behavior-Driven Emacs Lisp Testing
 app-emacs/cask 0.8.7 9999: Cask: Project management for package development
-app-emacs/cl-format 1.2 9999: CL format routine
+app-emacs/cl-format 1.2 1.2.1 9999: CL format routine
 app-emacs/closql 9999: Store EIEIO objects using EmacSQL
 app-emacs/commander 0.7.0 9999: Emacs command line parser
 app-emacs/company 0.9.13 9999: Modular text completion framework
