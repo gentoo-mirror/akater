@@ -11,5 +11,5 @@ RDEPEND=>=app-emacs/concurrent-0.3.1 >=app-emacs/ctable-0.1.2 >=app-editors/emac
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/akater/emacs-epc/archive/refs/tags/v0.1.2_pre20211008.tar.gz -> epc-0.1.2_pre20211008.tar.gz
-_eclasses_=elisp-common	d65d4003126dec852c1a5a534c52d2f9	elisp	fbefa95f5e9ab880a34bc69832b7c0d7
+_eclasses_=elisp-common	dc179f98b2b4d9a4473fd3bdc154bbb6	elisp	fbefa95f5e9ab880a34bc69832b7c0d7
 _md5_=84f584d8205a04b6962b95c7d8ece020

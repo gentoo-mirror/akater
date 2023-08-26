@@ -9,5 +9,5 @@ KEYWORDS=~alpha amd64 arm arm64 hppa ~ia64 ~mips ppc ppc64 ~riscv sparc x86 ~amd
 LICENSE=GPL-3
 RDEPEND=inotify? ( app-editors/emacs[inotify] ) app-emacs/helm app-emacs/which-key >=app-editors/emacs-27.2:*
 SLOT=0
-_eclasses_=elisp-common	d65d4003126dec852c1a5a534c52d2f9	elisp	fbefa95f5e9ab880a34bc69832b7c0d7
+_eclasses_=elisp-common	dc179f98b2b4d9a4473fd3bdc154bbb6	elisp	fbefa95f5e9ab880a34bc69832b7c0d7
 _md5_=018e76a8054229e8e14734e8409c5276
