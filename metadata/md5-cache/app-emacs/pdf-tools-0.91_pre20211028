@@ -10,5 +10,5 @@ RDEPEND=app-editors/emacs[gui] || ( >=app-editors/emacs-25.1 app-emacs/let-alist
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/akater/pdf-tools/archive/refs/tags/0.91_pre20211028.tar.gz -> pdf-tools-0.91_pre20211028.tar.gz
-_eclasses_=elisp-common	b3b15bdbe800c721e93b69b70cce2b67	elisp	fbefa95f5e9ab880a34bc69832b7c0d7
+_eclasses_=elisp-common	d65d4003126dec852c1a5a534c52d2f9	elisp	fbefa95f5e9ab880a34bc69832b7c0d7
 _md5_=b6fb5bf9bf9af55f572951b88d61efa4

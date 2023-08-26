@@ -10,5 +10,5 @@ RDEPEND=>=app-emacs/ansi-0.1.0 >=app-emacs/commander-0.2.0 >=app-emacs/dash-1.8.
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/rejeep/ert-runner.el/archive/refs/tags/v0.8.0.tar.gz -> ert-runner-0.8.0.tar.gz
-_eclasses_=elisp-common	b3b15bdbe800c721e93b69b70cce2b67	elisp	fbefa95f5e9ab880a34bc69832b7c0d7
+_eclasses_=elisp-common	d65d4003126dec852c1a5a534c52d2f9	elisp	fbefa95f5e9ab880a34bc69832b7c0d7
 _md5_=5aec48ad1ffd047ee311b256dfb70d09
