@@ -64,7 +64,7 @@ app-emacs/gentoo-cache 99999999: Elisp package that provides cached data about u
 app-emacs/geo 2.0 9999: Geolocation library for Emacs
 app-emacs/ghub 9999: Minuscule client libraries for Git forge APIs.
 app-emacs/gntp 0.1 9999: Growl Notification Protocol for Emacs
-app-emacs/helm 3.8.0 9999: Emacs incremental completion and selection narrowing framework
+app-emacs/helm 3.8.0 3.9.5 9999: Emacs incremental completion and selection narrowing framework
 app-emacs/helm-company 9999: Helm interface for company-mode
 app-emacs/htmlize 9999: HTML-ize font-lock buffers in Emacs
 app-emacs/hydra 9999: Make bindings that stick around.
@@ -198,5 +198,7 @@ net-wireless/wpa_supplicant 9999: IEEE 802.1X/WPA supplicant for secure wireless
 sys-devel/crossdev 20200131 20200801: Gentoo Cross-toolchain generator
 sys-devel/gcc 10.2.0-r5 10.3.0 11.2.0: The GNU Compiler Collection
 sys-firmware/open-ath9k-htc-firmware 1.4.0: The firmware for QCA AR7010/AR9271 802.11n USB NICs
+www-client/firefox 118.0.1: Firefox Web Browser
 www-client/netsurf 3.10-r3: a free, open source web browser
+x11-libs/gtk+ 3.24.38: Gimp ToolKit +
 x11-themes/qtstyleplugins 1.0_pre20170311 9999: Additional style plugins for Qt5 (gtk2, cleanlook, plastic, motif)
