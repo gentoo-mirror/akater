@@ -1,14 +1,15 @@
-BDEPEND=>=net-libs/tdlib-1.8.20 sys-devel/make virtual/pkgconfig doc? ( app-emacs/ellit-org >=app-emacs/htmlize-1.34 app-emacs/alert app-emacs/all-the-icons >=app-emacs/compat-28.1.2.2 >=app-emacs/dashboard-1.8.0 app-emacs/esxml >=app-emacs/rainbow-identifiers-0.2.2 app-emacs/transient >=app-emacs/visual-fill-column-1.9 ) org? ( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) ) test? ( >=dev-lang/python-3 ) tray? ( >=dev-libs/libappindicator-3 ) >=app-editors/emacs-27.1:* >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=>=net-libs/tdlib-1.8.20 sys-devel/make virtual/pkgconfig doc? ( app-emacs/ellit-org >=app-emacs/htmlize-1.34 app-emacs/alert app-emacs/all-the-icons >=app-emacs/compat-28.1.2.2 >=app-emacs/dashboard-1.8.0 app-emacs/esxml >=app-emacs/rainbow-identifiers-0.2.2 app-emacs/transient >=app-emacs/visual-fill-column-1.9 texinfo? ( sys-apps/texinfo ) ) org? ( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) ) test? ( >=dev-lang/python-3 ) tray? ( >=dev-libs/libappindicator-3 ) >=app-editors/emacs-27.1:* >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
 DESCRIPTION=GNU Emacs telegram client (unofficial)
 EAPI=8
 HOMEPAGE=https://zevlg.github.io/telega.el
 INHERIT=elisp git-r3
-IUSE=contrib dbus doc geo org standalone tray test
-KEYWORDS=~amd64 ~arm ~arm64 ~x86 ~amd64-linux ~x86-linux
+IUSE=contrib dbus doc geo org standalone tray test texinfo
+KEYWORDS=amd64 ~arm arm64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=>=net-libs/tdlib-1.8.20 >=app-emacs/visual-fill-column-1.9 >=app-emacs/rainbow-identifiers-0.2.2 contrib? ( app-emacs/alert app-emacs/all-the-icons app-emacs/dashboard app-emacs/esxml app-emacs/language-detection app-emacs/transient ) dbus? ( app-editors/emacs[dbus] ) geo? ( app-emacs/geo ) org? ( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) ) standalone? ( app-emacs/company app-emacs/helm app-emacs/which-key ) tray? ( >=dev-libs/libappindicator-3 ) >=app-editors/emacs-27.1:*
+REQUIRED_USE=texinfo? ( doc )
 SLOT=0
 _eclasses_=elisp-common	2a0fa407d2e6363c663ccb299503b25c	elisp	fbefa95f5e9ab880a34bc69832b7c0d7	git-r3	2358a7b20091609e24bd3a83b3ac5991
-_md5_=2a0dceb5fb10651f16cf665863e1f755
+_md5_=dc2eb4db18cc32cc2be732b1cc0ea5ad
