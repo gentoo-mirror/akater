@@ -11,5 +11,5 @@ PROPERTIES=live
 RDEPEND=>=app-emacs/concurrent-0.3.1 >=app-emacs/ctable-0.1.2 >=app-emacs/epc-0.1.1 app-emacs/e2wm dev-perl/DBI sqlite? ( dev-perl/DBD-SQLite ) postgres? ( dev-perl/DBD-Pg ) mysql? ( dev-perl/DBD-mysql ) >=dev-perl/RPC-EPC-Service-0.0.11 >=app-editors/emacs-24:*
 REQUIRED_USE=|| ( mysql postgres sqlite )
 SLOT=0
-_eclasses_=elisp-common	2a0fa407d2e6363c663ccb299503b25c	elisp	fbefa95f5e9ab880a34bc69832b7c0d7	git-r3	2358a7b20091609e24bd3a83b3ac5991
+_eclasses_=elisp-common	2a0fa407d2e6363c663ccb299503b25c	elisp	fbefa95f5e9ab880a34bc69832b7c0d7	git-r3	5133e393e8717a3a093660f990801dc1
 _md5_=b8c057d88df4a3e5635690b660a0c6a9
