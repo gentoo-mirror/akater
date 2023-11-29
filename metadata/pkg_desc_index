@@ -150,7 +150,7 @@ app-emacs/sudo-edit 9999: Open files as another user
 app-emacs/sx 9999: StackExchange client for Emacs
 app-emacs/tablist 1.0 1.01_pre20211008 9999: Extended tabulated-list-mode
 app-emacs/tco 9999: Tail-call optimisation for Emacs Lisp
-app-emacs/telega 0.8.0 0.8.75 0.8.80 0.8.81 0.8.100 0.8.110 0.8.110-r1 0.8.120 0.8.120-r1 0.8.141-r1 0.8.150 0.8.152 0.8.160 0.8.162 0.8.200-r1 0.8.210 0.8.212-r1 9999: GNU Emacs telegram client (unofficial)
+app-emacs/telega 0.8.0 0.8.75 0.8.80 0.8.81 0.8.100 0.8.110 0.8.110-r1 0.8.120 0.8.120-r1 0.8.141-r1 0.8.150 0.8.152 0.8.160 0.8.162 0.8.200-r1 0.8.210 0.8.212-r1 0.8.217 9999: GNU Emacs telegram client (unofficial)
 app-emacs/timestamp-util 99999999: Define Elisp timestamp matchers
 app-emacs/trace-mode 99999999: Attempt at mode for trace output and one extra feature for trace
 app-emacs/transient 0.3.6 9999: Convenient infix arguments and suffix commands in Emacs
