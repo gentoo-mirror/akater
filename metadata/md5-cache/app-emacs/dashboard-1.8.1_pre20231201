@@ -1,0 +1,13 @@
+BDEPEND=>=app-emacs/page-break-lines-0.11 >=app-editors/emacs-26.1:* >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DESCRIPTION=A startup screen extracted from Spacemacs
+EAPI=8
+HOMEPAGE=https://github.com/emacs-dashboard/emacs-dashboard
+INHERIT=elisp git-r3
+KEYWORDS=amd64 ~arm ~arm64 ~x86
+LICENSE=GPL-3
+PROPERTIES=live
+RDEPEND=>=app-emacs/page-break-lines-0.11 >=app-editors/emacs-26.1:*
+SLOT=0
+_eclasses_=elisp-common	2a0fa407d2e6363c663ccb299503b25c	elisp	fbefa95f5e9ab880a34bc69832b7c0d7	git-r3	5133e393e8717a3a093660f990801dc1
+_md5_=b9518b38ef88782a2f9d8a4b95dc6da1
