@@ -1,0 +1,16 @@
+Better backtraces
+
+This should not be enabled by something like (setq backtrace-line-length 0)
+but unfortunately that's the way it is now in Emacs 29.1
+
+--- a/docs/Makefile
++++ b/docs/Makefile
+@@ -5,7 +5,7 @@
+ all: index.html
+ 
+ telega-manual.org: telega-ellit.org telega-note.org $(DOC_EL_SOURCES)
+-	$(EMACS) --eval '(progn (defvar telega-note-file "telega-note.org") (let ((load-prefer-newer t) (debug-on-error t)) (load-library "telega") (ellit-org-export "telega-ellit.org" "telega-manual.org")))'
++	$(EMACS) --eval '(progn (defvar telega-note-file "telega-note.org") (setq backtrace-line-length 0) (let ((load-prefer-newer t) (debug-on-error t) (debugger-stack-frame-as-list t)) (load-library "telega") (ellit-org-export "telega-ellit.org" "telega-manual.org")))'
+ 
+ index-release.html:
+ 	cp telega-note-release.org telega-note.org
