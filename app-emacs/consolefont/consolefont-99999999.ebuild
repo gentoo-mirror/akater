@@ -8,9 +8,9 @@ MY_PN="emacs-${PN}"
 inherit elisp-common akater-live-release
 
 DESCRIPTION="Change console font with OpenRC from Emacs"
-HOMEPAGE="https://gitlab.com/akater/elisp-eix"
+HOMEPAGE="https://framagit.org/akater/emacs-consolefont"
 
-EGIT_REPO_URI="https://gitlab.com/akater/${MY_PN}.git"
+EGIT_REPO_URI="https://framagit.org/akater/${MY_PN}.git"
 
 LICENSE="GPL-3"
 SLOT="0"
