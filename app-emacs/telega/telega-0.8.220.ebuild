@@ -4,18 +4,20 @@
 EAPI=8
 NEED_EMACS="27.1"
 
-MY_PN="${PN}.el"
 inherit elisp git-r3
 
 DESCRIPTION="GNU Emacs telegram client (unofficial)"
 HOMEPAGE="https://zevlg.github.io/telega.el"
-EGIT_REPO_URI="https://github.com/zevlg/${MY_PN}.git"
-EGIT_CLONE_TYPE="single+tags"
+
+EGIT_REPO_URI="https://github.com/zevlg/telega.el.git"
+EGIT_CLONE_TYPE="single"
+EGIT_COMMIT="ec8863c"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm arm64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="contrib dbus doc geo org standalone tray test texinfo"
+REQUIRED_USE="texinfo? ( doc )"
 # emerging with geo not tested
 SITEFILE="50${PN}-gentoo.el"
 
@@ -31,11 +33,12 @@ BDEPEND="
 		   app-emacs/alert
 		   app-emacs/all-the-icons
 		   >=app-emacs/compat-28.1.2.2
-		   >=app-emacs/dashboard-1.8.0
+		   >=app-emacs/dashboard-1.8.1_pre20231201
 		   app-emacs/esxml
 		   >=app-emacs/rainbow-identifiers-0.2.2
 		   app-emacs/transient
-		   >=app-emacs/visual-fill-column-1.9 )
+		   >=app-emacs/visual-fill-column-1.9
+		   texinfo? ( sys-apps/texinfo ) )
 	org? ( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) )
 	test? ( >=dev-lang/python-3 )
 	tray? ( >=dev-libs/libappindicator-3 )
@@ -67,9 +70,9 @@ RDEPEND="
 src_prepare() {
 
 	if use doc; then
-		eapply "${FILESDIR}/${PN}"-9999-fix-make-doc.patch
-		eapply "${FILESDIR}/${PN}"-9999-make-doc-debug.patch
-		eapply "${FILESDIR}/${PN}"-9999-fix-make-doc-org-persist.patch
+		eapply "${FILESDIR}/${PN}"-0.8.210-fix-make-doc.patch
+		eapply "${FILESDIR}/${PN}"-0.8.217-make-doc-debug.patch
+		eapply "${FILESDIR}/${PN}"-0.8.0-fix-make-doc-org-persist.patch
 		cp "${FILESDIR}"/theme-readtheorg.setup docs
 		rm docs/index-0.7.2.html
 		rm docs/index-release.html
@@ -77,7 +80,7 @@ src_prepare() {
 		rm docs/telega-manual.org
 		if use texinfo ; then
 			cp "${FILESDIR}"/telega-make-texinfo.el docs
-			eapply "${FILESDIR}/${PN}"-9999-doc.patch
+			eapply "${FILESDIR}/${PN}"-0.8.100-doc.patch
 		fi
 	fi
 

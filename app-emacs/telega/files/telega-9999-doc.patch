@@ -1,0 +1,16 @@
+Add texinfo headers
+
+--- a/docs/telega-ellit.org
++++ b/docs/telega-ellit.org
+@@ -2,6 +2,10 @@
+ #+TITLE: Telega Manual (v{{{eval(telega-version,t)}}})
+ #+STARTUP: showall
+ 
++#+TEXINFO_DIR_CATEGORY: Emacs
++#+TEXINFO_DIR_TITLE: Telega: (telega-manual).
++#+TEXINFO_DIR_DESC: Telegram client for GNU Emacs
++
+ #+MACRO: nl          (eval (concat "\n" (make-string (1- (string-to-number $1)) ?\s)))
+ #+MACRO: user-option-ndv User Option: ~$1~ {{{nl(1)}}} {{{nl($2)}}} {{{vardoc($1, $2)}}} {{{nl(1)}}}
+ #+MACRO: user-option User Option: ~$1~ {{{nl(1)}}} {{{nl($2)}}} {{{vardoc($1, $2)}}} {{{nl(1)}}} {{{nl($2)}}} Default value: {{{eval((ellit-org-pp-code-block $1 $2), t)}}}
+
