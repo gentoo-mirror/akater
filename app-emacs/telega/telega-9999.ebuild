@@ -15,7 +15,7 @@ EGIT_CLONE_TYPE="single+tags"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="contrib dbus doc geo org standalone tray test"
+IUSE="contrib dbus doc geo org standalone tray test texinfo"
 # emerging with geo not tested
 SITEFILE="50${PN}-gentoo.el"
 
@@ -68,12 +68,17 @@ src_prepare() {
 
 	if use doc; then
 		eapply "${FILESDIR}/${PN}"-9999-fix-make-doc.patch
+		eapply "${FILESDIR}/${PN}"-9999-make-doc-debug.patch
 		eapply "${FILESDIR}/${PN}"-9999-fix-make-doc-org-persist.patch
 		cp "${FILESDIR}"/theme-readtheorg.setup docs
 		rm docs/index-0.7.2.html
 		rm docs/index-release.html
 		rm docs/index.html
 		rm docs/telega-manual.org
+		if use texinfo ; then
+			cp "${FILESDIR}"/telega-make-texinfo.el docs
+			eapply "${FILESDIR}/${PN}"-9999-doc.patch
+		fi
 	fi
 
 	if use test; then
@@ -90,6 +95,14 @@ src_compile () {
 	emake telega-server
 
 	use doc && emake -j1 -C docs all && HTML_DOCS=( docs/*.html )
+	use doc && use texinfo && \
+		elisp-compile docs/telega-make-texinfo.el && \
+		${EMACS} -batch -Q -L . -L /usr/share/emacs/site-lisp/org \
+				 -l docs/telega-make-texinfo.elc \
+				 --eval '(let ((debug-on-error t))
+						   (telega--make-texinfo
+							"docs/telega-manual.org"))' && \
+		ELISP_TEXINFO=( docs/*.texi ) && makeinfo ${ELISP_TEXINFO}
 
 	use geo || rm contrib/telega-live-location.el
 	use geo && elisp-compile contrib/telega-live-location.el
