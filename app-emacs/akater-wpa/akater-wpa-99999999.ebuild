@@ -28,6 +28,7 @@ RDEPEND="
 	net-wireless/wpa_supplicant
 	app-emacs/akater-misc
 	app-emacs/shmu
+	sys-apps/coreutils
 "
 
 DEPEND="test? ( app-emacs/ort )"
