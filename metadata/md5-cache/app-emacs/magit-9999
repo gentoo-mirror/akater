@@ -10,5 +10,5 @@ LICENSE=GPL-3+
 PROPERTIES=live
 RDEPEND=>=app-emacs/compat-28.1.1.2 app-emacs/transient >=app-emacs/with-editor-2.8.0 sys-apps/texinfo libgit? ( app-emacs/libegit2 ) !magit-section? ( app-emacs/magit-section ) >=dev-vcs/git-2.0.0 libgit? ( dev-libs/libgit2 app-emacs/libegit2 ) !magit-section? ( app-emacs/magit-section ) >=app-editors/emacs-25:*
 SLOT=0
-_eclasses_=elisp-common	2a0fa407d2e6363c663ccb299503b25c	elisp	fbefa95f5e9ab880a34bc69832b7c0d7	git-r3	5133e393e8717a3a093660f990801dc1
+_eclasses_=elisp-common	2a0fa407d2e6363c663ccb299503b25c	elisp	fbefa95f5e9ab880a34bc69832b7c0d7	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
 _md5_=6977a58f706d03e56f272578c76b23fc
