@@ -1,5 +1,5 @@
 app-admin/pass 9999: Stores, retrieves, generates, and synchronizes passwords securely
-app-crypt/openpgp-keys-gnu-elpa 20190923: OpenPGP keys used to sign GNU ELPA packages
+app-crypt/openpgp-keys-gnu-elpa 20190923 20231225: OpenPGP keys used to sign GNU ELPA packages
 app-doc/ansicl 20210723 20210724 20210904: Common Lisp ANSI standard (draft)
 app-doc/ansicl-dpANS-sources 15.17-r1: Common Lisp ANSI standard (draft): TeX sources
 app-editors/emacs 27.2-r6 29.1.9999: The extensible, customizable, self-documenting real-time display editor
@@ -65,7 +65,7 @@ app-emacs/gentoo-cache 99999999: Elisp package that provides cached data about u
 app-emacs/geo 2.0 9999: Geolocation library for Emacs
 app-emacs/ghub 9999: Minuscule client libraries for Git forge APIs.
 app-emacs/gntp 0.1 9999: Growl Notification Protocol for Emacs
-app-emacs/helm 3.8.0 3.9.5 9999: Emacs incremental completion and selection narrowing framework
+app-emacs/helm 3.8.0 3.8.4-r1 3.9.5 3.9.7 9999: Emacs incremental completion and selection narrowing framework
 app-emacs/helm-company 9999: Helm interface for company-mode
 app-emacs/htmlize 9999: HTML-ize font-lock buffers in Emacs
 app-emacs/hydra 9999: Make bindings that stick around.
@@ -169,6 +169,7 @@ app-emacs/volume 9999: Tweak your sound card volume from Emacs
 app-emacs/vterm 9999: Emacs package implementing a terminal via libvterm
 app-emacs/web-mode 9999: Major mode for editing web templates
 app-emacs/webpaste 9999: Paste to pastebin-like services
+app-emacs/wfnames 1.1: A mode to edit filenames, similar to wdired
 app-emacs/wgrep 9999: Writable grep buffer and apply the changes to files
 app-emacs/which-key 3.5.4 9999: Display available keybindings in popup
 app-emacs/window-layout 1.5_pre20221130 9999: Window layout manager

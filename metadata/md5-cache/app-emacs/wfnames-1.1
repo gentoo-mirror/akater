@@ -1,0 +1,15 @@
+BDEPEND=verify-sig? ( >=app-crypt/openpgp-keys-gnu-elpa-20231225 ) >=app-editors/emacs-24.3:* verify-sig? ( app-crypt/gnupg >=app-portage/gemato-16 ) verify-sig? ( app-crypt/openpgp-keys-gnu-elpa )
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DESCRIPTION=A mode to edit filenames, similar to wdired
+EAPI=8
+HOMEPAGE=https://github.com/thierryvolpiatto/wfnames
+INHERIT=elpa
+IUSE=verify-sig +verify-sig
+KEYWORDS=amd64 x86
+LICENSE=GPL-3+
+RDEPEND=>=app-editors/emacs-24.3:*
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://elpa.nongnu.org/nongnu/wfnames-1.1.tar verify-sig? ( https://elpa.nongnu.org/nongnu/wfnames-1.1.tar.sig )
+_eclasses_=elisp-common	2a0fa407d2e6363c663ccb299503b25c	elisp	fbefa95f5e9ab880a34bc69832b7c0d7	verify-sig	798e0173d334021f14ba78a786c37059	elpa	5d418d732ff72242897d8f781cbe17c8
+_md5_=e941d22eda00273711f9a722b4376d0f
