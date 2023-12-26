@@ -10,7 +10,7 @@ DESCRIPTION="Emacs incremental completion and selection narrowing framework"
 HOMEPAGE="https://emacs-helm.github.io/helm/"
 # EGIT_REPO_URI="https://github.com/emacs-helm/${PN}.git"
 EGIT_REPO_URI="https://github.com/akater/${PN}.git"
-EGIT_BRANCH="master"
+EGIT_COMMIT="a4e4f060"
 EGIT_CLONE_TYPE="mirror"
 
 LICENSE="GPL-3+"
