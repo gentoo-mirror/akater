@@ -10,7 +10,8 @@ DESCRIPTION="Emacs incremental completion and selection narrowing framework"
 HOMEPAGE="https://emacs-helm.github.io/helm/"
 # EGIT_REPO_URI="https://github.com/emacs-helm/${PN}.git"
 EGIT_REPO_URI="https://github.com/akater/${PN}.git"
-EGIT_BRANCH="master"
+EGIT_COMMIT="a7b9e898296142465c0857b2d201d8d828ba7b05"
+# EGIT_BRANCH="master"
 EGIT_CLONE_TYPE="mirror"
 
 LICENSE="GPL-3+"
@@ -22,11 +23,11 @@ RDEPEND="
 	X? ( >=app-editors/emacs-25.1[gui] )
 	!X? ( >=app-editors/emacs-25.1 )
 	>=app-emacs/async-1.9.4
-	>=app-emacs/wfnames-1.1
-	>=app-emacs/popup-0.5.3"
+	app-emacs/popup"
 BDEPEND="${RDEPEND}
 	|| ( app-emacs/org app-editors/emacs[-minimal] )"
 
+# PATCHES="${FILESDIR}/${P}-no-autoload-check.patch"
 SITEFILE="50${PN}-gentoo.el"
 
 src_prepare() {
@@ -34,6 +35,7 @@ src_prepare() {
 
 	git branch work
 	git switch work
+	git-merge no-autoload-check
 	git-merge no-org
 
 	use X || git-merge no-x
