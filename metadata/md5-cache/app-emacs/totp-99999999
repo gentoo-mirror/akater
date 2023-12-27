@@ -1,0 +1,15 @@
+BDEPEND=app-emacs/akater-misc app-emacs/base32 >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=unpack
+DEPEND=test? ( app-emacs/ort )
+DESCRIPTION=TOTP in Emacs
+EAPI=8
+HOMEPAGE=https://framagit.org/akater/emacs-totp
+INHERIT=elisp-common akater-live-release
+IUSE=test
+KEYWORDS=amd64 ~x86
+LICENSE=GPL-3
+PROPERTIES=live
+RDEPEND=app-emacs/akater-misc app-emacs/base32
+SLOT=0
+_eclasses_=elisp-common	2a0fa407d2e6363c663ccb299503b25c	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b	akater-live-release	897a1f1f3cc888930f723d152f685879
+_md5_=a6a83277d9e77b20d3ee15252a44a7df
