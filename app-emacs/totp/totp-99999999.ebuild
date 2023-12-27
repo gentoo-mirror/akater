@@ -23,6 +23,17 @@ DOCS="" # README.org is a relative symlink
 BDEPEND="
 	app-emacs/akater-misc
 	app-emacs/base32"
-RDEPEND="${BDEPEND}"
+RDEPEND="${BDEPEND}
+	app-admin/pass[emacs]
+"
 
 DEPEND="test? ( app-emacs/ort )"
+
+pkg_postinst() {
+	if ! has_version "net-misc/ntp"; then
+		elog
+		elog "Consider installing an NTP client."
+		elog "If your system time is off, your TOTP PINs won't work."
+		elog
+	fi
+}
