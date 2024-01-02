@@ -59,6 +59,7 @@ app-emacs/etemplate 99999999: Create systems of org files from templates
 app-emacs/expand-region 9999: Emacs extension to increase selected region by semantic units
 app-emacs/exwm 9999: Emacs X Window Manager
 app-emacs/fakemake 99999999: A minimalistic build system for Elisp software
+app-emacs/fbset 99999999: Change console resolution from Emacs
 app-emacs/file-tree 99999999: Manipulating symbolic file trees in Elisp
 app-emacs/findr 0.9.11 9999: Breadth-first file-finding facility for (X)Emacs
 app-emacs/forge 9999: Access Git forges from Magit
