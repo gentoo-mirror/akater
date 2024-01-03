@@ -22,13 +22,20 @@ DOCS="" # README.org is a relative symlink
 
 BDEPEND="
 	app-emacs/akater-misc
-	app-emacs/base32"
+	app-emacs/mmxx-macros
+	app-emacs/base32
+"
 RDEPEND="${BDEPEND}
 	app-editors/emacs[gmp,ssl]
 	app-admin/pass[emacs]
 "
 
 DEPEND="test? ( app-emacs/ort )"
+
+src_compile() {
+	elisp-check-emacs-version
+	default
+}
 
 pkg_postinst() {
 	if ! has_version "net-misc/ntp"; then
