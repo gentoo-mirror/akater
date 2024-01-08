@@ -17,6 +17,7 @@ app-emacs/async 1.9.5 9999: Simple library for asynchronous processing in Emacs
 app-emacs/auctex 13.0.14 9999: Extensible package for writing and formatting TeX files in Emacs
 app-emacs/avy 0.5.0 9999: Jump to arbitrary positions in visible text and select text quickly.
 app-emacs/base32 99999999: Base32 encoding in Emacs Lisp
+app-emacs/bugz 99999999: Emacs interface to Bugzilla
 app-emacs/buttercup 1.24 9999: Behavior-Driven Emacs Lisp Testing
 app-emacs/cask 0.8.7 9999: Cask: Project management for package development
 app-emacs/cl-bytes 99999999: CL operations with bytes in integers in Emacs Lisp
