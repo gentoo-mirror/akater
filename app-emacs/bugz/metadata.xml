@@ -7,6 +7,6 @@
 </maintainer>
 <stabilize-allarches/>
 <upstream>
-  <remote-id type="framagit">akater/elisp-bugz</remote-id>
+  <remote-id type="framagit">akater/emacs-bugz</remote-id>
 </upstream>
 </pkgmetadata>
