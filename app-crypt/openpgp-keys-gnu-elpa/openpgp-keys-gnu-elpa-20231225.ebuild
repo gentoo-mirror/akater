@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -17,7 +17,12 @@ BDEPEND="=app-editors/emacs-29.1*
 src_install() {
 	insinto /usr/share/openpgp-keys
 
+	latest_emacs_29="$(find /usr/share/emacs/ -name '29.1.*' | sort -ru | head -n1)"
+	if [[ -z "${latest_emacs_29}" ]] ; then
+	   die "Can't find emacs 29.1.* directory"
+	fi
+
 	# I blindly copied the syntax from openpgp-keys-tor
 	newins - elpa.gnu.org.asc < <(gpg -o - -a --import --import-options import-export \
-		/usr/share/emacs/29.1.50/etc/package-keyring.gpg || die)
+		"${latest_emacs_29}/etc/package-keyring.gpg" || die)
 }
