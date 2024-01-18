@@ -11,7 +11,7 @@ HOMEPAGE="https://zevlg.github.io/telega.el"
 
 EGIT_REPO_URI="https://github.com/zevlg/telega.el.git"
 EGIT_CLONE_TYPE="single"
-EGIT_COMMIT="304705f"
+EGIT_COMMIT="fbf3ea5"
 
 LICENSE="GPL-3"
 SLOT="0"
