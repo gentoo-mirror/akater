@@ -1,5 +1,5 @@
 app-admin/pass 9999: Stores, retrieves, generates, and synchronizes passwords securely
-app-crypt/openpgp-keys-gnu-elpa 20190923 20231225: OpenPGP keys used to sign GNU ELPA packages
+app-crypt/openpgp-keys-gnu-elpa 20190923 20240122: OpenPGP keys used to sign GNU ELPA packages
 app-doc/ansicl 20210723 20210724 20210904: Common Lisp ANSI standard (draft)
 app-doc/ansicl-dpANS-sources 15.17-r1: Common Lisp ANSI standard (draft): TeX sources
 app-editors/emacs 27.2-r6 29.1.9999: The extensible, customizable, self-documenting real-time display editor
