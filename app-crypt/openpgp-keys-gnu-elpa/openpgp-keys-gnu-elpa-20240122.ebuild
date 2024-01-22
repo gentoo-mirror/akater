@@ -11,15 +11,15 @@ SLOT="0"
 KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86"
 
 S="${WORKDIR}"
-BDEPEND="=app-editors/emacs-29.1*
+BDEPEND="=app-editors/emacs-29*
 	app-crypt/gnupg"
 
 src_install() {
 	insinto /usr/share/openpgp-keys
 
-	latest_emacs_29="$(find /usr/share/emacs/ -name '29.1.*' | sort -ru | head -n1)"
+	latest_emacs_29="$(find /usr/share/emacs/ -name '29.*' | sort -ru | head -n1)"
 	if [[ -z "${latest_emacs_29}" ]] ; then
-	   die "Can't find emacs 29.1.* directory"
+	   die "Can't find emacs 29.* directory"
 	fi
 
 	# I blindly copied the syntax from openpgp-keys-tor
