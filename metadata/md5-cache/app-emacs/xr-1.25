@@ -10,6 +10,6 @@ LICENSE=GPL-3+
 RDEPEND=>=app-editors/emacs-26.1:*
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://elpa.gnu.org/packages/xr-1.21.tar verify-sig? ( https://elpa.gnu.org/packages/xr-1.21.tar.sig )
+SRC_URI=https://elpa.gnu.org/packages/xr-1.25.tar verify-sig? ( https://elpa.gnu.org/packages/xr-1.25.tar.sig )
 _eclasses_=elisp-common	2a0fa407d2e6363c663ccb299503b25c	elisp	fbefa95f5e9ab880a34bc69832b7c0d7	verify-sig	a79ba011daaf532d71a219182474d150	elpa	5d418d732ff72242897d8f781cbe17c8
 _md5_=008e9df245a6bcddf7416e3adae28e92
