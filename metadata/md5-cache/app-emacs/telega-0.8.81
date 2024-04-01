@@ -10,5 +10,5 @@ LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=>=net-libs/tdlib-1.8.8 >=app-emacs/visual-fill-column-1.9 >=app-emacs/rainbow-identifiers-0.2.2 contrib? ( app-emacs/alert app-emacs/all-the-icons app-emacs/dashboard app-emacs/esxml app-emacs/language-detection app-emacs/transient ) dbus? ( app-editors/emacs[dbus] ) geo? ( app-emacs/geo ) org? ( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) ) standalone? ( app-emacs/company app-emacs/helm app-emacs/which-key ) tray? ( >=dev-libs/libappindicator-3 ) >=app-editors/emacs-26.1:*
 SLOT=0
-_eclasses_=elisp-common	2a0fa407d2e6363c663ccb299503b25c	elisp	fbefa95f5e9ab880a34bc69832b7c0d7	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
+_eclasses_=elisp-common	2a0fa407d2e6363c663ccb299503b25c	elisp	fbefa95f5e9ab880a34bc69832b7c0d7	git-r3	fbb2889c81f3a05910c1524db69425c1
 _md5_=914f0c1e83492810b76b6abbaf9586d5

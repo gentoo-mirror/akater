@@ -9,5 +9,5 @@ LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=>=dev-vcs/git-2.7.0 >=app-emacs/closql-1.0.4 >=app-emacs/dash-2.18.1 >=app-emacs/emacsql-3.0.0 >=app-emacs/ghub-3.5.2 >=app-emacs/magit-3.0.0 >=app-emacs/markdown-mode-2.4 >=app-emacs/transient-0.3.3 app-emacs/treepy app-emacs/with-editor app-emacs/yaml >=app-editors/emacs-25.1:*
 SLOT=0
-_eclasses_=elisp-common	2a0fa407d2e6363c663ccb299503b25c	elisp	fbefa95f5e9ab880a34bc69832b7c0d7	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
+_eclasses_=elisp-common	2a0fa407d2e6363c663ccb299503b25c	elisp	fbefa95f5e9ab880a34bc69832b7c0d7	git-r3	fbb2889c81f3a05910c1524db69425c1
 _md5_=8d0376e68e7e5ede1c0374d9c7df63a9
