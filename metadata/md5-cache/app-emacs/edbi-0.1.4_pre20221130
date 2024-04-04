@@ -12,5 +12,5 @@ REQUIRED_USE=|| ( mysql postgres sqlite )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/akater/emacs-edbi/archive/refs/tags/v0.1.4_pre20221130.tar.gz -> edbi-0.1.4_pre20221130.tar.gz
-_eclasses_=elisp-common	2a0fa407d2e6363c663ccb299503b25c	elisp	fbefa95f5e9ab880a34bc69832b7c0d7
+_eclasses_=elisp-common	b5740ee671dad911400f832fe315a9a5	elisp	fbefa95f5e9ab880a34bc69832b7c0d7
 _md5_=13b6977022c5da78709ff704cdc9c9fb

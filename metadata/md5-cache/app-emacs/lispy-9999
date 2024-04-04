@@ -10,5 +10,5 @@ LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=app-emacs/ace-window app-emacs/avy app-emacs/hydra app-emacs/iedit app-emacs/ivy[swiper] app-emacs/zoutline javascript? ( app-emacs/indium ) >=app-editors/emacs-24:*
 SLOT=0
-_eclasses_=elisp-common	2a0fa407d2e6363c663ccb299503b25c	elisp	fbefa95f5e9ab880a34bc69832b7c0d7	git-r3	fbb2889c81f3a05910c1524db69425c1
+_eclasses_=elisp-common	b5740ee671dad911400f832fe315a9a5	elisp	fbefa95f5e9ab880a34bc69832b7c0d7	git-r3	fbb2889c81f3a05910c1524db69425c1
 _md5_=018d512d86b8d4624b65f20b6d01f1d8

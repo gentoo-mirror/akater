@@ -12,5 +12,5 @@ PROPERTIES=live
 RDEPEND=virtual/commonlisp dev-lisp/asdf system-macrostep? ( >=app-emacs/macrostep-0.9 ) >=app-editors/emacs-25.3:*
 RESTRICT=test
 SLOT=0
-_eclasses_=elisp-common	2a0fa407d2e6363c663ccb299503b25c	elisp	fbefa95f5e9ab880a34bc69832b7c0d7	git-r3	fbb2889c81f3a05910c1524db69425c1	git-extras	b78a103217ada95e56ce5c5a5ec7f421
+_eclasses_=elisp-common	b5740ee671dad911400f832fe315a9a5	elisp	fbefa95f5e9ab880a34bc69832b7c0d7	git-r3	fbb2889c81f3a05910c1524db69425c1	git-extras	b78a103217ada95e56ce5c5a5ec7f421
 _md5_=48fbc3a6820a4c6ea19b84ec386ba76a
