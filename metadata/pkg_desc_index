@@ -8,7 +8,6 @@ app-emacs/ace-window 9999: Quickly switch windows.
 app-emacs/ag 0.48 9999: An Emacs front-end for ag ('the silver searcher')
 app-emacs/akater-conf 99999999: Emacs Lisp conf-related functions and macros used by akater
 app-emacs/akater-misc 99999999: Emacs Lisp accessory functions used by akater
-app-emacs/akater-wpa 99999999: Emacs interface to wpa_supplicant
 app-emacs/alert 1.2 9999: Growl-style notification system for Emacs
 app-emacs/all-the-icons 5.0.0 9999: A library for inserting Developer icons
 app-emacs/anaphora 1.0.4 9999: Anaphoric macros for Emacs Lisp providing implicit temp variables
@@ -97,12 +96,14 @@ app-emacs/macrostep 9999: Interactive macro expander
 app-emacs/magentoo 99999999: Gentoo dashboard for Emacs
 app-emacs/magit 9999: A Git porcelain inside Emacs
 app-emacs/magit-section 9999: Sections for read-only buffers
+app-emacs/marginalia 1.5: Vertical interactive completion
 app-emacs/markdown-mode 9999: Major mode for Markdown-formatted text
 app-emacs/melpa-sources 99999999: Milkman Emacs Lisp Package Archive recipes
 app-emacs/mmxx-macros 99999999: Useful Lisp macros developed ca. 2020
 app-emacs/modus-themes 9999: Highly accessible themes (WCAG AAA) for Emacs
 app-emacs/multitran 9999: Interface to multitran
 app-emacs/nonen 99999999: Surface-level non-English (NonEn) Elisp in Emacs
+app-emacs/orderless 1.1: Completion style that matches multiple regexps in any order
 app-emacs/org 9999: An Emacs mode for notes and project planning
 app-emacs/org-board 9999: Bookmarking and web archival system for Org mode.
 app-emacs/org-clhs 99999999: Support for links to CLHS in Org mode
@@ -169,6 +170,7 @@ app-emacs/undercover 9999: Test coverage library for Emacs Lisp
 app-emacs/undo-tree 0.8.2 9999: Undo trees and visualization
 app-emacs/use-package 2.4.3_pre20221105 9999: A configuration macro for simplifying your .emacs
 app-emacs/uuid 0.0.4_pre20220112 9999: UUID's for EmacsLisp
+app-emacs/vertico 1.7: Vertical interactive completion
 app-emacs/visual-fill-column 2.4 9999: fill-column for visual-line-mode
 app-emacs/vlf 9999: View Large Files
 app-emacs/volume 9999: Tweak your sound card volume from Emacs
@@ -180,6 +182,7 @@ app-emacs/wgrep 9999: Writable grep buffer and apply the changes to files
 app-emacs/which-key 3.5.4 9999: Display available keybindings in popup
 app-emacs/window-layout 1.5_pre20221130 9999: Window layout manager
 app-emacs/with-editor 9999: Use the Emacsclient as the $EDITOR of child processes
+app-emacs/wpa 99999999: Emacs interface to wpa_supplicant
 app-emacs/xah-fly-keys 11.5.20200625041453 9999: ergonomic modal keybinding minor mode.
 app-emacs/xelb 9999: X protocol Emacs Lisp Binding
 app-emacs/xr 1.25: Convert string regexp to rx notation
