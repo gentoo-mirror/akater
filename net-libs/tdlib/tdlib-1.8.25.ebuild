@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -9,7 +9,7 @@ DESCRIPTION="Cross-platform library for building Telegram clients"
 HOMEPAGE="https://core.telegram.org/tdlib"
 EGIT_REPO_URI="https://github.com/tdlib/td.git"
 EGIT_CLONE_TYPE="single"
-EGIT_COMMIT="76f5f3316"
+EGIT_COMMIT="fe6201556"
 
 LICENSE="Boost-1.0"
 SLOT="0"
@@ -45,11 +45,6 @@ DOCS=( README.md )
 src_prepare() {
 
 	eapply "${FILESDIR}/${PN}"-1.8.0-fix-runpath.patch
-
-	# from mva
-	sed -r \
-		-e '/install\(TARGETS/,/  INCLUDES/{s@(LIBRARY DESTINATION).*@\1 ${CMAKE_INSTALL_LIBDIR}@;s@(ARCHIVE DESTINATION).*@\1 ${CMAKE_INSTALL_LIBDIR}@;s@(RUNTIME DESTINATION).*@\1 ${CMAKE_INSTALL_BINDIR}@}' \
-		-i CMakeLists.txt
 
 	# from pg_overlay
 	if use test

@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -11,7 +11,7 @@ HOMEPAGE="https://zevlg.github.io/telega.el"
 
 EGIT_REPO_URI="https://github.com/zevlg/telega.el.git"
 EGIT_CLONE_TYPE="single"
-EGIT_COMMIT="187ce6a"
+EGIT_COMMIT="d1cf1ff"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -25,7 +25,7 @@ DOCS="README.md"
 
 # todo: tgs2png
 BDEPEND="
-	>=net-libs/tdlib-1.8.20
+	>=net-libs/tdlib-1.8.25
 	dev-build/make
 	virtual/pkgconfig
 	doc? ( app-emacs/ellit-org
@@ -33,7 +33,7 @@ BDEPEND="
 		   app-emacs/alert
 		   app-emacs/all-the-icons
 		   >=app-emacs/compat-28.1.2.2
-		   >=app-emacs/dashboard-1.8.0
+		   >=app-emacs/dashboard-1.8.1_pre20231201
 		   app-emacs/esxml
 		   >=app-emacs/rainbow-identifiers-0.2.2
 		   app-emacs/transient
@@ -51,7 +51,7 @@ BDEPEND="
 # fixme: tray support will be built if libappindicator is installed,
 # regardless of USE
 RDEPEND="
-	>=net-libs/tdlib-1.8.20
+	>=net-libs/tdlib-1.8.25
 	>=app-emacs/visual-fill-column-1.9
 	>=app-emacs/rainbow-identifiers-0.2.2
 	contrib? ( app-emacs/alert
@@ -70,7 +70,8 @@ RDEPEND="
 src_prepare() {
 
 	if use doc; then
-		eapply "${FILESDIR}/${PN}"-0.8.75-fix-make-doc.patch
+		eapply "${FILESDIR}/${PN}"-0.8.210-fix-make-doc.patch
+		eapply "${FILESDIR}/${PN}"-0.8.217-make-doc-debug.patch
 		eapply "${FILESDIR}/${PN}"-0.8.0-fix-make-doc-org-persist.patch
 		cp "${FILESDIR}"/theme-readtheorg.setup docs
 		rm docs/index-0.7.2.html
@@ -104,7 +105,7 @@ src_compile () {
 				 --eval '(let ((debug-on-error t))
 						   (telega--make-texinfo
 							"docs/telega-manual.org"))' && \
-		ELISP_TEXINFO=( docs/*.texi ) && makeinfo ${ELISP_TEXINFO} || die
+		ELISP_TEXINFO=( docs/*.texi ) && makeinfo ${ELISP_TEXINFO}
 
 	use geo || rm contrib/telega-live-location.el
 	use geo && elisp-compile contrib/telega-live-location.el

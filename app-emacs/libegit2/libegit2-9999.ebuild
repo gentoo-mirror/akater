@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -24,7 +24,7 @@ RDEPEND="
 "
 
 BDEPEND="${RDEPEND}
-	>=dev-util/cmake-3.0
+	>=dev-build/cmake-3.0
 "
 # todo: another build (?) dependency is app-eselect/eselect-emacs::akater
 # as we need /usr/include/emacs symlink and it is only set by eselect in my ebuild repository

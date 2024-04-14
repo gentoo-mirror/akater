@@ -23,8 +23,8 @@ DOCS="README.md"
 
 # todo: tgs2png
 BDEPEND="
-	>=net-libs/tdlib-1.8.23
-	sys-devel/make
+	>=net-libs/tdlib-1.8.25
+	dev-build/make
 	virtual/pkgconfig
 	doc? ( app-emacs/ellit-org
 		   >=app-emacs/htmlize-1.34
@@ -48,7 +48,7 @@ BDEPEND="
 # fixme: tray support will be built if libappindicator is installed,
 # regardless of USE
 RDEPEND="
-	>=net-libs/tdlib-1.8.23
+	>=net-libs/tdlib-1.8.25
 	>=app-emacs/visual-fill-column-1.9
 	>=app-emacs/rainbow-identifiers-0.2.2
 	contrib? ( app-emacs/alert

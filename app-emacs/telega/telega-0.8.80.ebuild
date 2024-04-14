@@ -25,7 +25,7 @@ DOCS="README.md"
 # todo: tgs2png
 BDEPEND="
 	>=net-libs/tdlib-1.8.8
-	sys-devel/make
+	dev-build/make
 	virtual/pkgconfig
 	doc? ( app-emacs/ellit-org
 		   app-emacs/compat

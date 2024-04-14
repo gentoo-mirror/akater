@@ -25,9 +25,9 @@ REQUIRED_USE="
 # according to TDLib build instructions, lto excludes java
 
 BDEPEND="gcc? ( >=sys-devel/gcc-4.9.2 )
-	>=dev-util/cmake-3.0.2
+	>=dev-build/cmake-3.0.2
 	dev-util/gperf
-	lto? ( >=dev-util/cmake-3.9.0 )
+	lto? ( >=dev-build/cmake-3.9.0 )
 	clang? ( >=sys-devel/clang-3.4:= )
 	low-ram? ( dev-lang/php[cli] )
 	doc? ( app-doc/doxygen )

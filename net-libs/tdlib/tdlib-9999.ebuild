@@ -35,7 +35,7 @@ REQUIRED_USE="
 # "
 
 BDEPEND="gcc? ( >=sys-devel/gcc-4.9:= )
-	>=dev-util/cmake-3.0.2
+	>=dev-build/cmake-3.0.2
 	dev-util/gperf
 	clang? ( >=sys-devel/clang-3.4:= )
 	low-ram? ( dev-lang/php[cli,ctype] )
