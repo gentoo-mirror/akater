@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -44,7 +44,7 @@ BDEPEND="
 	>=dev-libs/gmp-5.0.5[static-libs]
 	>=dev-libs/mpc-1.0.1[static-libs]
 	>=dev-libs/mpfr-3.1.1[static-libs]
-	>=dev-util/cmake-2.6
+	>=dev-build/cmake-2.6
 "
 
 # BDEPEND="
@@ -54,7 +54,7 @@ BDEPEND="
 # 	>=cross-xtensa-elf/gmp-5.0.5[static-libs]
 # 	>=cross-xtensa-elf/mpc-1.0.1[static-libs]
 # 	>=cross-xtensa-elf/mpfr-3.1.1[static-libs]
-# 	>=dev-util/cmake-2.6
+# 	>=dev-build/cmake-2.6
 # "
 
 RDEPEND=""
