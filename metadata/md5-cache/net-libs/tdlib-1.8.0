@@ -1,4 +1,4 @@
-BDEPEND=gcc? ( >=sys-devel/gcc-4.9.2 ) >=dev-util/cmake-3.0.2 dev-util/gperf lto? ( >=dev-util/cmake-3.9.0 ) clang? ( >=sys-devel/clang-3.4:= ) low-ram? ( dev-lang/php[cli] ) doc? ( app-doc/doxygen ) java? ( virtual/jdk:= ) app-alternatives/ninja >=dev-build/cmake-3.20.5
+BDEPEND=gcc? ( >=sys-devel/gcc-4.9.2 ) >=dev-build/cmake-3.0.2 dev-util/gperf lto? ( >=dev-build/cmake-3.9.0 ) clang? ( >=sys-devel/clang-3.4:= ) low-ram? ( dev-lang/php[cli] ) doc? ( app-doc/doxygen ) java? ( virtual/jdk:= ) app-alternatives/ninja >=dev-build/cmake-3.20.5
 DEFINED_PHASES=compile configure install prepare test
 DESCRIPTION=Cross-platform library for building Telegram clients
 EAPI=7
@@ -13,4 +13,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/tdlib/td/archive/v1.8.0.tar.gz -> tdlib-1.8.0.tar.gz
 _eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	288c54efeb5e2aa70775e39032695ad4	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	c7c9a62d6232cac66d4ea32d575c3e7c
-_md5_=ad7046832b8a75023ebe51215620980f
+_md5_=811a2472d62aafdd9ae34a7508678c39
