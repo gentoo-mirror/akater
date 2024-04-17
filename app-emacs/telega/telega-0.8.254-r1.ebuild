@@ -25,6 +25,8 @@ DOCS="README.md"
 
 BDEPEND="
 	|| ( >=app-editors/emacs-29 app-emacs/transient )
+	>=app-emacs/rainbow-identifiers-0.2.2
+	>=app-emacs/visual-fill-column-1.9
 	>=net-libs/tdlib-1.8.25
 	dev-build/make
 	virtual/pkgconfig
@@ -35,15 +37,11 @@ BDEPEND="
 		   >=app-emacs/compat-28.1.2.2
 		   >=app-emacs/dashboard-1.8.1_pre20231201
 		   app-emacs/esxml
-		   >=app-emacs/rainbow-identifiers-0.2.2
-		   >=app-emacs/visual-fill-column-1.9
 		   texinfo? ( sys-apps/texinfo ) )
 	org? ( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) )
 	test? ( >=dev-lang/python-3 )
 	tray? ( >=dev-libs/libappindicator-3 )
 "
-
-# todo: ensure visual-fill-column and rainbow-identifiers aren't needed at build time
 
 # todo: try to run tests with -Q
 
