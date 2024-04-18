@@ -72,6 +72,7 @@ app-emacs/telega:dbus - Ensure Emacs supports dbus, for notifications
 app-emacs/telega:geo - Enable geolocation support with app-emacs/geo
 app-emacs/telega:org - Enable Org links
 app-emacs/telega:standalone - Accessibility for users without Emacs knowledge
+app-emacs/telega:stickers - Add support for animated stickers
 app-emacs/telega:texinfo - Build and install Info documentation
 app-emacs/telega:tray - Enable AppIndicator support
 app-emacs/vterm:fish - Install Friendly Shell scripts.
