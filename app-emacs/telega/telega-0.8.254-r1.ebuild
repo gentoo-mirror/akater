@@ -25,6 +25,7 @@ DOCS="README.md"
 
 BDEPEND="
 	|| ( >=app-editors/emacs-29 app-emacs/transient )
+	|| ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] )
 	>=app-emacs/rainbow-identifiers-0.2.2
 	>=app-emacs/visual-fill-column-1.9
 	>=net-libs/tdlib-1.8.25
@@ -38,20 +39,18 @@ BDEPEND="
 		   >=app-emacs/dashboard-1.8.1_pre20231201
 		   app-emacs/esxml
 		   texinfo? ( sys-apps/texinfo ) )
-	org? ( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) )
 	test? ( >=dev-lang/python-3 )
 	tray? ( >=dev-libs/libappindicator-3 )
 "
 
-# todo: try to run tests with -Q
-
 # fixme: tray support will be built if libappindicator is installed,
 # regardless of USE
 RDEPEND="
-	>=net-libs/tdlib-1.8.25
 	|| ( >=app-editors/emacs-29 app-emacs/transient )
-	>=app-emacs/visual-fill-column-1.9
+	|| ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] )
 	>=app-emacs/rainbow-identifiers-0.2.2
+	>=app-emacs/visual-fill-column-1.9
+	>=net-libs/tdlib-1.8.25
 	contrib? ( app-emacs/alert
 			   app-emacs/all-the-icons
 			   app-emacs/dashboard
@@ -59,7 +58,6 @@ RDEPEND="
 			   app-emacs/language-detection )
 	dbus? ( app-editors/emacs[dbus] )
 	geo? ( app-emacs/geo )
-	org? ( || ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] ) )
 	standalone? ( app-emacs/company app-emacs/helm app-emacs/which-key )
 	stickers? ( media-libs/tgs2png )
 	tray? ( >=dev-libs/libappindicator-3 )
@@ -85,6 +83,7 @@ src_prepare() {
 	if use test; then
 		eapply "${FILESDIR}/${PN}"-0.8.0-no-installs-during-test.patch
 		eapply "${FILESDIR}/${PN}"-0.8.0-fix-tests-bin-path.patch
+		eapply "${FILESDIR}/${PN}"-0.8.254-run-tests-Q.patch
 	fi
 
 	default

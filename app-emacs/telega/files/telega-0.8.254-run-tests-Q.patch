@@ -1,0 +1,14 @@
+--- a/Makefile
++++ b/Makefile
+@@ -12,7 +12,10 @@
+ 	$(MAKE) -C server install
+ 
+ test_el: test.el
+-	$(EMACS) -batch -L . -l etc/telega-make \
++	emacs -Q -L /usr/share/emacs/site-lisp/org \
++	         -L /usr/share/emacs/site-lisp/rainbow-identifiers \
++	         -L /usr/share/emacs/site-lisp/visual-fill-column \
++		 -batch -L . -l etc/telega-make \
+ 	         -f telega-run-tests
+ 
+ test_server:
