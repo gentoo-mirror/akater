@@ -10,7 +10,7 @@ HOMEPAGE="http://common-lisp.net/project/slime/"
 # EGIT_REPO_URI="https://github.com/slime/slime.git"
 # EGIT_BRANCH="master"
 EGIT_REPO_URI="https://github.com/akater/slime.git"
-EGIT_BRANCH="master"
+EGIT_COMMIT="ef2af895"
 EGIT_CLONE_TYPE="mirror"
 
 LICENSE="GPL-2 xref? ( xref.lisp )"
