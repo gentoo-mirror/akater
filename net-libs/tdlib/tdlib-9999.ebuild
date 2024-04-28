@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -58,6 +58,15 @@ RDEPEND="dev-libs/openssl:0=
 
 DOCS=( README.md )
 
+# Some fix for clang
+# suggested by Carlos @capezotte in Gentoogram
+# comment: it only matters for clang-runtime[-sanitize] users
+# pre_src_prepare() {
+# 	if use clang ; then
+# 		find "$S" -name CMakeLists.txt -exec sed -i -- '/-fsanitize=/d' {} +;
+# 	fi
+# }
+
 src_prepare() {
 
 	eapply "${FILESDIR}/${PN}"-1.8.0-fix-runpath.patch
@@ -88,6 +97,31 @@ src_configure(){
 		# for using tdlib from C# under Windows through C++/CLI
 		-DTD_ENABLE_DOTNET=OFF
 	)
+	# compiler switcher, from www-client/firefox
+	if use clang ; then
+		local version_clang=$(clang --version 2>/dev/null | grep -F -- 'clang version' | awk '{ print $3 }')
+		[[ -n ${version_clang} ]] && version_clang=$(ver_cut 1 "${version_clang}")
+		[[ -z ${version_clang} ]] && die "Failed to read clang version!"
+
+		# if tc-is-gcc; then
+		# 	have_switched_compiler=yes
+		# fi
+
+		AR=llvm-ar
+		CC=${CHOST}-clang-${version_clang}
+		CXX=${CHOST}-clang++-${version_clang}
+		NM=llvm-nm
+		RANLIB=llvm-ranlib
+
+	# elif ! use clang && ! tc-is-gcc ; then
+	elif use gcc ; then
+		# have_switched_compiler=yes
+		AR=gcc-ar
+		CC=${CHOST}-gcc
+		CXX=${CHOST}-g++
+		NM=gcc-nm
+		RANLIB=gcc-ranlib
+	fi
 
 	cmake_src_configure
 
