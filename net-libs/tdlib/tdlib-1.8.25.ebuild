@@ -44,12 +44,12 @@ DOCS=( README.md )
 
 # Some fix for clang
 # suggested by Carlos @capezotte in Gentoogram
-# comment: it only matters for clang-runtime[-sanitizers] users
-# pre_src_prepare() {
-# 	if use clang ; then
-# 		find "$S" -name CMakeLists.txt -exec sed -i -- '/-fsanitize=/d' {} +;
-# 	fi
-# }
+pre_src_prepare() {
+	if use clang && ! has_version sys-devel/clang-runtime[sanitize] ; then
+		einfo "Patching -fsanitize options because clang-runtime doesn't have sanitizers"
+		find "$S" -name CMakeLists.txt -exec sed -i -- '/-fsanitize=/d' {} +;
+	fi
+}
 
 src_prepare() {
 
