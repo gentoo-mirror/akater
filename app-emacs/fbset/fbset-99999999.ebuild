@@ -28,7 +28,7 @@ BDEPEND="
 RDEPEND="
 	|| ( >=app-editors/emacs-28 app-emacs/compat )
 	app-emacs/shmu
-	sys-apps/busybox
+	|| ( sys-apps/fbset sys-apps/busybox )
 "
 
 DEPEND="test? ( app-emacs/ort )"
