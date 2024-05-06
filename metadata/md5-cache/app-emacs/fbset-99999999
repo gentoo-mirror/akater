@@ -11,5 +11,5 @@ LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=|| ( >=app-editors/emacs-28 app-emacs/compat ) app-emacs/shmu || ( sys-apps/fbset sys-apps/busybox )
 SLOT=0
-_eclasses_=elisp-common	b5740ee671dad911400f832fe315a9a5	git-r3	fbb2889c81f3a05910c1524db69425c1	akater-live-release	897a1f1f3cc888930f723d152f685879
+_eclasses_=elisp-common	abb2dda42f680fce87602c8273f832c7	git-r3	fbb2889c81f3a05910c1524db69425c1	akater-live-release	897a1f1f3cc888930f723d152f685879
 _md5_=9f105f272a1f9144cb75f81aa747e23b
