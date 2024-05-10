@@ -156,7 +156,7 @@ app-emacs/sudo-edit 9999: Open files as another user
 app-emacs/sx 9999: StackExchange client for Emacs
 app-emacs/tablist 1.0 1.01_pre20211008 9999: Extended tabulated-list-mode
 app-emacs/tco 9999: Tail-call optimisation for Emacs Lisp
-app-emacs/telega 0.8.0 0.8.75 0.8.80 0.8.81 0.8.100 0.8.110 0.8.110-r1 0.8.120 0.8.120-r1 0.8.141-r1 0.8.150 0.8.152 0.8.160 0.8.162 0.8.200-r1 0.8.210 0.8.212-r1 0.8.217 0.8.217-r1 0.8.220 0.8.230 0.8.231-r1 0.8.250 0.8.254 0.8.254-r1 0.8.255 9999: GNU Emacs telegram client (unofficial)
+app-emacs/telega 0.8.0 0.8.75 0.8.80 0.8.81 0.8.100 0.8.110 0.8.110-r1 0.8.120 0.8.120-r1 0.8.141-r1 0.8.150 0.8.152 0.8.160 0.8.162 0.8.200-r1 0.8.210 0.8.212-r1 0.8.217 0.8.217-r1 0.8.220 0.8.230 0.8.231-r1 0.8.250 0.8.254 0.8.254-r1 0.8.255 0.8.256 9999: GNU Emacs telegram client (unofficial)
 app-emacs/timestamp-util 99999999: Define Elisp timestamp matchers
 app-emacs/totp 99999999: TOTP in Emacs
 app-emacs/totp-juergenhoetzel 9999: Time-based One-time Password (TOTP)
@@ -209,6 +209,7 @@ net-libs/tdlib 1.8.0 1.8.7 1.8.8 1.8.10 1.8.11 1.8.11-r1 1.8.12 1.8.14 1.8.15 1.
 net-print/panasonic-mccgdi-bin 2.0.10: Panasonic Multi-Function Printers drivers
 net-wireless/wpa_supplicant 9999: IEEE 802.1X/WPA supplicant for secure wireless transfers
 sys-devel/crossdev 20200131 20200801: Gentoo Cross-toolchain generator
+sys-devel/gcc 10.2.0-r5 10.3.0 11.2.0: The GNU Compiler Collection
 sys-firmware/open-ath9k-htc-firmware 1.4.0: The firmware for QCA AR7010/AR9271 802.11n USB NICs
 www-client/firefox 118.0.1: Firefox Web Browser
 www-client/netsurf 3.10-r3: a free, open source web browser
