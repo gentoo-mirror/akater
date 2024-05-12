@@ -12,4 +12,4 @@ RDEPEND=|| ( >=app-editors/emacs-29 >=app-emacs/transient-0.3.0 ) || ( app-emacs
 REQUIRED_USE=texinfo? ( doc )
 SLOT=0
 _eclasses_=elisp-common	abb2dda42f680fce87602c8273f832c7	elisp	fbefa95f5e9ab880a34bc69832b7c0d7	git-r3	fbb2889c81f3a05910c1524db69425c1
-_md5_=fa668a944923f67f7ce5aaeb2882620e
+_md5_=6eb11a943a0e6c262259a65f7aba747c
