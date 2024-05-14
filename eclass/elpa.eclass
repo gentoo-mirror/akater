@@ -1,4 +1,4 @@
-# Copyright 2002-2021 Gentoo Authors
+# Copyright 2002-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: elpa.eclass
@@ -201,6 +201,7 @@ elpa_src_prepare() {
 		 # this is our guess
 		 *) ;;
 	esac
+	rm "${PN}-pkg.el"
 	default
 }
 
