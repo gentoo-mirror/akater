@@ -38,7 +38,7 @@ BDEPEND="
 		   >=app-emacs/dashboard-1.8.1_pre20231201
 		   app-emacs/esxml
 		   texinfo? ( sys-apps/texinfo ) )
-	test? ( >=dev-lang/python-3 )
+	test? ( >=dev-lang/python-3 app-editors/emacs[svg] )
 	tray? ( >=dev-libs/libappindicator-3 )
 "
 
