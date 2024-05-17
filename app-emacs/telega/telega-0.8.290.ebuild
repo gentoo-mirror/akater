@@ -69,7 +69,9 @@ src_prepare() {
 		eapply "${FILESDIR}/${PN}"-0.8.210-fix-make-doc.patch
 		eapply "${FILESDIR}/${PN}"-0.8.217-make-doc-debug.patch
 		eapply "${FILESDIR}/${PN}"-0.8.0-fix-make-doc-org-persist.patch
-		cp "${FILESDIR}"/theme-readtheorg.setup docs
+		local themedir="${WORKDIR}/org-html-themes/org"
+		mkdir -p ${themedir}
+		cp "${FILESDIR}"/theme-readtheorg.setup ${themedir}
 		rm docs/index-0.7.2.html
 		rm docs/index-release.html
 		rm docs/index.html
