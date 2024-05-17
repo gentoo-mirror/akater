@@ -23,7 +23,7 @@ SITEFILE="50${PN}-gentoo.el"
 DOCS="README.md"
 
 BDEPEND="
-	|| ( >=app-editors/emacs-29 app-emacs/transient )
+	|| ( >=app-editors/emacs-29 >=app-emacs/transient-0.3.0 )
 	|| ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] )
 	>=app-emacs/rainbow-identifiers-0.2.2
 	>=app-emacs/visual-fill-column-1.9
@@ -45,7 +45,7 @@ BDEPEND="
 # fixme: tray support will be built if libappindicator is installed,
 # regardless of USE
 RDEPEND="
-	|| ( >=app-editors/emacs-29 app-emacs/transient )
+	|| ( >=app-editors/emacs-29 >=app-emacs/transient-0.3.0 )
 	|| ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] )
 	>=app-emacs/rainbow-identifiers-0.2.2
 	>=app-emacs/visual-fill-column-1.9
