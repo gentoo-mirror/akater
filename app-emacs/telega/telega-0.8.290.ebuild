@@ -4,17 +4,18 @@
 EAPI=8
 NEED_EMACS="27.1"
 
-MY_PN="${PN}.el"
 inherit elisp git-r3
 
 DESCRIPTION="GNU Emacs telegram client (unofficial)"
 HOMEPAGE="https://zevlg.github.io/telega.el"
-EGIT_REPO_URI="https://github.com/zevlg/${MY_PN}.git"
-EGIT_CLONE_TYPE="single+tags"
+
+EGIT_REPO_URI="https://github.com/zevlg/telega.el.git"
+EGIT_CLONE_TYPE="single"
+EGIT_COMMIT="3d2e5ee"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm arm64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="contrib dbus doc geo org standalone stickers tray test texinfo"
 REQUIRED_USE="texinfo? ( doc )"
 # emerging with geo not tested
@@ -23,7 +24,7 @@ SITEFILE="50${PN}-gentoo.el"
 DOCS="README.md"
 
 BDEPEND="
-	|| ( >=app-editors/emacs-29 app-emacs/transient )
+	|| ( >=app-editors/emacs-29 >=app-emacs/transient-0.3.0 )
 	|| ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] )
 	>=app-emacs/rainbow-identifiers-0.2.2
 	>=app-emacs/visual-fill-column-1.9
@@ -45,7 +46,7 @@ BDEPEND="
 # fixme: tray support will be built if libappindicator is installed,
 # regardless of USE
 RDEPEND="
-	|| ( >=app-editors/emacs-29 app-emacs/transient )
+	|| ( >=app-editors/emacs-29 >=app-emacs/transient-0.3.0 )
 	|| ( app-emacs/org app-emacs/org-mode app-editors/emacs[-minimal] )
 	>=app-emacs/rainbow-identifiers-0.2.2
 	>=app-emacs/visual-fill-column-1.9
@@ -65,19 +66,17 @@ RDEPEND="
 src_prepare() {
 
 	if use doc; then
-		eapply "${FILESDIR}/${PN}"-9999-fix-make-doc.patch
-		eapply "${FILESDIR}/${PN}"-9999-make-doc-debug.patch
-		eapply "${FILESDIR}/${PN}"-9999-fix-make-doc-org-persist.patch
-		local themedir="${WORKDIR}/org-html-themes/org"
-		mkdir -p ${themedir}
-		cp "${FILESDIR}"/theme-readtheorg.setup ${themedir}
+		eapply "${FILESDIR}/${PN}"-0.8.210-fix-make-doc.patch
+		eapply "${FILESDIR}/${PN}"-0.8.217-make-doc-debug.patch
+		eapply "${FILESDIR}/${PN}"-0.8.0-fix-make-doc-org-persist.patch
+		cp "${FILESDIR}"/theme-readtheorg.setup docs
 		rm docs/index-0.7.2.html
 		rm docs/index-release.html
 		rm docs/index.html
 		rm docs/telega-manual.org
 		if use texinfo ; then
 			cp "${FILESDIR}"/telega-make-texinfo.el docs
-			eapply "${FILESDIR}/${PN}"-9999-doc.patch
+			eapply "${FILESDIR}/${PN}"-0.8.100-doc.patch
 		fi
 	fi
 
