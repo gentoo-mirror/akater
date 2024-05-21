@@ -12,6 +12,23 @@ KEYWORDS="~amd64 ~x86"
 
 SLOT="0"
 
+DOCS="readme.org ${PN}.png ${PN}-by-types.png"
+
 RDEPEND="
 		sys-apps/coreutils
 "
+
+MY_SITEFILE="50${PN}-gentoo.el"
+
+src_compile() {
+	elisp_src_compile
+	elisp-make-autoload-file ${MY_SITEFILE}
+	sed -i '/^;/d' ${MY_SITEFILE}
+	sed -i '/^\f/ { N; d }' ${MY_SITEFILE}
+	sed -i "1s/^/(add-to-list 'load-path \"@SITELISP@\")/" ${MY_SITEFILE}
+}
+
+src_install() {
+	elisp_src_install
+	elisp-site-file-install ${MY_SITEFILE}
+}
