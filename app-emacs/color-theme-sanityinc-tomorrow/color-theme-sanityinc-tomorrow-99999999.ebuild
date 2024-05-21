@@ -9,9 +9,9 @@ inherit elisp git-r3
 DESCRIPTION="A version of Chris Kempson's \"tomorrow\" themes"
 HOMEPAGE="https://github.com/purcell/color-theme-sanityinc-tomorrow"
 
-EGIT_REPO_URI="https://github.com/purcell/color-theme-sanityinc-tomorrow.git"
+EGIT_REPO_URI="https://github.com/akater/color-theme-sanityinc-tomorrow.git"
 EGIT_CLONE_TYPE="single"
-EGIT_BRANCH="master"
+EGIT_BRANCH="akater"
 KEYWORDS="amd64 ~x86"
 
 LICENSE="GPL-3+"
