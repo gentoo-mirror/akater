@@ -36,6 +36,7 @@ app-emacs/dashboard 1.7.0 1.8.1_pre20210827 1.8.1_pre20231201 9999: A startup sc
 app-emacs/db 0.0.7_pre20220112 9999: A database for EmacsLisp
 app-emacs/deferred 9999: Simple asynchronous functions for Emacs Lisp
 app-emacs/dired-rsync 9999: Allow rsync from dired buffers
+app-emacs/disk-usage 1.3.3 9999: Sort and browse disk usage listings
 app-emacs/e2wm 1.5_pre20221130 9999: Simple window manager for Emacs
 app-emacs/ebdb 0.8.2 9999: Contact management package
 app-emacs/ebuild-mode 9999: Emacs modes for editing ebuilds and other Gentoo specific files
