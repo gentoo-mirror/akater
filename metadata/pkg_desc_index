@@ -23,6 +23,7 @@ app-emacs/cl-bytes 99999999: CL operations with bytes in integers in Emacs Lisp
 app-emacs/cl-flet-improvement 99999999: Bug fixes and new features for cl-flet
 app-emacs/cl-format 1.2 1.2.1 9999: CL format routine
 app-emacs/closql 9999: Store EIEIO objects using EmacSQL
+app-emacs/color-theme-sanityinc-tomorrow 20210528 20240429 99999999: A version of Chris Kempson's "tomorrow" themes
 app-emacs/commander 0.7.0 9999: Emacs command line parser
 app-emacs/company 0.9.13 9999: Modular text completion framework
 app-emacs/company-ebdb 1.1 1.1-r1: company-mode completion backend for EBDB in message-mode
