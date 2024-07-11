@@ -11,5 +11,5 @@ LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=app-admin/sudo sys-apps/kbd app-emacs/akater-misc app-emacs/shmu
 SLOT=0
-_eclasses_=elisp-common	abb2dda42f680fce87602c8273f832c7	git-r3	fbb2889c81f3a05910c1524db69425c1	akater-live-release	897a1f1f3cc888930f723d152f685879
+_eclasses_=elisp-common	abb2dda42f680fce87602c8273f832c7	git-r3	875eb471682d3e1f18da124be97dcc81	akater-live-release	897a1f1f3cc888930f723d152f685879
 _md5_=d0c0c64c74bedc53a11fb51e7c8ea677

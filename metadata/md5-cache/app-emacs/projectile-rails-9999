@@ -10,5 +10,5 @@ LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=>=app-emacs/projectile-0.12.0 >=app-emacs/inflections-1.1 >=app-emacs/inf-ruby-2.2.6 >=app-emacs/f-0.13.0 >=app-emacs/rake-0.3.2 hydra? ( app-emacs/hydra ) >=app-editors/emacs-24.3:*
 SLOT=0
-_eclasses_=elisp-common	abb2dda42f680fce87602c8273f832c7	elisp	fbefa95f5e9ab880a34bc69832b7c0d7	git-r3	fbb2889c81f3a05910c1524db69425c1
+_eclasses_=elisp-common	abb2dda42f680fce87602c8273f832c7	elisp	fbefa95f5e9ab880a34bc69832b7c0d7	git-r3	875eb471682d3e1f18da124be97dcc81
 _md5_=8475944b88fb446627e9a40ea15bb16f
