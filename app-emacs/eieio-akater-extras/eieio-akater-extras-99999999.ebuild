@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -21,7 +21,9 @@ IUSE="test"
 
 DOCS="" # README.org is a relative symlink
 
-DEPEND="test? ( app-emacs/ort )"
+DEPEND="test? ( app-emacs/ort app-emacs/org app-emacs/slime )"
+# app-emacs/org is there because it contains patches
+# for non-standard org-babel lisp evaluation
 
 pkg_postinst() {
 	elisp-site-regen
