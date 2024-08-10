@@ -26,6 +26,7 @@ BDEPEND="
 	app-emacs/akater-conf
 "
 RDEPEND="
+	sys-apps/kbd
 	systemd? ( sys-apps/systemd )
 	!systemd? ( sys-apps/openrc )
 	app-emacs/shmu[privileged]
