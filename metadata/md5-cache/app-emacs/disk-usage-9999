@@ -1,5 +1,5 @@
 BDEPEND=>=app-editors/emacs-26:* >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DEFINED_PHASES=compile configure info install postinst postrm prepare setup test unpack
 DESCRIPTION=Sort and browse disk usage listings
 EAPI=8
 HOMEPAGE=https://elpa.gnu.org/packages/disk-usage.html
@@ -9,5 +9,5 @@ LICENSE=GPL-3+
 PROPERTIES=live
 RDEPEND=sys-apps/coreutils >=app-editors/emacs-26:*
 SLOT=0
-_eclasses_=elisp-common	abb2dda42f680fce87602c8273f832c7	elisp	fbefa95f5e9ab880a34bc69832b7c0d7	git-r3	875eb471682d3e1f18da124be97dcc81	elpa	8a9d0bfbbd88b8bbace2831f2aa0e935
+_eclasses_=elisp-common	abb2dda42f680fce87602c8273f832c7	elisp	e7149f29f0c141396a0cec7cc59947a6	git-r3	875eb471682d3e1f18da124be97dcc81	elpa	8a9d0bfbbd88b8bbace2831f2aa0e935
 _md5_=8840c9891e4fb9d6cf16da049ed82bc0
