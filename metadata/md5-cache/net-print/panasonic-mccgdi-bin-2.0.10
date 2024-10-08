@@ -11,5 +11,5 @@ RDEPEND=sys-libs/glibc gui? ( dev-libs/atk x11-libs/cairo x11-libs/gtk+ x11-libs
 RESTRICT=mirror
 SLOT=0
 SRC_URI=x86? ( https://www.psn-web.net/cs/support/fax/common/file/Linux_PrnDriver/Driver_Install_files/mccgdi-2.0.10-i686.tar.gz -> panasonic-mccgdi-bin-2.0.10-i686.tar.gz ) amd64? ( https://www.psn-web.net/cs/support/fax/common/file/Linux_PrnDriver/Driver_Install_files/mccgdi-2.0.10-x86_64.tar.gz -> panasonic-mccgdi-bin-2.0.10-x86_64.tar.gz )
-_eclasses_=desktop	56973babb9c5f19cab0eeb53ece644c6	prefix	629161311cdf29bf8596fdd036826a2c
+_eclasses_=desktop	3a72ffe0d8e1dd73af3a1c8c15a59fed	prefix	c3c4c93ebda319c0fa7ed6f942ba1010
 _md5_=2f229da169f06ada2a86ecb9ee0de604
