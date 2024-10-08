@@ -201,7 +201,6 @@ dev-lisp/sbcl 2.3.7 2.3.8: Steel Bank Common Lisp (SBCL) is an implementation of
 dev-perl/Data-SExpression 0.41: Parse Lisp S-Expressions into perl data structures.
 dev-perl/RPC-EPC-Service 0.0.11: An Asynchronous Remote Procedure Stack
 media-fonts/liberation-fonts 1.07.4: GPL-2 Helvetica/Times/Courier replacement TrueType fonts, courtesy of Red Hat
-media-gfx/fim 0.5_rc3: Fbi-IMproved is a framebuffer image viewer based on Fbi and inspired from Vim
 media-gfx/panamfs-scan-bin 1.3.1: Panasonic MFS Scanner Driver
 media-libs/rlottie 0.2_p20220123: A platform independent standalone library that plays Lottie Animations
 media-libs/tgs2png 0.1_p20220124 9999: Convert Telegram's animated stickers in TGS format into series of PNG images
