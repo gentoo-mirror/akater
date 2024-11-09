@@ -210,7 +210,6 @@ net-libs/tdlib 1.8.0 1.8.7 1.8.8 1.8.10 1.8.11 1.8.11-r1 1.8.12 1.8.14 1.8.15 1.
 net-print/panasonic-mccgdi-bin 2.0.10: Panasonic Multi-Function Printers drivers
 net-wireless/wpa_supplicant 9999: IEEE 802.1X/WPA supplicant for secure wireless transfers
 sys-devel/crossdev 20200131 20200801: Gentoo Cross-toolchain generator
-sys-devel/gcc 10.2.0-r5 10.3.0 11.2.0: The GNU Compiler Collection
 sys-firmware/open-ath9k-htc-firmware 1.4.0: The firmware for QCA AR7010/AR9271 802.11n USB NICs
 www-client/firefox 118.0.1: Firefox Web Browser
 www-client/netsurf 3.10-r3: a free, open source web browser
