@@ -11,5 +11,5 @@ RDEPEND=>=app-emacs/window-layout-1.4 >=app-editors/emacs-24:*
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/akater/emacs-window-manager/archive/refs/tags/v1.5_pre20221130.tar.gz -> e2wm-1.5_pre20221130.tar.gz
-_eclasses_=elisp-common	4ee3453b022aae73f4d827a0f98920c2	elisp	e7149f29f0c141396a0cec7cc59947a6
+_eclasses_=elisp-common	4ee3453b022aae73f4d827a0f98920c2	elisp	8dfc7a00348fe9c91895014adc78a4a5
 _md5_=42cbc5b8d9933bf18d51cf5cb72f2c00
