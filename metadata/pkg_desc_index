@@ -146,7 +146,7 @@ app-emacs/sgc 99999999: Sufficiently Generic Completion (Emacs Lisp)
 app-emacs/shmu 99999999: A sexp to sh translator and other *nix-related convenience stuff
 app-emacs/shut-up 0.3.3 9999: Shut up would you!
 app-emacs/simple-httpd 9999: Pure elisp HTTP server
-app-emacs/slime 2.26.1 2.30 9999: SLIME, the Superior Lisp Interaction Mode (Extended)
+app-emacs/slime 2.26.1 2.30 2.30-r1 2.31 9999: SLIME, the Superior Lisp Interaction Mode (Extended)
 app-emacs/slime-company 9999: slime completion backend for company mode
 app-emacs/smart-mode-line 9999: A color coded smart mode-line.
 app-emacs/smartparens 9999: Automatic insertion, wrapping and paredit-like navigation w/ user defined pairs.

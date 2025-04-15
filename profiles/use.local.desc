@@ -56,6 +56,7 @@ app-emacs/melpa-sources:package-build - Compile and system-wide install `package
 app-emacs/melpa-sources:recipes - Install MELPA recipes
 app-emacs/melpa-sources:sources - Install MELPA build scripts meant to build packages from recipes
 app-emacs/org:odt-schema - Install non-free schema files for OpenDocument Text exporter
+app-emacs/org-development-lisp:literate-lisp - Offer some support for literate-lisp
 app-emacs/org-nutrition:minimal - Do not install greeting code (OK for minimally experienced users)
 app-emacs/portage:helm - Offer some support for app-emacs/helm
 app-emacs/portage:pona - Use some facilities of app-emacs/portage-navi
