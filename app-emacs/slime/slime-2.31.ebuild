@@ -8,9 +8,9 @@ inherit elisp git-r3 git-extras
 DESCRIPTION="SLIME, the Superior Lisp Interaction Mode (Extended)"
 HOMEPAGE="http://common-lisp.net/project/slime/"
 # EGIT_REPO_URI="https://github.com/slime/slime.git"
-# EGIT_BRANCH="master"
+EGIT_BRANCH="slime-231"
 EGIT_REPO_URI="https://github.com/akater/slime.git"
-EGIT_BRANCH="master"
+# EGIT_COMMIT="a71e133a"
 EGIT_CLONE_TYPE="mirror"
 
 LICENSE="GPL-2 xref? ( xref.lisp )"
