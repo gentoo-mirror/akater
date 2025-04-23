@@ -10,5 +10,5 @@ RDEPEND=>=app-editors/emacs-24:*
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/akater/emacs-window-layout-1.5_pre20221130/archive/refs/tags/v1.5_pre20221130.tar.gz -> window-layout-1.5_pre20221130.tar.gz
-_eclasses_=elisp-common	4ee3453b022aae73f4d827a0f98920c2	elisp	8dfc7a00348fe9c91895014adc78a4a5
+_eclasses_=elisp-common	fe05085d051330f15cf7201109b5cd23	elisp	8dfc7a00348fe9c91895014adc78a4a5
 _md5_=8fdab73376aa5816d6c51e5ffe411d1b

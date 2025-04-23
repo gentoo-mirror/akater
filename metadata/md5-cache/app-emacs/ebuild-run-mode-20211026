@@ -8,5 +8,5 @@ LICENSE=GPL-2+
 RDEPEND=>=app-emacs/ebuild-mode-1.53
 SLOT=0
 SRC_URI=https://gitlab.com/akater/emacs-ebuild-run-mode/-/archive/v20211026/emacs-ebuild-run-mode-v20211026.tar.gz -> ebuild-run-mode-20211026.tar.gz
-_eclasses_=elisp-common	4ee3453b022aae73f4d827a0f98920c2
+_eclasses_=elisp-common	fe05085d051330f15cf7201109b5cd23
 _md5_=57fb794f2c2b2a40cc1d5f8299f11b19
