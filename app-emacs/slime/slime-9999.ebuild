@@ -4,6 +4,7 @@
 EAPI=8
 
 inherit elisp git-r3 git-extras
+# inherit elisp common-lisp-3 git-r3 git-extras
 
 DESCRIPTION="SLIME, the Superior Lisp Interaction Mode (Extended)"
 HOMEPAGE="http://common-lisp.net/project/slime/"
@@ -92,6 +93,10 @@ src_install() {
 
 	# Install swank
 	elisp-install ${PN}/swank/ swank/*.lisp
+	elisp-install ${PN}/ swank.asd
+	# We better use this
+	# common-lisp-install-one-asdf swank.asd
+	# but eclass common-lisp-3 doesn't work for me right now
 
 	elisp-site-file-install "${FILESDIR}"/${SITEFILE}
 	# Install docs
