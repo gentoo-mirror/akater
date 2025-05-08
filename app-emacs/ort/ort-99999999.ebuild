@@ -1,10 +1,12 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 NEED_EMACS="26"
 
 inherit elisp-common akater-live-release
+
+ORG_UPSTREAM_SOURCES_DIRECTORY="${SITEETC}/org-run-tests"
 
 DESCRIPTION="Treat Org blocks like tests"
 HOMEPAGE="https://framagit.org/akater/org-run-tests"
