@@ -37,6 +37,7 @@ SITEFILE=70${PN}-gentoo.el
 src_prepare() {
 	git branch work
 	git switch work
+	git-merge emacs-compat
 	git-merge modern-symbols
 	git-merge no-obsolete-functions
 	git-merge main-fixes
