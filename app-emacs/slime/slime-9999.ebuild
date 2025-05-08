@@ -44,6 +44,7 @@ src_prepare() {
 	git-merge slime-asdf-fixes
 	git-merge grab-multiple-outputs
 	git-merge readtables-in-eval-and-grab
+	git-merge asdf-integration
 
 	# bundled cl-lib is likely only needed for emacs 23
 	if use system-cl-lib ; then
