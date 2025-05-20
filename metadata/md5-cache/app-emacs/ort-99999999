@@ -10,4 +10,4 @@ LICENSE=GPL-3
 PROPERTIES=live
 SLOT=0
 _eclasses_=elisp-common	fe05085d051330f15cf7201109b5cd23	git-r3	875eb471682d3e1f18da124be97dcc81	akater-live-release	897a1f1f3cc888930f723d152f685879
-_md5_=7de722fd53bf042fba4df4fecd880b88
+_md5_=b2dfd60876a8fd9f29c3a129eade884b
