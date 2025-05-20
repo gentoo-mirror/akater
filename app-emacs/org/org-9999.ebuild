@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -28,9 +28,9 @@ SITEFILE="50${PN}-gentoo.el"
 src_prepare() {
 	git branch work
 	git switch work
-	git-merge ob-lisp-traces-and-errors
-	git-merge ob-lisp-fix-quotes
+	# git-merge ob-lisp-traces-and-errors
 	git-merge org-element-cleaner-parsers
+	git-merge ob-lisp-akater
 	# git-merge ob-generic-blocks
 
 	default

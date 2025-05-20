@@ -4,6 +4,7 @@
 EAPI=8
 
 inherit elisp git-r3 git-extras
+# inherit elisp common-lisp-3 git-r3 git-extras
 
 DESCRIPTION="SLIME, the Superior Lisp Interaction Mode (Extended)"
 HOMEPAGE="http://common-lisp.net/project/slime/"
@@ -36,12 +37,14 @@ SITEFILE=70${PN}-gentoo.el
 src_prepare() {
 	git branch work
 	git switch work
+	git-merge emacs-compat
 	git-merge modern-symbols
 	git-merge no-obsolete-functions
 	git-merge main-fixes
 	git-merge slime-asdf-fixes
 	git-merge grab-multiple-outputs
 	git-merge readtables-in-eval-and-grab
+	git-merge asdf-integration
 
 	# bundled cl-lib is likely only needed for emacs 23
 	if use system-cl-lib ; then
@@ -92,6 +95,10 @@ src_install() {
 
 	# Install swank
 	elisp-install ${PN}/swank/ swank/*.lisp
+	elisp-install ${PN}/ swank.asd
+	# We better use this
+	# common-lisp-install-one-asdf swank.asd
+	# but eclass common-lisp-3 doesn't work for me right now
 
 	elisp-site-file-install "${FILESDIR}"/${SITEFILE}
 	# Install docs

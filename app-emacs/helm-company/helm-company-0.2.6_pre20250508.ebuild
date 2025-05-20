@@ -10,7 +10,8 @@ DESCRIPTION="Helm interface for company-mode"
 HOMEPAGE="https://github.com/Sodel-the-Vociferous/helm-company"
 
 EGIT_REPO_URI="https://github.com/Sodel-the-Vociferous/helm-company.git"
-KEYWORDS="~amd64 ~x86"
+EGIT_COMMIT="6eb5c2d730a60e394e005b47c1db018697094dde"
+KEYWORDS="amd64 ~x86"
 
 LICENSE="GPL-3"
 SLOT="0"
