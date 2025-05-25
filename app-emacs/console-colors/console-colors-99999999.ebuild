@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -28,7 +28,7 @@ BDEPEND="
 	app-emacs/shmu
 "
 RDEPEND="
-	app-admin/sudo
+	|| ( app-admin/sudo app-admin/doas sys-apps/shadow )
 	sys-apps/kbd
 	app-emacs/akater-misc
 	app-emacs/shmu"
