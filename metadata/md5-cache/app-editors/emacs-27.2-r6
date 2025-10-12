@@ -13,5 +13,5 @@ RDEPEND=app-emacs/emacs-common[games?,gui(-)?] sys-libs/ncurses:0= acl? ( virtua
 RESTRICT=test
 SLOT=27
 SRC_URI=mirror://gnu/emacs/emacs-27.2.tar.xz https://dev.gentoo.org/~ulm/emacs/emacs-27.2-patches-3.tar.xz
-_eclasses_=elisp-common	fe05085d051330f15cf7201109b5cd23	readme.gentoo-r1	b045f3acf546393ab6b3170781875358	toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0
+_eclasses_=elisp-common	fe05085d051330f15cf7201109b5cd23	readme.gentoo-r1	b045f3acf546393ab6b3170781875358	toolchain-funcs	98d9f464d912ae6b7316fb8a3721f5db
 _md5_=5b39d81aa67dbf9ce8fcfc624ef9ba15
