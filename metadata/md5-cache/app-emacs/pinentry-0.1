@@ -1,4 +1,4 @@
-BDEPEND=>=app-editors/emacs-24:* verify-sig? ( app-alternatives/gpg >=app-portage/gemato-20 ) verify-sig? ( app-crypt/openpgp-keys-gnu-elpa )
+BDEPEND=>=app-editors/emacs-24:* verify-sig? ( || ( app-alternatives/gpg app-crypt/gnupg[-alternatives(-)] ) >=app-portage/gemato-20 ) verify-sig? ( app-crypt/openpgp-keys-gnu-elpa )
 DEFINED_PHASES=compile configure info install postinst postrm prepare setup test unpack
 DESCRIPTION=GnuPG Pinentry server implementation
 EAPI=8
@@ -11,5 +11,5 @@ RDEPEND=>=app-crypt/gnupg-2.1.5 >=app-editors/emacs-24:*
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://elpa.gnu.org/packages/pinentry-0.1.el verify-sig? ( https://elpa.gnu.org/packages/pinentry-0.1.el.sig )
-_eclasses_=elisp-common	fe05085d051330f15cf7201109b5cd23	elisp	8dfc7a00348fe9c91895014adc78a4a5	eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	verify-sig	2cbcfd9aec371384bdcd6f99e8692a45	elpa	8a9d0bfbbd88b8bbace2831f2aa0e935
+_eclasses_=elisp-common	fe05085d051330f15cf7201109b5cd23	elisp	8dfc7a00348fe9c91895014adc78a4a5	eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	verify-sig	103bd85bd89e7550554d65afe22e8d04	elpa	8a9d0bfbbd88b8bbace2831f2aa0e935
 _md5_=6491b293a740d7233f56f24f9b58714c
