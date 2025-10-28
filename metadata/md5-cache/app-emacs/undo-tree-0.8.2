@@ -1,4 +1,4 @@
-BDEPEND=>=app-editors/emacs-24:* verify-sig? ( app-crypt/gnupg >=app-portage/gemato-20 ) verify-sig? ( app-crypt/openpgp-keys-gnu-elpa )
+BDEPEND=>=app-editors/emacs-24:* verify-sig? ( app-alternatives/gpg >=app-portage/gemato-20 ) verify-sig? ( app-crypt/openpgp-keys-gnu-elpa )
 DEFINED_PHASES=compile configure info install postinst postrm prepare setup test unpack
 DEPEND=app-emacs/queue
 DESCRIPTION=Undo trees and visualization
@@ -12,5 +12,5 @@ RDEPEND=app-emacs/queue >=app-editors/emacs-24:*
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://elpa.gnu.org/packages/undo-tree-0.8.2.tar verify-sig? ( https://elpa.gnu.org/packages/undo-tree-0.8.2.tar.sig )
-_eclasses_=readme.gentoo-r1	b045f3acf546393ab6b3170781875358	elisp-common	fe05085d051330f15cf7201109b5cd23	elisp	8dfc7a00348fe9c91895014adc78a4a5	eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	verify-sig	8e2e065056335c16cb9f4ab83673c939	elpa	8a9d0bfbbd88b8bbace2831f2aa0e935
+_eclasses_=readme.gentoo-r1	b045f3acf546393ab6b3170781875358	elisp-common	fe05085d051330f15cf7201109b5cd23	elisp	8dfc7a00348fe9c91895014adc78a4a5	eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	verify-sig	2cbcfd9aec371384bdcd6f99e8692a45	elpa	8a9d0bfbbd88b8bbace2831f2aa0e935
 _md5_=6e30da2699e3e10c75af30b66511b0bc
